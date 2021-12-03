@@ -12,8 +12,7 @@
         <pubDate>Thu, 02 Dec 2021 22:09:48 +0900</pubDate>
         
         <guid>https://spongebob03.github.io/p/hugo%EB%A1%9C-%EA%B0%9C%EB%B0%9C-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9E%A5%EB%A7%8C%ED%95%98%EA%B8%B0/</guid>
-        <description>&lt;h2 id=&#34;githubio-blog-with-hugo&#34;&gt;github.io Blog with Hugo!&lt;/h2&gt;
-&lt;p&gt;&lt;figure 
+        <description>&lt;p&gt;&lt;figure 
 	&gt;
 	&lt;a href=&#34;https://blog.chodaeho.com/images/blog/2021/01/hugo-logo.png&#34; &gt;
 		&lt;img src=&#34;https://blog.chodaeho.com/images/blog/2021/01/hugo-logo.png&#34;
@@ -27,31 +26,68 @@
 	&lt;figcaption&gt;Hugo-Static Site Generator&lt;/figcaption&gt;
 	
 &lt;/figure&gt;&lt;br&gt;
-SSG 중 Hugo를 사용하여 블로그를 만들었다. 처음에 뭐가 뭔지 몰라서 뚱땅뚱땅 만들었다.
-이제 배포를 해야하는데 어떻게 하더라&amp;hellip;&lt;/p&gt;
+SSG(Static site generator) 중 Hugo를 사용하여 블로그를 만들었다. 처음에 뭐가 뭔지 몰라서 뚱땅뚱땅 만들었다. 호스팅까지 하는데 하루 걸렸고 더 빠르게 할 수 있었지만 역시 세팅에서 시행착오를 겪었다. 그나마 Hugo여서 하루만에 할 수 있었던걸수도&amp;hellip; Hugo는 Go로 만들어져서 나중에 Go에 대해서 더 공부해보고 싶다.&lt;/p&gt;
 &lt;h2 id=&#34;githubio-만들기&#34;&gt;github.io 만들기&lt;/h2&gt;
-&lt;h3 id=&#34;install-hugo&#34;&gt;Install Hugo&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;brew install hugo&lt;/code&gt;
+&lt;h3 id=&#34;hugo-설치하기&#34;&gt;Hugo 설치하기&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;brew install hugo&lt;/code&gt;&lt;br&gt;
 &lt;code&gt;hugo version&lt;/code&gt;&lt;/p&gt;
 &lt;h3 id=&#34;사이트-폴더-만들기&#34;&gt;사이트 폴더 만들기&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;hugo new site blog&lt;/code&gt;&lt;/p&gt;
 &lt;h3 id=&#34;테마-붙이기&#34;&gt;테마 붙이기&lt;/h3&gt;
-&lt;p&gt;테그, 카테고리 잘보이는 테마가 안보여서 그나마 stack 테마가 제일 내가 원하는 템플릿이었다&amp;hellip;&lt;/p&gt;
+&lt;p&gt;테그, 카테고리 잘보이는 테마가 안보여서 그나마 stack 테마가 제일 내가 원하는 템플릿이었다.&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cd blog
 git init
 git submodule add https://github.com/CaiJimmy/hugo-theme-stack/ themes/hugo-theme-stack
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;code&gt;config.toml&lt;/code&gt;파일 삭제&lt;/p&gt;
-&lt;h3 id=&#34;템플릿-데모-사이트-참고해서-수정하기&#34;&gt;템플릿 데모 사이트 참고해서 수정하기&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;content&lt;/code&gt; 폴더 내용을 복사해와서 사용.&lt;/p&gt;
+&lt;h3 id=&#34;github-저장소-연결&#34;&gt;Github 저장소 연결&lt;/h3&gt;
+&lt;p&gt;github.io 블로그를 호스팅하기 위해서는 깃헙 저장소 2개가 필요하다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;blog&lt;/code&gt;: 블로그 컨텐츠&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;깃헙id.github.io&lt;/code&gt;: 빌드된 웹사이트&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git remote add origin https://blog_저장소_주소
+git submodule add -b main git@github.io_저장소_SSH주소 public ## SSH키 있어야함
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;블로그-사용하기&#34;&gt;블로그 사용하기&lt;/h3&gt;
+&lt;p&gt;themes/exampleSite의 &lt;code&gt;content&lt;/code&gt; 폴더 내용을 복사해와서 사용.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;포스트 생성
 &lt;code&gt;hugo new post/포스트제목.md&lt;/code&gt; 제목은 title 항목으로 고칠 수 있다.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;확인&#34;&gt;확인&lt;/h3&gt;
+&lt;h3 id=&#34;로컬-서버-확인&#34;&gt;로컬 서버 확인&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;hugo server (-D)&lt;/code&gt; 웹서버 실행해서 수정사항 확인&lt;/p&gt;
 &lt;h3 id=&#34;host-on-github&#34;&gt;host on github&lt;/h3&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/hosting-and-deployment/hosting-on-github/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;공식 문서&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;커맨드
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;cd blog&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;hugo -t hugo-theme-stack&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cd public&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git add .&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git commit -m &amp;quot;커밋메시지&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git push origin main&lt;/code&gt; -&amp;gt; 내계정.github.io에 푸시(main이 기본 브랜치명이었다)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cd ..&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git add .&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git commit -m &amp;quot;커밋메시지&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git push origin master&lt;/code&gt; -&amp;gt; blog 저장소에 푸시&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;쉘 스크립트로 업로드 자동화
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;deploy.sh&lt;/code&gt;에 위에 매번 쓰는 커맨드를 정리&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;./deploy.sh &amp;quot;커밋 메시지&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;추가할-사항&#34;&gt;추가할 사항&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;utterances로 댓글기능 추가&lt;/li&gt;
+&lt;li&gt;카테고리 사이드메뉴에 추가&lt;/li&gt;
+&lt;li&gt;GithubAction으로 자동화&lt;/li&gt;
+&lt;li&gt;hugo 기능 잘 활용하기&lt;/li&gt;
+&lt;li&gt;통계기능 추가&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;참고-자료&#34;&gt;참고 자료&lt;/h2&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/getting-started/quick-start/#step-3-add-a-theme&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Hugo 공식문서 Quick Start&lt;/a&gt;&lt;br&gt;
@@ -60,7 +96,7 @@ git submodule add https://github.com/CaiJimmy/hugo-theme-stack/ themes/hugo-them
 &lt;a class=&#34;link&#34; href=&#34;https://docs.stack.jimmycai.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Hugo theme Stack doc&lt;/a&gt;&lt;br&gt;
 &lt;a class=&#34;link&#34; href=&#34;https://key4920.github.io/p/%EC%B4%88%EB%B3%B4%EC%9E%90-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95%EA%B8%B0/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;초보자 Hugo 블로그 구축기&lt;/a&gt;&lt;/p&gt;
+    &gt;초보자 Hugo 블로그 구축기&lt;/a&gt; - 같은 테마를 사용하는 분의 블로그를 찾아서 더 수월했다.&lt;/p&gt;
 </description>
         </item>
         

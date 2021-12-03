@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>blog on BeMore</title>
-    <link>https://spongebob03.github.io/tags/blog/</link>
-    <description>Recent content in blog on BeMore</description>
+    <title>개발환경 on BeMore</title>
+    <link>https://spongebob03.github.io/tags/%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD/</link>
+    <description>Recent content in 개발환경 on BeMore</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 02 Dec 2021 22:09:48 +0900</lastBuildDate><atom:link href="https://spongebob03.github.io/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 02 Dec 2021 22:09:48 +0900</lastBuildDate><atom:link href="https://spongebob03.github.io/tags/%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo로 개발 블로그 장만하기</title>
       <link>https://spongebob03.github.io/p/hugo%EB%A1%9C-%EA%B0%9C%EB%B0%9C-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9E%A5%EB%A7%8C%ED%95%98%EA%B8%B0/</link>
