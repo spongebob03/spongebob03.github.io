@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on BeMore</title>
+    <link>https://spongebob03.github.io/post/</link>
+    <description>Recent content in Posts on BeMore</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 02 Dec 2021 22:09:48 +0900</lastBuildDate><atom:link href="https://spongebob03.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo로 개발 블로그 장만하기</title>
+      <link>https://spongebob03.github.io/p/hugo%EB%A1%9C-%EA%B0%9C%EB%B0%9C-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9E%A5%EB%A7%8C%ED%95%98%EA%B8%B0/</link>
+      <pubDate>Thu, 02 Dec 2021 22:09:48 +0900</pubDate>
+      
+      <guid>https://spongebob03.github.io/p/hugo%EB%A1%9C-%EA%B0%9C%EB%B0%9C-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9E%A5%EB%A7%8C%ED%95%98%EA%B8%B0/</guid>
+      <description>github.io Blog with Hugo!  Hugo-Static Site Generator 
+SSG 중 Hugo를 사용하여 블로그를 만들었다. 처음에 뭐가 뭔지 몰라서 뚱땅뚱땅 만들었다. 이제 배포를 해야하는데 어떻게 하더라&amp;hellip;
+github.io 만들기 Install Hugo brew install hugo hugo version
+사이트 폴더 만들기 hugo new site blog
+테마 붙이기 테그, 카테고리 잘보이는 테마가 안보여서 그나마 stack 테마가 제일 내가 원하는 템플릿이었다&amp;hellip;
+cd blog git init git submodule add https://github.com/CaiJimmy/hugo-theme-stack/ themes/hugo-theme-stack config.toml파일 삭제
+템플릿 데모 사이트 참고해서 수정하기 content 폴더 내용을 복사해와서 사용.</description>
+    </item>
+    
+  </channel>
+</rss>

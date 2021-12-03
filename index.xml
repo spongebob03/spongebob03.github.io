@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>BeMore</title>
+        <link>https://spongebob03.github.io/</link>
+        <description>Recent content on BeMore</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Thu, 02 Dec 2021 22:09:48 +0900</lastBuildDate><atom:link href="https://spongebob03.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Hugo로 개발 블로그 장만하기</title>
+        <link>https://spongebob03.github.io/p/hugo%EB%A1%9C-%EA%B0%9C%EB%B0%9C-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9E%A5%EB%A7%8C%ED%95%98%EA%B8%B0/</link>
+        <pubDate>Thu, 02 Dec 2021 22:09:48 +0900</pubDate>
+        
+        <guid>https://spongebob03.github.io/p/hugo%EB%A1%9C-%EA%B0%9C%EB%B0%9C-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9E%A5%EB%A7%8C%ED%95%98%EA%B8%B0/</guid>
+        <description>&lt;h2 id=&#34;githubio-blog-with-hugo&#34;&gt;github.io Blog with Hugo!&lt;/h2&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://blog.chodaeho.com/images/blog/2021/01/hugo-logo.png&#34; &gt;
+		&lt;img src=&#34;https://blog.chodaeho.com/images/blog/2021/01/hugo-logo.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			alt=&#34;Hugo-Static Site Generator&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;Hugo-Static Site Generator&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;br&gt;
+SSG 중 Hugo를 사용하여 블로그를 만들었다. 처음에 뭐가 뭔지 몰라서 뚱땅뚱땅 만들었다.
+이제 배포를 해야하는데 어떻게 하더라&amp;hellip;&lt;/p&gt;
+&lt;h2 id=&#34;githubio-만들기&#34;&gt;github.io 만들기&lt;/h2&gt;
+&lt;h3 id=&#34;install-hugo&#34;&gt;Install Hugo&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;brew install hugo&lt;/code&gt;
+&lt;code&gt;hugo version&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;사이트-폴더-만들기&#34;&gt;사이트 폴더 만들기&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;hugo new site blog&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;테마-붙이기&#34;&gt;테마 붙이기&lt;/h3&gt;
+&lt;p&gt;테그, 카테고리 잘보이는 테마가 안보여서 그나마 stack 테마가 제일 내가 원하는 템플릿이었다&amp;hellip;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cd blog
+git init
+git submodule add https://github.com/CaiJimmy/hugo-theme-stack/ themes/hugo-theme-stack
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;code&gt;config.toml&lt;/code&gt;파일 삭제&lt;/p&gt;
+&lt;h3 id=&#34;템플릿-데모-사이트-참고해서-수정하기&#34;&gt;템플릿 데모 사이트 참고해서 수정하기&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;content&lt;/code&gt; 폴더 내용을 복사해와서 사용.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;포스트 생성
+&lt;code&gt;hugo new post/포스트제목.md&lt;/code&gt; 제목은 title 항목으로 고칠 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;확인&#34;&gt;확인&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;hugo server (-D)&lt;/code&gt; 웹서버 실행해서 수정사항 확인&lt;/p&gt;
+&lt;h3 id=&#34;host-on-github&#34;&gt;host on github&lt;/h3&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/hosting-and-deployment/hosting-on-github/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;공식 문서&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;참고-자료&#34;&gt;참고 자료&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/getting-started/quick-start/#step-3-add-a-theme&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hugo 공식문서 Quick Start&lt;/a&gt;&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/Integerous/Integerous.github.io&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hugo로 Github.io 블로그 만들기&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://docs.stack.jimmycai.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hugo theme Stack doc&lt;/a&gt;&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://key4920.github.io/p/%EC%B4%88%EB%B3%B4%EC%9E%90-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95%EA%B8%B0/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;초보자 Hugo 블로그 구축기&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
