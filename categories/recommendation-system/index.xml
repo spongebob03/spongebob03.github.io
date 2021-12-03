@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Recommendation System on BeMore</title>
+    <link>https://spongebob03.github.io/categories/recommendation-system/</link>
+    <description>Recent content in Recommendation System on BeMore</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 19 Nov 2021 22:09:48 +0900</lastBuildDate><atom:link href="https://spongebob03.github.io/categories/recommendation-system/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>주요 추천 알고리즘</title>
+      <link>https://spongebob03.github.io/p/%EC%A3%BC%EC%9A%94-%EC%B6%94%EC%B2%9C-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/</link>
+      <pubDate>Fri, 19 Nov 2021 22:09:48 +0900</pubDate>
+      
+      <guid>https://spongebob03.github.io/p/%EC%A3%BC%EC%9A%94-%EC%B6%94%EC%B2%9C-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/</guid>
+      <description>1. Content-Based filtering: CB  비슷한 아이템을 기반으로 추천
+  도메인 지식 필요 아이템 간의 유사도 측정하여 추천 모든 이에게 동일한 아이템을 추천 보통 아이템, 사용자 수가 적다 hand-engineered features에서만 성능 좋음 텍스트 처리 필요하기도 함(NLP) - 예.작가의 다른 책  핵심
+ 아이템들을 어떤 정보를 기준으로 서술할 건가 유사소 계산 방법 정하기 (코사인, 피어슨&amp;hellip;)  2. Collaborative Filtering: CF  기본적으로 다른 사용자들의 정보를 이용하여 취향 예측
+ 1) 메모리 기반 (=Nearest Neighbor based CF) - 👨‍👩‍👧‍👦 사용자 기반 나와 비슷한 평점 패턴을 보이는 사람들을 찾아서 그 사람들이 높게 평가한 아이템 추천</description>
+    </item>
+    
+    <item>
+      <title>추천시스템이란?</title>
+      <link>https://spongebob03.github.io/p/%EC%B6%94%EC%B2%9C%EC%8B%9C%EC%8A%A4%ED%85%9C%EC%9D%B4%EB%9E%80/</link>
+      <pubDate>Tue, 09 Nov 2021 22:09:48 +0900</pubDate>
+      
+      <guid>https://spongebob03.github.io/p/%EC%B6%94%EC%B2%9C%EC%8B%9C%EC%8A%A4%ED%85%9C%EC%9D%B4%EB%9E%80/</guid>
+      <description>사용자가 관심있어 할만한 아이템을 제공해주는 자동화된 시스템
+  핵심  관심을 어떻게 표현하는가? 관심을 어떻게 측정하는가? =&amp;gt; 유사도 측정    사용자와 아이템  사용자: 서비스를 사용하는 사람 아이템: 서비스에서 판매하는 물품(다른 사용자가 물품이 될 수 있음) 보통 서비스가 성장하면 사용자, 아이템의 수도 같이 성장함  특히 사용자의 성장도가 훨씬 커짐   하지만 아이템의 수가 커지면서 아이템 디스커버리 문제가 대두  모든 사용자가 검색(능동적)을 하지 않으며 사람들이 점점 더 추천(수동적) 선호    필요성  조금의 노력으로 사용자가 관심있어 할만한 아이템을 찾아주는 방법  아이템의 수가 굉장히 큰 경우 더 의미가 있다 수작업으론&amp;hellip;도저히 불가 → 자동화 필요!</description>
+    </item>
+    
+  </channel>
+</rss>

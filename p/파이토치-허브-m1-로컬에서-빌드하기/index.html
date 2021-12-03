@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='간단한 빌드 중 만나게 되는 에러들^^*'><title>파이토치 허브 M1 로컬에서 빌드하기</title>
+
+<link rel='canonical' href='https://spongebob03.github.io/p/%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98-%ED%97%88%EB%B8%8C-m1-%EB%A1%9C%EC%BB%AC%EC%97%90%EC%84%9C-%EB%B9%8C%EB%93%9C%ED%95%98%EA%B8%B0/'>
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='파이토치 허브 M1 로컬에서 빌드하기'>
+<meta property='og:description' content='간단한 빌드 중 만나게 되는 에러들^^*'>
+<meta property='og:url' content='https://spongebob03.github.io/p/%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98-%ED%97%88%EB%B8%8C-m1-%EB%A1%9C%EC%BB%AC%EC%97%90%EC%84%9C-%EB%B9%8C%EB%93%9C%ED%95%98%EA%B8%B0/'>
+<meta property='og:site_name' content='BeMore'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='M1' /><meta property='article:tag' content='오픈소스' /><meta property='article:tag' content='개발환경' /><meta property='article:published_time' content='2021-08-16T22:09:48&#43;09:00'/><meta property='article:modified_time' content='2021-08-16T22:09:48&#43;09:00'/>
+<meta name="twitter:title" content="파이토치 허브 M1 로컬에서 빌드하기">
+<meta name="twitter:description" content="간단한 빌드 중 만나게 되는 에러들^^*">
+    </head>
+    <body class="
+    article-page has-toc
+">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex 
+    
+        extended
+    
+">
+    
+        <div id="article-toolbar">
+            <a href="/" class="back-home">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+                <span>Back</span>
+            </a>
+        </div>
+    
+<main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%EC%9D%B4%EA%B2%8C-%EC%99%9C-%EC%95%88%EB%90%98%EC%A7%80/" >
+                이게 왜 안되지
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/p/%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98-%ED%97%88%EB%B8%8C-m1-%EB%A1%9C%EC%BB%AC%EC%97%90%EC%84%9C-%EB%B9%8C%EB%93%9C%ED%95%98%EA%B8%B0/">파이토치 허브 M1 로컬에서 빌드하기</a>
+    </h2>
+
+    
+    <h3 class="article-subtitle">
+        간단한 빌드 중 만나게 되는 에러들^^*
+    </h3>
+    
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Aug 16, 2021</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    1 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+</div>
+</header>
+
+    <section class="article-content">
+    <blockquote>
+<p><a class="link" href="https://github.com/9bow/PyTorchKR"  target="_blank" rel="noopener"
+    >Github) PyTorchKR</a></p>
+</blockquote>
+<h3 id="nvm-command-not-found">nvm: command not found</h3>
+<p><a class="link" href="https://kood-dev.tistory.com/3"  target="_blank" rel="noopener"
+    >노드 버전관리 설치 및 사용법</a></p>
+<ol>
+<li><code>find ~/.zshrc</code>로 /.zshrc파일 있는지 확인</li>
+<li><code>open ~/.zshrc</code> 파일 열어서 아래 내용 추가</li>
+</ol>
+<pre tabindex="0"><code>export NVM_DIR=~/.nvm 
+source $(brew --prefix nvm)/nvm.sh
+</code></pre><ol start="4">
+<li><code>source ~/.zshrc</code> 코드 적용</li>
+<li>nvm &ndash;version으로 확인</li>
+</ol>
+<h3 id="rbenv-version-259-is-not-installed">rbenv: version `2.5.9' is not installed</h3>
+<p>brew install rbenv했지만 [이걸 또 m1이..?]
+(<a class="link" href="https://github.com/rbenv/ruby-build/issues/1691"  target="_blank" rel="noopener"
+    >https://github.com/rbenv/ruby-build/issues/1691</a>)
+해결 방법은 간단했습니다.
+<code>rbenv install 2.5.9</code></p>
+<h3 id="error-while-executing-gemgemfilepermissionerror">ERROR: While executing gem&hellip;Gem::FilePermissionError</h3>
+<p><a class="link" href="https://jojoldu.tistory.com/288"  target="_blank" rel="noopener"
+    >Mac에서 Gem::FilePermissionError 에러 발생시 해결 방법</a>
+~/.zshrc 파일에 아래 내용 추가</p>
+<pre tabindex="0"><code>[[ -d ~/.rbenv  ]] &amp;&amp; \
+  export PATH=${HOME}/.rbenv/bin:${PATH} &amp;&amp; \
+  eval &quot;$(rbenv init -)&quot;
+</code></pre><p><code>source ~/.zshrc</code>로 코드 적용</p>
+<h3 id="bundle-install-에서-make-yarn-no-such-file-or-directory">bundle install 에서 make: yarn: No such file or directory</h3>
+<p><code>npm install -g yarn</code></p>
+<h3 id="빌드">빌드</h3>
+<p><code>make serve</code>
+<figure 
+	>
+	<a href="https://images.velog.io/images/spongebob03/post/2d0b56cb-0994-430f-9b91-593d8f6237a0/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202021-08-16%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%2011.15.55.png" >
+		<img src="https://images.velog.io/images/spongebob03/post/2d0b56cb-0994-430f-9b91-593d8f6237a0/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202021-08-16%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%2011.15.55.png"
+			
+			
+			
+			loading="lazy"
+			>
+	</a>
+	
+</figure>
+멘토님의 친절한 커맨드 예시와 오늘도 구글링으로 얻은 정보들에 감사하며&hellip;🥳</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/m1/">M1</a>
+        
+            <a href="/tags/%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4/">오픈소스</a>
+        
+            <a href="/tags/%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD/">개발환경</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+    
+    
+        <h2 class="section-title">관련 글</h2>
+        <div class="related-contents">
+            <div class="flex article-list--tile">
+                
+                    
+<article class="">
+    <a href="/p/macmini-m1-%EC%97%90%EC%84%9C-homebrew-%EC%84%A4%EC%B9%98/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">MacMini M1 에서 Homebrew 설치</h2>
+        </div>
+    </a>
+</article>
+                
+            </div>
+        </div>
+    
+</aside>
+
+     
+    
+        
+    <script src="https://utteranc.es/client.js" 
+        repo=""
+        issue-term="pathname"
+        
+        crossorigin="anonymous"
+        async
+        >
+</script>
+
+<style>
+    .utterances {
+        max-width: unset;
+    }
+</style>
+
+<script>
+    function setUtterancesTheme(theme) {
+        let utterances = document.querySelector('.utterances iframe');
+        if (utterances) {
+            utterances.contentWindow.postMessage(
+                {
+                    type: 'set-theme',
+                    theme: `github-${theme}`
+                },
+                'https://utteranc.es'
+            );
+        }
+    }
+
+    addEventListener('message', event => {
+        if (event.origin !== 'https://utteranc.es') return;
+        setUtterancesTheme(document.documentElement.dataset.scheme)
+    });
+
+    window.addEventListener('onColorSchemeChange', (e) => {
+        setUtterancesTheme(e.detail)
+    })
+</script>
+
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2021 BeMore
+    </section>
+    
+    <section class="powerby">
+        <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>로 만듦 <br />
+        <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>의 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.5.0">Stack</a></b> 테마 사용 중
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    
+        <aside class="sidebar right-sidebar sticky">
+            <section class="widget archives">
+                <div class="widget-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+                </div>
+                <h2 class="widget-title section-title">Table of contents</h2>
+                
+                <div class="widget--toc">
+                    <nav id="TableOfContents">
+  <ol>
+    <li>
+      <ol>
+        <li><a href="#nvm-command-not-found">nvm: command not found</a></li>
+        <li><a href="#rbenv-version-259-is-not-installed">rbenv: version `2.5.9' is not installed</a></li>
+        <li><a href="#error-while-executing-gemgemfilepermissionerror">ERROR: While executing gem&hellip;Gem::FilePermissionError</a></li>
+        <li><a href="#bundle-install-에서-make-yarn-no-such-file-or-directory">bundle install 에서 make: yarn: No such file or directory</a></li>
+        <li><a href="#빌드">빌드</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+                </div>
+            </section>
+        </aside>
+    
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

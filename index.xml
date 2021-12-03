@@ -58,8 +58,6 @@ git submodule add -b main git@github.io_저장소_SSH주소 public ## SSH키 있
 &lt;h3 id=&#34;host-on-github&#34;&gt;host on github&lt;/h3&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/hosting-and-deployment/hosting-on-github/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;공식 문서&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;커맨드
 &lt;ol&gt;
 &lt;li&gt;&lt;code&gt;cd blog&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;hugo -t hugo-theme-stack&lt;/code&gt;&lt;/li&gt;
@@ -70,17 +68,13 @@ git submodule add -b main git@github.io_저장소_SSH주소 public ## SSH키 있
 &lt;li&gt;&lt;code&gt;cd ..&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git add .&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git commit -m &amp;quot;커밋메시지&amp;quot;&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;git push origin master&lt;/code&gt; -&amp;gt; blog 저장소에 푸시&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;쉘 스크립트로 업로드 자동화
-&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;git push origin master&lt;/code&gt; -&amp;gt; blog 저장소에 푸시&lt;br&gt;
+쉘 스크립트로 업로드 자동화&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;deploy.sh&lt;/code&gt;에 위에 매번 쓰는 커맨드를 정리&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;./deploy.sh &amp;quot;커밋 메시지&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;./deploy.sh &amp;quot;커밋 메시지&amp;quot;&lt;/code&gt;&lt;br&gt;
+이후에는 Gist, GithubAction&amp;hellip; 더 편하게 할 수 있는 방법 도전&lt;/li&gt;
 &lt;/ol&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;추가할-사항&#34;&gt;추가할 사항&lt;/h1&gt;
+&lt;h2 id=&#34;추가할-사항&#34;&gt;추가할 사항&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;utterances로 댓글기능 추가&lt;/li&gt;
 &lt;li&gt;카테고리 사이드메뉴에 추가&lt;/li&gt;
@@ -97,6 +91,422 @@ git submodule add -b main git@github.io_저장소_SSH주소 public ## SSH키 있
     &gt;Hugo theme Stack doc&lt;/a&gt;&lt;br&gt;
 &lt;a class=&#34;link&#34; href=&#34;https://key4920.github.io/p/%EC%B4%88%EB%B3%B4%EC%9E%90-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95%EA%B8%B0/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;초보자 Hugo 블로그 구축기&lt;/a&gt; - 같은 테마를 사용하는 분의 블로그를 찾아서 더 수월했다.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>주요 추천 알고리즘</title>
+        <link>https://spongebob03.github.io/p/%EC%A3%BC%EC%9A%94-%EC%B6%94%EC%B2%9C-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/</link>
+        <pubDate>Fri, 19 Nov 2021 22:09:48 +0900</pubDate>
+        
+        <guid>https://spongebob03.github.io/p/%EC%A3%BC%EC%9A%94-%EC%B6%94%EC%B2%9C-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/</guid>
+        <description>&lt;h2 id=&#34;1-content-based-filtering-cb&#34;&gt;1. Content-Based filtering: CB&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;비슷한 아이템을 기반으로 추천&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;도메인 지식 필요&lt;/li&gt;
+&lt;li&gt;아이템 간의 유사도 측정하여 추천&lt;/li&gt;
+&lt;li&gt;모든 이에게 동일한 아이템을 추천&lt;/li&gt;
+&lt;li&gt;보통 아이템, 사용자 수가 적다&lt;/li&gt;
+&lt;li&gt;hand-engineered features에서만 성능 좋음&lt;/li&gt;
+&lt;li&gt;텍스트 처리 필요하기도 함(NLP) - &lt;em&gt;예.작가의 다른 책&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;핵심&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;아이템들을 어떤 정보를 기준으로 서술할 건가&lt;/li&gt;
+&lt;li&gt;유사소 계산 방법 정하기 (코사인, 피어슨&amp;hellip;)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;2-collaborative-filtering-cf&#34;&gt;2. Collaborative Filtering: CF&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;기본적으로 다른 사용자들의 정보를 이용하여 취향 예측&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;1-메모리-기반-nearest-neighbor-based-cf&#34;&gt;1) 메모리 기반 (=Nearest Neighbor based CF)&lt;/h3&gt;
+&lt;h4 id=&#34;---사용자-기반&#34;&gt;- 👨‍👩‍👧‍👦 사용자 기반&lt;/h4&gt;
+&lt;p&gt;나와 비슷한 평점 패턴을 보이는 &lt;strong&gt;사람&lt;/strong&gt;들을 찾아서 그 사람들이 높게 평가한 아이템 추천&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;나와 다른 사람 어떻게 표현할 것인가&lt;/li&gt;
+&lt;li&gt;나와 비슷한 사용자를 어떻게 찾을지가 중요
+&lt;ul&gt;
+&lt;li&gt;사용자 프로파일 정보 구축&lt;/li&gt;
+&lt;li&gt;프로파일 정보간의 유사도 계산&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;---아이템-기반&#34;&gt;- 🎨 아이템 기반&lt;/h4&gt;
+&lt;p&gt;아마존에서 논문으로 발표
+유사도 비교 → &lt;strong&gt;평점&lt;/strong&gt;의 패턴이 비슷한 &lt;strong&gt;아이템&lt;/strong&gt;들을 찾아서 그걸 추천하는 방식
+아이템의 수가 보통 사용자 수보다 적다 → 평점의 수가 평균적으로 더 많고 계산량이 작다 → 사용자 기반보다는 덜 sparse → 사용자 기반 협업 필터링과 비교해 더 안정적이며 좋은 성능을 보임&lt;/p&gt;
+&lt;h3 id=&#34;2-모델-기반&#34;&gt;2) 모델 기반&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;넷플릭스 프라이즈 컨테스트 때 고안된 추천 방식&lt;/li&gt;
+&lt;li&gt;사용자 아이템 행렬에서 비어있는 평점들을 SGD를 사용해서 채우는 방식&lt;/li&gt;
+&lt;li&gt;SVD(Singular Vector Decomposition)을 사용해서 구현
+&lt;ul&gt;
+&lt;li&gt;요즘은 딥려닝의 오토인코더를 사용&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;평점을 포함한 다른 사용자 행동을 예측하는 방식으로 진화&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;3-사용자-행동-기반&#34;&gt;3) 사용자 행동 기반&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;사용자 행동(아이템 클릭 or 구매 등) 정보를 기반으로 추천
+&lt;ul&gt;
+&lt;li&gt;사용자, 아이템에 대한 부가 정보 필수&lt;/li&gt;
+&lt;li&gt;구현 간단하지만 아주 유용&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;사용자 행동을 예측하는 추천 (클릭 or 구매)
+&lt;ul&gt;
+&lt;li&gt;모델링을 통해 사용자와 아이템 페어에 대한 클릭 확률 등의 점수 계산 가능
+&lt;ul&gt;
+&lt;li&gt;의사 결정 트리나 딥러닝등이 사용 가능&lt;/li&gt;
+&lt;li&gt;유데미에서 사용했던 방식&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;4-latent-factor-cf&#34;&gt;4) Latent Factor CF&lt;/h3&gt;
+&lt;p&gt;사용자-아이템 평점 행렬 데이터만을 이용해 말 그대로 &amp;lsquo;잠재 요인&amp;rsquo;을 끄집어 내는 것&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Matrix Factorization&lt;/li&gt;
+&lt;li&gt;우연한 추천 기능&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;3-다수의-알고리즘-다양한-방식-조합&#34;&gt;3. 다수의 알고리즘: 다양한 방식 조합&lt;/h1&gt;
+&lt;h1 id=&#34;4-지도학습-방식&#34;&gt;4. 지도학습 방식&lt;/h1&gt;
+&lt;p&gt;어떤 기준으로 추천을 하느냐가 가장 중요 - 머신러닝의 레이블 정보!&lt;/p&gt;
+&lt;p&gt;힌트&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;명시적 힌트: 리뷰점수, 좋아요&lt;/li&gt;
+&lt;li&gt;암시적 힌트: 클릭, 구매, 소비
+&lt;ul&gt;
+&lt;li&gt;클릭보다는 구매가 더 좋은 힌트, 소비 여부도 좋은 힌트다&lt;/li&gt;
+&lt;li&gt;클릭은 노이즈가 있지만 장점은 관심없는 아이템들의 파악이 쉽다&lt;/li&gt;
+&lt;li&gt;자세한 사용자 행동 정보의 수집, 저장과 가공 먼저 필요&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>추천시스템이란?</title>
+        <link>https://spongebob03.github.io/p/%EC%B6%94%EC%B2%9C%EC%8B%9C%EC%8A%A4%ED%85%9C%EC%9D%B4%EB%9E%80/</link>
+        <pubDate>Tue, 09 Nov 2021 22:09:48 +0900</pubDate>
+        
+        <guid>https://spongebob03.github.io/p/%EC%B6%94%EC%B2%9C%EC%8B%9C%EC%8A%A4%ED%85%9C%EC%9D%B4%EB%9E%80/</guid>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;사용자가 관심있어 할만한 아이템을 제공해주는 자동화된 시스템&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;핵심
+&lt;ul&gt;
+&lt;li&gt;관심을 어떻게 표현하는가?&lt;/li&gt;
+&lt;li&gt;관심을 어떻게 측정하는가?
+=&amp;gt; 유사도 측정&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;사용자와-아이템&#34;&gt;사용자와 아이템&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;사용자: 서비스를 사용하는 사람&lt;/li&gt;
+&lt;li&gt;아이템: 서비스에서 판매하는 물품(다른 사용자가 물품이 될 수 있음)
+보통 서비스가 성장하면 사용자, 아이템의 수도 같이 성장함
+&lt;ul&gt;
+&lt;li&gt;특히 사용자의 성장도가 훨씬 커짐&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;하지만 아이템의 수가 커지면서 아이템 디스커버리 문제가 대두
+&lt;ul&gt;
+&lt;li&gt;모든 사용자가 검색(능동적)을 하지 않으며 사람들이 점점 더 추천(수동적) 선호&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;필요성&#34;&gt;필요성&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;조금의 노력으로 사용자가 관심있어 할만한 아이템을 찾아주는 방법
+&lt;ul&gt;
+&lt;li&gt;아이템의 수가 굉장히 큰 경우 더 의미가 있다&lt;/li&gt;
+&lt;li&gt;수작업으론&amp;hellip;도저히 불가 → 자동화 필요!&lt;/li&gt;
+&lt;li&gt;개인화(Personalization)으로 연결됨&lt;/li&gt;
+&lt;li&gt;확증편향의 문제가 있을 수 있다
+&lt;ul&gt;
+&lt;li&gt;가끔씩 전혀 관심없을 듯한 아이템도 추천 가능(Serendipity)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;회사 관점에서는 추천 엔진을 기반으로 다양한 기능 추가 가능
+&lt;ul&gt;
+&lt;li&gt;마케팅시 추천 엔진 사용(이메일 마케팅)&lt;/li&gt;
+&lt;li&gt;관련 상품 추천으로 쉽게 확장 가능&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;아이템 수가 많아서 원하는 것을 찾기 쉽지 않은 경우
+⇒ 검색을 위한 수고를 덜어줌&lt;/li&gt;
+&lt;li&gt;추천을 통해 신상품등의 마케팅이 가능해짐
+&lt;ul&gt;
+&lt;li&gt;새로 나온 아이템들은 노출 자체가 어려운데 추천을 통해 기회를 줄 수 있다&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;인기 아이템 뿐만 아니라 롱 테일의 다양한 아이템 노출이 가능
+&lt;ul&gt;
+&lt;li&gt;추천 방식에 따라 다르지만 개인화가 잘 되면 이게 가능해짐&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;추천은-매칭-문제&#34;&gt;추천은 매칭 문제!&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;사용자에게 맞는 아이템을 매칭해주기
+&lt;ul&gt;
+&lt;li&gt;아이템은 서비스에 따라 달라지며 아이템이 다른 사용자가 될 수도 있음 (친구 추천, 강의 추천&amp;hellip;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;어떤 아이뎀을 추천할 것인가?
+&lt;ul&gt;
+&lt;li&gt;다양한 방법이 존재
+&lt;ul&gt;
+&lt;li&gt;지금 뜨는 아이템 추천(개인화되어 있지 않음)&lt;/li&gt;
+&lt;li&gt;사용자가 마지막에 클릭했던 아이템들 다시 추천&lt;/li&gt;
+&lt;li&gt;사용자가 구매했던 아이템들을 구매한 다른 사용자들이 구매한 아이템 추천 ← &lt;em&gt;협업 필터링&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;추천 UI도 굉장히 중요
+&lt;ul&gt;
+&lt;li&gt;추천 유닛 존재. 일르 어떤 순서로 어떻게 노출하는지가 중요&lt;/li&gt;
+&lt;li&gt;구체적인 이유를 보여주는 것이 좋다&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;사용자와 아이템에 대한 부가 정보들이 필요해짐&lt;/li&gt;
+&lt;li&gt;아이템 부가 정보
+&lt;ul&gt;
+&lt;li&gt;분류 체계&lt;/li&gt;
+&lt;li&gt;태그 형태로 부가정보를 유지하는 것도 아주 좋음&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;사용자 프로파일 정보
+&lt;ul&gt;
+&lt;li&gt;개인정보: 성별, 연령대 → 콜드 스타트 문제 해결&lt;/li&gt;
+&lt;li&gt;아이템 정보:
+&lt;ul&gt;
+&lt;li&gt;관심 카테고리와 서브 카테고리(분류체계 기반), 태그&lt;/li&gt;
+&lt;li&gt;클릭 혹은 구매 아이템&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;무엇을 기준으로 추천을 할 것인가?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;일상에서-볼-수-있는-추천&#34;&gt;일상에서 볼 수 있는 추천&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;아마존 관련 상품 추천
+키보드 샀다면 → 같이 쓸 마우스 추천&lt;/li&gt;
+&lt;li&gt;넷플릭스 영화, 드라마 추천
+이전에 봤던 작품 → 다른 드라마, 영화 추천
+&lt;code&gt;추천 타이틀&lt;/code&gt;: 이 작품들 왜 추천하는지&lt;/li&gt;
+&lt;li&gt;구글 검색어 자동 완성
+편리, 내가 생각하지 못했던 정보로도 검색할 수 있어서
+개인정보 이슈가 있었다&lt;/li&gt;
+&lt;li&gt;링크드인 or 페이스북 친구 추천
+&lt;ul&gt;
+&lt;li&gt;사용자: 멤버&lt;/li&gt;
+&lt;li&gt;아이템: 멤버
+왜 추천하는지 이유를 보여준다&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;스포티파이 노래, 플레이리스트 추천&lt;/li&gt;
+&lt;li&gt;헬스케어 도메인의 위험 점수 계산
+사용자: 의사, 간호사
+아이템: 환자
+어느 환자를 먼저 치료하는게 좋은지 점수로 수치화&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;-공통점&#34;&gt;→ 공통점&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;격자 형태 UI 사용&lt;/li&gt;
+&lt;li&gt;다양한 종류의 추천 유닛 존재
+&lt;ul&gt;
+&lt;li&gt;일부 유닛은 개인화&lt;/li&gt;
+&lt;li&gt;일부 유닛은 인기도 등 비 개인화 정보기반&lt;/li&gt;
+&lt;li&gt;추천 유닛의 랭킹 중요
+&lt;ul&gt;
+&lt;li&gt;이 부분도 모델링하여 개인화하는 추세&lt;/li&gt;
+&lt;li&gt;클릭을 최적화하고 이 데이터 수집을 위한 실험을 함
+&lt;ul&gt;
+&lt;li&gt;순전히 데이터 수집을 위한 온라인 테스트&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>파이토치 허브 M1 로컬에서 빌드하기</title>
+        <link>https://spongebob03.github.io/p/%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98-%ED%97%88%EB%B8%8C-m1-%EB%A1%9C%EC%BB%AC%EC%97%90%EC%84%9C-%EB%B9%8C%EB%93%9C%ED%95%98%EA%B8%B0/</link>
+        <pubDate>Mon, 16 Aug 2021 22:09:48 +0900</pubDate>
+        
+        <guid>https://spongebob03.github.io/p/%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98-%ED%97%88%EB%B8%8C-m1-%EB%A1%9C%EC%BB%AC%EC%97%90%EC%84%9C-%EB%B9%8C%EB%93%9C%ED%95%98%EA%B8%B0/</guid>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/9bow/PyTorchKR&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Github) PyTorchKR&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;nvm-command-not-found&#34;&gt;nvm: command not found&lt;/h3&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://kood-dev.tistory.com/3&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;노드 버전관리 설치 및 사용법&lt;/a&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;find ~/.zshrc&lt;/code&gt;로 /.zshrc파일 있는지 확인&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;open ~/.zshrc&lt;/code&gt; 파일 열어서 아래 내용 추가&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;export NVM_DIR=~/.nvm 
+source $(brew --prefix nvm)/nvm.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;&lt;code&gt;source ~/.zshrc&lt;/code&gt; 코드 적용&lt;/li&gt;
+&lt;li&gt;nvm &amp;ndash;version으로 확인&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;rbenv-version-259-is-not-installed&#34;&gt;rbenv: version `2.5.9&#39; is not installed&lt;/h3&gt;
+&lt;p&gt;brew install rbenv했지만 [이걸 또 m1이..?]
+(&lt;a class=&#34;link&#34; href=&#34;https://github.com/rbenv/ruby-build/issues/1691&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/rbenv/ruby-build/issues/1691&lt;/a&gt;)
+해결 방법은 간단했습니다.
+&lt;code&gt;rbenv install 2.5.9&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;error-while-executing-gemgemfilepermissionerror&#34;&gt;ERROR: While executing gem&amp;hellip;Gem::FilePermissionError&lt;/h3&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://jojoldu.tistory.com/288&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Mac에서 Gem::FilePermissionError 에러 발생시 해결 방법&lt;/a&gt;
+~/.zshrc 파일에 아래 내용 추가&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;[[ -d ~/.rbenv  ]] &amp;amp;&amp;amp; \
+  export PATH=${HOME}/.rbenv/bin:${PATH} &amp;amp;&amp;amp; \
+  eval &amp;quot;$(rbenv init -)&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;code&gt;source ~/.zshrc&lt;/code&gt;로 코드 적용&lt;/p&gt;
+&lt;h3 id=&#34;bundle-install-에서-make-yarn-no-such-file-or-directory&#34;&gt;bundle install 에서 make: yarn: No such file or directory&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;npm install -g yarn&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;빌드&#34;&gt;빌드&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;make serve&lt;/code&gt;
+&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://images.velog.io/images/spongebob03/post/2d0b56cb-0994-430f-9b91-593d8f6237a0/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202021-08-16%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%2011.15.55.png&#34; &gt;
+		&lt;img src=&#34;https://images.velog.io/images/spongebob03/post/2d0b56cb-0994-430f-9b91-593d8f6237a0/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202021-08-16%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%2011.15.55.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;
+멘토님의 친절한 커맨드 예시와 오늘도 구글링으로 얻은 정보들에 감사하며&amp;hellip;🥳&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>SlackBot으로 랜덤 문제 출제</title>
+        <link>https://spongebob03.github.io/p/slackbot%EC%9C%BC%EB%A1%9C-%EB%9E%9C%EB%8D%A4-%EB%AC%B8%EC%A0%9C-%EC%B6%9C%EC%A0%9C/</link>
+        <pubDate>Sun, 08 Aug 2021 22:09:48 +0900</pubDate>
+        
+        <guid>https://spongebob03.github.io/p/slackbot%EC%9C%BC%EB%A1%9C-%EB%9E%9C%EB%8D%A4-%EB%AC%B8%EC%A0%9C-%EC%B6%9C%EC%A0%9C/</guid>
+        <description>&lt;p&gt;스터디에서 4주 동안 배운 알고리즘 유형 문제를 정해진 시간에 풀어보는 모의 코딩테스트를 진행하고 싶었다. 백준 문제를 배운 알고리즘 내에서 랜덤으로 출제하는 슬랙 챗봇을 사용하면 재밌을거 같았다. &lt;a class=&#34;link&#34; href=&#34;https://www.acmicpc.net/board/view/2308&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;백준 사이트는 웹 스크래핑이 금지된다고 공지&lt;/a&gt;가 되어있어 solved.ac의 알고리즘 유형 카테고리 정보를 긁어오는 식으로 문제를 뽑아왔다. 혹시 이것도 문제가 되는지 문의해봐야겠다&amp;hellip;&lt;/p&gt;
+&lt;h4 id=&#34;사용-라이브러리&#34;&gt;사용 라이브러리&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;BeautifulSoup&lt;/li&gt;
+&lt;li&gt;slack_sdk&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;데이터-긁어오기&#34;&gt;데이터 긁어오기&lt;/h3&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://images.velog.io/images/spongebob03/post/3a536885-5dc4-4497-8213-a2590ac989ad/getData.png&#34; &gt;
+		&lt;img src=&#34;https://images.velog.io/images/spongebob03/post/3a536885-5dc4-4497-8213-a2590ac989ad/getData.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h3 id=&#34;출제-유형-랜덤-선택-문제-랜덤-선택&#34;&gt;출제 유형 랜덤 선택, 문제 랜덤 선택&lt;/h3&gt;
+&lt;p&gt;tag의 랜덤 범위가 5인 이유는 5개 알고리즘을 배워서&amp;hellip;
+&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://images.velog.io/images/spongebob03/post/77194cbc-754d-456d-9afc-669ac3d3c9ea/random.png&#34; &gt;
+		&lt;img src=&#34;https://images.velog.io/images/spongebob03/post/77194cbc-754d-456d-9afc-669ac3d3c9ea/random.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h3 id=&#34;슬랙에-텍스트-보내기&#34;&gt;슬랙에 텍스트 보내기&lt;/h3&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://api.slack.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Slack api&lt;/a&gt; &amp;gt; create app
+&lt;a class=&#34;link&#34; href=&#34;https://api.slack.com/messaging/sending&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Sending messages 문서&lt;/a&gt;
+원래 slacker 모듈을 사용했는데 적용이 안되어서 찾아보니 21년부터 slacker는 지원하지 않고 slack_sdk 패키지를 사용하는 것 같다.
+&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://images.velog.io/images/spongebob03/post/f274ad9c-4d72-475d-9f35-d3c2a9b4fd8a/sendToSlack.png&#34; &gt;
+		&lt;img src=&#34;https://images.velog.io/images/spongebob03/post/f274ad9c-4d72-475d-9f35-d3c2a9b4fd8a/sendToSlack.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h3 id=&#34;문제-상황-&#34;&gt;문제 상황 🤔&lt;/h3&gt;
+&lt;p&gt;백준 사이트는 지나치게 많은 트래픽을 발생시키는 경우에는 사이트 이용이 정지된다고 합니다. 백준 사이트가 아닌 solved.ac의 알고리즘별 문제 목록을 긁어오는 것도 그래서인지 여러번 실행하면 아무 정보가 들어오지 않는다. 하지만 solvedac인데 왜..?&lt;/p&gt;
+&lt;h3 id=&#34;개선해야할-점&#34;&gt;개선해야할 점&lt;/h3&gt;
+&lt;p&gt;지금 상태는 파이썬 코드를 직접 실행시켜야 슬랙 챗봇이 실행된다. 파이썬 메인함수에서 스터디 기간동안 배운 알고리즘 유형들을 solved.ac에 있는 tag이름으로 찾아서 써줘야한다. 외부에서 간단하게 입력할 수 있었으면 좋겠다. 또한 다른 슬랙 앱처럼 슬랙에서 바로 실행시킬 수 있도록 할 필요가 있다.&lt;/p&gt;
+&lt;h4 id=&#34;참고-사이트&#34;&gt;[참고 사이트]&lt;/h4&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://yganalyst.github.io/web/slackbot1/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://yganalyst.github.io/web/slackbot1/&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://corikachu.github.io/articles/python/python-slack-bot-slacker&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://corikachu.github.io/articles/python/python-slack-bot-slacker&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/os/slacker&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/os/slacker&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://api.slack.com/authentication/oauth-v2&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://api.slack.com/authentication/oauth-v2&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://developerdk.tistory.com/96&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://developerdk.tistory.com/96&lt;/a&gt; 슬랙커가 안먹히는 이유
+&lt;a class=&#34;link&#34; href=&#34;https://api.slack.com/methods/chat.postMessage/code&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://api.slack.com/methods/chat.postMessage/code&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://slack.dev/python-slack-sdk/v3-migration/index.html#from-slackclient-2-x&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://slack.dev/python-slack-sdk/v3-migration/index.html#from-slackclient-2-x&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://pypi.org/project/slack-sdk/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://pypi.org/project/slack-sdk/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://pythonrepo.com/repo/slackapi-python-slack-sdk-python-third-party-apis-wrappers&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://pythonrepo.com/repo/slackapi-python-slack-sdk-python-third-party-apis-wrappers&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/slackapi/python-slack-sdk/issues/561&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/slackapi/python-slack-sdk/issues/561&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>MacMini M1 에서 Homebrew 설치</title>
+        <link>https://spongebob03.github.io/p/macmini-m1-%EC%97%90%EC%84%9C-homebrew-%EC%84%A4%EC%B9%98/</link>
+        <pubDate>Tue, 08 Jun 2021 22:09:48 +0900</pubDate>
+        
+        <guid>https://spongebob03.github.io/p/macmini-m1-%EC%97%90%EC%84%9C-homebrew-%EC%84%A4%EC%B9%98/</guid>
+        <description>&lt;h2 id=&#34;homebrew&#34;&gt;Homebrew?&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://stackoverflow.com/questions/17265226/what-is-the-difference-between-installing-an-app-via-homebrew-or-installing-it&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;그냥 사이트에서 다운받는거랑 뭐가 다른가요?&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;macOS용 패키지 매니저로 프로그램 설치, 업데이트, 삭제를 편하게 관리할 수 있다. (하지만 윈도우만 쓰던 나는 나중에 알았다..)&lt;/p&gt;
+&lt;h3 id=&#34;m1-네이티브로-설치하려-했으나실패&#34;&gt;M1 네이티브로 설치하려 했으나..실패!&lt;/h3&gt;
+&lt;p&gt;그냥 뭔가 커맨드가 안먹혀서 의문이었는데 기존 MAC을 위한 안내는 기존 실리콘칩. 내 컴퓨터는 m1칩이라 그런 것이었다.&lt;/p&gt;
+&lt;h3 id=&#34;해결&#34;&gt;🛠해결&lt;/h3&gt;
+&lt;p&gt;M1 네이티브로 설치하는 방법도 있으나 이전 맥 터미널과 동일하게 호환할 수 있는 Rosetta를 사용하는 방법이 제일 간단했다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;터미널앱 &amp;gt; 정보 가져오기&amp;gt; ☑️ &lt;strong&gt;Rosetta를 사용하여 열기&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://brew.sh/index_ko&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Homebrew&lt;/a&gt; 설치
+&lt;code&gt;/bin/bash -c &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;참고&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=j-933jvH8sE&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;설치하기 이전에 이걸 봤어야 했는데&amp;hellip;&lt;/a&gt;&lt;/p&gt;
 </description>
         </item>
         

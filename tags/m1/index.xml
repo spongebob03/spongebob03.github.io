@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>M1 on BeMore</title>
+    <link>https://spongebob03.github.io/tags/m1/</link>
+    <description>Recent content in M1 on BeMore</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 16 Aug 2021 22:09:48 +0900</lastBuildDate><atom:link href="https://spongebob03.github.io/tags/m1/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>파이토치 허브 M1 로컬에서 빌드하기</title>
+      <link>https://spongebob03.github.io/p/%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98-%ED%97%88%EB%B8%8C-m1-%EB%A1%9C%EC%BB%AC%EC%97%90%EC%84%9C-%EB%B9%8C%EB%93%9C%ED%95%98%EA%B8%B0/</link>
+      <pubDate>Mon, 16 Aug 2021 22:09:48 +0900</pubDate>
+      
+      <guid>https://spongebob03.github.io/p/%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98-%ED%97%88%EB%B8%8C-m1-%EB%A1%9C%EC%BB%AC%EC%97%90%EC%84%9C-%EB%B9%8C%EB%93%9C%ED%95%98%EA%B8%B0/</guid>
+      <description>Github) PyTorchKR
+ nvm: command not found 노드 버전관리 설치 및 사용법
+ find ~/.zshrc로 /.zshrc파일 있는지 확인 open ~/.zshrc 파일 열어서 아래 내용 추가  export NVM_DIR=~/.nvm source $(brew --prefix nvm)/nvm.sh source ~/.zshrc 코드 적용 nvm &amp;ndash;version으로 확인  rbenv: version `2.5.9&#39; is not installed brew install rbenv했지만 [이걸 또 m1이..?] (https://github.com/rbenv/ruby-build/issues/1691) 해결 방법은 간단했습니다. rbenv install 2.5.9
+ERROR: While executing gem&amp;hellip;Gem::FilePermissionError Mac에서 Gem::FilePermissionError 에러 발생시 해결 방법 ~/.</description>
+    </item>
+    
+    <item>
+      <title>MacMini M1 에서 Homebrew 설치</title>
+      <link>https://spongebob03.github.io/p/macmini-m1-%EC%97%90%EC%84%9C-homebrew-%EC%84%A4%EC%B9%98/</link>
+      <pubDate>Tue, 08 Jun 2021 22:09:48 +0900</pubDate>
+      
+      <guid>https://spongebob03.github.io/p/macmini-m1-%EC%97%90%EC%84%9C-homebrew-%EC%84%A4%EC%B9%98/</guid>
+      <description>Homebrew? 그냥 사이트에서 다운받는거랑 뭐가 다른가요?
+macOS용 패키지 매니저로 프로그램 설치, 업데이트, 삭제를 편하게 관리할 수 있다. (하지만 윈도우만 쓰던 나는 나중에 알았다..)
+M1 네이티브로 설치하려 했으나..실패! 그냥 뭔가 커맨드가 안먹혀서 의문이었는데 기존 MAC을 위한 안내는 기존 실리콘칩. 내 컴퓨터는 m1칩이라 그런 것이었다.
+🛠해결 M1 네이티브로 설치하는 방법도 있으나 이전 맥 터미널과 동일하게 호환할 수 있는 Rosetta를 사용하는 방법이 제일 간단했다.
+ 터미널앱 &amp;gt; 정보 가져오기&amp;gt; ☑️ Rosetta를 사용하여 열기 Homebrew 설치 /bin/bash -c &amp;quot;$(curl -fsSL https://raw.</description>
+    </item>
+    
+  </channel>
+</rss>
