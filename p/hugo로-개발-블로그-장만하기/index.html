@@ -159,7 +159,19 @@ git submodule add -b main git@github.io_저장소_SSH주소 public ## SSH키 있
 <li>포스트 생성
 <code>hugo new post/포스트제목.md</code> 제목은 title 항목으로 고칠 수 있다.</li>
 </ul>
-<h3 id="로컬-서버-확인">로컬 서버 확인</h3>
+<h3 id="댓글-기능-추가">댓글 기능 추가</h3>
+<p><code>config.yaml</code>의 comments 설정만으로 간단하게 추가할 수 있다. <br>
+깃헙계정으로 댓글을 남길 수 있는 <a class="link" href="https://utteranc.es/"  target="_blank" rel="noopener"
+    >utterances</a>로 설정했다.</p>
+<pre tabindex="0"><code>comments:
+        enabled: true
+        provider: utterances
+
+        utterances:
+            repo: 깃헙계정/깃헙계정.github.io
+            issueTerm: pathname
+            label: comment
+</code></pre><h3 id="로컬-서버-확인">로컬 서버 확인</h3>
 <p><code>hugo server (-D)</code> 웹서버 실행해서 수정사항 확인</p>
 <h3 id="host-on-github">host on github</h3>
 <p><a class="link" href="https://gohugo.io/hosting-and-deployment/hosting-on-github/"  target="_blank" rel="noopener"
@@ -184,12 +196,12 @@ git submodule add -b main git@github.io_저장소_SSH주소 public ## SSH키 있
 </ol>
 <h2 id="추가할-사항">추가할 사항</h2>
 <ul>
-<li>utterances로 댓글기능 추가</li>
-<li>카테고리 사이드메뉴에 추가</li>
-<li>GithubAction으로 자동화</li>
-<li>hugo 기능 잘 활용하기</li>
-<li>통계기능 추가</li>
-<li>custom domain
+<li><input checked="" disabled="" type="checkbox"> utterances로 댓글기능 추가</li>
+<li><input disabled="" type="checkbox"> 카테고리 사이드메뉴에 추가</li>
+<li><input disabled="" type="checkbox"> GithubAction으로 자동화</li>
+<li><input disabled="" type="checkbox"> hugo 기능 잘 활용하기</li>
+<li><input disabled="" type="checkbox"> 통계기능 추가</li>
+<li><input disabled="" type="checkbox"> custom domain
 <ul>
 <li><a class="link" href="https://www.holaxprogramming.com/2017/05/15/github-page-and-custom-domain/"  target="_blank" rel="noopener"
     >https://www.holaxprogramming.com/2017/05/15/github-page-and-custom-domain/</a></li>
@@ -251,8 +263,10 @@ git submodule add -b main git@github.io_저장소_SSH주소 public ## SSH키 있
     
         
     <script src="https://utteranc.es/client.js" 
-        repo=""
+        repo="spongebob03/spongebob03.github.io"
         issue-term="pathname"
+        
+        label="comment"
         
         crossorigin="anonymous"
         async
@@ -414,6 +428,7 @@ git submodule add -b main git@github.io_저장소_SSH주소 public ## SSH키 있
         <li><a href="#테마-붙이기">테마 붙이기</a></li>
         <li><a href="#github-저장소-연결">Github 저장소 연결</a></li>
         <li><a href="#블로그-사용하기">블로그 사용하기</a></li>
+        <li><a href="#댓글-기능-추가">댓글 기능 추가</a></li>
         <li><a href="#로컬-서버-확인">로컬 서버 확인</a></li>
         <li><a href="#host-on-github">host on github</a></li>
       </ol>

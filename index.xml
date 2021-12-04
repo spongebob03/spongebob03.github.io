@@ -51,7 +51,19 @@ git submodule add -b main git@github.io_저장소_SSH주소 public ## SSH키 있
 &lt;li&gt;포스트 생성
 &lt;code&gt;hugo new post/포스트제목.md&lt;/code&gt; 제목은 title 항목으로 고칠 수 있다.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;로컬-서버-확인&#34;&gt;로컬 서버 확인&lt;/h3&gt;
+&lt;h3 id=&#34;댓글-기능-추가&#34;&gt;댓글 기능 추가&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;config.yaml&lt;/code&gt;의 comments 설정만으로 간단하게 추가할 수 있다. &lt;br&gt;
+깃헙계정으로 댓글을 남길 수 있는 &lt;a class=&#34;link&#34; href=&#34;https://utteranc.es/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;utterances&lt;/a&gt;로 설정했다.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;comments:
+        enabled: true
+        provider: utterances
+
+        utterances:
+            repo: 깃헙계정/깃헙계정.github.io
+            issueTerm: pathname
+            label: comment
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;로컬-서버-확인&#34;&gt;로컬 서버 확인&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;hugo server (-D)&lt;/code&gt; 웹서버 실행해서 수정사항 확인&lt;/p&gt;
 &lt;h3 id=&#34;host-on-github&#34;&gt;host on github&lt;/h3&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/hosting-and-deployment/hosting-on-github/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -76,12 +88,12 @@ git submodule add -b main git@github.io_저장소_SSH주소 public ## SSH키 있
 &lt;/ol&gt;
 &lt;h2 id=&#34;추가할-사항&#34;&gt;추가할 사항&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;utterances로 댓글기능 추가&lt;/li&gt;
-&lt;li&gt;카테고리 사이드메뉴에 추가&lt;/li&gt;
-&lt;li&gt;GithubAction으로 자동화&lt;/li&gt;
-&lt;li&gt;hugo 기능 잘 활용하기&lt;/li&gt;
-&lt;li&gt;통계기능 추가&lt;/li&gt;
-&lt;li&gt;custom domain
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; utterances로 댓글기능 추가&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 카테고리 사이드메뉴에 추가&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; GithubAction으로 자동화&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; hugo 기능 잘 활용하기&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 통계기능 추가&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; custom domain
 &lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.holaxprogramming.com/2017/05/15/github-page-and-custom-domain/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://www.holaxprogramming.com/2017/05/15/github-page-and-custom-domain/&lt;/a&gt;&lt;/li&gt;
