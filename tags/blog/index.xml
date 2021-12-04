@@ -13,8 +13,7 @@
       <pubDate>Thu, 02 Dec 2021 22:09:48 +0900</pubDate>
       
       <guid>https://spongebob03.github.io/p/hugo%EB%A1%9C-%EA%B0%9C%EB%B0%9C-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9E%A5%EB%A7%8C%ED%95%98%EA%B8%B0/</guid>
-      <description>Hugo-Static Site Generator 
-SSG(Static site generator) 중 Hugo를 사용하여 블로그를 만들었다. 처음에 뭐가 뭔지 몰라서 뚱땅뚱땅 만들었다. 호스팅까지 하는데 하루 걸렸고 더 빠르게 할 수 있었지만 역시 세팅에서 시행착오를 겪었다. 그나마 Hugo여서 하루만에 할 수 있었던걸수도&amp;hellip; Hugo는 Go로 만들어져서 나중에 Go에 대해서 더 공부해보고 싶다.
+      <description>SSG(Static site generator) 중 Hugo를 사용하여 블로그를 만들었다. 처음에 뭐가 뭔지 몰라서 뚱땅뚱땅 만들었다. 호스팅까지 하는데 하루 걸렸고 더 빠르게 할 수 있었지만 역시 세팅에서 시행착오를 겪었다. 그나마 Hugo여서 하루만에 할 수 있었던걸수도&amp;hellip; Hugo는 Go로 만들어져서 나중에 Go에 대해서 더 공부해보고 싶다.
 github.io 만들기 Hugo 설치하기 brew install hugo
 hugo version
 사이트 폴더 만들기 hugo new site blog
