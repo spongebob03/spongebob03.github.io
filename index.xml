@@ -6,7 +6,103 @@
         <description>Recent content on BeMore</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Fri, 03 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://spongebob03.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 06 Dec 2021 19:09:48 +0900</lastBuildDate><atom:link href="https://spongebob03.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Hugo Blog with Custom Domain</title>
+        <link>https://spongebob03.github.io/p/hugo-blog-with-custom-domain/</link>
+        <pubDate>Mon, 06 Dec 2021 19:09:48 +0900</pubDate>
+        
+        <guid>https://spongebob03.github.io/p/hugo-blog-with-custom-domain/</guid>
+        <description>&lt;p&gt;github.io 주소도 좋지만 간단하고 나만의 도메인 주소를 만들어서 쓰고 싶었다.&lt;/p&gt;
+&lt;h2 id=&#34;도메인-구매&#34;&gt;도메인 구매&lt;/h2&gt;
+&lt;p&gt;구매 사이트 비교(.dev 도메인 비용으로 찾아봤을 때 1년 비용. 기간에 따라 더 비싸지는 곳도 있다고 한다. 구매 전 기간을 설정하고 확인하자.)&lt;br&gt;
+&lt;em&gt;원화 가격은 편의를 위해 만단위로 표시&lt;/em&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;사이트&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;1년 가격&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;google domain&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$12&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;namecheap&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$14.98&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;gandi&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;€14.01&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;godaddy&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;2,3890₩&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;gabia&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;2,9000₩&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;이 중 google이니 ad, analytics 사용할 때도 편하지 않을까 하는 기대로 google domain으로 정했다. 그런데 한국은 아직 서비스 하는 지역이 아니어서 결제를 못한다는..? 안내가 있어서 포기했다. 그러다가 역시 구글링을 통해 &lt;a class=&#34;link&#34; href=&#34;https://starton.tistory.com/598&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;지역을 바꾸고 진행할 수 있다는 글&lt;/a&gt;을 따라 무사히 결제하고 도메인을 받을 수 있었다.&lt;/p&gt;
+&lt;h2 id=&#34;네임서버-레코드-설정&#34;&gt;네임서버 레코드 설정&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;호스트 이름&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;유형&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;TTL&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;데이터&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;커스텀도메인&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;A&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;기본&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;185.199.108.153&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;www.커스텀도메인&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;CNAME&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;기본&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;깃헙계정.github.io&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;github-저장소에서-도메인-설정&#34;&gt;GitHub 저장소에서 도메인 설정&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;github.io 저장소&lt;/code&gt; &amp;gt; &lt;code&gt;Settings&lt;/code&gt; &amp;gt; &lt;code&gt;Pages&lt;/code&gt; &amp;gt; &lt;code&gt;Custom domain&lt;/code&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;구입한 도메인 입력&lt;/li&gt;
+&lt;li&gt;Save&lt;/li&gt;
+&lt;li&gt;조금 기다린 후 Enforce HTTPS 체크&lt;br&gt;
+(설정 다시 볼때마다 체크가 풀려있는거 같은데&amp;hellip;)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;-완성&#34;&gt;🎉 완성&lt;/h2&gt;
+&lt;p&gt;이제 내가 설정한 도메인을 이용할 수 있다!&lt;/p&gt;
+&lt;h2 id=&#34;참고자료&#34;&gt;참고자료&lt;/h2&gt;
+&lt;p&gt;Doc&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/hosting-and-deployment/hosting-on-github/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hugo doc - Use a Custom Domain&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;About custom domains and GitHub Pages&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#about-custom-domain-configuration&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Managing a custom domain for your GitHub Pages site&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Blog&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.chulgil.me/how-to-make-blog-using-github-3/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;블로그 만들기 GitHub 심화 3편 - 커스텀 도메인&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://devinlife.com/howto%20github%20pages/custom-domain/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;블로그 커스텀 도메인 등록하기&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
         <title>Hugo로 개발 블로그 장만하기</title>
         <link>https://spongebob03.github.io/p/hugo%EB%A1%9C-%EA%B0%9C%EB%B0%9C-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9E%A5%EB%A7%8C%ED%95%98%EA%B8%B0/</link>
         <pubDate>Thu, 02 Dec 2021 22:09:48 +0900</pubDate>
@@ -32,7 +128,7 @@ SSG(Static site generator) 중 Hugo를 사용하여 블로그를 만들었다. �
 &lt;h3 id=&#34;사이트-폴더-만들기&#34;&gt;사이트 폴더 만들기&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;hugo new site blog&lt;/code&gt;&lt;/p&gt;
 &lt;h3 id=&#34;테마-붙이기&#34;&gt;테마 붙이기&lt;/h3&gt;
-&lt;p&gt;테그, 카테고리 잘보이는 테마가 안보여서 그나마 stack 테마가 제일 내가 원하는 템플릿이었다.&lt;/p&gt;
+&lt;p&gt;태그, 카테고리 잘보이는 테마가 안보여서 그나마 stack 테마가 제일 내가 원하는 템플릿이었다.&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cd blog
 git init
 git submodule add https://github.com/CaiJimmy/hugo-theme-stack/ themes/hugo-theme-stack
