@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Colab환경에서 fastai로 곰 이미지 분류기 실습'><title>fastai와 파이토치가 만나 꽃피운 딥러닝 2장</title>
+
+<link rel='canonical' href='https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/'>
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='fastai와 파이토치가 만나 꽃피운 딥러닝 2장'>
+<meta property='og:description' content='Colab환경에서 fastai로 곰 이미지 분류기 실습'>
+<meta property='og:url' content='https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/'>
+<meta property='og:site_name' content='BeMore'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='ML' /><meta property='article:tag' content='fastai' /><meta property='article:published_time' content='2021-12-08T19:09:48&#43;09:00'/><meta property='article:modified_time' content='2021-12-08T19:09:48&#43;09:00'/>
+<meta name="twitter:title" content="fastai와 파이토치가 만나 꽃피운 딥러닝 2장">
+<meta name="twitter:description" content="Colab환경에서 fastai로 곰 이미지 분류기 실습">
+    <link rel="shortcut icon" href="favicon.ico" />
+
+    </head>
+    <body class="
+    article-page has-toc
+">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex 
+    
+        extended
+    
+">
+    
+        <div id="article-toolbar">
+            <a href="/" class="back-home">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+                <span>뒤로가기</span>
+            </a>
+        </div>
+    
+<main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/fastai/" >
+                fastai
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/">fastai와 파이토치가 만나 꽃피운 딥러닝 2장</a>
+    </h2>
+
+    
+    <h3 class="article-subtitle">
+        Colab환경에서 fastai로 곰 이미지 분류기 실습
+    </h3>
+    
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Dec 08, 2021</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    5 분 정도
+                </time>
+            </div>
+        
+    </footer>
+    
+</div>
+</header>
+
+    <section class="article-content">
+    <p>이번 장에서는 분류 모델을 구축하면서 딥러닝의 가능성 및 제한사항을 살펴볼 수 있다. 이 곰돌이가 어떤 곰돌이인지 예측하는 모델을 다뤄봅시다 🐻</p>
+<h2 id="데이터-다운로드">데이터 다운로드</h2>
+<p>책에서는 빙 이미지 검색의 데이터를 사용했지만 빙 이미지 검색은 보안키를 요구해서&hellip;좀 더 편하게 이미지 데이터를 받아올 방법을 찾아보았다.<br>
+역시 <a class="link" href="https://course.fast.ai/images"  target="_blank" rel="noopener"
+    >fastai공식 자료</a>를 찾아보니 귀찮게 보안키를 요구하지 않는 DuckDuckGo 이미지를 편하게 받아서 쓸 수 있는 방법이 있었다!</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">fastbook</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">fastbook</span> <span class="kn">import</span> <span class="o">*</span> 
+<span class="n">urls</span> <span class="o">=</span> <span class="n">search_images_ddg</span><span class="p">(</span><span class="s1">&#39;grizzly bear&#39;</span><span class="p">,</span> <span class="n">max_images</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<span class="nb">len</span><span class="p">(</span><span class="n">urls</span><span class="p">),</span> <span class="n">urls</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</code></pre></div><p>출력:</p>
+<pre><code>(100,
+ 'https://s3-us-west-2.amazonaws.com/cdn.yellowst.one/animals/grizzly-bear.jpg')
+</code></pre>
+<p>다운로드한 이미지 하나 열어서 확인하면&hellip;</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">download_url</span><span class="p">(</span><span class="n">urls</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="s1">&#39;images/bear.jpg&#39;</span><span class="p">)</span>
+<span class="n">im</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;images/bear.jpg&#39;</span><span class="p">)</span>
+<span class="n">im</span><span class="o">.</span><span class="n">thumbnail</span><span class="p">((</span><span class="mi">256</span><span class="p">,</span><span class="mi">256</span><span class="p">))</span>
+<span class="n">im</span>
+</code></pre></div><!-- raw HTML omitted -->
+<p><figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 149; 
+			flex-basis: 359px"
+	>
+	<a href="/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_3_1.png" data-size="256x171">
+		<img src="/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_3_1.png"
+			width="256"
+			height="171"
+			srcset="/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_3_1_hu1bb6afd40de311997667ad05661f3970_80388_480x0_resize_box_3.png 480w, /p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_3_1_hu1bb6afd40de311997667ad05661f3970_80388_1024x0_resize_box_3.png 1024w"
+			loading="lazy"
+			alt="귀여운 곰이다">
+	</a>
+	
+	<figcaption>귀여운 곰이다</figcaption>
+	
+</figure></p>
+<p>각 검색어에서 얻은 모든 URL의 이미지를 fastai가 제공하는 <code>download_images</code> 함수로 다운로드 하여 검색어가 이름인 별도의 폴더에 저장한다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">bear_types</span> <span class="o">=</span> <span class="s1">&#39;grizzly&#39;</span><span class="p">,</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="s1">&#39;teddy&#39;</span>
+<span class="n">path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;bears&#39;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+    <span class="n">path</span><span class="o">.</span><span class="n">mkdir</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">o</span> <span class="ow">in</span> <span class="n">bear_types</span><span class="p">:</span>
+        <span class="n">dest</span> <span class="o">=</span> <span class="p">(</span><span class="n">path</span><span class="o">/</span><span class="n">o</span><span class="p">)</span>
+        <span class="n">dest</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">download_images</span><span class="p">(</span><span class="n">dest</span><span class="p">,</span> <span class="n">urls</span><span class="o">=</span><span class="n">search_images_ddg</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">o</span><span class="si">}</span><span class="s1"> bear&#39;</span><span class="p">,</span> <span class="n">max_images</span><span class="o">=</span><span class="mi">150</span><span class="p">))</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">fns</span> <span class="o">=</span> <span class="n">get_image_files</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+<span class="n">fns</span><span class="p">[:</span><span class="mi">5</span><span class="p">]</span>
+</code></pre></div><p>출력:</p>
+<pre><code>(#5) [Path('bears/teddy/00000085.png'),Path('bears/teddy/00000008.jpg'),Path('bears/teddy/00000107.jpg'),Path('bears/teddy/00000168.jpeg'),Path('bears/teddy/00000130.jpg')]
+</code></pre>
+<p>가끔 파일에 오류가 발생할 수 있어서 <code>verify_images</code> 함수로 검사</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">failed</span> <span class="o">=</span> <span class="n">verify_images</span><span class="p">(</span><span class="n">fns</span><span class="p">)</span>
+<span class="n">failed</span>
+</code></pre></div><p>출력:</p>
+<pre><code>(#1) [Path('bears/teddy/00000101.png')]
+</code></pre>
+<p><code>map</code> 메서드는 호출 시 인자로 전달된 함수를 컬렉션에 포함된 각 요소에 적용.<br>
+unlink 함수를 사용해 오류가 발생한 모든 요소 삭제.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">failed</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">Path</span><span class="o">.</span><span class="n">unlink</span><span class="p">)</span>
+</code></pre></div><pre><code>(#1) [None]
+</code></pre>
+<h2 id="데이터에서-dataloaders까지">데이터에서 DataLoaders까지</h2>
+<p>다운로드한 데이터를 <code>DataLoaders</code>객체로 만들어 목적에 맞게 학습용과 검증용으로 나눈다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">DataLoaders</span><span class="p">(</span><span class="n">GetAttr</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">loaders</span><span class="p">):</span> <span class="bp">self</span><span class="o">.</span><span class="n">loaders</span> <span class="o">=</span> <span class="n">loaders</span>
+    <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">loaders</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="n">train</span><span class="p">,</span> <span class="n">valid</span> <span class="o">=</span> <span class="n">add_props</span><span class="p">(</span><span class="k">lambda</span> <span class="n">i</span><span class="p">,</span> <span class="bp">self</span><span class="p">:</span> <span class="bp">self</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+</code></pre></div><p>딱 들어맞는 메서드가 없다면 fastai가 제공하는 데이터블록 사용해 사용자의 상황에 맞는 DataLoaders 객체 생성.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">bears</span> <span class="o">=</span> <span class="n">DataBlock</span><span class="p">(</span><span class="n">blocks</span><span class="o">=</span><span class="p">(</span><span class="n">ImageBlock</span><span class="p">,</span> <span class="n">CategoryBlock</span><span class="p">),</span> 
+                  <span class="n">get_items</span><span class="o">=</span><span class="n">get_image_files</span><span class="p">,</span>
+                  <span class="n">splitter</span><span class="o">=</span><span class="n">RandomSplitter</span><span class="p">(</span><span class="n">valid_pct</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="mi">42</span><span class="p">),</span>
+                  <span class="n">get_y</span><span class="o">=</span><span class="n">parent_label</span><span class="p">,</span>
+                  <span class="n">item_tfms</span><span class="o">=</span><span class="n">Resize</span><span class="p">(</span><span class="mi">128</span><span class="p">))</span>
+</code></pre></div><ul>
+<li>
+<p><code>bocks=(독립변수, 종속변수)</code></p>
+</li>
+<li>
+<p><code>get_image_files</code>: 인자로 주어진 경로에 포함된 모든 이미지 목록 찾아 반환</p>
+</li>
+<li>
+<p><code>splitter=RandomSplitter(valid_pct=0.2, seed=42)</code></p>
+<ul>
+<li><code>seed</code>: 목록이 시작되는 지점. 난순을 생성하는 기준값이 매번 바뀌기 때문에 주피터 노트북을 실행할 때마다 각 데이터셋에 포함된 이미지가 달라지는 문제 해결하기 위해 제시됨.</li>
+</ul>
+</li>
+<li>
+<p><code>get_y=데이터셋 레이블링에 쓰일 함수</code></p>
+<ul>
+<li><code>parent_label</code>: 파일이 저장된 폴더명 반환</li>
+</ul>
+</li>
+<li>
+<p><code>item_tfms</code>: 모델을 학습시킬 이미지를 텐서로 구성하려면 모든 이미지의 크기가 같아야 한다. 이미지의 크기를 똑같이 맞추는 변형방법.</p>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">dls</span> <span class="o">=</span> <span class="n">bears</span><span class="o">.</span><span class="n">dataloaders</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+</code></pre></div><p>배치 요소 중 일부 확인</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">dls</span><span class="o">.</span><span class="n">valid</span><span class="o">.</span><span class="n">show_batch</span><span class="p">(</span><span class="n">max_n</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div><p><figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 388; 
+			flex-basis: 932px"
+	>
+	<a href="/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_12_0.png" data-size="684x176">
+		<img src="/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_12_0.png"
+			width="684"
+			height="176"
+			srcset="/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_12_0_huc8fb08359629f4677ae7826fddbd59ee_156634_480x0_resize_box_3.png 480w, /p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_12_0_huc8fb08359629f4677ae7826fddbd59ee_156634_1024x0_resize_box_3.png 1024w"
+			loading="lazy"
+			alt="png">
+	</a>
+	
+	<figcaption>png</figcaption>
+	
+</figure></p>
+<p>이미지 크기를 동일하게 맞추려 잘라내다가 일부가 유실될 수도 있다. 이미지를 잘라내지 않고 크기를 맞추는 다음 방법들이 있다.</p>
+<ol>
+<li>찌그러뜨리기</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">bears</span> <span class="o">=</span> <span class="n">bears</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">item_tfms</span><span class="o">=</span><span class="n">Resize</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="n">ResizeMethod</span><span class="o">.</span><span class="n">Squish</span><span class="p">))</span>
+<span class="n">dls</span> <span class="o">=</span> <span class="n">bears</span><span class="o">.</span><span class="n">dataloaders</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+<span class="n">dls</span><span class="o">.</span><span class="n">valid</span><span class="o">.</span><span class="n">show_batch</span><span class="p">(</span><span class="n">max_n</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div><p><figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 388; 
+			flex-basis: 932px"
+	>
+	<a href="/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_13_0.png" data-size="684x176">
+		<img src="/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_13_0.png"
+			width="684"
+			height="176"
+			srcset="/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_13_0_hu3e27ee519e62bee5c495f9382b12154f_158300_480x0_resize_box_3.png 480w, /p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_13_0_hu3e27ee519e62bee5c495f9382b12154f_158300_1024x0_resize_box_3.png 1024w"
+			loading="lazy"
+			alt="png">
+	</a>
+	
+	<figcaption>png</figcaption>
+	
+</figure></p>
+<ol start="2">
+<li>빈 곳을 0으로 채우는 방법</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">bears</span><span class="o">=</span><span class="n">bears</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">item_tfms</span><span class="o">=</span><span class="n">Resize</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="n">ResizeMethod</span><span class="o">.</span><span class="n">Pad</span><span class="p">,</span> <span class="n">pad_mode</span><span class="o">=</span><span class="s1">&#39;zeros&#39;</span><span class="p">))</span>
+<span class="n">dls</span><span class="o">=</span><span class="n">bears</span><span class="o">.</span><span class="n">dataloaders</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+<span class="n">dls</span><span class="o">.</span><span class="n">valid</span><span class="o">.</span><span class="n">show_batch</span><span class="p">(</span><span class="n">max_n</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div><p><figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 388; 
+			flex-basis: 932px"
+	>
+	<a href="/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_14_0.png" data-size="684x176">
+		<img src="/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_14_0.png"
+			width="684"
+			height="176"
+			srcset="/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_14_0_hub5a1ed7303ea03551def5a978a8a0e34_115631_480x0_resize_box_3.png 480w, /p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_14_0_hub5a1ed7303ea03551def5a978a8a0e34_115631_1024x0_resize_box_3.png 1024w"
+			loading="lazy"
+			alt="png">
+	</a>
+	
+	<figcaption>png</figcaption>
+	
+</figure></p>
+<p>위의 두 방법은 이미지를 비현실적으로 변형해서 모델이 실제와는 다른 형태를 학습할 수도 있다. 이미지 크기를 맞추기 위해서 이미지 일부를 잘라내거나, 찌그러뜨리거나, 늘리기, 불필요한 빈 공간을 많이 만들어내는 방법은 모델의 계산 처리에 큰 낭비를 야기시킨다. 이는 유효해상도가 낮아지는 결과로 이어질 수 있다.</p>
+<p>실전에서는 이미지의 특정 부분을 <strong>무작위</strong>로 선택하여 잘라내는 방식을 보편적으로 사용한다. 에포크마다 무작위로 각 이미지의 다른 부분을 선택해 모델이 각 이미지의 서로 다른 위치에서 드러난 특징에 집중하여 다양성을 인식할 수 있는 방향으로 학습될 수 있도록 한다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">bears</span> <span class="o">=</span> <span class="n">bears</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">item_tfms</span><span class="o">=</span><span class="n">RandomResizedCrop</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="n">min_scale</span><span class="o">=</span><span class="mf">0.3</span><span class="p">))</span>
+<span class="n">dls</span><span class="o">=</span><span class="n">bears</span><span class="o">.</span><span class="n">dataloaders</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+<span class="n">dls</span><span class="o">.</span><span class="n">train</span><span class="o">.</span><span class="n">show_batch</span><span class="p">(</span><span class="n">max_n</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">unique</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div><p><code>min_scale</code>: 매번 이미지의 얼마나 많은 영역을 선택할지 결정!<br>
+<code>show_batch</code>함수의 <code>unique</code>인자: 동일 이미지에서 반복해서 적용되는 변형으로 만들어지는 서로 다른 이미지 확인</p>
+<p><figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 388; 
+			flex-basis: 932px"
+	>
+	<a href="/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_16_0.png" data-size="684x176">
+		<img src="/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_16_0.png"
+			width="684"
+			height="176"
+			srcset="/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_16_0_hu3cac9a43ab4796d812018327ad516491_184729_480x0_resize_box_3.png 480w, /p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_16_0_hu3cac9a43ab4796d812018327ad516491_184729_1024x0_resize_box_3.png 1024w"
+			loading="lazy"
+			alt="png">
+	</a>
+	
+	<figcaption>png</figcaption>
+	
+</figure></p>
+<h2 id="데이터-증강">데이터 증강</h2>
+<p>입력 데이터를 임의로 변형해 새로운 데이터를 생성하는 기법. 변형된 결과들은 서로 다른 개체를 만들지만, 데이터 자체의 의미를 벗어나서는 안된다.</p>
+<ul>
+<li>회전</li>
+<li>뒤집기</li>
+<li>원근 뒤틀기</li>
+<li>명도 바꾸기</li>
+<li>채도 바꾸기..등</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">bears</span> <span class="o">=</span> <span class="n">bears</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">item_tfms</span><span class="o">=</span><span class="n">Resize</span><span class="p">(</span><span class="mi">128</span><span class="p">),</span> <span class="n">batch_tfms</span><span class="o">=</span><span class="n">aug_transforms</span><span class="p">(</span><span class="n">mult</span><span class="o">=</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">dls</span> <span class="o">=</span> <span class="n">bears</span><span class="o">.</span><span class="n">dataloaders</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+<span class="n">dls</span><span class="o">.</span><span class="n">train</span><span class="o">.</span><span class="n">show_batch</span><span class="p">(</span><span class="n">max_n</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">nrows</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">unique</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div><p><code>batch_tfms</code>: GPU에서 배치 단위로 적용할 변형 지정하는 인자<br>
+<code>aug_transforms</code>: 자연스러운 사진에는 이미 잘 작동한다고 알려진 표준적인 데이터 증강 목록 반환</p>
+<p><figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 193; 
+			flex-basis: 463px"
+	>
+	<a href="/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_17_1.png" data-size="684x354">
+		<img src="/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_17_1.png"
+			width="684"
+			height="354"
+			srcset="/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_17_1_hu266d6a9a7a888d308f410a9877683652_336767_480x0_resize_box_3.png 480w, /p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_17_1_hu266d6a9a7a888d308f410a9877683652_336767_1024x0_resize_box_3.png 1024w"
+			loading="lazy"
+			alt="png">
+	</a>
+	
+	<figcaption>png</figcaption>
+	
+</figure></p>
+<h2 id="모델-훈련과-훈련된-모델을-이용한-데이터-정리">모델 훈련과 훈련된 모델을 이용한 데이터 정리</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">bears</span> <span class="o">=</span> <span class="n">bears</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">item_tfms</span><span class="o">=</span><span class="n">RandomResizedCrop</span><span class="p">(</span><span class="mi">224</span><span class="p">,</span> <span class="n">min_scale</span><span class="o">=</span><span class="mf">0.5</span><span class="p">),</span>
+                  <span class="n">batch_tfms</span><span class="o">=</span><span class="n">aug_transforms</span><span class="p">())</span>
+<span class="n">dls</span> <span class="o">=</span> <span class="n">bears</span><span class="o">.</span><span class="n">dataloaders</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">learn</span> <span class="o">=</span> <span class="n">cnn_learner</span><span class="p">(</span><span class="n">dls</span><span class="p">,</span> <span class="n">resnet18</span><span class="p">,</span> <span class="n">metrics</span><span class="o">=</span><span class="n">error_rate</span><span class="p">)</span>
+<span class="n">learn</span><span class="o">.</span><span class="n">fine_tune</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+</code></pre></div><p>출력:</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">interp</span> <span class="o">=</span> <span class="n">ClassificationInterpretation</span><span class="o">.</span><span class="n">from_learner</span><span class="p">(</span><span class="n">learn</span><span class="p">)</span>
+<span class="n">interp</span><span class="o">.</span><span class="n">plot_confusion_matrix</span><span class="p">()</span>
+</code></pre></div><p>오차행렬:</p>
+<p><figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 94; 
+			flex-basis: 226px"
+	>
+	<a href="/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_21_1.png" data-size="276x293">
+		<img src="/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_21_1.png"
+			width="276"
+			height="293"
+			srcset="/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_21_1_hu0b708653e88c6d776bf4d1054135c6c1_9387_480x0_resize_box_3.png 480w, /p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_21_1_hu0b708653e88c6d776bf4d1054135c6c1_9387_1024x0_resize_box_3.png 1024w"
+			loading="lazy"
+			alt="png">
+	</a>
+	
+	<figcaption>png</figcaption>
+	
+</figure></p>
+<p>오류가 발생하는 곳 원인 파악해야 데이터셋인지, 모델 자체 문제인지 알 수 있다.</p>
+<p>손실 기준으로 이미지 정렬해서 확인하기</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">interp</span><span class="o">.</span><span class="n">plot_top_losses</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div><p><figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 403; 
+			flex-basis: 967px"
+	>
+	<a href="/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_22_0.png" data-size="883x219">
+		<img src="/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_22_0.png"
+			width="883"
+			height="219"
+			srcset="/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_22_0_hu6a3e2d981486c349521ff5fe4df8d74d_65212_480x0_resize_box_3.png 480w, /p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_22_0_hu6a3e2d981486c349521ff5fe4df8d74d_65212_1024x0_resize_box_3.png 1024w"
+			loading="lazy"
+			alt="png">
+	</a>
+	
+	<figcaption>png</figcaption>
+	
+</figure></p>
+<h3 id="imageclassifiercleaner로-시각적으로-확인해서-데이터-정제">ImageClassifierCleaner로 시각적으로 확인해서 데이터 정제</h3>
+<p>⚠️ Colab환경에서 실습할 때 ImageClassifier not found Error 발생할 수 있다.
+<a class="link" href="https://forums.fast.ai/t/fastai2s-imageclassifiercleaner-to-clean-image-data-is-not-showing-up-in-colab/66125"  target="_blank" rel="noopener"
+    >Fastai2’s ImageClassifierCleaner to clean image data is not showing up in Colab</a> 참고해 위젯 모듈을 임포트 해줘야했다. fastai2가 아니라 fastai로 해야 문제가 없었다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">fastai.vision.widgets</span> <span class="kn">import</span> <span class="o">*</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">cleaner</span> <span class="o">=</span> <span class="n">ImageClassifierCleaner</span><span class="p">(</span><span class="n">learn</span><span class="p">)</span>
+<span class="n">cleaner</span>
+</code></pre></div><p>위젯으로 확인했을 때, 라벨링이 잘못되어 있는 이미지는 레이블을 바꿔주거나 삭제. ImageClassifierCleaner가 해당 이미지를 실제 삭제하거나 레이블을 변경하지는 않는다. 변경이 필요한 목록의 색인번호를 반환한다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="n">cleaner</span><span class="o">.</span><span class="n">delete</span><span class="p">():</span><span class="n">cleaner</span><span class="o">.</span><span class="n">fns</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span><span class="o">.</span><span class="n">unlink</span><span class="p">()</span>
+</code></pre></div><p>삭제를 선택한 모든 이미지 삭제.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">cat</span> <span class="ow">in</span> <span class="n">cleaner</span><span class="o">.</span><span class="n">change</span><span class="p">():</span> <span class="n">shutil</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">cleaner</span><span class="o">.</span><span class="n">fns</span><span class="p">[</span><span class="n">idx</span><span class="p">]),</span> <span class="n">path</span><span class="o">/</span><span class="n">cat</span><span class="p">)</span>
+</code></pre></div><p>레이블 변경을 선택한 모든 이미지 알맞은 범주의 디렉터리로 옮긴다.</p>
+<h2 id="모델을-온라인-애플리케이션으로-전환하기">모델을 온라인 애플리케이션으로 전환하기</h2>
+<p>먼저, 학습한 모델 파일 형태로 서버에 저장한다. 모델은 <code>구조</code>, <code>학습된 파라미터</code>로 구성된다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">learn</span><span class="o">.</span><span class="n">export</span><span class="p">()</span>
+</code></pre></div><p>모델의 구조 및 파라미터 파일로 저장</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">()</span>
+<span class="n">path</span><span class="o">.</span><span class="n">ls</span><span class="p">(</span><span class="n">file_exts</span><span class="o">=</span><span class="s1">&#39;.pkl&#39;</span><span class="p">)</span>
+</code></pre></div><p>확인:</p>
+<pre><code>(#1) [Path('export.pkl')]
+</code></pre>
+<h3 id="추론">추론</h3>
+<p>모델을 예측에 사용하기</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">learn_inf</span> <span class="o">=</span> <span class="n">load_learner</span><span class="p">(</span><span class="n">path</span><span class="o">/</span><span class="s1">&#39;export.pkl&#39;</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">learn_inf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="s1">&#39;images/bear.jpg&#39;</span><span class="p">)</span>
+</code></pre></div><p>결과:</p>
+<pre><code>('grizzly', TensorBase(1), TensorBase([9.1902e-08, 1.0000e+00, 5.0465e-07]))
+</code></pre>
+<p>(예측된 범주, 예측된 범주의 인덱스, 범주 별 확률)</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">learn_inf</span><span class="o">.</span><span class="n">dls</span><span class="o">.</span><span class="n">vocab</span>
+</code></pre></div><p>DataLoaders의 vocab에 저장된 모든 범주 목록 순서 확인</p>
+<pre><code>['black', 'grizzly', 'teddy']
+</code></pre>
+<p>범주 인덱스도 맞게 된 것을 확인할 수 있다.</p>
+<h2 id="어플리케이션에-모델-서빙">어플리케이션에 모델 서빙</h2>
+<p><code>predict</code> 메서드로 모델 예측 기능을 만들어서 구동해봅시다. 간단하게 주피터 노트북에서 위젯으로 웹 어플리케이션을 만들어볼 수 있다.</p>
+<ol>
+<li>예측하고 싶은 이미지 파일 업로드하는 버튼 만들기</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">btn_upload</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">FileUpload</span><span class="p">()</span>
+<span class="n">btn_upload</span>
+</code></pre></div><pre><code>FileUpload(value={}, description='Upload')
+</code></pre>
+<p>업로드한 이미지 확인하기</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">img</span> <span class="o">=</span> <span class="n">PILImage</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">btn_upload</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">out_pl</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Output</span><span class="p">()</span>
+<span class="n">out_pl</span><span class="o">.</span><span class="n">clear_output</span><span class="p">()</span>
+<span class="k">with</span> <span class="n">out_pl</span><span class="p">:</span> <span class="n">display</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">to_thumb</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="mi">128</span><span class="p">))</span>
+<span class="n">out_pl</span>
+</code></pre></div><p>이미지 확인</p>
+<p>해당 이미지에 대한 예측 실행</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">pred</span><span class="p">,</span> <span class="n">pred_idx</span><span class="p">,</span> <span class="n">probs</span> <span class="o">=</span> <span class="n">learn_inf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+</code></pre></div><p>Label 위젯으로 예측 결과 출력하기</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">lbl_pred</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Label</span><span class="p">()</span>
+<span class="n">lbl_pred</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;Prediction: </span><span class="si">{</span><span class="n">pred</span><span class="si">}</span><span class="s1">; Probability: </span><span class="si">{</span><span class="n">probs</span><span class="p">[</span><span class="n">pred_idx</span><span class="p">]</span><span class="si">:</span><span class="s1">.04f</span><span class="si">}</span><span class="s1">&#39;</span>
+
+<span class="n">lbl_pred</span>
+</code></pre></div><p>출력:</p>
+<pre><code>Label(value='Prediction: grizzly; Probability: 1.0000')
+</code></pre>
+<ol start="2">
+<li>예측하기 버튼 만들기</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">btn_run</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s1">&#39;Classify&#39;</span><span class="p">)</span>
+<span class="n">btn_run</span>
+</code></pre></div><pre><code>Button(description='Classify', style=ButtonStyle())
+</code></pre>
+<p>클릭 이벤트 핸들러 정의하기</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">on_click_classify</span><span class="p">(</span><span class="n">change</span><span class="p">):</span>
+    <span class="n">img</span> <span class="o">=</span> <span class="n">PILImage</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">btn_upload</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">out_pl</span><span class="o">.</span><span class="n">clear_output</span><span class="p">()</span>
+    <span class="k">with</span> <span class="n">out_pl</span><span class="p">:</span> <span class="n">display</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">to_thumb</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="mi">128</span><span class="p">))</span>
+    <span class="n">pred</span><span class="p">,</span> <span class="n">pred_idx</span><span class="p">,</span> <span class="n">probs</span> <span class="o">=</span> <span class="n">learn_inf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+    <span class="n">lbl_pred</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;Prediction: </span><span class="si">{</span><span class="n">pred</span><span class="si">}</span><span class="s1">; Probability: </span><span class="si">{</span><span class="n">probs</span><span class="p">[</span><span class="n">pred_idx</span><span class="p">]</span><span class="si">:</span><span class="s1">.04f</span><span class="si">}</span><span class="s1">&#39;</span>
+
+<span class="n">btn_run</span><span class="o">.</span><span class="n">on_click</span><span class="p">(</span><span class="n">on_click_classify</span><span class="p">)</span>
+</code></pre></div><ol start="3">
+<li>만든 위젯들 나열. GUI 완성</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">VBox</span><span class="p">([</span><span class="n">widgets</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="s1">&#39;Select your bear!&#39;</span><span class="p">),</span>
+      <span class="n">btn_upload</span><span class="p">,</span> <span class="n">btn_run</span><span class="p">,</span> <span class="n">out_pl</span><span class="p">,</span> <span class="n">lbl_pred</span><span class="p">])</span>
+</code></pre></div><pre><code>VBox(children=(Label(value='Select your bear!'), FileUpload(value={'스크린샷 2021-11-30 오후 10.25.08.png': …
+</code></pre>
+<p>이상 곰 이미지 분류 모델에 대한 간단한 연습을 해볼 수 있었다.</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/ml/">ML</a>
+        
+            <a href="/tags/fastai/">fastai</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+    
+    
+</aside>
+
+     
+    
+        
+    <script src="https://utteranc.es/client.js" 
+        repo="spongebob03/spongebob03.github.io"
+        issue-term="pathname"
+        
+        label="comment"
+        
+        crossorigin="anonymous"
+        async
+        >
+</script>
+
+<style>
+    .utterances {
+        max-width: unset;
+    }
+</style>
+
+<script>
+    function setUtterancesTheme(theme) {
+        let utterances = document.querySelector('.utterances iframe');
+        if (utterances) {
+            utterances.contentWindow.postMessage(
+                {
+                    type: 'set-theme',
+                    theme: `github-${theme}`
+                },
+                'https://utteranc.es'
+            );
+        }
+    }
+
+    addEventListener('message', event => {
+        if (event.origin !== 'https://utteranc.es') return;
+        setUtterancesTheme(document.documentElement.dataset.scheme)
+    });
+
+    window.addEventListener('onColorSchemeChange', (e) => {
+        setUtterancesTheme(e.detail)
+    })
+</script>
+
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2021 BeMore
+    </section>
+    
+    <section class="powerby">
+        <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>로 만듦 <br />
+        <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>의 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.5.0">Stack</a></b> 테마 사용 중
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    
+        <aside class="sidebar right-sidebar sticky">
+            <section class="widget archives">
+                <div class="widget-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+                </div>
+                <h2 class="widget-title section-title">목차</h2>
+                
+                <div class="widget--toc">
+                    <nav id="TableOfContents">
+  <ol>
+    <li><a href="#데이터-다운로드">데이터 다운로드</a></li>
+    <li><a href="#데이터에서-dataloaders까지">데이터에서 DataLoaders까지</a></li>
+    <li><a href="#데이터-증강">데이터 증강</a></li>
+    <li><a href="#모델-훈련과-훈련된-모델을-이용한-데이터-정리">모델 훈련과 훈련된 모델을 이용한 데이터 정리</a>
+      <ol>
+        <li><a href="#imageclassifiercleaner로-시각적으로-확인해서-데이터-정제">ImageClassifierCleaner로 시각적으로 확인해서 데이터 정제</a></li>
+      </ol>
+    </li>
+    <li><a href="#모델을-온라인-애플리케이션으로-전환하기">모델을 온라인 애플리케이션으로 전환하기</a>
+      <ol>
+        <li><a href="#추론">추론</a></li>
+      </ol>
+    </li>
+    <li><a href="#어플리케이션에-모델-서빙">어플리케이션에 모델 서빙</a></li>
+  </ol>
+</nav>
+                </div>
+            </section>
+        </aside>
+    
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

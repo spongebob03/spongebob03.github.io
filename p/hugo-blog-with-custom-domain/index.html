@@ -112,7 +112,7 @@
 
 
                 <time class="article-time--reading">
-                    1 분 정도
+                    2 분 정도
                 </time>
             </div>
         
@@ -189,10 +189,18 @@
 <li>구입한 도메인 입력</li>
 <li>Save</li>
 <li>조금 기다린 후 Enforce HTTPS 체크<br>
-(설정 다시 볼때마다 체크가 풀려있는거 같은데&hellip;)</li>
+github.io 저장소에 CNAME 파일이 생성된다.</li>
 </ol>
 <h2 id="-완성">🎉 완성</h2>
 <p>이제 내가 설정한 도메인을 이용할 수 있다!</p>
+<h2 id="-이후-빌드-커밋하기-전">⚠️ 이후 빌드 커밋하기 전</h2>
+<p>github.io저장소에 CNAME파일이 생성되었기 때문에 그냥 빌드하고 커밋, 푸시할 때 에러날 수 있다. submodule로 연결되어 있는 public폴더를 미리 업데이트 해주면 문제 없다. 그전에 서브모듈 폴더(public, theme) 내부를 바꾸지 않았어야 한다.</p>
+<ol>
+<li><code>cd blog</code></li>
+<li><code>git pull</code>: main 프로젝트 pull</li>
+<li><code>git submodule update --remote --merge</code> : 연결된 서브모듈들의 업데이트 한번에 받아오기<br>
+<code>git submodule update --remote &lt;REMOTE-REPO-NAME&gt; --merge</code>: 특정 서브모듈 업데이트만 받아오기</li>
+</ol>
 <h2 id="참고자료">참고자료</h2>
 <p>Doc</p>
 <ul>
@@ -209,6 +217,8 @@
     >블로그 만들기 GitHub 심화 3편 - 커스텀 도메인</a></li>
 <li><a class="link" href="https://devinlife.com/howto%20github%20pages/custom-domain/"  target="_blank" rel="noopener"
     >블로그 커스텀 도메인 등록하기</a></li>
+<li><a class="link" href="https://pinedance.github.io/blog/2019/05/28/Git-Submodule"  target="_blank" rel="noopener"
+    >Git submodule 사용하기</a></li>
 </ul>
 
 </section>
@@ -435,6 +445,7 @@
     <li><a href="#네임서버-레코드-설정">네임서버 레코드 설정</a></li>
     <li><a href="#github-저장소에서-도메인-설정">GitHub 저장소에서 도메인 설정</a></li>
     <li><a href="#-완성">🎉 완성</a></li>
+    <li><a href="#-이후-빌드-커밋하기-전">⚠️ 이후 빌드 커밋하기 전</a></li>
     <li><a href="#참고자료">참고자료</a></li>
   </ol>
 </nav>

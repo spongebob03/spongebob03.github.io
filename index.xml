@@ -6,7 +6,383 @@
         <description>Recent content on BeMore</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Mon, 06 Dec 2021 19:09:48 +0900</lastBuildDate><atom:link href="https://spongebob03.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 08 Dec 2021 19:09:48 +0900</lastBuildDate><atom:link href="https://spongebob03.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>fastai와 파이토치가 만나 꽃피운 딥러닝 2장</title>
+        <link>https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/</link>
+        <pubDate>Wed, 08 Dec 2021 19:09:48 +0900</pubDate>
+        
+        <guid>https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/</guid>
+        <description>&lt;p&gt;이번 장에서는 분류 모델을 구축하면서 딥러닝의 가능성 및 제한사항을 살펴볼 수 있다. 이 곰돌이가 어떤 곰돌이인지 예측하는 모델을 다뤄봅시다 🐻&lt;/p&gt;
+&lt;h2 id=&#34;데이터-다운로드&#34;&gt;데이터 다운로드&lt;/h2&gt;
+&lt;p&gt;책에서는 빙 이미지 검색의 데이터를 사용했지만 빙 이미지 검색은 보안키를 요구해서&amp;hellip;좀 더 편하게 이미지 데이터를 받아올 방법을 찾아보았다.&lt;br&gt;
+역시 &lt;a class=&#34;link&#34; href=&#34;https://course.fast.ai/images&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;fastai공식 자료&lt;/a&gt;를 찾아보니 귀찮게 보안키를 요구하지 않는 DuckDuckGo 이미지를 편하게 받아서 쓸 수 있는 방법이 있었다!&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;err&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pip&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;install&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;fastbook&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;fastbook&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; 
+&lt;span class=&#34;n&#34;&gt;urls&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;search_images_ddg&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;grizzly bear&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;max_images&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;100&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;nb&#34;&gt;len&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;urls&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;urls&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;출력:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;(100,
+ &#39;https://s3-us-west-2.amazonaws.com/cdn.yellowst.one/animals/grizzly-bear.jpg&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;다운로드한 이미지 하나 열어서 확인하면&amp;hellip;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;download_url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;urls&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;images/bear.jpg&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;im&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Image&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;open&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;images/bear.jpg&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;im&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;thumbnail&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;256&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;256&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;im&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 149; 
+			flex-basis: 359px&#34;
+	&gt;
+	&lt;a href=&#34;https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_3_1.png&#34; data-size=&#34;256x171&#34;&gt;
+		&lt;img src=&#34;https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_3_1.png&#34;
+			width=&#34;256&#34;
+			height=&#34;171&#34;
+			srcset=&#34;https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_3_1_hu1bb6afd40de311997667ad05661f3970_80388_480x0_resize_box_3.png 480w, https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_3_1_hu1bb6afd40de311997667ad05661f3970_80388_1024x0_resize_box_3.png 1024w&#34;
+			loading=&#34;lazy&#34;
+			alt=&#34;귀여운 곰이다&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;귀여운 곰이다&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;각 검색어에서 얻은 모든 URL의 이미지를 fastai가 제공하는 &lt;code&gt;download_images&lt;/code&gt; 함수로 다운로드 하여 검색어가 이름인 별도의 폴더에 저장한다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;bear_types&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;grizzly&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;black&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;teddy&amp;#39;&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;path&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Path&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;bears&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+
+&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;not&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;exists&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;():&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mkdir&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;o&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;bear_types&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;dest&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;o&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;dest&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mkdir&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;exist_ok&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;True&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;download_images&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dest&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;urls&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;search_images_ddg&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;sa&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;o&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt; bear&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;max_images&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;150&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;fns&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;get_image_files&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;fns&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[:&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;출력:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;(#5) [Path(&#39;bears/teddy/00000085.png&#39;),Path(&#39;bears/teddy/00000008.jpg&#39;),Path(&#39;bears/teddy/00000107.jpg&#39;),Path(&#39;bears/teddy/00000168.jpeg&#39;),Path(&#39;bears/teddy/00000130.jpg&#39;)]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;가끔 파일에 오류가 발생할 수 있어서 &lt;code&gt;verify_images&lt;/code&gt; 함수로 검사&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;failed&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;verify_images&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;fns&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;failed&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;출력:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;(#1) [Path(&#39;bears/teddy/00000101.png&#39;)]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;map&lt;/code&gt; 메서드는 호출 시 인자로 전달된 함수를 컬렉션에 포함된 각 요소에 적용.&lt;br&gt;
+unlink 함수를 사용해 오류가 발생한 모든 요소 삭제.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;failed&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;map&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Path&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;unlink&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;(#1) [None]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;데이터에서-dataloaders까지&#34;&gt;데이터에서 DataLoaders까지&lt;/h2&gt;
+&lt;p&gt;다운로드한 데이터를 &lt;code&gt;DataLoaders&lt;/code&gt;객체로 만들어 목적에 맞게 학습용과 검증용으로 나눈다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;k&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;DataLoaders&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;GetAttr&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;fm&#34;&gt;__init__&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;loaders&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt; &lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;loaders&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;loaders&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;fm&#34;&gt;__getitem__&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;loaders&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;train&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;valid&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;add_props&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;lambda&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;딱 들어맞는 메서드가 없다면 fastai가 제공하는 데이터블록 사용해 사용자의 상황에 맞는 DataLoaders 객체 생성.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;bears&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;DataBlock&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;blocks&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ImageBlock&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;CategoryBlock&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; 
+                  &lt;span class=&#34;n&#34;&gt;get_items&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;get_image_files&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+                  &lt;span class=&#34;n&#34;&gt;splitter&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;RandomSplitter&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;valid_pct&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;seed&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;42&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
+                  &lt;span class=&#34;n&#34;&gt;get_y&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;parent_label&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+                  &lt;span class=&#34;n&#34;&gt;item_tfms&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Resize&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;128&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;bocks=(독립변수, 종속변수)&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;get_image_files&lt;/code&gt;: 인자로 주어진 경로에 포함된 모든 이미지 목록 찾아 반환&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;splitter=RandomSplitter(valid_pct=0.2, seed=42)&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;seed&lt;/code&gt;: 목록이 시작되는 지점. 난순을 생성하는 기준값이 매번 바뀌기 때문에 주피터 노트북을 실행할 때마다 각 데이터셋에 포함된 이미지가 달라지는 문제 해결하기 위해 제시됨.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;get_y=데이터셋 레이블링에 쓰일 함수&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;parent_label&lt;/code&gt;: 파일이 저장된 폴더명 반환&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;item_tfms&lt;/code&gt;: 모델을 학습시킬 이미지를 텐서로 구성하려면 모든 이미지의 크기가 같아야 한다. 이미지의 크기를 똑같이 맞추는 변형방법.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;dls&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;bears&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dataloaders&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;배치 요소 중 일부 확인&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;dls&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;valid&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;show_batch&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;max_n&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nrows&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 388; 
+			flex-basis: 932px&#34;
+	&gt;
+	&lt;a href=&#34;https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_12_0.png&#34; data-size=&#34;684x176&#34;&gt;
+		&lt;img src=&#34;https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_12_0.png&#34;
+			width=&#34;684&#34;
+			height=&#34;176&#34;
+			srcset=&#34;https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_12_0_huc8fb08359629f4677ae7826fddbd59ee_156634_480x0_resize_box_3.png 480w, https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_12_0_huc8fb08359629f4677ae7826fddbd59ee_156634_1024x0_resize_box_3.png 1024w&#34;
+			loading=&#34;lazy&#34;
+			alt=&#34;png&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;png&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;이미지 크기를 동일하게 맞추려 잘라내다가 일부가 유실될 수도 있다. 이미지를 잘라내지 않고 크기를 맞추는 다음 방법들이 있다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;찌그러뜨리기&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;bears&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;bears&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;new&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;item_tfms&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Resize&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;128&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ResizeMethod&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Squish&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;dls&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;bears&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dataloaders&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;dls&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;valid&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;show_batch&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;max_n&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nrows&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 388; 
+			flex-basis: 932px&#34;
+	&gt;
+	&lt;a href=&#34;https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_13_0.png&#34; data-size=&#34;684x176&#34;&gt;
+		&lt;img src=&#34;https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_13_0.png&#34;
+			width=&#34;684&#34;
+			height=&#34;176&#34;
+			srcset=&#34;https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_13_0_hu3e27ee519e62bee5c495f9382b12154f_158300_480x0_resize_box_3.png 480w, https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_13_0_hu3e27ee519e62bee5c495f9382b12154f_158300_1024x0_resize_box_3.png 1024w&#34;
+			loading=&#34;lazy&#34;
+			alt=&#34;png&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;png&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;빈 곳을 0으로 채우는 방법&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;bears&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;bears&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;new&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;item_tfms&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Resize&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;128&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ResizeMethod&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Pad&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pad_mode&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;zeros&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;dls&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;bears&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dataloaders&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;dls&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;valid&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;show_batch&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;max_n&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nrows&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 388; 
+			flex-basis: 932px&#34;
+	&gt;
+	&lt;a href=&#34;https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_14_0.png&#34; data-size=&#34;684x176&#34;&gt;
+		&lt;img src=&#34;https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_14_0.png&#34;
+			width=&#34;684&#34;
+			height=&#34;176&#34;
+			srcset=&#34;https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_14_0_hub5a1ed7303ea03551def5a978a8a0e34_115631_480x0_resize_box_3.png 480w, https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_14_0_hub5a1ed7303ea03551def5a978a8a0e34_115631_1024x0_resize_box_3.png 1024w&#34;
+			loading=&#34;lazy&#34;
+			alt=&#34;png&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;png&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;위의 두 방법은 이미지를 비현실적으로 변형해서 모델이 실제와는 다른 형태를 학습할 수도 있다. 이미지 크기를 맞추기 위해서 이미지 일부를 잘라내거나, 찌그러뜨리거나, 늘리기, 불필요한 빈 공간을 많이 만들어내는 방법은 모델의 계산 처리에 큰 낭비를 야기시킨다. 이는 유효해상도가 낮아지는 결과로 이어질 수 있다.&lt;/p&gt;
+&lt;p&gt;실전에서는 이미지의 특정 부분을 &lt;strong&gt;무작위&lt;/strong&gt;로 선택하여 잘라내는 방식을 보편적으로 사용한다. 에포크마다 무작위로 각 이미지의 다른 부분을 선택해 모델이 각 이미지의 서로 다른 위치에서 드러난 특징에 집중하여 다양성을 인식할 수 있는 방향으로 학습될 수 있도록 한다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;bears&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;bears&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;new&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;item_tfms&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;RandomResizedCrop&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;128&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;min_scale&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;dls&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;bears&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dataloaders&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;dls&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;train&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;show_batch&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;max_n&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nrows&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;unique&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;True&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;min_scale&lt;/code&gt;: 매번 이미지의 얼마나 많은 영역을 선택할지 결정!&lt;br&gt;
+&lt;code&gt;show_batch&lt;/code&gt;함수의 &lt;code&gt;unique&lt;/code&gt;인자: 동일 이미지에서 반복해서 적용되는 변형으로 만들어지는 서로 다른 이미지 확인&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 388; 
+			flex-basis: 932px&#34;
+	&gt;
+	&lt;a href=&#34;https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_16_0.png&#34; data-size=&#34;684x176&#34;&gt;
+		&lt;img src=&#34;https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_16_0.png&#34;
+			width=&#34;684&#34;
+			height=&#34;176&#34;
+			srcset=&#34;https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_16_0_hu3cac9a43ab4796d812018327ad516491_184729_480x0_resize_box_3.png 480w, https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_16_0_hu3cac9a43ab4796d812018327ad516491_184729_1024x0_resize_box_3.png 1024w&#34;
+			loading=&#34;lazy&#34;
+			alt=&#34;png&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;png&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;데이터-증강&#34;&gt;데이터 증강&lt;/h2&gt;
+&lt;p&gt;입력 데이터를 임의로 변형해 새로운 데이터를 생성하는 기법. 변형된 결과들은 서로 다른 개체를 만들지만, 데이터 자체의 의미를 벗어나서는 안된다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;회전&lt;/li&gt;
+&lt;li&gt;뒤집기&lt;/li&gt;
+&lt;li&gt;원근 뒤틀기&lt;/li&gt;
+&lt;li&gt;명도 바꾸기&lt;/li&gt;
+&lt;li&gt;채도 바꾸기..등&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;bears&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;bears&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;new&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;item_tfms&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Resize&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;128&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;batch_tfms&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;aug_transforms&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mult&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;dls&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;bears&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dataloaders&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;dls&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;train&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;show_batch&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;max_n&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nrows&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;unique&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;True&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;batch_tfms&lt;/code&gt;: GPU에서 배치 단위로 적용할 변형 지정하는 인자&lt;br&gt;
+&lt;code&gt;aug_transforms&lt;/code&gt;: 자연스러운 사진에는 이미 잘 작동한다고 알려진 표준적인 데이터 증강 목록 반환&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 193; 
+			flex-basis: 463px&#34;
+	&gt;
+	&lt;a href=&#34;https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_17_1.png&#34; data-size=&#34;684x354&#34;&gt;
+		&lt;img src=&#34;https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_17_1.png&#34;
+			width=&#34;684&#34;
+			height=&#34;354&#34;
+			srcset=&#34;https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_17_1_hu266d6a9a7a888d308f410a9877683652_336767_480x0_resize_box_3.png 480w, https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_17_1_hu266d6a9a7a888d308f410a9877683652_336767_1024x0_resize_box_3.png 1024w&#34;
+			loading=&#34;lazy&#34;
+			alt=&#34;png&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;png&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;모델-훈련과-훈련된-모델을-이용한-데이터-정리&#34;&gt;모델 훈련과 훈련된 모델을 이용한 데이터 정리&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;bears&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;bears&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;new&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;item_tfms&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;RandomResizedCrop&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;224&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;min_scale&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
+                  &lt;span class=&#34;n&#34;&gt;batch_tfms&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;aug_transforms&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;())&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;dls&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;bears&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dataloaders&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;learn&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cnn_learner&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dls&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;resnet18&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;metrics&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;error_rate&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;learn&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;fine_tune&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;출력:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;interp&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ClassificationInterpretation&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;from_learner&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;learn&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;interp&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;plot_confusion_matrix&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;오차행렬:&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 94; 
+			flex-basis: 226px&#34;
+	&gt;
+	&lt;a href=&#34;https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_21_1.png&#34; data-size=&#34;276x293&#34;&gt;
+		&lt;img src=&#34;https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_21_1.png&#34;
+			width=&#34;276&#34;
+			height=&#34;293&#34;
+			srcset=&#34;https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_21_1_hu0b708653e88c6d776bf4d1054135c6c1_9387_480x0_resize_box_3.png 480w, https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_21_1_hu0b708653e88c6d776bf4d1054135c6c1_9387_1024x0_resize_box_3.png 1024w&#34;
+			loading=&#34;lazy&#34;
+			alt=&#34;png&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;png&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;오류가 발생하는 곳 원인 파악해야 데이터셋인지, 모델 자체 문제인지 알 수 있다.&lt;/p&gt;
+&lt;p&gt;손실 기준으로 이미지 정렬해서 확인하기&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;interp&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;plot_top_losses&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nrows&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 403; 
+			flex-basis: 967px&#34;
+	&gt;
+	&lt;a href=&#34;https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_22_0.png&#34; data-size=&#34;883x219&#34;&gt;
+		&lt;img src=&#34;https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_22_0.png&#34;
+			width=&#34;883&#34;
+			height=&#34;219&#34;
+			srcset=&#34;https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_22_0_hu6a3e2d981486c349521ff5fe4df8d74d_65212_480x0_resize_box_3.png 480w, https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_22_0_hu6a3e2d981486c349521ff5fe4df8d74d_65212_1024x0_resize_box_3.png 1024w&#34;
+			loading=&#34;lazy&#34;
+			alt=&#34;png&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;png&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h3 id=&#34;imageclassifiercleaner로-시각적으로-확인해서-데이터-정제&#34;&gt;ImageClassifierCleaner로 시각적으로 확인해서 데이터 정제&lt;/h3&gt;
+&lt;p&gt;⚠️ Colab환경에서 실습할 때 ImageClassifier not found Error 발생할 수 있다.
+&lt;a class=&#34;link&#34; href=&#34;https://forums.fast.ai/t/fastai2s-imageclassifiercleaner-to-clean-image-data-is-not-showing-up-in-colab/66125&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Fastai2’s ImageClassifierCleaner to clean image data is not showing up in Colab&lt;/a&gt; 참고해 위젯 모듈을 임포트 해줘야했다. fastai2가 아니라 fastai로 해야 문제가 없었다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;fastai.vision.widgets&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;cleaner&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ImageClassifierCleaner&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;learn&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;cleaner&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;위젯으로 확인했을 때, 라벨링이 잘못되어 있는 이미지는 레이블을 바꿔주거나 삭제. ImageClassifierCleaner가 해당 이미지를 실제 삭제하거나 레이블을 변경하지는 않는다. 변경이 필요한 목록의 색인번호를 반환한다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;idx&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cleaner&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;delete&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;():&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cleaner&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;fns&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;idx&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;unlink&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;삭제를 선택한 모든 이미지 삭제.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;idx&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cat&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cleaner&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;change&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;():&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;shutil&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;move&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;str&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cleaner&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;fns&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;idx&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]),&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cat&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;레이블 변경을 선택한 모든 이미지 알맞은 범주의 디렉터리로 옮긴다.&lt;/p&gt;
+&lt;h2 id=&#34;모델을-온라인-애플리케이션으로-전환하기&#34;&gt;모델을 온라인 애플리케이션으로 전환하기&lt;/h2&gt;
+&lt;p&gt;먼저, 학습한 모델 파일 형태로 서버에 저장한다. 모델은 &lt;code&gt;구조&lt;/code&gt;, &lt;code&gt;학습된 파라미터&lt;/code&gt;로 구성된다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;learn&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;export&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;모델의 구조 및 파라미터 파일로 저장&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;path&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Path&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ls&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;file_exts&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;.pkl&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;확인:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;(#1) [Path(&#39;export.pkl&#39;)]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;추론&#34;&gt;추론&lt;/h3&gt;
+&lt;p&gt;모델을 예측에 사용하기&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;learn_inf&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;load_learner&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;export.pkl&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;learn_inf&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;predict&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;images/bear.jpg&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;결과:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;(&#39;grizzly&#39;, TensorBase(1), TensorBase([9.1902e-08, 1.0000e+00, 5.0465e-07]))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;(예측된 범주, 예측된 범주의 인덱스, 범주 별 확률)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;learn_inf&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dls&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;vocab&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;DataLoaders의 vocab에 저장된 모든 범주 목록 순서 확인&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[&#39;black&#39;, &#39;grizzly&#39;, &#39;teddy&#39;]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;범주 인덱스도 맞게 된 것을 확인할 수 있다.&lt;/p&gt;
+&lt;h2 id=&#34;어플리케이션에-모델-서빙&#34;&gt;어플리케이션에 모델 서빙&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;predict&lt;/code&gt; 메서드로 모델 예측 기능을 만들어서 구동해봅시다. 간단하게 주피터 노트북에서 위젯으로 웹 어플리케이션을 만들어볼 수 있다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;예측하고 싶은 이미지 파일 업로드하는 버튼 만들기&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;btn_upload&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;widgets&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;FileUpload&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;btn_upload&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;FileUpload(value={}, description=&#39;Upload&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;업로드한 이미지 확인하기&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;img&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;PILImage&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;create&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;btn_upload&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;out_pl&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;widgets&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Output&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;out_pl&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;clear_output&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;with&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;out_pl&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;display&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;img&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;to_thumb&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;128&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;128&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;out_pl&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;이미지 확인&lt;/p&gt;
+&lt;p&gt;해당 이미지에 대한 예측 실행&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;pred&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pred_idx&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;probs&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;learn_inf&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;predict&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;img&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Label 위젯으로 예측 결과 출력하기&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;lbl_pred&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;widgets&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Label&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;lbl_pred&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;value&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;Prediction: &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pred&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;; Probability: &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;probs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pred_idx&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;.04f&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&lt;/span&gt;
+
+&lt;span class=&#34;n&#34;&gt;lbl_pred&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;출력:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Label(value=&#39;Prediction: grizzly; Probability: 1.0000&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;예측하기 버튼 만들기&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;btn_run&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;widgets&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Button&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;description&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;Classify&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;btn_run&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;Button(description=&#39;Classify&#39;, style=ButtonStyle())
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;클릭 이벤트 핸들러 정의하기&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;on_click_classify&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;change&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;img&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;PILImage&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;create&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;btn_upload&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;out_pl&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;clear_output&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;with&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;out_pl&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;display&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;img&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;to_thumb&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;128&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;128&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;pred&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pred_idx&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;probs&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;learn_inf&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;predict&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;img&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;lbl_pred&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;value&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;Prediction: &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pred&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;; Probability: &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;probs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pred_idx&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;.04f&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&lt;/span&gt;
+
+&lt;span class=&#34;n&#34;&gt;btn_run&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;on_click&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;on_click_classify&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;만든 위젯들 나열. GUI 완성&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;VBox&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;([&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;widgets&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Label&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;Select your bear!&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;btn_upload&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;btn_run&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;out_pl&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;lbl_pred&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;VBox(children=(Label(value=&#39;Select your bear!&#39;), FileUpload(value={&#39;스크린샷 2021-11-30 오후 10.25.08.png&#39;: …
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;이상 곰 이미지 분류 모델에 대한 간단한 연습을 해볼 수 있었다.&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Hugo Blog with Custom Domain</title>
         <link>https://spongebob03.github.io/p/hugo-blog-with-custom-domain/</link>
         <pubDate>Mon, 06 Dec 2021 19:09:48 +0900</pubDate>
@@ -79,10 +455,18 @@
 &lt;li&gt;구입한 도메인 입력&lt;/li&gt;
 &lt;li&gt;Save&lt;/li&gt;
 &lt;li&gt;조금 기다린 후 Enforce HTTPS 체크&lt;br&gt;
-(설정 다시 볼때마다 체크가 풀려있는거 같은데&amp;hellip;)&lt;/li&gt;
+github.io 저장소에 CNAME 파일이 생성된다.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;-완성&#34;&gt;🎉 완성&lt;/h2&gt;
 &lt;p&gt;이제 내가 설정한 도메인을 이용할 수 있다!&lt;/p&gt;
+&lt;h2 id=&#34;-이후-빌드-커밋하기-전&#34;&gt;⚠️ 이후 빌드 커밋하기 전&lt;/h2&gt;
+&lt;p&gt;github.io저장소에 CNAME파일이 생성되었기 때문에 그냥 빌드하고 커밋, 푸시할 때 에러날 수 있다. submodule로 연결되어 있는 public폴더를 미리 업데이트 해주면 문제 없다. 그전에 서브모듈 폴더(public, theme) 내부를 바꾸지 않았어야 한다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;cd blog&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git pull&lt;/code&gt;: main 프로젝트 pull&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git submodule update --remote --merge&lt;/code&gt; : 연결된 서브모듈들의 업데이트 한번에 받아오기&lt;br&gt;
+&lt;code&gt;git submodule update --remote &amp;lt;REMOTE-REPO-NAME&amp;gt; --merge&lt;/code&gt;: 특정 서브모듈 업데이트만 받아오기&lt;/li&gt;
+&lt;/ol&gt;
 &lt;h2 id=&#34;참고자료&#34;&gt;참고자료&lt;/h2&gt;
 &lt;p&gt;Doc&lt;/p&gt;
 &lt;ul&gt;
@@ -99,6 +483,8 @@
     &gt;블로그 만들기 GitHub 심화 3편 - 커스텀 도메인&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://devinlife.com/howto%20github%20pages/custom-domain/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;블로그 커스텀 도메인 등록하기&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://pinedance.github.io/blog/2019/05/28/Git-Submodule&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Git submodule 사용하기&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
         </item>
