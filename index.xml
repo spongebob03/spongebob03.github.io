@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>BeMore</title>
-        <link>https://spongebob03.github.io/</link>
+        <link>https://www.bemore.dev/</link>
         <description>Recent content on BeMore</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Wed, 08 Dec 2021 19:09:48 +0900</lastBuildDate><atom:link href="https://spongebob03.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 08 Dec 2021 19:09:48 +0900</lastBuildDate><atom:link href="https://www.bemore.dev/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>fastai와 파이토치가 만나 꽃피운 딥러닝 2장</title>
-        <link>https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/</link>
+        <link>https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/</link>
         <pubDate>Wed, 08 Dec 2021 19:09:48 +0900</pubDate>
         
-        <guid>https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/</guid>
+        <guid>https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/</guid>
         <description>&lt;p&gt;이번 장에서는 분류 모델을 구축하면서 딥러닝의 가능성 및 제한사항을 살펴볼 수 있다. 이 곰돌이가 어떤 곰돌이인지 예측하는 모델을 다뤄봅시다 🐻&lt;/p&gt;
 &lt;h2 id=&#34;데이터-다운로드&#34;&gt;데이터 다운로드&lt;/h2&gt;
 &lt;p&gt;책에서는 빙 이미지 검색의 데이터를 사용했지만 빙 이미지 검색은 보안키를 요구해서&amp;hellip;좀 더 편하게 이미지 데이터를 받아올 방법을 찾아보았다.&lt;br&gt;
@@ -38,11 +38,11 @@
 			flex-grow: 149; 
 			flex-basis: 359px&#34;
 	&gt;
-	&lt;a href=&#34;https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_3_1.png&#34; data-size=&#34;256x171&#34;&gt;
-		&lt;img src=&#34;https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_3_1.png&#34;
+	&lt;a href=&#34;https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_3_1.png&#34; data-size=&#34;256x171&#34;&gt;
+		&lt;img src=&#34;https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_3_1.png&#34;
 			width=&#34;256&#34;
 			height=&#34;171&#34;
-			srcset=&#34;https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_3_1_hu1bb6afd40de311997667ad05661f3970_80388_480x0_resize_box_3.png 480w, https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_3_1_hu1bb6afd40de311997667ad05661f3970_80388_1024x0_resize_box_3.png 1024w&#34;
+			srcset=&#34;https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_3_1_hu1bb6afd40de311997667ad05661f3970_80388_480x0_resize_box_3.png 480w, https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_3_1_hu1bb6afd40de311997667ad05661f3970_80388_1024x0_resize_box_3.png 1024w&#34;
 			loading=&#34;lazy&#34;
 			alt=&#34;귀여운 곰이다&#34;&gt;
 	&lt;/a&gt;
@@ -121,11 +121,11 @@ unlink 함수를 사용해 오류가 발생한 모든 요소 삭제.&lt;/p&gt;
 			flex-grow: 388; 
 			flex-basis: 932px&#34;
 	&gt;
-	&lt;a href=&#34;https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_12_0.png&#34; data-size=&#34;684x176&#34;&gt;
-		&lt;img src=&#34;https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_12_0.png&#34;
+	&lt;a href=&#34;https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_12_0.png&#34; data-size=&#34;684x176&#34;&gt;
+		&lt;img src=&#34;https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_12_0.png&#34;
 			width=&#34;684&#34;
 			height=&#34;176&#34;
-			srcset=&#34;https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_12_0_huc8fb08359629f4677ae7826fddbd59ee_156634_480x0_resize_box_3.png 480w, https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_12_0_huc8fb08359629f4677ae7826fddbd59ee_156634_1024x0_resize_box_3.png 1024w&#34;
+			srcset=&#34;https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_12_0_huc8fb08359629f4677ae7826fddbd59ee_156634_480x0_resize_box_3.png 480w, https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_12_0_huc8fb08359629f4677ae7826fddbd59ee_156634_1024x0_resize_box_3.png 1024w&#34;
 			loading=&#34;lazy&#34;
 			&gt;
 	&lt;/a&gt;
@@ -145,11 +145,11 @@ unlink 함수를 사용해 오류가 발생한 모든 요소 삭제.&lt;/p&gt;
 			flex-grow: 388; 
 			flex-basis: 932px&#34;
 	&gt;
-	&lt;a href=&#34;https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_13_0.png&#34; data-size=&#34;684x176&#34;&gt;
-		&lt;img src=&#34;https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_13_0.png&#34;
+	&lt;a href=&#34;https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_13_0.png&#34; data-size=&#34;684x176&#34;&gt;
+		&lt;img src=&#34;https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_13_0.png&#34;
 			width=&#34;684&#34;
 			height=&#34;176&#34;
-			srcset=&#34;https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_13_0_hu3e27ee519e62bee5c495f9382b12154f_158300_480x0_resize_box_3.png 480w, https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_13_0_hu3e27ee519e62bee5c495f9382b12154f_158300_1024x0_resize_box_3.png 1024w&#34;
+			srcset=&#34;https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_13_0_hu3e27ee519e62bee5c495f9382b12154f_158300_480x0_resize_box_3.png 480w, https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_13_0_hu3e27ee519e62bee5c495f9382b12154f_158300_1024x0_resize_box_3.png 1024w&#34;
 			loading=&#34;lazy&#34;
 			&gt;
 	&lt;/a&gt;
@@ -168,11 +168,11 @@ unlink 함수를 사용해 오류가 발생한 모든 요소 삭제.&lt;/p&gt;
 			flex-grow: 388; 
 			flex-basis: 932px&#34;
 	&gt;
-	&lt;a href=&#34;https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_14_0.png&#34; data-size=&#34;684x176&#34;&gt;
-		&lt;img src=&#34;https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_14_0.png&#34;
+	&lt;a href=&#34;https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_14_0.png&#34; data-size=&#34;684x176&#34;&gt;
+		&lt;img src=&#34;https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_14_0.png&#34;
 			width=&#34;684&#34;
 			height=&#34;176&#34;
-			srcset=&#34;https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_14_0_hub5a1ed7303ea03551def5a978a8a0e34_115631_480x0_resize_box_3.png 480w, https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_14_0_hub5a1ed7303ea03551def5a978a8a0e34_115631_1024x0_resize_box_3.png 1024w&#34;
+			srcset=&#34;https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_14_0_hub5a1ed7303ea03551def5a978a8a0e34_115631_480x0_resize_box_3.png 480w, https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_14_0_hub5a1ed7303ea03551def5a978a8a0e34_115631_1024x0_resize_box_3.png 1024w&#34;
 			loading=&#34;lazy&#34;
 			&gt;
 	&lt;/a&gt;
@@ -192,11 +192,11 @@ unlink 함수를 사용해 오류가 발생한 모든 요소 삭제.&lt;/p&gt;
 			flex-grow: 388; 
 			flex-basis: 932px&#34;
 	&gt;
-	&lt;a href=&#34;https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_16_0.png&#34; data-size=&#34;684x176&#34;&gt;
-		&lt;img src=&#34;https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_16_0.png&#34;
+	&lt;a href=&#34;https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_16_0.png&#34; data-size=&#34;684x176&#34;&gt;
+		&lt;img src=&#34;https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_16_0.png&#34;
 			width=&#34;684&#34;
 			height=&#34;176&#34;
-			srcset=&#34;https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_16_0_hu3cac9a43ab4796d812018327ad516491_184729_480x0_resize_box_3.png 480w, https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_16_0_hu3cac9a43ab4796d812018327ad516491_184729_1024x0_resize_box_3.png 1024w&#34;
+			srcset=&#34;https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_16_0_hu3cac9a43ab4796d812018327ad516491_184729_480x0_resize_box_3.png 480w, https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_16_0_hu3cac9a43ab4796d812018327ad516491_184729_1024x0_resize_box_3.png 1024w&#34;
 			loading=&#34;lazy&#34;
 			&gt;
 	&lt;/a&gt;
@@ -223,11 +223,11 @@ unlink 함수를 사용해 오류가 발생한 모든 요소 삭제.&lt;/p&gt;
 			flex-grow: 193; 
 			flex-basis: 463px&#34;
 	&gt;
-	&lt;a href=&#34;https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_17_1.png&#34; data-size=&#34;684x354&#34;&gt;
-		&lt;img src=&#34;https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_17_1.png&#34;
+	&lt;a href=&#34;https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_17_1.png&#34; data-size=&#34;684x354&#34;&gt;
+		&lt;img src=&#34;https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_17_1.png&#34;
 			width=&#34;684&#34;
 			height=&#34;354&#34;
-			srcset=&#34;https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_17_1_hu266d6a9a7a888d308f410a9877683652_336767_480x0_resize_box_3.png 480w, https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_17_1_hu266d6a9a7a888d308f410a9877683652_336767_1024x0_resize_box_3.png 1024w&#34;
+			srcset=&#34;https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_17_1_hu266d6a9a7a888d308f410a9877683652_336767_480x0_resize_box_3.png 480w, https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_17_1_hu266d6a9a7a888d308f410a9877683652_336767_1024x0_resize_box_3.png 1024w&#34;
 			loading=&#34;lazy&#34;
 			&gt;
 	&lt;/a&gt;
@@ -252,11 +252,11 @@ unlink 함수를 사용해 오류가 발생한 모든 요소 삭제.&lt;/p&gt;
 			flex-grow: 94; 
 			flex-basis: 226px&#34;
 	&gt;
-	&lt;a href=&#34;https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_21_1.png&#34; data-size=&#34;276x293&#34;&gt;
-		&lt;img src=&#34;https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_21_1.png&#34;
+	&lt;a href=&#34;https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_21_1.png&#34; data-size=&#34;276x293&#34;&gt;
+		&lt;img src=&#34;https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_21_1.png&#34;
 			width=&#34;276&#34;
 			height=&#34;293&#34;
-			srcset=&#34;https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_21_1_hu0b708653e88c6d776bf4d1054135c6c1_9387_480x0_resize_box_3.png 480w, https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_21_1_hu0b708653e88c6d776bf4d1054135c6c1_9387_1024x0_resize_box_3.png 1024w&#34;
+			srcset=&#34;https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_21_1_hu0b708653e88c6d776bf4d1054135c6c1_9387_480x0_resize_box_3.png 480w, https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_21_1_hu0b708653e88c6d776bf4d1054135c6c1_9387_1024x0_resize_box_3.png 1024w&#34;
 			loading=&#34;lazy&#34;
 			&gt;
 	&lt;/a&gt;
@@ -272,11 +272,11 @@ unlink 함수를 사용해 오류가 발생한 모든 요소 삭제.&lt;/p&gt;
 			flex-grow: 403; 
 			flex-basis: 967px&#34;
 	&gt;
-	&lt;a href=&#34;https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_22_0.png&#34; data-size=&#34;883x219&#34;&gt;
-		&lt;img src=&#34;https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_22_0.png&#34;
+	&lt;a href=&#34;https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_22_0.png&#34; data-size=&#34;883x219&#34;&gt;
+		&lt;img src=&#34;https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_22_0.png&#34;
 			width=&#34;883&#34;
 			height=&#34;219&#34;
-			srcset=&#34;https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_22_0_hu6a3e2d981486c349521ff5fe4df8d74d_65212_480x0_resize_box_3.png 480w, https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_22_0_hu6a3e2d981486c349521ff5fe4df8d74d_65212_1024x0_resize_box_3.png 1024w&#34;
+			srcset=&#34;https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_22_0_hu6a3e2d981486c349521ff5fe4df8d74d_65212_480x0_resize_box_3.png 480w, https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_22_0_hu6a3e2d981486c349521ff5fe4df8d74d_65212_1024x0_resize_box_3.png 1024w&#34;
 			loading=&#34;lazy&#34;
 			&gt;
 	&lt;/a&gt;
@@ -370,10 +370,10 @@ unlink 함수를 사용해 오류가 발생한 모든 요소 삭제.&lt;/p&gt;
         </item>
         <item>
         <title>Hugo Blog with Custom Domain</title>
-        <link>https://spongebob03.github.io/p/hugo-blog-with-custom-domain/</link>
+        <link>https://www.bemore.dev/p/hugo-blog-with-custom-domain/</link>
         <pubDate>Mon, 06 Dec 2021 19:09:48 +0900</pubDate>
         
-        <guid>https://spongebob03.github.io/p/hugo-blog-with-custom-domain/</guid>
+        <guid>https://www.bemore.dev/p/hugo-blog-with-custom-domain/</guid>
         <description>&lt;p&gt;github.io 주소도 좋지만 간단하고 나만의 도메인 주소를 만들어서 쓰고 싶었다.&lt;/p&gt;
 &lt;h2 id=&#34;도메인-구매&#34;&gt;도메인 구매&lt;/h2&gt;
 &lt;p&gt;구매 사이트 비교(.dev 도메인 비용으로 찾아봤을 때 1년 비용. 기간에 따라 더 비싸지는 곳도 있다고 한다. 구매 전 기간을 설정하고 확인하자.)&lt;br&gt;
@@ -476,10 +476,10 @@ github.io 저장소에 CNAME 파일이 생성된다.&lt;/li&gt;
         </item>
         <item>
         <title>Hugo로 개발 블로그 장만하기</title>
-        <link>https://spongebob03.github.io/p/hugo%EB%A1%9C-%EA%B0%9C%EB%B0%9C-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9E%A5%EB%A7%8C%ED%95%98%EA%B8%B0/</link>
+        <link>https://www.bemore.dev/p/hugo%EB%A1%9C-%EA%B0%9C%EB%B0%9C-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9E%A5%EB%A7%8C%ED%95%98%EA%B8%B0/</link>
         <pubDate>Thu, 02 Dec 2021 22:09:48 +0900</pubDate>
         
-        <guid>https://spongebob03.github.io/p/hugo%EB%A1%9C-%EA%B0%9C%EB%B0%9C-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9E%A5%EB%A7%8C%ED%95%98%EA%B8%B0/</guid>
+        <guid>https://www.bemore.dev/p/hugo%EB%A1%9C-%EA%B0%9C%EB%B0%9C-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9E%A5%EB%A7%8C%ED%95%98%EA%B8%B0/</guid>
         <description>&lt;p&gt;&lt;figure 
 	&gt;
 	&lt;a href=&#34;https://blog.chodaeho.com/images/blog/2021/01/hugo-logo.png&#34; &gt;
@@ -583,10 +583,10 @@ git submodule add -b main git@github.io_저장소_SSH주소 public ## SSH키 있
         </item>
         <item>
         <title>주요 추천 알고리즘</title>
-        <link>https://spongebob03.github.io/p/%EC%A3%BC%EC%9A%94-%EC%B6%94%EC%B2%9C-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/</link>
+        <link>https://www.bemore.dev/p/%EC%A3%BC%EC%9A%94-%EC%B6%94%EC%B2%9C-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/</link>
         <pubDate>Fri, 19 Nov 2021 22:09:48 +0900</pubDate>
         
-        <guid>https://spongebob03.github.io/p/%EC%A3%BC%EC%9A%94-%EC%B6%94%EC%B2%9C-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/</guid>
+        <guid>https://www.bemore.dev/p/%EC%A3%BC%EC%9A%94-%EC%B6%94%EC%B2%9C-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/</guid>
         <description>&lt;h2 id=&#34;1-content-based-filtering-cb&#34;&gt;1. Content-Based filtering: CB&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;비슷한 아이템을 기반으로 추천&lt;/p&gt;
@@ -678,10 +678,10 @@ git submodule add -b main git@github.io_저장소_SSH주소 public ## SSH키 있
         </item>
         <item>
         <title>추천시스템이란?</title>
-        <link>https://spongebob03.github.io/p/%EC%B6%94%EC%B2%9C%EC%8B%9C%EC%8A%A4%ED%85%9C%EC%9D%B4%EB%9E%80/</link>
+        <link>https://www.bemore.dev/p/%EC%B6%94%EC%B2%9C%EC%8B%9C%EC%8A%A4%ED%85%9C%EC%9D%B4%EB%9E%80/</link>
         <pubDate>Tue, 09 Nov 2021 22:09:48 +0900</pubDate>
         
-        <guid>https://spongebob03.github.io/p/%EC%B6%94%EC%B2%9C%EC%8B%9C%EC%8A%A4%ED%85%9C%EC%9D%B4%EB%9E%80/</guid>
+        <guid>https://www.bemore.dev/p/%EC%B6%94%EC%B2%9C%EC%8B%9C%EC%8A%A4%ED%85%9C%EC%9D%B4%EB%9E%80/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;사용자가 관심있어 할만한 아이템을 제공해주는 자동화된 시스템&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -833,10 +833,10 @@ git submodule add -b main git@github.io_저장소_SSH주소 public ## SSH키 있
         </item>
         <item>
         <title>파이토치 허브 M1 로컬에서 빌드하기</title>
-        <link>https://spongebob03.github.io/p/%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98-%ED%97%88%EB%B8%8C-m1-%EB%A1%9C%EC%BB%AC%EC%97%90%EC%84%9C-%EB%B9%8C%EB%93%9C%ED%95%98%EA%B8%B0/</link>
+        <link>https://www.bemore.dev/p/%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98-%ED%97%88%EB%B8%8C-m1-%EB%A1%9C%EC%BB%AC%EC%97%90%EC%84%9C-%EB%B9%8C%EB%93%9C%ED%95%98%EA%B8%B0/</link>
         <pubDate>Mon, 16 Aug 2021 22:09:48 +0900</pubDate>
         
-        <guid>https://spongebob03.github.io/p/%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98-%ED%97%88%EB%B8%8C-m1-%EB%A1%9C%EC%BB%AC%EC%97%90%EC%84%9C-%EB%B9%8C%EB%93%9C%ED%95%98%EA%B8%B0/</guid>
+        <guid>https://www.bemore.dev/p/%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98-%ED%97%88%EB%B8%8C-m1-%EB%A1%9C%EC%BB%AC%EC%97%90%EC%84%9C-%EB%B9%8C%EB%93%9C%ED%95%98%EA%B8%B0/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/9bow/PyTorchKR&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Github) PyTorchKR&lt;/a&gt;&lt;/p&gt;
@@ -889,10 +889,10 @@ source $(brew --prefix nvm)/nvm.sh
         </item>
         <item>
         <title>SlackBot으로 랜덤 문제 출제</title>
-        <link>https://spongebob03.github.io/p/slackbot%EC%9C%BC%EB%A1%9C-%EB%9E%9C%EB%8D%A4-%EB%AC%B8%EC%A0%9C-%EC%B6%9C%EC%A0%9C/</link>
+        <link>https://www.bemore.dev/p/slackbot%EC%9C%BC%EB%A1%9C-%EB%9E%9C%EB%8D%A4-%EB%AC%B8%EC%A0%9C-%EC%B6%9C%EC%A0%9C/</link>
         <pubDate>Sun, 08 Aug 2021 22:09:48 +0900</pubDate>
         
-        <guid>https://spongebob03.github.io/p/slackbot%EC%9C%BC%EB%A1%9C-%EB%9E%9C%EB%8D%A4-%EB%AC%B8%EC%A0%9C-%EC%B6%9C%EC%A0%9C/</guid>
+        <guid>https://www.bemore.dev/p/slackbot%EC%9C%BC%EB%A1%9C-%EB%9E%9C%EB%8D%A4-%EB%AC%B8%EC%A0%9C-%EC%B6%9C%EC%A0%9C/</guid>
         <description>&lt;p&gt;스터디에서 4주 동안 배운 알고리즘 유형 문제를 정해진 시간에 풀어보는 모의 코딩테스트를 진행하고 싶었다. 백준 문제를 배운 알고리즘 내에서 랜덤으로 출제하는 슬랙 챗봇을 사용하면 재밌을거 같았다. &lt;a class=&#34;link&#34; href=&#34;https://www.acmicpc.net/board/view/2308&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;백준 사이트는 웹 스크래핑이 금지된다고 공지&lt;/a&gt;가 되어있어 solved.ac의 알고리즘 유형 카테고리 정보를 긁어오는 식으로 문제를 뽑아왔다. 혹시 이것도 문제가 되는지 문의해봐야겠다&amp;hellip;&lt;/p&gt;
 &lt;h4 id=&#34;사용-라이브러리&#34;&gt;사용 라이브러리&lt;/h4&gt;
@@ -974,10 +974,10 @@ source $(brew --prefix nvm)/nvm.sh
         </item>
         <item>
         <title>MacMini M1 에서 Homebrew 설치</title>
-        <link>https://spongebob03.github.io/p/macmini-m1-%EC%97%90%EC%84%9C-homebrew-%EC%84%A4%EC%B9%98/</link>
+        <link>https://www.bemore.dev/p/macmini-m1-%EC%97%90%EC%84%9C-homebrew-%EC%84%A4%EC%B9%98/</link>
         <pubDate>Tue, 08 Jun 2021 22:09:48 +0900</pubDate>
         
-        <guid>https://spongebob03.github.io/p/macmini-m1-%EC%97%90%EC%84%9C-homebrew-%EC%84%A4%EC%B9%98/</guid>
+        <guid>https://www.bemore.dev/p/macmini-m1-%EC%97%90%EC%84%9C-homebrew-%EC%84%A4%EC%B9%98/</guid>
         <description>&lt;h2 id=&#34;homebrew&#34;&gt;Homebrew?&lt;/h2&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://stackoverflow.com/questions/17265226/what-is-the-difference-between-installing-an-app-via-homebrew-or-installing-it&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;그냥 사이트에서 다운받는거랑 뭐가 다른가요?&lt;/a&gt;&lt;/p&gt;
@@ -999,10 +999,10 @@ source $(brew --prefix nvm)/nvm.sh
         </item>
         <item>
         <title>2020년 회고</title>
-        <link>https://spongebob03.github.io/p/2020%EB%85%84-%ED%9A%8C%EA%B3%A0/</link>
+        <link>https://www.bemore.dev/p/2020%EB%85%84-%ED%9A%8C%EA%B3%A0/</link>
         <pubDate>Wed, 30 Dec 2020 14:58:14 +0900</pubDate>
         
-        <guid>https://spongebob03.github.io/p/2020%EB%85%84-%ED%9A%8C%EA%B3%A0/</guid>
+        <guid>https://www.bemore.dev/p/2020%EB%85%84-%ED%9A%8C%EA%B3%A0/</guid>
         <description>&lt;h2 id=&#34;코로나&#34;&gt;코로나&lt;/h2&gt;
 &lt;p&gt;이&amp;hellip; 미친 코로나 때문에&amp;hellip; 1년이 날아간 기분이다. 주어진 처지에서 최선을 다했으니 후회는 없지만 그래도 아쉬움이 없는 것은 아니다.&lt;/p&gt;
 &lt;h2 id=&#34;졸업-프로젝트&#34;&gt;졸업 프로젝트&lt;/h2&gt;
@@ -1014,10 +1014,10 @@ source $(brew --prefix nvm)/nvm.sh
         </item>
         <item>
         <title>2019년 회고</title>
-        <link>https://spongebob03.github.io/p/2019%EB%85%84-%ED%9A%8C%EA%B3%A0/</link>
+        <link>https://www.bemore.dev/p/2019%EB%85%84-%ED%9A%8C%EA%B3%A0/</link>
         <pubDate>Tue, 31 Dec 2019 14:58:04 +0900</pubDate>
         
-        <guid>https://spongebob03.github.io/p/2019%EB%85%84-%ED%9A%8C%EA%B3%A0/</guid>
+        <guid>https://www.bemore.dev/p/2019%EB%85%84-%ED%9A%8C%EA%B3%A0/</guid>
         <description>&lt;h2 id=&#34;운동&#34;&gt;운동🏃&lt;/h2&gt;
 &lt;p&gt;태권도. 8월까지 방학에는 태권도장에 다니면서 처음보다 확실히 좋아졌다. 하지만 학기 중에 운동을 위해 집에 자주 오는 것도 부담되서 2학기에 소모임을 만들어 주 3회 운동하려고 했으나&amp;hellip;모임을 지속적으로 유지하는 것도 쉽지 않았고 내가 유단자가 아니어서 역량도 없는 상태였다. 회비를 걷지 않고 자율적인 참여여서 참여율은 많이 떨어졌지만 금전 문제가 없는 것이 차라리 다행이었다. 이렇게 부족한 소모임 운영이었지만 참여해준 모든 모임원들에게 정말 고마울 뿐이다. 특히 그냥 모임원이었는데 운영자보다 더 많은 부분 맡아야했던 다른과 후배님,,,나와 같은 초급자들 기본자세, 품새를 가르쳐줬다. 같이 운동하는게 즐거워서 하는 사람을 만나서 좋았던 기회였다. 막판엔 거의 못했지만 지속적으로 한 운동은 수영 이후로 처음이다. 체력에 대해서 많이 필요하다고 생각했던 한 해였고 체력을 기르기 위해 나름의 노력을 했는데도 어려웠다. 아쉬움이 더 많이 남는다. 이번에 6개월 꾸준히 했던 거라면 내년에는 12개월을 꾸준히 운동하고 그렇게 된다면 태극5~8장도 잘하게 된 상태를 만들고 싶다.&lt;/p&gt;
 &lt;h2 id=&#34;학교&#34;&gt;학교&lt;/h2&gt;
@@ -1059,10 +1059,10 @@ source $(brew --prefix nvm)/nvm.sh
         </item>
         <item>
         <title>Memory Process 기억 과정</title>
-        <link>https://spongebob03.github.io/p/memory-process-%EA%B8%B0%EC%96%B5-%EA%B3%BC%EC%A0%95/</link>
+        <link>https://www.bemore.dev/p/memory-process-%EA%B8%B0%EC%96%B5-%EA%B3%BC%EC%A0%95/</link>
         <pubDate>Wed, 02 Oct 2019 22:09:48 +0900</pubDate>
         
-        <guid>https://spongebob03.github.io/p/memory-process-%EA%B8%B0%EC%96%B5-%EA%B3%BC%EC%A0%95/</guid>
+        <guid>https://www.bemore.dev/p/memory-process-%EA%B8%B0%EC%96%B5-%EA%B3%BC%EC%A0%95/</guid>
         <description>&lt;h2 id=&#34;memory-process&#34;&gt;Memory Process&lt;/h2&gt;
 &lt;h2 id=&#34;단기기억의-부호화&#34;&gt;단기기억의 부호화&lt;/h2&gt;
 &lt;ul&gt;
@@ -1394,10 +1394,10 @@ Rehearsal 반복의 효과 때문 (충격적 사건의 경험을 자주 말하�
         </item>
         <item>
         <title>Memory 기억</title>
-        <link>https://spongebob03.github.io/p/memory-%EA%B8%B0%EC%96%B5/</link>
+        <link>https://www.bemore.dev/p/memory-%EA%B8%B0%EC%96%B5/</link>
         <pubDate>Wed, 02 Oct 2019 22:09:48 +0900</pubDate>
         
-        <guid>https://spongebob03.github.io/p/memory-%EA%B8%B0%EC%96%B5/</guid>
+        <guid>https://www.bemore.dev/p/memory-%EA%B8%B0%EC%96%B5/</guid>
         <description>&lt;!-- raw HTML omitted --&gt;
 &lt;h2 id=&#34;basic-process&#34;&gt;Basic process&lt;/h2&gt;
 &lt;ul&gt;
@@ -1547,10 +1547,10 @@ Rehearsal 반복의 효과 때문 (충격적 사건의 경험을 자주 말하�
         </item>
         <item>
         <title>Attention 주의</title>
-        <link>https://spongebob03.github.io/p/attention-%EC%A3%BC%EC%9D%98/</link>
+        <link>https://www.bemore.dev/p/attention-%EC%A3%BC%EC%9D%98/</link>
         <pubDate>Tue, 10 Sep 2019 22:09:48 +0900</pubDate>
         
-        <guid>https://spongebob03.github.io/p/attention-%EC%A3%BC%EC%9D%98/</guid>
+        <guid>https://www.bemore.dev/p/attention-%EC%A3%BC%EC%9D%98/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;(감각, 저장된 기억, 다른 인지적 과정을 통해) 이용가능한 엄청난 양의 정보로부터 제한된 양의 정보를 집중적으로 처리 할 수 있게 해주는 수단&lt;/p&gt;
 &lt;/blockquote&gt;

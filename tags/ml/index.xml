@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ML on BeMore</title>
-    <link>https://spongebob03.github.io/tags/ml/</link>
+    <link>https://www.bemore.dev/tags/ml/</link>
     <description>Recent content in ML on BeMore</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 08 Dec 2021 19:09:48 +0900</lastBuildDate><atom:link href="https://spongebob03.github.io/tags/ml/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 08 Dec 2021 19:09:48 +0900</lastBuildDate><atom:link href="https://www.bemore.dev/tags/ml/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>fastai와 파이토치가 만나 꽃피운 딥러닝 2장</title>
-      <link>https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/</link>
+      <link>https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/</link>
       <pubDate>Wed, 08 Dec 2021 19:09:48 +0900</pubDate>
       
-      <guid>https://spongebob03.github.io/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/</guid>
+      <guid>https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/</guid>
       <description>이번 장에서는 분류 모델을 구축하면서 딥러닝의 가능성 및 제한사항을 살펴볼 수 있다. 이 곰돌이가 어떤 곰돌이인지 예측하는 모델을 다뤄봅시다 🐻
 데이터 다운로드 책에서는 빙 이미지 검색의 데이터를 사용했지만 빙 이미지 검색은 보안키를 요구해서&amp;hellip;좀 더 편하게 이미지 데이터를 받아올 방법을 찾아보았다.
 역시 fastai공식 자료를 찾아보니 귀찮게 보안키를 요구하지 않는 DuckDuckGo 이미지를 편하게 받아서 쓸 수 있는 방법이 있었다!

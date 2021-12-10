@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>심리학 on BeMore</title>
-    <link>https://spongebob03.github.io/tags/%EC%8B%AC%EB%A6%AC%ED%95%99/</link>
+    <link>https://www.bemore.dev/tags/%EC%8B%AC%EB%A6%AC%ED%95%99/</link>
     <description>Recent content in 심리학 on BeMore</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 02 Oct 2019 22:09:48 +0900</lastBuildDate><atom:link href="https://spongebob03.github.io/tags/%EC%8B%AC%EB%A6%AC%ED%95%99/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 02 Oct 2019 22:09:48 +0900</lastBuildDate><atom:link href="https://www.bemore.dev/tags/%EC%8B%AC%EB%A6%AC%ED%95%99/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Memory Process 기억 과정</title>
-      <link>https://spongebob03.github.io/p/memory-process-%EA%B8%B0%EC%96%B5-%EA%B3%BC%EC%A0%95/</link>
+      <link>https://www.bemore.dev/p/memory-process-%EA%B8%B0%EC%96%B5-%EA%B3%BC%EC%A0%95/</link>
       <pubDate>Wed, 02 Oct 2019 22:09:48 +0900</pubDate>
       
-      <guid>https://spongebob03.github.io/p/memory-process-%EA%B8%B0%EC%96%B5-%EA%B3%BC%EC%A0%95/</guid>
+      <guid>https://www.bemore.dev/p/memory-process-%EA%B8%B0%EC%96%B5-%EA%B3%BC%EC%A0%95/</guid>
       <description>Memory Process 단기기억의 부호화  Conrad 실험 : 발음 비슷한 다른 글자 혼동→자극 시각적으로 제시되었어도 기억 오류 청각적 혼동 가능성있다  결론 : 자극이 시각적이든 청각적이든 단기기억 부호화할때 청각적 코드 사용   Baddeley : 의미정보는? 실험 1 : 유사한 소리 나는 단어들 / 소리 구별되는 단어들 → 유사한 소리 헷갈림 실험 2 : 의미 유사 단어 / 의미 차이 자극 → 별 차이 없음  결과 : Conrad가 맞네&amp;hellip;   Shulman 실험 : 청각적으로 유사(Bawl,Ball) / 의미상 유사(Talk,Speak) / 리스트에 있는 단어  결과 : 둘다 비슷하게 나옴 → 청각적 부호화 의미 부호화 모두 사용됨   Posner &amp;amp; Keele 실험 : 두 개의 글자 같은 글자인가 판단 A-a : Yes로 대답 &amp;lt; A-A : Yes로 대답시간 더 빠름  결과 : 시각 부호화도 안쓰는건 아니다    결론 : 주로 청각 부호화.</description>
     </item>
     
     <item>
       <title>Memory 기억</title>
-      <link>https://spongebob03.github.io/p/memory-%EA%B8%B0%EC%96%B5/</link>
+      <link>https://www.bemore.dev/p/memory-%EA%B8%B0%EC%96%B5/</link>
       <pubDate>Wed, 02 Oct 2019 22:09:48 +0900</pubDate>
       
-      <guid>https://spongebob03.github.io/p/memory-%EA%B8%B0%EC%96%B5/</guid>
+      <guid>https://www.bemore.dev/p/memory-%EA%B8%B0%EC%96%B5/</guid>
       <description>Basic process  Encoding 감각정보를 심적 표상으로 변형하여 기억속에 저장하는 과정 Storage 부화화된 정보를 기억속에 유지하는 과정 Retrieval 기억 속에 저장된 정보를 끄집어 내어 사용하는 과정  Explicit memory (외현기억) 의식 수준에서의 기억 회상과제, 재인과제 모두 외현기억을 측정하는 과제
 Implicit memory (암묵기억) 기억정보를 사용하지만 이를 의식적으로 자각하지 않음.
 의도적으로 기억하려 하지 않아도 기억이 살아나는 것
@@ -31,10 +31,10 @@ Procedural memory (절차기억): 학습된 기술, 자동화된 행동
     
     <item>
       <title>Attention 주의</title>
-      <link>https://spongebob03.github.io/p/attention-%EC%A3%BC%EC%9D%98/</link>
+      <link>https://www.bemore.dev/p/attention-%EC%A3%BC%EC%9D%98/</link>
       <pubDate>Tue, 10 Sep 2019 22:09:48 +0900</pubDate>
       
-      <guid>https://spongebob03.github.io/p/attention-%EC%A3%BC%EC%9D%98/</guid>
+      <guid>https://www.bemore.dev/p/attention-%EC%A3%BC%EC%9D%98/</guid>
       <description>(감각, 저장된 기억, 다른 인지적 과정을 통해) 이용가능한 엄청난 양의 정보로부터 제한된 양의 정보를 집중적으로 처리 할 수 있게 해주는 수단
  장점 : 한정된 정신적 자원을 효율적으로 사용하게 해준다
 주의 과정의 일부는 의식적 자각 없이도 진행

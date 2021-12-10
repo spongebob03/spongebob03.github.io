@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>개발환경 on BeMore</title>
-    <link>https://spongebob03.github.io/tags/%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD/</link>
+    <link>https://www.bemore.dev/tags/%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD/</link>
     <description>Recent content in 개발환경 on BeMore</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 06 Dec 2021 19:09:48 +0900</lastBuildDate><atom:link href="https://spongebob03.github.io/tags/%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 06 Dec 2021 19:09:48 +0900</lastBuildDate><atom:link href="https://www.bemore.dev/tags/%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo Blog with Custom Domain</title>
-      <link>https://spongebob03.github.io/p/hugo-blog-with-custom-domain/</link>
+      <link>https://www.bemore.dev/p/hugo-blog-with-custom-domain/</link>
       <pubDate>Mon, 06 Dec 2021 19:09:48 +0900</pubDate>
       
-      <guid>https://spongebob03.github.io/p/hugo-blog-with-custom-domain/</guid>
+      <guid>https://www.bemore.dev/p/hugo-blog-with-custom-domain/</guid>
       <description>github.io 주소도 좋지만 간단하고 나만의 도메인 주소를 만들어서 쓰고 싶었다.
 도메인 구매 구매 사이트 비교(.dev 도메인 비용으로 찾아봤을 때 1년 비용. 기간에 따라 더 비싸지는 곳도 있다고 한다. 구매 전 기간을 설정하고 확인하자.)
 원화 가격은 편의를 위해 만단위로 표시
@@ -21,10 +21,10 @@
     
     <item>
       <title>Hugo로 개발 블로그 장만하기</title>
-      <link>https://spongebob03.github.io/p/hugo%EB%A1%9C-%EA%B0%9C%EB%B0%9C-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9E%A5%EB%A7%8C%ED%95%98%EA%B8%B0/</link>
+      <link>https://www.bemore.dev/p/hugo%EB%A1%9C-%EA%B0%9C%EB%B0%9C-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9E%A5%EB%A7%8C%ED%95%98%EA%B8%B0/</link>
       <pubDate>Thu, 02 Dec 2021 22:09:48 +0900</pubDate>
       
-      <guid>https://spongebob03.github.io/p/hugo%EB%A1%9C-%EA%B0%9C%EB%B0%9C-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9E%A5%EB%A7%8C%ED%95%98%EA%B8%B0/</guid>
+      <guid>https://www.bemore.dev/p/hugo%EB%A1%9C-%EA%B0%9C%EB%B0%9C-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9E%A5%EB%A7%8C%ED%95%98%EA%B8%B0/</guid>
       <description>SSG(Static site generator) 중 Hugo를 사용하여 블로그를 만들었다. 처음에 뭐가 뭔지 몰라서 뚱땅뚱땅 만들었다. 호스팅까지 하는데 하루 걸렸고 더 빠르게 할 수 있었지만 역시 세팅에서 시행착오를 겪었다. 그나마 Hugo여서 하루만에 할 수 있었던걸수도&amp;hellip; Hugo는 Go로 만들어져서 나중에 Go에 대해서 더 공부해보고 싶다.
 github.io 만들기 Hugo 설치하기 brew install hugo
 hugo version
@@ -34,10 +34,10 @@ hugo version
     
     <item>
       <title>파이토치 허브 M1 로컬에서 빌드하기</title>
-      <link>https://spongebob03.github.io/p/%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98-%ED%97%88%EB%B8%8C-m1-%EB%A1%9C%EC%BB%AC%EC%97%90%EC%84%9C-%EB%B9%8C%EB%93%9C%ED%95%98%EA%B8%B0/</link>
+      <link>https://www.bemore.dev/p/%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98-%ED%97%88%EB%B8%8C-m1-%EB%A1%9C%EC%BB%AC%EC%97%90%EC%84%9C-%EB%B9%8C%EB%93%9C%ED%95%98%EA%B8%B0/</link>
       <pubDate>Mon, 16 Aug 2021 22:09:48 +0900</pubDate>
       
-      <guid>https://spongebob03.github.io/p/%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98-%ED%97%88%EB%B8%8C-m1-%EB%A1%9C%EC%BB%AC%EC%97%90%EC%84%9C-%EB%B9%8C%EB%93%9C%ED%95%98%EA%B8%B0/</guid>
+      <guid>https://www.bemore.dev/p/%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98-%ED%97%88%EB%B8%8C-m1-%EB%A1%9C%EC%BB%AC%EC%97%90%EC%84%9C-%EB%B9%8C%EB%93%9C%ED%95%98%EA%B8%B0/</guid>
       <description>Github) PyTorchKR
  nvm: command not found 노드 버전관리 설치 및 사용법
  find ~/.zshrc로 /.zshrc파일 있는지 확인 open ~/.zshrc 파일 열어서 아래 내용 추가  export NVM_DIR=~/.nvm source $(brew --prefix nvm)/nvm.sh source ~/.zshrc 코드 적용 nvm &amp;ndash;version으로 확인  rbenv: version `2.5.9&#39; is not installed brew install rbenv했지만 [이걸 또 m1이..?] (https://github.com/rbenv/ruby-build/issues/1691) 해결 방법은 간단했습니다. rbenv install 2.5.9
@@ -46,10 +46,10 @@ ERROR: While executing gem&amp;hellip;Gem::FilePermissionError Mac에서 Gem::Fi
     
     <item>
       <title>MacMini M1 에서 Homebrew 설치</title>
-      <link>https://spongebob03.github.io/p/macmini-m1-%EC%97%90%EC%84%9C-homebrew-%EC%84%A4%EC%B9%98/</link>
+      <link>https://www.bemore.dev/p/macmini-m1-%EC%97%90%EC%84%9C-homebrew-%EC%84%A4%EC%B9%98/</link>
       <pubDate>Tue, 08 Jun 2021 22:09:48 +0900</pubDate>
       
-      <guid>https://spongebob03.github.io/p/macmini-m1-%EC%97%90%EC%84%9C-homebrew-%EC%84%A4%EC%B9%98/</guid>
+      <guid>https://www.bemore.dev/p/macmini-m1-%EC%97%90%EC%84%9C-homebrew-%EC%84%A4%EC%B9%98/</guid>
       <description>Homebrew? 그냥 사이트에서 다운받는거랑 뭐가 다른가요?
 macOS용 패키지 매니저로 프로그램 설치, 업데이트, 삭제를 편하게 관리할 수 있다. (하지만 윈도우만 쓰던 나는 나중에 알았다..)
 M1 네이티브로 설치하려 했으나..실패! 그냥 뭔가 커맨드가 안먹혀서 의문이었는데 기존 MAC을 위한 안내는 기존 실리콘칩. 내 컴퓨터는 m1칩이라 그런 것이었다.

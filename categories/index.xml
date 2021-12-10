@@ -2,62 +2,62 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on BeMore</title>
-    <link>https://spongebob03.github.io/categories/</link>
+    <link>https://www.bemore.dev/categories/</link>
     <description>Recent content in Categories on BeMore</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 08 Dec 2021 19:09:48 +0900</lastBuildDate><atom:link href="https://spongebob03.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 08 Dec 2021 19:09:48 +0900</lastBuildDate><atom:link href="https://www.bemore.dev/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>fastai</title>
-      <link>https://spongebob03.github.io/categories/fastai/</link>
+      <link>https://www.bemore.dev/categories/fastai/</link>
       <pubDate>Wed, 08 Dec 2021 19:09:48 +0900</pubDate>
       
-      <guid>https://spongebob03.github.io/categories/fastai/</guid>
+      <guid>https://www.bemore.dev/categories/fastai/</guid>
       <description></description>
     </item>
     
     <item>
       <title>우당탕탕 개발기</title>
-      <link>https://spongebob03.github.io/categories/%EC%9A%B0%EB%8B%B9%ED%83%95%ED%83%95-%EA%B0%9C%EB%B0%9C%EA%B8%B0/</link>
+      <link>https://www.bemore.dev/categories/%EC%9A%B0%EB%8B%B9%ED%83%95%ED%83%95-%EA%B0%9C%EB%B0%9C%EA%B8%B0/</link>
       <pubDate>Mon, 06 Dec 2021 19:09:48 +0900</pubDate>
       
-      <guid>https://spongebob03.github.io/categories/%EC%9A%B0%EB%8B%B9%ED%83%95%ED%83%95-%EA%B0%9C%EB%B0%9C%EA%B8%B0/</guid>
+      <guid>https://www.bemore.dev/categories/%EC%9A%B0%EB%8B%B9%ED%83%95%ED%83%95-%EA%B0%9C%EB%B0%9C%EA%B8%B0/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Recommendation System</title>
-      <link>https://spongebob03.github.io/categories/recommendation-system/</link>
+      <link>https://www.bemore.dev/categories/recommendation-system/</link>
       <pubDate>Fri, 19 Nov 2021 22:09:48 +0900</pubDate>
       
-      <guid>https://spongebob03.github.io/categories/recommendation-system/</guid>
+      <guid>https://www.bemore.dev/categories/recommendation-system/</guid>
       <description></description>
     </item>
     
     <item>
       <title>이게 왜 안되지</title>
-      <link>https://spongebob03.github.io/categories/%EC%9D%B4%EA%B2%8C-%EC%99%9C-%EC%95%88%EB%90%98%EC%A7%80/</link>
+      <link>https://www.bemore.dev/categories/%EC%9D%B4%EA%B2%8C-%EC%99%9C-%EC%95%88%EB%90%98%EC%A7%80/</link>
       <pubDate>Mon, 16 Aug 2021 22:09:48 +0900</pubDate>
       
-      <guid>https://spongebob03.github.io/categories/%EC%9D%B4%EA%B2%8C-%EC%99%9C-%EC%95%88%EB%90%98%EC%A7%80/</guid>
+      <guid>https://www.bemore.dev/categories/%EC%9D%B4%EA%B2%8C-%EC%99%9C-%EC%95%88%EB%90%98%EC%A7%80/</guid>
       <description></description>
     </item>
     
     <item>
       <title>회고</title>
-      <link>https://spongebob03.github.io/categories/%ED%9A%8C%EA%B3%A0/</link>
+      <link>https://www.bemore.dev/categories/%ED%9A%8C%EA%B3%A0/</link>
       <pubDate>Wed, 30 Dec 2020 14:58:14 +0900</pubDate>
       
-      <guid>https://spongebob03.github.io/categories/%ED%9A%8C%EA%B3%A0/</guid>
+      <guid>https://www.bemore.dev/categories/%ED%9A%8C%EA%B3%A0/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Cognitive psychology</title>
-      <link>https://spongebob03.github.io/categories/cognitive-psychology/</link>
+      <link>https://www.bemore.dev/categories/cognitive-psychology/</link>
       <pubDate>Wed, 02 Oct 2019 22:09:48 +0900</pubDate>
       
-      <guid>https://spongebob03.github.io/categories/cognitive-psychology/</guid>
+      <guid>https://www.bemore.dev/categories/cognitive-psychology/</guid>
       <description></description>
     </item>
     
