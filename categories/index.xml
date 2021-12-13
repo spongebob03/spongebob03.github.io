@@ -6,7 +6,16 @@
     <description>Recent content in Categories on BeMore</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 08 Dec 2021 19:09:48 +0900</lastBuildDate><atom:link href="https://www.bemore.dev/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 10 Dec 2021 12:09:48 +0900</lastBuildDate><atom:link href="https://www.bemore.dev/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>이게 왜 안되지</title>
+      <link>https://www.bemore.dev/categories/%EC%9D%B4%EA%B2%8C-%EC%99%9C-%EC%95%88%EB%90%98%EC%A7%80/</link>
+      <pubDate>Fri, 10 Dec 2021 12:09:48 +0900</pubDate>
+      
+      <guid>https://www.bemore.dev/categories/%EC%9D%B4%EA%B2%8C-%EC%99%9C-%EC%95%88%EB%90%98%EC%A7%80/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>fastai</title>
       <link>https://www.bemore.dev/categories/fastai/</link>
@@ -31,15 +40,6 @@
       <pubDate>Fri, 19 Nov 2021 22:09:48 +0900</pubDate>
       
       <guid>https://www.bemore.dev/categories/recommendation-system/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>이게 왜 안되지</title>
-      <link>https://www.bemore.dev/categories/%EC%9D%B4%EA%B2%8C-%EC%99%9C-%EC%95%88%EB%90%98%EC%A7%80/</link>
-      <pubDate>Mon, 16 Aug 2021 22:09:48 +0900</pubDate>
-      
-      <guid>https://www.bemore.dev/categories/%EC%9D%B4%EA%B2%8C-%EC%99%9C-%EC%95%88%EB%90%98%EC%A7%80/</guid>
       <description></description>
     </item>
     

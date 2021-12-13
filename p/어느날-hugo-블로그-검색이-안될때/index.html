@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en-us">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='dns주소 설정하기'><title>Hugo Blog with Custom Domain</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='로컬에서는 되는데 도메인에서는 왜..?'><title>어느날 Hugo 블로그 검색이 안될때</title>
 
-<link rel='canonical' href='https://www.bemore.dev/p/hugo-blog-with-custom-domain/'>
+<link rel='canonical' href='https://www.bemore.dev/p/%EC%96%B4%EB%8A%90%EB%82%A0-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B2%80%EC%83%89%EC%9D%B4-%EC%95%88%EB%90%A0%EB%95%8C/'>
 
-<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='Hugo Blog with Custom Domain'>
-<meta property='og:description' content='dns주소 설정하기'>
-<meta property='og:url' content='https://www.bemore.dev/p/hugo-blog-with-custom-domain/'>
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='어느날 Hugo 블로그 검색이 안될때'>
+<meta property='og:description' content='로컬에서는 되는데 도메인에서는 왜..?'>
+<meta property='og:url' content='https://www.bemore.dev/p/%EC%96%B4%EB%8A%90%EB%82%A0-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B2%80%EC%83%89%EC%9D%B4-%EC%95%88%EB%90%A0%EB%95%8C/'>
 <meta property='og:site_name' content='BeMore'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='blog' /><meta property='article:tag' content='hugo' /><meta property='article:tag' content='개발환경' /><meta property='article:published_time' content='2021-12-06T19:09:48&#43;09:00'/><meta property='article:modified_time' content='2021-12-06T19:09:48&#43;09:00'/>
-<meta name="twitter:title" content="Hugo Blog with Custom Domain">
-<meta name="twitter:description" content="dns주소 설정하기">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='blog' /><meta property='article:tag' content='hugo' /><meta property='article:published_time' content='2021-12-10T12:09:48&#43;09:00'/><meta property='article:modified_time' content='2021-12-10T12:09:48&#43;09:00'/>
+<meta name="twitter:title" content="어느날 Hugo 블로그 검색이 안될때">
+<meta name="twitter:description" content="로컬에서는 되는데 도메인에서는 왜..?">
     <link rel="shortcut icon" href="favicon.ico" />
 
     </head>
@@ -67,20 +67,20 @@
     
     <header class="article-category">
         
-            <a href="/categories/%EC%9A%B0%EB%8B%B9%ED%83%95%ED%83%95-%EA%B0%9C%EB%B0%9C%EA%B8%B0/" >
-                우당탕탕 개발기
+            <a href="/categories/%EC%9D%B4%EA%B2%8C-%EC%99%9C-%EC%95%88%EB%90%98%EC%A7%80/" >
+                이게 왜 안되지
             </a>
         
     </header>
     
 
     <h2 class="article-title">
-        <a href="/p/hugo-blog-with-custom-domain/">Hugo Blog with Custom Domain</a>
+        <a href="/p/%EC%96%B4%EB%8A%90%EB%82%A0-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B2%80%EC%83%89%EC%9D%B4-%EC%95%88%EB%90%A0%EB%95%8C/">어느날 Hugo 블로그 검색이 안될때</a>
     </h2>
 
     
     <h3 class="article-subtitle">
-        dns주소 설정하기
+        로컬에서는 되는데 도메인에서는 왜..?
     </h3>
     
 
@@ -97,7 +97,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Dec 06, 2021</time>
+                <time class="article-time--published">Dec 10, 2021</time>
             </div>
         
 
@@ -112,7 +112,7 @@
 
 
                 <time class="article-time--reading">
-                    2 분 정도
+                    1 분 정도
                 </time>
             </div>
         
@@ -122,104 +122,52 @@
 </header>
 
     <section class="article-content">
-    <p>github.io 주소도 좋지만 간단하고 나만의 도메인 주소를 만들어서 쓰고 싶었다.</p>
-<h2 id="도메인-구매">도메인 구매</h2>
-<p>구매 사이트 비교(.dev 도메인 비용으로 찾아봤을 때 1년 비용. 기간에 따라 더 비싸지는 곳도 있다고 한다. 구매 전 기간을 설정하고 확인하자.)<br>
-<em>원화 가격은 편의를 위해 만단위로 표시</em></p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">사이트</th>
-<th style="text-align:center">1년 가격</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">google domain</td>
-<td style="text-align:center">$12</td>
-</tr>
-<tr>
-<td style="text-align:center">namecheap</td>
-<td style="text-align:center">$14.98</td>
-</tr>
-<tr>
-<td style="text-align:center">gandi</td>
-<td style="text-align:center">€14.01</td>
-</tr>
-<tr>
-<td style="text-align:center">godaddy</td>
-<td style="text-align:center">2,3890₩</td>
-</tr>
-<tr>
-<td style="text-align:center">gabia</td>
-<td style="text-align:center">2,9000₩</td>
-</tr>
-</tbody>
-</table>
-<p>이 중 google이니 ad, analytics 사용할 때도 편하지 않을까 하는 기대로 google domain으로 정했다. 그런데 한국은 아직 서비스 하는 지역이 아니어서 결제를 못한다는..? 안내가 있어서 포기했다. 그러다가 역시 구글링을 통해 <a class="link" href="https://starton.tistory.com/598"  target="_blank" rel="noopener"
-    >지역을 바꾸고 진행할 수 있다는 글</a>을 따라 무사히 결제하고 도메인을 받을 수 있었다.</p>
-<h2 id="네임서버-레코드-설정">네임서버 레코드 설정</h2>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">호스트 이름</th>
-<th style="text-align:center">유형</th>
-<th style="text-align:center">TTL</th>
-<th style="text-align:center">데이터</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">커스텀도메인</td>
-<td style="text-align:center">A</td>
-<td style="text-align:center">기본</td>
-<td style="text-align:center"><code>185.199.108.153</code></td>
-</tr>
-<tr>
-<td style="text-align:center">www.커스텀도메인</td>
-<td style="text-align:center">CNAME</td>
-<td style="text-align:center">기본</td>
-<td style="text-align:center"><code>깃헙계정.github.io</code></td>
-</tr>
-</tbody>
-</table>
-<h2 id="github-저장소에서-도메인-설정">GitHub 저장소에서 도메인 설정</h2>
-<p><code>github.io 저장소</code> &gt; <code>Settings</code> &gt; <code>Pages</code> &gt; <code>Custom domain</code></p>
+    <h2 id="로컬에서-되던-검색이-도메인에서는-안된다">로컬에서 되던 검색이 도메인에서는 안된다..?</h2>
+<p>블로그 만들고 도메인 설정하고 신나게 글을 쓰다가 검색기능이 안되는걸 발견했다. 빌드한 그대로 로컬에서 돌려봤을때는 잘만 되는데..?<br>
+<strong>도메인에서는 다음과 같은 에러메시지가 나오는 상태였다.</strong>
+<figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 466; 
+			flex-basis: 1120px"
+	>
+	<a href="/p/%EC%96%B4%EB%8A%90%EB%82%A0-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B2%80%EC%83%89%EC%9D%B4-%EC%95%88%EB%90%A0%EB%95%8C/searcherror.png" data-size="579x124">
+		<img src="/p/%EC%96%B4%EB%8A%90%EB%82%A0-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B2%80%EC%83%89%EC%9D%B4-%EC%95%88%EB%90%A0%EB%95%8C/searcherror.png"
+			width="579"
+			height="124"
+			srcset="/p/%EC%96%B4%EB%8A%90%EB%82%A0-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B2%80%EC%83%89%EC%9D%B4-%EC%95%88%EB%90%A0%EB%95%8C/searcherror_hu769297bb68b3f56c7a9d5596579c0b61_41646_480x0_resize_box_3.png 480w, /p/%EC%96%B4%EB%8A%90%EB%82%A0-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B2%80%EC%83%89%EC%9D%B4-%EC%95%88%EB%90%A0%EB%95%8C/searcherror_hu769297bb68b3f56c7a9d5596579c0b61_41646_1024x0_resize_box_3.png 1024w"
+			loading="lazy"
+			>
+	</a>
+	
+</figure>
+baseURL 설정이 웹에서 요구하는 주소 형태랑 좀 달라서 나타난 문제같았다.</p>
+<h2 id="-해결">🛠 해결</h2>
 <ol>
-<li>구입한 도메인 입력</li>
-<li>Save</li>
-<li>조금 기다린 후 Enforce HTTPS 체크<br>
-github.io 저장소에 CNAME 파일이 생성된다.</li>
+<li>
+<p><code>config.yaml</code>에서 baseURL을 <a class="link" href="http://www.bemore.dev"  target="_blank" rel="noopener"
+    >www.bemore.dev</a>로 바꿔도 달라지지 않았다.</p>
+</li>
+<li>
+<p>CNAME 파일 확인하기<br>
+CNAME 내부 주소 값이 처음 도메인 설정해줄때 <a class="link" href="http://www.bemore.dev"  target="_blank" rel="noopener"
+    >www.bemore.dev</a>였는데 빌드하고 나서 bemore.dev로 바꼈던 부분이 생각났다.<br>
+&lt;- Push할 떄마다 페이지가 작동하지 않을수도 있다고 해서 이를 방지하기 위해 static/CNAME을 작성할때<br>
+😈 <strong><code>www</code>를 뺀 apex주소를 썼던거 때문이었다.</strong> 😈</p>
+</li>
+<li>
+<p>static/CNAME<br>
+👉 내용 <code>www.도메인주소</code>으로 수정하고 Push</p>
+</li>
 </ol>
-<h2 id="-완성">🎉 완성</h2>
-<p>이제 내가 설정한 도메인을 이용할 수 있다!</p>
-<h2 id="-이후-빌드-커밋하기-전">⚠️ 이후 빌드 커밋하기 전</h2>
-<p>github.io저장소에 CNAME파일이 생성되었기 때문에 그냥 빌드하고 커밋, 푸시할 때 에러날 수 있다. submodule로 연결되어 있는 public폴더를 미리 업데이트 해주면 문제 없다. 그전에 서브모듈 폴더(public, theme) 내부를 바꾸지 않았어야 한다.</p>
-<ol>
-<li><code>cd blog</code></li>
-<li><code>git pull</code>: main 프로젝트 pull</li>
-<li><code>git submodule update --remote --merge</code> : 연결된 서브모듈들의 업데이트 한번에 받아오기<br>
-<code>git submodule update --remote &lt;REMOTE-REPO-NAME&gt; --merge</code>: 특정 서브모듈 업데이트만 받아오기</li>
-</ol>
-<h2 id="참고자료">참고자료</h2>
-<p>Doc</p>
-<ul>
-<li><a class="link" href="https://gohugo.io/hosting-and-deployment/hosting-on-github/"  target="_blank" rel="noopener"
-    >Hugo doc - Use a Custom Domain</a>
-<a class="link" href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages"  target="_blank" rel="noopener"
-    >About custom domains and GitHub Pages</a></li>
-<li><a class="link" href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#about-custom-domain-configuration"  target="_blank" rel="noopener"
-    >Managing a custom domain for your GitHub Pages site</a></li>
-</ul>
-<p>Blog</p>
-<ul>
-<li><a class="link" href="https://blog.chulgil.me/how-to-make-blog-using-github-3/"  target="_blank" rel="noopener"
-    >블로그 만들기 GitHub 심화 3편 - 커스텀 도메인</a></li>
-<li><a class="link" href="https://devinlife.com/howto%20github%20pages/custom-domain/"  target="_blank" rel="noopener"
-    >블로그 커스텀 도메인 등록하기</a></li>
-<li><a class="link" href="https://pinedance.github.io/blog/2019/05/28/Git-Submodule"  target="_blank" rel="noopener"
-    >Git submodule 사용하기</a></li>
-</ul>
+<p>🎉 이제 도메인에서도 제대로 작동한다!</p>
+<h3 id="참고">참고</h3>
+<p><a class="link" href="https://discourse.gohugo.io/t/search-works-locally-but-not-on-domain/20641"  target="_blank" rel="noopener"
+    >Search works locally but not on domain</a><br>
+<a class="link" href="https://github.com/xiaoheiAh/hugo-theme-pure/issues/14"  target="_blank" rel="noopener"
+    >&ldquo;Search&rdquo; still not functioning with CORS blocking</a></p>
+<p>블로그 그만 고치고 글 쓰겠어&hellip;</p>
 
 </section>
 
@@ -231,8 +179,6 @@ github.io 저장소에 CNAME 파일이 생성된다.</li>
             <a href="/tags/blog/">blog</a>
         
             <a href="/tags/hugo/">hugo</a>
-        
-            <a href="/tags/%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD/">개발환경</a>
         
     </section>
 
@@ -264,6 +210,18 @@ github.io 저장소에 CNAME 파일이 생성된다.</li>
                 
                     
 <article class="">
+    <a href="/p/hugo-blog-with-custom-domain/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Hugo Blog with Custom Domain</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
     <a href="/p/hugo%EB%A1%9C-%EA%B0%9C%EB%B0%9C-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9E%A5%EB%A7%8C%ED%95%98%EA%B8%B0/">
         
         
@@ -276,12 +234,24 @@ github.io 저장소에 CNAME 파일이 생성된다.</li>
                 
                     
 <article class="">
-    <a href="/p/%EC%96%B4%EB%8A%90%EB%82%A0-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B2%80%EC%83%89%EC%9D%B4-%EC%95%88%EB%90%A0%EB%95%8C/">
+    <a href="/p/%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98-%ED%97%88%EB%B8%8C-m1-%EB%A1%9C%EC%BB%AC%EC%97%90%EC%84%9C-%EB%B9%8C%EB%93%9C%ED%95%98%EA%B8%B0/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">어느날 Hugo 블로그 검색이 안될때</h2>
+            <h2 class="article-title">파이토치 허브 M1 로컬에서 빌드하기</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/p/macmini-m1-%EC%97%90%EC%84%9C-homebrew-%EC%84%A4%EC%B9%98/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">MacMini M1 에서 Homebrew 설치</h2>
         </div>
     </a>
 </article>
@@ -453,12 +423,12 @@ github.io 저장소에 CNAME 파일이 생성된다.</li>
                 <div class="widget--toc">
                     <nav id="TableOfContents">
   <ol>
-    <li><a href="#도메인-구매">도메인 구매</a></li>
-    <li><a href="#네임서버-레코드-설정">네임서버 레코드 설정</a></li>
-    <li><a href="#github-저장소에서-도메인-설정">GitHub 저장소에서 도메인 설정</a></li>
-    <li><a href="#-완성">🎉 완성</a></li>
-    <li><a href="#-이후-빌드-커밋하기-전">⚠️ 이후 빌드 커밋하기 전</a></li>
-    <li><a href="#참고자료">참고자료</a></li>
+    <li><a href="#로컬에서-되던-검색이-도메인에서는-안된다">로컬에서 되던 검색이 도메인에서는 안된다..?</a></li>
+    <li><a href="#-해결">🛠 해결</a>
+      <ol>
+        <li><a href="#참고">참고</a></li>
+      </ol>
+    </li>
   </ol>
 </nav>
                 </div>

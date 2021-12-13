@@ -6,7 +6,21 @@
     <description>Recent content in Posts on BeMore</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 08 Dec 2021 19:09:48 +0900</lastBuildDate><atom:link href="https://www.bemore.dev/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 10 Dec 2021 12:09:48 +0900</lastBuildDate><atom:link href="https://www.bemore.dev/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>어느날 Hugo 블로그 검색이 안될때</title>
+      <link>https://www.bemore.dev/p/%EC%96%B4%EB%8A%90%EB%82%A0-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B2%80%EC%83%89%EC%9D%B4-%EC%95%88%EB%90%A0%EB%95%8C/</link>
+      <pubDate>Fri, 10 Dec 2021 12:09:48 +0900</pubDate>
+      
+      <guid>https://www.bemore.dev/p/%EC%96%B4%EB%8A%90%EB%82%A0-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B2%80%EC%83%89%EC%9D%B4-%EC%95%88%EB%90%A0%EB%95%8C/</guid>
+      <description>로컬에서 되던 검색이 도메인에서는 안된다..? 블로그 만들고 도메인 설정하고 신나게 글을 쓰다가 검색기능이 안되는걸 발견했다. 빌드한 그대로 로컬에서 돌려봤을때는 잘만 되는데..?
+도메인에서는 다음과 같은 에러메시지가 나오는 상태였다.   baseURL 설정이 웹에서 요구하는 주소 형태랑 좀 달라서 나타난 문제같았다.
+🛠 해결   config.yaml에서 baseURL을 www.bemore.dev로 바꿔도 달라지지 않았다.
+  CNAME 파일 확인하기
+CNAME 내부 주소 값이 처음 도메인 설정해줄때 www.bemore.dev였는데 빌드하고 나서 bemore.dev로 바꼈던 부분이 생각났다.
+&amp;lt;- Push할 떄마다 페이지가 작동하지 않을수도 있다고 해서 이를 방지하기 위해 static/CNAME을 작성할때</description>
+    </item>
+    
     <item>
       <title>fastai와 파이토치가 만나 꽃피운 딥러닝 2장</title>
       <link>https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/</link>
