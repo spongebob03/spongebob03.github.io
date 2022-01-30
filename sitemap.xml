@@ -2,19 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.bemore.dev/</loc>
+    <lastmod>2022-01-30T14:36:02+09:00</lastmod>
+  </url><url>
+    <loc>https://www.bemore.dev/tags/git/</loc>
+    <lastmod>2022-01-30T14:36:02+09:00</lastmod>
+  </url><url>
+    <loc>https://www.bemore.dev/post/</loc>
+    <lastmod>2022-01-30T14:36:02+09:00</lastmod>
+  </url><url>
+    <loc>https://www.bemore.dev/tags/</loc>
+    <lastmod>2022-01-30T14:36:02+09:00</lastmod>
+  </url><url>
+    <loc>https://www.bemore.dev/p/%EB%A6%AC%EB%AA%A8%ED%8A%B8%EC%97%90-%EC%98%AC%EB%A6%B0-%EC%BB%A4%EB%B0%8B-%EC%B7%A8%EC%86%8C-or-%EB%90%98%EB%8F%8C%EB%A6%AC%EA%B8%B0/</loc>
+    <lastmod>2022-01-30T14:36:02+09:00</lastmod>
+  </url><url>
+    <loc>https://www.bemore.dev/tags/%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4/</loc>
+    <lastmod>2022-01-30T14:36:02+09:00</lastmod>
+  </url><url>
     <loc>https://www.bemore.dev/p/2021%EB%85%84-%ED%9A%8C%EA%B3%A0/</loc>
     <lastmod>2021-12-30T14:39:31+09:00</lastmod>
   </url><url>
-    <loc>https://www.bemore.dev/</loc>
-    <lastmod>2021-12-30T14:39:31+09:00</lastmod>
-  </url><url>
     <loc>https://www.bemore.dev/categories/</loc>
-    <lastmod>2021-12-30T14:39:31+09:00</lastmod>
-  </url><url>
-    <loc>https://www.bemore.dev/post/</loc>
-    <lastmod>2021-12-30T14:39:31+09:00</lastmod>
-  </url><url>
-    <loc>https://www.bemore.dev/tags/</loc>
     <lastmod>2021-12-30T14:39:31+09:00</lastmod>
   </url><url>
     <loc>https://www.bemore.dev/tags/%ED%9A%8C%EA%B3%A0/</loc>
@@ -78,9 +87,6 @@
     <lastmod>2021-11-09T22:09:48+09:00</lastmod>
   </url><url>
     <loc>https://www.bemore.dev/tags/m1/</loc>
-    <lastmod>2021-08-16T22:09:48+09:00</lastmod>
-  </url><url>
-    <loc>https://www.bemore.dev/tags/%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4/</loc>
     <lastmod>2021-08-16T22:09:48+09:00</lastmod>
   </url><url>
     <loc>https://www.bemore.dev/p/%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98-%ED%97%88%EB%B8%8C-m1-%EB%A1%9C%EC%BB%AC%EC%97%90%EC%84%9C-%EB%B9%8C%EB%93%9C%ED%95%98%EA%B8%B0/</loc>

@@ -6,7 +6,64 @@
         <description>Recent content on BeMore</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Thu, 30 Dec 2021 14:39:31 +0900</lastBuildDate><atom:link href="https://www.bemore.dev/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 30 Jan 2022 14:36:02 +0900</lastBuildDate><atom:link href="https://www.bemore.dev/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>리모트에 올린 커밋 취소 or 되돌리기</title>
+        <link>https://www.bemore.dev/p/%EB%A6%AC%EB%AA%A8%ED%8A%B8%EC%97%90-%EC%98%AC%EB%A6%B0-%EC%BB%A4%EB%B0%8B-%EC%B7%A8%EC%86%8C-or-%EB%90%98%EB%8F%8C%EB%A6%AC%EA%B8%B0/</link>
+        <pubDate>Sun, 30 Jan 2022 14:36:02 +0900</pubDate>
+        
+        <guid>https://www.bemore.dev/p/%EB%A6%AC%EB%AA%A8%ED%8A%B8%EC%97%90-%EC%98%AC%EB%A6%B0-%EC%BB%A4%EB%B0%8B-%EC%B7%A8%EC%86%8C-or-%EB%90%98%EB%8F%8C%EB%A6%AC%EA%B8%B0/</guid>
+        <description>&lt;p&gt;요즘 번역 오픈소스 프로젝트를 하다보니 커밋하고 나서 보이는 오타들이 있었다. 하지만 글자 하나 때문에 새로 커밋 올리는 것은 깔끔하지 않다고 생각되고 어떤 오픈소스 프로젝트에서는 불필요한 커밋은 합쳐서 올리기를 요청하기도 한다고 했다(기본인가..?)🤔&lt;br&gt;
+이럴땐 커밋 취소, 되돌리기, 덮어쓰기를 상황에 맞게 사용하자.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git log --oneline&lt;/code&gt;&lt;br&gt;
+현재 커밋 로그를 조회해서 어느 지점 커밋으로 되돌리고 싶은지 확인한다.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;8d9111b (HEAD -&amp;gt; ddp_pipeline, origin/ddp_pipeline) 커밋4
+cedfd58 커밋3
+f0780f0 커밋2
+b908557 커밋1
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;✅  이미 올라간 커밋을 바꾸고 싶다! 어떻게?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;방법1 &lt;strong&gt;커밋 취소하기&lt;/strong&gt;:&lt;code&gt;git reset --soft HEAD^&lt;/code&gt;&lt;br&gt;
+로컬 저장소 상태를 커밋 이전 상태로 강제 변경해린다.&lt;br&gt;
+⚠️ 해당 브랜치를 협업하고 있다면 위험할 수 있다⚠️&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;--soft&lt;/code&gt;: 지정한 커밋에 있던 내용이 stage에 있는 상태로 되돌려진다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--hard&lt;/code&gt;: 지정한 커밋 기점의 상태로 되돌아간 상태이다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;HEAD^&lt;/code&gt;: 바로 이전 커밋으로 돌아가기&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;HEAD~n&lt;/code&gt;: n전 커밋으로 돌아가기 (HEAD~1==HEAD^)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;방법2 &lt;strong&gt;커밋 되돌리기&lt;/strong&gt;:&lt;code&gt;git revert HEAD^&lt;/code&gt;&lt;br&gt;
+커밋을 되돌렸다는 게 히스토리에 남는다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;방법3 &lt;strong&gt;커밋 덮어쓰기&lt;/strong&gt;: &lt;code&gt;git commit --amend&lt;/code&gt;&lt;br&gt;
+추가 작업을 이전 커밋에 포함시킨다. (이게 제일 좋은 방법같다..)&lt;br&gt;
+하지만 이미 원격 저장소에 push한 커밋 내용이라면 resest처럼 force push 필요하다)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;나는 해당 브랜치를 함께 작업하는 사람이 없어서 reset을 사용하는데 문제가 없었고 이전 커밋을 취소하고 새 커밋을 올리리고 싶었다. 이 방법으로 오타까지 고친 &lt;code&gt;커밋5&lt;/code&gt;를 새로 올리고 히스토리에 &lt;code&gt;커밋4&lt;/code&gt;를 남기지 않는다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;git reset --soft HEAD^&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cedfd58 (HEAD -&amp;gt; ddp_pipeline) 커밋3
+f0780f0 커밋2
+b908557 커밋3
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;기존의 수정한 내용을 지우지 않고 한군데만 더 고치면 되어서 &lt;code&gt;hard&lt;/code&gt; 대신 &lt;code&gt;soft&lt;/code&gt; 옵션을 줬다.&lt;br&gt;
+스테이지에 추가되어있던 파일을 내려주고 수정하기&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git commit -m &amp;quot;message&amp;quot;&lt;/code&gt; 커밋 올리기&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git push -f origin ddp_pipeline&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cfb8eec (HEAD -&amp;gt; ddp_pipeline, origin/ddp_pipeline) 커밋5
+cedfd58 커밋3
+f0780f0 커밋2
+b908557 커밋3
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;다음엔 revert를 사용해야겠다.&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>2021년 회고</title>
         <link>https://www.bemore.dev/p/2021%EB%85%84-%ED%9A%8C%EA%B3%A0/</link>
         <pubDate>Thu, 30 Dec 2021 14:39:31 +0900</pubDate>

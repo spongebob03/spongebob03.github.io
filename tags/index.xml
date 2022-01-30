@@ -6,7 +6,25 @@
     <description>Recent content in Tags on BeMore</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 30 Dec 2021 14:39:31 +0900</lastBuildDate><atom:link href="https://www.bemore.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 30 Jan 2022 14:36:02 +0900</lastBuildDate><atom:link href="https://www.bemore.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>git</title>
+      <link>https://www.bemore.dev/tags/git/</link>
+      <pubDate>Sun, 30 Jan 2022 14:36:02 +0900</pubDate>
+      
+      <guid>https://www.bemore.dev/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>오픈소스</title>
+      <link>https://www.bemore.dev/tags/%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4/</link>
+      <pubDate>Sun, 30 Jan 2022 14:36:02 +0900</pubDate>
+      
+      <guid>https://www.bemore.dev/tags/%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>회고</title>
       <link>https://www.bemore.dev/tags/%ED%9A%8C%EA%B3%A0/</link>
@@ -76,15 +94,6 @@
       <pubDate>Mon, 16 Aug 2021 22:09:48 +0900</pubDate>
       
       <guid>https://www.bemore.dev/tags/m1/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>오픈소스</title>
-      <link>https://www.bemore.dev/tags/%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4/</link>
-      <pubDate>Mon, 16 Aug 2021 22:09:48 +0900</pubDate>
-      
-      <guid>https://www.bemore.dev/tags/%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4/</guid>
       <description></description>
     </item>
     

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>git on BeMore</title>
+    <link>https://www.bemore.dev/tags/git/</link>
+    <description>Recent content in git on BeMore</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 30 Jan 2022 14:36:02 +0900</lastBuildDate><atom:link href="https://www.bemore.dev/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>리모트에 올린 커밋 취소 or 되돌리기</title>
+      <link>https://www.bemore.dev/p/%EB%A6%AC%EB%AA%A8%ED%8A%B8%EC%97%90-%EC%98%AC%EB%A6%B0-%EC%BB%A4%EB%B0%8B-%EC%B7%A8%EC%86%8C-or-%EB%90%98%EB%8F%8C%EB%A6%AC%EA%B8%B0/</link>
+      <pubDate>Sun, 30 Jan 2022 14:36:02 +0900</pubDate>
+      
+      <guid>https://www.bemore.dev/p/%EB%A6%AC%EB%AA%A8%ED%8A%B8%EC%97%90-%EC%98%AC%EB%A6%B0-%EC%BB%A4%EB%B0%8B-%EC%B7%A8%EC%86%8C-or-%EB%90%98%EB%8F%8C%EB%A6%AC%EA%B8%B0/</guid>
+      <description>요즘 번역 오픈소스 프로젝트를 하다보니 커밋하고 나서 보이는 오타들이 있었다. 하지만 글자 하나 때문에 새로 커밋 올리는 것은 깔끔하지 않다고 생각되고 어떤 오픈소스 프로젝트에서는 불필요한 커밋은 합쳐서 올리기를 요청하기도 한다고 했다(기본인가..?)🤔
+이럴땐 커밋 취소, 되돌리기, 덮어쓰기를 상황에 맞게 사용하자.
+git log --oneline
+현재 커밋 로그를 조회해서 어느 지점 커밋으로 되돌리고 싶은지 확인한다.
+8d9111b (HEAD -&amp;gt; ddp_pipeline, origin/ddp_pipeline) 커밋4 cedfd58 커밋3 f0780f0 커밋2 b908557 커밋1 ✅ 이미 올라간 커밋을 바꾸고 싶다! 어떻게?</description>
+    </item>
+    
+  </channel>
+</rss>
