@@ -6,7 +6,18 @@
     <description>Recent content in Posts on BeMore</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 30 Jan 2022 14:36:02 +0900</lastBuildDate><atom:link href="https://www.bemore.dev/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 19 Feb 2022 22:35:43 +0900</lastBuildDate><atom:link href="https://www.bemore.dev/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CleanCode: 시작</title>
+      <link>https://www.bemore.dev/p/cleancode-%EC%8B%9C%EC%9E%91/</link>
+      <pubDate>Sat, 19 Feb 2022 22:35:43 +0900</pubDate>
+      
+      <guid>https://www.bemore.dev/p/cleancode-%EC%8B%9C%EC%9E%91/</guid>
+      <description>시작 소프트웨어 개발에서 80% 이상은 유지보수다. 따라서 출시했다고 끝이 아니라 시작인것이다.
+나중으로 미루는 대신 리팩토링으로 나중의 &amp;ldquo;대가&amp;quot;를 줄이는 자세가 기본이다. 자기 코드에 대해서 정직하자. 버그 파티인 코드도 돌아간다고 면죄부를 준다면 그 대가는 혹독하다.
+코드 장인  원칙, 패턴, 기법에 대한 지식 꺠져가면서 연습 왜 그렇게 고쳤는지 서술할 수 있는 능력  &amp;ldquo;클린코드&amp;quot;의 이론 부분만 읽고 그쳐서는 그저 &amp;ldquo;기분 좋은 책&amp;rdquo;, 자기계발서에 머물지 않는다. 잘 읽고 잘 연습하고 스스로 깨닫도록 하자. 이 책에서 프로그래밍의 정의는 기계가 실행할 정도로 상세하게 요구사항을 명시하는 작업이다.</description>
+    </item>
+    
     <item>
       <title>리모트에 올린 커밋 취소 or 되돌리기</title>
       <link>https://www.bemore.dev/p/%EB%A6%AC%EB%AA%A8%ED%8A%B8%EC%97%90-%EC%98%AC%EB%A6%B0-%EC%BB%A4%EB%B0%8B-%EC%B7%A8%EC%86%8C-or-%EB%90%98%EB%8F%8C%EB%A6%AC%EA%B8%B0/</link>

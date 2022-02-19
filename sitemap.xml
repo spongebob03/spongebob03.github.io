@@ -3,15 +3,33 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.bemore.dev/</loc>
-    <lastmod>2022-01-30T14:36:02+09:00</lastmod>
+    <lastmod>2022-02-19T22:35:43+09:00</lastmod>
   </url><url>
-    <loc>https://www.bemore.dev/tags/git/</loc>
-    <lastmod>2022-01-30T14:36:02+09:00</lastmod>
+    <loc>https://www.bemore.dev/categories/</loc>
+    <lastmod>2022-02-19T22:35:43+09:00</lastmod>
+  </url><url>
+    <loc>https://www.bemore.dev/tags/cleancode/</loc>
+    <lastmod>2022-02-19T22:35:43+09:00</lastmod>
+  </url><url>
+    <loc>https://www.bemore.dev/p/cleancode-%EC%8B%9C%EC%9E%91/</loc>
+    <lastmod>2022-02-19T22:35:43+09:00</lastmod>
+  </url><url>
+    <loc>https://www.bemore.dev/tags/devbook/</loc>
+    <lastmod>2022-02-19T22:35:43+09:00</lastmod>
   </url><url>
     <loc>https://www.bemore.dev/post/</loc>
-    <lastmod>2022-01-30T14:36:02+09:00</lastmod>
+    <lastmod>2022-02-19T22:35:43+09:00</lastmod>
   </url><url>
     <loc>https://www.bemore.dev/tags/</loc>
+    <lastmod>2022-02-19T22:35:43+09:00</lastmod>
+  </url><url>
+    <loc>https://www.bemore.dev/tags/til/</loc>
+    <lastmod>2022-02-19T22:35:43+09:00</lastmod>
+  </url><url>
+    <loc>https://www.bemore.dev/categories/%EB%8F%85%EC%84%9C/</loc>
+    <lastmod>2022-02-19T22:35:43+09:00</lastmod>
+  </url><url>
+    <loc>https://www.bemore.dev/tags/git/</loc>
     <lastmod>2022-01-30T14:36:02+09:00</lastmod>
   </url><url>
     <loc>https://www.bemore.dev/p/%EB%A6%AC%EB%AA%A8%ED%8A%B8%EC%97%90-%EC%98%AC%EB%A6%B0-%EC%BB%A4%EB%B0%8B-%EC%B7%A8%EC%86%8C-or-%EB%90%98%EB%8F%8C%EB%A6%AC%EA%B8%B0/</loc>
@@ -21,9 +39,6 @@
     <lastmod>2022-01-30T14:36:02+09:00</lastmod>
   </url><url>
     <loc>https://www.bemore.dev/p/2021%EB%85%84-%ED%9A%8C%EA%B3%A0/</loc>
-    <lastmod>2021-12-30T14:39:31+09:00</lastmod>
-  </url><url>
-    <loc>https://www.bemore.dev/categories/</loc>
     <lastmod>2021-12-30T14:39:31+09:00</lastmod>
   </url><url>
     <loc>https://www.bemore.dev/tags/%ED%9A%8C%EA%B3%A0/</loc>

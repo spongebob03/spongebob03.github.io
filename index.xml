@@ -6,7 +6,39 @@
         <description>Recent content on BeMore</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 30 Jan 2022 14:36:02 +0900</lastBuildDate><atom:link href="https://www.bemore.dev/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 19 Feb 2022 22:35:43 +0900</lastBuildDate><atom:link href="https://www.bemore.dev/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>CleanCode: 시작</title>
+        <link>https://www.bemore.dev/p/cleancode-%EC%8B%9C%EC%9E%91/</link>
+        <pubDate>Sat, 19 Feb 2022 22:35:43 +0900</pubDate>
+        
+        <guid>https://www.bemore.dev/p/cleancode-%EC%8B%9C%EC%9E%91/</guid>
+        <description>&lt;h2 id=&#34;시작&#34;&gt;시작&lt;/h2&gt;
+&lt;p&gt;소프트웨어 개발에서 80% 이상은 &lt;strong&gt;유지보수&lt;/strong&gt;다. 따라서 출시했다고 끝이 아니라 시작인것이다.&lt;br&gt;
+나중으로 미루는 대신 리팩토링으로 나중의 &amp;ldquo;대가&amp;quot;를 줄이는 자세가 기본이다.
+자기 코드에 대해서 정직하자. 버그 파티인 코드도 돌아간다고 면죄부를 준다면 그 대가는 혹독하다.&lt;/p&gt;
+&lt;h2 id=&#34;코드-장인&#34;&gt;코드 장인&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;원칙, 패턴, 기법에 대한 지식&lt;/li&gt;
+&lt;li&gt;꺠져가면서 연습&lt;/li&gt;
+&lt;li&gt;왜 그렇게 고쳤는지 서술할 수 있는 능력&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&amp;ldquo;클린코드&amp;quot;의 이론 부분만 읽고 그쳐서는 그저 &amp;ldquo;기분 좋은 책&amp;rdquo;, 자기계발서에 머물지 않는다. 잘 읽고 잘 연습하고 스스로 깨닫도록 하자. 이 책에서 프로그래밍의 정의는 &lt;strong&gt;기계가 실행할 정도로 상세하게 요구사항을 명시하는 작업&lt;/strong&gt;이다. 본 목적에 충실하면서도 협업에 적합한 코드를 충족하는 것이 클린 코드 아닐까&lt;/p&gt;
+&lt;h2 id=&#34;나쁜-코드의-스노우볼링&#34;&gt;나쁜 코드의 스노우볼링&lt;/h2&gt;
+&lt;p&gt;처음의 회피가 더 큰 대가로&amp;hellip;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;일단 돌아가니까..!나중에 하자 -&amp;gt; 내가 뭘 짠거지? -&amp;gt; 버그 파티 -&amp;gt; 고통 반복
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;⭐️ 르블랑의 법칙: &lt;strong&gt;나중은 절대 돌아오지 않는다&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;깨끗한-코드&#34;&gt;깨끗한 코드?&lt;/h2&gt;
+&lt;p&gt;대단한 프로그래머들의 견해에 따르면 클린 코드란&lt;br&gt;
+&lt;code&gt;#우아&lt;/code&gt;, &lt;code&gt;#간단한 논리&lt;/code&gt;, &lt;code&gt;#의존성&lt;/code&gt;, &lt;code&gt;#간결&lt;/code&gt;, &lt;code&gt;#단순&lt;/code&gt;, &lt;code&gt;#직관적&lt;/code&gt;, &lt;code&gt;#이해쉬운&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;인용된 개발자들 모두 천상계&amp;hellip;그들은 가능하겠지..&lt;/p&gt;
+&lt;h2 id=&#34;느낀점&#34;&gt;느낀점&lt;/h2&gt;
+&lt;p&gt;나쁜 예시를 읽을때마다 자꾸 뜨끔한다. 하지만 이 책을 읽고 단순히 반성만 하고 끝내고 싶지 않았다.
+세세함에 몰두하는 태도는 탁얼함을 추구하는 모든 노력에서 공통으로 발견된다.
+작업한 코드에 대한 끊임없는 관심이 필요하다는 핵심을 표현하는 문장들은 천재적인 능력을 말하지 않는다. 사소하지만 일상적인 노력의 형태를 요구한다. 마치 문학 작품을 집필하는 작가나 그림을 그리는 화가에게 필요하는 것이 한번의 초안, 스케치로 명작을 만드는 것이 아니라 계속된 수정을 거치면서 더 낫게 하려는 노력과 같다. 물론 지속가능한 노력이 가장 어렵다&amp;hellip;
+일상적이고 간단한 활동 모두 인간의 노력에 들어 있는 위대함과 아름다움의 바탕이다. 이를 무시하고 대단한 일을 할 수 없는 것이다.&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>리모트에 올린 커밋 취소 or 되돌리기</title>
         <link>https://www.bemore.dev/p/%EB%A6%AC%EB%AA%A8%ED%8A%B8%EC%97%90-%EC%98%AC%EB%A6%B0-%EC%BB%A4%EB%B0%8B-%EC%B7%A8%EC%86%8C-or-%EB%90%98%EB%8F%8C%EB%A6%AC%EA%B8%B0/</link>
         <pubDate>Sun, 30 Jan 2022 14:36:02 +0900</pubDate>
