@@ -6,16 +6,28 @@
     <description>Recent content in CleanCode on BeMore</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 19 Feb 2022 22:35:43 +0900</lastBuildDate><atom:link href="https://www.bemore.dev/tags/cleancode/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 20 Feb 2022 10:19:13 +0900</lastBuildDate><atom:link href="https://www.bemore.dev/tags/cleancode/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>클린코드: Ch2</title>
+      <link>https://www.bemore.dev/p/%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C-ch2/</link>
+      <pubDate>Sun, 20 Feb 2022 10:19:13 +0900</pubDate>
+      
+      <guid>https://www.bemore.dev/p/%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C-ch2/</guid>
+      <description>영어는 필수다&amp;hellip;
+👍 의미있는 이름  역할 파악할 수 있도록 표현 읽는 사람이 차이를 알도록 이름을 지어야 한다 발음하기 쉬운 이름쓰기 검색하기 쉬운 이름 접두어는 이제 더이상 필요하지 않다 클래스 이름은 명사나 명사구가 적합 메서드 이름은 동사, 동사구가 적합  접근, 변경, 조건은 값 앞에 get, set, is를 붙이는게 표준   기발한 이름보다 명료한 이름이 모두의 평화를 위해서 더 좋다 일관성 있는 어휘 한 단어 다른 맥락에서 남발하지 않기  예)add, insert, append는 다르다   기술 개념에는 기술 이름이 가장 적합 적절한 개발 용어 없다면 도메인 용어 필요하다면 의미있는 맥락 추가 불필요한 맥락 없애기  👎 나쁜 이름  비슷한 이름 소문자 l이나 o 변수: 뭘 표현한지도 모르겠고 숫자 1, 0으로 착각하기 쉽다.</description>
+    </item>
+    
     <item>
       <title>CleanCode: 시작</title>
       <link>https://www.bemore.dev/p/cleancode-%EC%8B%9C%EC%9E%91/</link>
       <pubDate>Sat, 19 Feb 2022 22:35:43 +0900</pubDate>
       
       <guid>https://www.bemore.dev/p/cleancode-%EC%8B%9C%EC%9E%91/</guid>
-      <description>시작 소프트웨어 개발에서 80% 이상은 유지보수다. 따라서 출시했다고 끝이 아니라 시작인것이다.
-나중으로 미루는 대신 리팩토링으로 나중의 &amp;ldquo;대가&amp;quot;를 줄이는 자세가 기본이다. 자기 코드에 대해서 정직하자. 버그 파티인 코드도 돌아간다고 면죄부를 준다면 그 대가는 혹독하다.
-코드 장인  원칙, 패턴, 기법에 대한 지식 꺠져가면서 연습 왜 그렇게 고쳤는지 서술할 수 있는 능력  &amp;ldquo;클린코드&amp;quot;의 이론 부분만 읽고 그쳐서는 그저 &amp;ldquo;기분 좋은 책&amp;rdquo;, 자기계발서에 머물지 않는다. 잘 읽고 잘 연습하고 스스로 깨닫도록 하자. 이 책에서 프로그래밍의 정의는 기계가 실행할 정도로 상세하게 요구사항을 명시하는 작업이다.</description>
+      <description>프로그래머 이 책에서 프로그래밍의 정의는 기계가 실행할 정도로 상세하게 요구사항을 명시하는 작업이다. 본 목적에 충실하면서도 협업에 적합한 코드를 충족하는 것이 클린 코드 아닐까.
+소프트웨어 개발에서 80% 이상은 유지보수다. 따라서 출시했다고 끝이 아니라 시작인것이다.
+미루는 대신 리팩토링으로 나중의 &amp;ldquo;대가&amp;quot;를 줄이는 자세가 기본이다.
+자기 코드에 대해서 정직하자. 버그 파티인 코드도 돌아간다고 면죄부를 준다면 그 대가는 혹독하다.
+코드 장인  원칙, 패턴, 기법에 대한 지식 깨져가면서 연습 왜 그렇게 고쳤는지 서술할 수 있는 능력  &amp;ldquo;클린코드&amp;quot;의 이론 부분만 읽고 그쳐서는 그저 &amp;ldquo;기분 좋은 책&amp;rdquo;, 자기계발서에 머물지 않는다.</description>
     </item>
     
   </channel>

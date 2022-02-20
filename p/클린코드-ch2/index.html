@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en-us">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='#노마드코더 #북클럽 #노개북'><title>CleanCode: 시작</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='#노마드코더 #북클럽 #노개북'><title>클린코드: Ch2</title>
 
-<link rel='canonical' href='https://www.bemore.dev/p/cleancode-%EC%8B%9C%EC%9E%91/'>
+<link rel='canonical' href='https://www.bemore.dev/p/%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C-ch2/'>
 
-<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='CleanCode: 시작'>
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='클린코드: Ch2'>
 <meta property='og:description' content='#노마드코더 #북클럽 #노개북'>
-<meta property='og:url' content='https://www.bemore.dev/p/cleancode-%EC%8B%9C%EC%9E%91/'>
+<meta property='og:url' content='https://www.bemore.dev/p/%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C-ch2/'>
 <meta property='og:site_name' content='BeMore'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='TIL' /><meta property='article:tag' content='CleanCode' /><meta property='article:tag' content='DevBook' /><meta property='article:published_time' content='2022-02-19T22:35:43&#43;09:00'/><meta property='article:modified_time' content='2022-02-19T22:35:43&#43;09:00'/>
-<meta name="twitter:title" content="CleanCode: 시작">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='TIL' /><meta property='article:tag' content='CleanCode' /><meta property='article:tag' content='DevBook' /><meta property='article:published_time' content='2022-02-20T10:19:13&#43;09:00'/><meta property='article:modified_time' content='2022-02-20T10:19:13&#43;09:00'/>
+<meta name="twitter:title" content="클린코드: Ch2">
 <meta name="twitter:description" content="#노마드코더 #북클럽 #노개북">
     <link rel="shortcut icon" href="favicon.ico" />
 
@@ -75,7 +75,7 @@
     
 
     <h2 class="article-title">
-        <a href="/p/cleancode-%EC%8B%9C%EC%9E%91/">CleanCode: 시작</a>
+        <a href="/p/%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C-ch2/">클린코드: Ch2</a>
     </h2>
 
     
@@ -97,7 +97,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Feb 19, 2022</time>
+                <time class="article-time--published">Feb 20, 2022</time>
             </div>
         
 
@@ -112,7 +112,7 @@
 
 
                 <time class="article-time--reading">
-                    2 분 정도
+                    1 분 정도
                 </time>
             </div>
         
@@ -122,38 +122,45 @@
 </header>
 
     <section class="article-content">
-    <h2 id="프로그래머">프로그래머</h2>
-<p>이 책에서 프로그래밍의 정의는 <strong>기계가 실행할 정도로 상세하게 요구사항을 명시하는 작업</strong>이다. 본 목적에 충실하면서도 협업에 적합한 코드를 충족하는 것이 클린 코드 아닐까.<br>
-소프트웨어 개발에서 80% 이상은 <strong>유지보수</strong>다. 따라서 출시했다고 끝이 아니라 시작인것이다.<br>
-미루는 대신 리팩토링으로 나중의 &ldquo;대가&quot;를 줄이는 자세가 기본이다.<br>
-자기 코드에 대해서 정직하자. 버그 파티인 코드도 돌아간다고 면죄부를 준다면 그 대가는 혹독하다.</p>
-<h2 id="코드-장인">코드 장인</h2>
-<ol>
-<li>원칙, 패턴, 기법에 대한 지식</li>
-<li>깨져가면서 연습</li>
-<li>왜 그렇게 고쳤는지 서술할 수 있는 능력</li>
-</ol>
-<p>&ldquo;클린코드&quot;의 이론 부분만 읽고 그쳐서는 그저 &ldquo;기분 좋은 책&rdquo;, 자기계발서에 머물지 않는다. 잘 읽고 잘 연습하고 스스로 깨닫도록 하자.</p>
-<h2 id="나쁜-코드의-스노우볼링">나쁜 코드의 스노우볼링</h2>
-<p>처음의 회피가 더 큰 대가로&hellip;</p>
-<pre tabindex="0"><code>일단 돌아가니까..!나중에 하자 -&gt; 내가 뭘 짠거지? -&gt; 버그 파티 -&gt; 고통 반복
-</code></pre><p>⭐️ 르블랑의 법칙: <strong>나중은 절대 돌아오지 않는다</strong></p>
-<h2 id="깨끗한-코드">깨끗한 코드?</h2>
-<p>대단한 프로그래머들의 견해에 따르면 클린 코드란<br>
-<code>#우아</code>, <code>#간단</code>, <code>#간결</code>, <code>#단순</code>, <code>#직관적</code>, <code>#이해쉬운</code></p>
-<p>명쾌한 추상화, 의존성 최소화, 테스트코드</p>
-<h2 id="느낀점">느낀점</h2>
-<p>나쁜 예시를 읽을때마다 자꾸 뜨끔한다. 하지만 이 책을 읽고 단순히 반성만 하고 끝내고 싶지 않았다.
-세세함에 몰두하는 태도는 탁월함을 추구하는 모든 노력에서 공통으로 발견된다고 한다.
-작업한 코드에 대한 끊임없는 관심이 필요하다는 핵심을 표현하는 문장들은 획기적인 능력을 말하지 않는다. 사소하지만 일상적인 노력의 형태를 요구한다. 마치 문학 작품을 집필하는 작가나 그림을 그리는 화가에게 필요하는 것이 한번의 초안, 스케치로 명작을 만드는 것이 아니라 계속된 수정을 거치면서 더 낫게 하려는 노력인 것과 같다. 물론 지속가능한 노력이 가장 어렵다&hellip;
-일상적이고 간단한 활동 모두 인간의 노력에 들어 있는 위대함과 아름다움의 바탕이다. 이를 무시하고 대단한 일을 할 수 없는 것이다.</p>
-<h2 id="이-책에-대한-다른-리뷰들">이 책에 대한 다른 리뷰들</h2>
+    <p>영어는 필수다&hellip;</p>
+<h2 id="-의미있는-이름">👍 의미있는 이름</h2>
 <ul>
-<li><a class="link" href="https://techblog.woowahan.com/2620/"  target="_blank" rel="noopener"
-    >우아한 형제들 기술 블로그</a></li>
-<li><a class="link" href="https://blog.outsider.ne.kr/515"  target="_blank" rel="noopener"
-    >아웃사이더 개발 블로그</a></li>
+<li>역할 파악할 수 있도록 표현</li>
+<li>읽는 사람이 차이를 알도록 이름을 지어야 한다</li>
+<li>발음하기 쉬운 이름쓰기</li>
+<li>검색하기 쉬운 이름</li>
+<li>접두어는 이제 더이상 필요하지 않다</li>
+<li><strong>클래스 이름</strong>은 명사나 명사구가 적합</li>
+<li><strong>메서드 이름</strong>은 동사, 동사구가 적합
+<ul>
+<li>접근, 변경, 조건은 값 앞에 get, set, is를 붙이는게 표준</li>
 </ul>
+</li>
+<li>기발한 이름보다 명료한 이름이 모두의 평화를 위해서 더 좋다</li>
+<li>일관성 있는 어휘</li>
+<li>한 단어 다른 맥락에서 남발하지 않기
+<ul>
+<li>예)add, insert, append는 다르다</li>
+</ul>
+</li>
+<li>기술 개념에는 기술 이름이 가장 적합</li>
+<li>적절한 개발 용어 없다면 도메인 용어</li>
+<li>필요하다면 의미있는 맥락 추가</li>
+<li>불필요한 맥락 없애기</li>
+</ul>
+<h3 id="-나쁜-이름">👎 나쁜 이름</h3>
+<ul>
+<li>비슷한 이름</li>
+<li>소문자 l이나 o 변수: 뭘 표현한지도 모르겠고 숫자 1, 0으로 착각하기 쉽다.</li>
+<li>문자 하나만 사용하는 변수 이름 (단, 반복문에서 주로 사용하는 변수 i, j, k는 괜찮다)
+<ul>
+<li>예)a1, a2는 그릇된 정보를 제공하는 이름은 아니지만 아무런 정보를 제공하지 못한다.</li>
+</ul>
+</li>
+<li>유의미한 상수: 그냥 숫자 형태로 써왔다면 해당 변수 검색은 꿈도 못꿀듯.</li>
+</ul>
+<h2 id="느낀점">느낀점</h2>
+<p>작성하는 클래스, 메서드, 변수 이름을 명확하게 표현해서 처음 코드를 보는 사람도 이해할 수 있어야한다. 맥락을 추가하는 예시를 통해서 클래스, 함수, 접근자를 어떻게 쓰는지 볼 수 있었다. 나는 리팩토링 이전의 코드만 짜고 있었다. 갈 길이 멀다.</p>
 
 </section>
 
@@ -198,12 +205,12 @@
                 
                     
 <article class="">
-    <a href="/p/%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C-ch2/">
+    <a href="/p/cleancode-%EC%8B%9C%EC%9E%91/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">클린코드: Ch2</h2>
+            <h2 class="article-title">CleanCode: 시작</h2>
         </div>
     </a>
 </article>
@@ -375,12 +382,12 @@
                 <div class="widget--toc">
                     <nav id="TableOfContents">
   <ol>
-    <li><a href="#프로그래머">프로그래머</a></li>
-    <li><a href="#코드-장인">코드 장인</a></li>
-    <li><a href="#나쁜-코드의-스노우볼링">나쁜 코드의 스노우볼링</a></li>
-    <li><a href="#깨끗한-코드">깨끗한 코드?</a></li>
+    <li><a href="#-의미있는-이름">👍 의미있는 이름</a>
+      <ol>
+        <li><a href="#-나쁜-이름">👎 나쁜 이름</a></li>
+      </ol>
+    </li>
     <li><a href="#느낀점">느낀점</a></li>
-    <li><a href="#이-책에-대한-다른-리뷰들">이 책에 대한 다른 리뷰들</a></li>
   </ol>
 </nav>
                 </div>
