@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>팀 프로젝트 on Bemore</title>
+    <link>https://www.bemore.dev/en/showcase/repos/</link>
+    <description>Recent content in 팀 프로젝트 on Bemore</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>bmofinnjake08@gmail.com (bmo)</managingEditor>
+    <webMaster>bmofinnjake08@gmail.com (bmo)</webMaster>
+    <copyright>©2022, All Rights Reserved</copyright>
+    <lastBuildDate>Sun, 19 Jan 2020 21:04:11 +0900</lastBuildDate>
+    
+        <atom:link href="https://www.bemore.dev/en/showcase/repos/index.xml" rel="self" type="application/rss+xml" />
+    
+
+      
+      <item>
+        <title>Music-Recommend</title>
+        <link>https://www.bemore.dev/en/showcase/repos/hugo-theme-zdoc/</link>
+        <pubDate>Sun, 19 Jan 2020 21:13:42 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Sun, 19 Jan 2020 21:13:42 +0900</atom:modified>
+        <guid>https://www.bemore.dev/en/showcase/repos/hugo-theme-zdoc/</guid>
+        <description></description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

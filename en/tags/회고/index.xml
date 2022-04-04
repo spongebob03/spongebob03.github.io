@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>회고 on Bemore</title>
+    <link>https://www.bemore.dev/en/tags/%ED%9A%8C%EA%B3%A0/</link>
+    <description>Recent content in 회고 on Bemore</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>bmofinnjake08@gmail.com (bmo)</managingEditor>
+    <webMaster>bmofinnjake08@gmail.com (bmo)</webMaster>
+    <copyright>©2022, All Rights Reserved</copyright>
+    <lastBuildDate>Thu, 30 Dec 2021 14:39:31 +0900</lastBuildDate>
+    
+        <atom:link href="https://www.bemore.dev/en/tags/%ED%9A%8C%EA%B3%A0/index.xml" rel="self" type="application/rss+xml" />
+    
+
+      
+      <item>
+        <title>2021년 회고</title>
+        <link>https://www.bemore.dev/en/posts/retrospect/y2021/</link>
+        <pubDate>Thu, 30 Dec 2021 14:39:31 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Thu, 30 Dec 2021 14:39:31 +0900</atom:modified>
+        <guid>https://www.bemore.dev/en/posts/retrospect/y2021/</guid>
+        <description>😷 올해도 코로나 올해도 코로나는 끝나지 않았다&amp;hellip; 이제는 &amp;lsquo;곧 끝나겠지&amp;rsquo;라는 생각도 들지 않지만 &amp;lsquo;언젠간</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>회고</category>
+            
+          
+        
+        
+          
+            
+              <category>회고</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>2020년 회고</title>
+        <link>https://www.bemore.dev/en/posts/retrospect/y2020/</link>
+        <pubDate>Wed, 30 Dec 2020 14:58:14 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Wed, 30 Dec 2020 14:58:14 +0900</atom:modified>
+        <guid>https://www.bemore.dev/en/posts/retrospect/y2020/</guid>
+        <description>코로나 이&amp;hellip; 미친 코로나 때문에&amp;hellip; 1년이 날아간 기분이다. 주어진 처지에서 최선을 다했으니 후회는 없지만 그래도 아쉬움이 없는 것은</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>회고</category>
+            
+          
+        
+        
+          
+            
+              <category>회고</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>2019년 회고</title>
+        <link>https://www.bemore.dev/en/posts/retrospect/y2019/</link>
+        <pubDate>Tue, 31 Dec 2019 14:58:04 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Tue, 31 Dec 2019 14:58:04 +0900</atom:modified>
+        <guid>https://www.bemore.dev/en/posts/retrospect/y2019/</guid>
+        <description>운동🏃 태권도. 8월까지 방학에는 태권도장에 다니면서 처음보다 확실히 좋아졌다. 하지만 학기 중에 운동을 위해 집에 자주 오는 것도 부담되서 2학기에 소모임을 만들</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>회고</category>
+            
+          
+        
+        
+          
+            
+              <category>회고</category>
+            
+          
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

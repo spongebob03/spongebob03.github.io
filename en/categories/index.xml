@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>Categories on Bemore</title>
+    <link>https://www.bemore.dev/en/categories/</link>
+    <description>Recent content in Categories on Bemore</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>bmofinnjake08@gmail.com (bmo)</managingEditor>
+    <webMaster>bmofinnjake08@gmail.com (bmo)</webMaster>
+    <copyright>©2022, All Rights Reserved</copyright>
+    <lastBuildDate>Thu, 30 Dec 2021 14:39:31 +0900</lastBuildDate>
+    
+        <atom:link href="https://www.bemore.dev/en/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+
+      
+      <item>
+        <title>회고</title>
+        <link>https://www.bemore.dev/en/categories/%ED%9A%8C%EA%B3%A0/</link>
+        <pubDate>Thu, 30 Dec 2021 14:39:31 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        
+        <guid>https://www.bemore.dev/en/categories/%ED%9A%8C%EA%B3%A0/</guid>
+        <description></description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>syntax</title>
+        <link>https://www.bemore.dev/en/categories/syntax/</link>
+        <pubDate>Fri, 20 Dec 2019 12:00:06 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        
+        <guid>https://www.bemore.dev/en/categories/syntax/</guid>
+        <description></description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>themes</title>
+        <link>https://www.bemore.dev/en/categories/themes/</link>
+        <pubDate>Fri, 20 Dec 2019 12:00:06 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        
+        <guid>https://www.bemore.dev/en/categories/themes/</guid>
+        <description></description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>diagram</title>
+        <link>https://www.bemore.dev/en/categories/diagram/</link>
+        <pubDate>Mon, 18 Nov 2019 21:00:06 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        
+        <guid>https://www.bemore.dev/en/categories/diagram/</guid>
+        <description></description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>math</title>
+        <link>https://www.bemore.dev/en/categories/math/</link>
+        <pubDate>Sat, 16 Nov 2019 12:00:06 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        
+        <guid>https://www.bemore.dev/en/categories/math/</guid>
+        <description></description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>
