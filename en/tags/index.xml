@@ -14,11 +14,83 @@
     <managingEditor>bmofinnjake08@gmail.com (bmo)</managingEditor>
     <webMaster>bmofinnjake08@gmail.com (bmo)</webMaster>
     <copyright>©2022, All Rights Reserved</copyright>
-    <lastBuildDate>Thu, 30 Dec 2021 14:39:31 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 05 Mar 2022 12:09:48 +0900</lastBuildDate>
     
         <atom:link href="https://www.bemore.dev/en/tags/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>연결리스트</title>
+        <link>https://www.bemore.dev/en/tags/%EC%97%B0%EA%B2%B0%EB%A6%AC%EC%8A%A4%ED%8A%B8/</link>
+        <pubDate>Sat, 05 Mar 2022 12:09:48 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        
+        <guid>https://www.bemore.dev/en/tags/%EC%97%B0%EA%B2%B0%EB%A6%AC%EC%8A%A4%ED%8A%B8/</guid>
+        <description></description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>자료구조</title>
+        <link>https://www.bemore.dev/en/tags/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/</link>
+        <pubDate>Sat, 05 Mar 2022 12:09:48 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        
+        <guid>https://www.bemore.dev/en/tags/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/</guid>
+        <description></description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>git</title>
+        <link>https://www.bemore.dev/en/tags/git/</link>
+        <pubDate>Sun, 30 Jan 2022 14:36:02 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        
+        <guid>https://www.bemore.dev/en/tags/git/</guid>
+        <description></description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>오픈소스</title>
+        <link>https://www.bemore.dev/en/tags/%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4/</link>
+        <pubDate>Sun, 30 Jan 2022 14:36:02 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        
+        <guid>https://www.bemore.dev/en/tags/%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4/</guid>
+        <description></description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
       
       <item>
         <title>회고</title>
@@ -39,12 +111,12 @@
       </item>
       
       <item>
-        <title>shortcode</title>
-        <link>https://www.bemore.dev/en/tags/shortcode/</link>
-        <pubDate>Sat, 25 Jan 2020 06:40:51 +0900</pubDate>
+        <title>blog</title>
+        <link>https://www.bemore.dev/en/tags/blog/</link>
+        <pubDate>Fri, 10 Dec 2021 12:09:48 +0900</pubDate>
         <author>bmofinnjake08@gmail.com (bmo)</author>
         
-        <guid>https://www.bemore.dev/en/tags/shortcode/</guid>
+        <guid>https://www.bemore.dev/en/tags/blog/</guid>
         <description></description>
         
         <dc:creator>bmo</dc:creator>
@@ -57,12 +129,12 @@
       </item>
       
       <item>
-        <title>css</title>
-        <link>https://www.bemore.dev/en/tags/css/</link>
-        <pubDate>Fri, 20 Dec 2019 12:00:06 +0900</pubDate>
+        <title>hugo</title>
+        <link>https://www.bemore.dev/en/tags/hugo/</link>
+        <pubDate>Fri, 10 Dec 2021 12:09:48 +0900</pubDate>
         <author>bmofinnjake08@gmail.com (bmo)</author>
         
-        <guid>https://www.bemore.dev/en/tags/css/</guid>
+        <guid>https://www.bemore.dev/en/tags/hugo/</guid>
         <description></description>
         
         <dc:creator>bmo</dc:creator>
@@ -75,12 +147,12 @@
       </item>
       
       <item>
-        <title>html</title>
-        <link>https://www.bemore.dev/en/tags/html/</link>
-        <pubDate>Fri, 20 Dec 2019 12:00:06 +0900</pubDate>
+        <title>fastai</title>
+        <link>https://www.bemore.dev/en/tags/fastai/</link>
+        <pubDate>Wed, 08 Dec 2021 19:09:48 +0900</pubDate>
         <author>bmofinnjake08@gmail.com (bmo)</author>
         
-        <guid>https://www.bemore.dev/en/tags/html/</guid>
+        <guid>https://www.bemore.dev/en/tags/fastai/</guid>
         <description></description>
         
         <dc:creator>bmo</dc:creator>
@@ -93,12 +165,12 @@
       </item>
       
       <item>
-        <title>markdown</title>
-        <link>https://www.bemore.dev/en/tags/markdown/</link>
-        <pubDate>Fri, 20 Dec 2019 12:00:06 +0900</pubDate>
+        <title>ML</title>
+        <link>https://www.bemore.dev/en/tags/ml/</link>
+        <pubDate>Wed, 08 Dec 2021 19:09:48 +0900</pubDate>
         <author>bmofinnjake08@gmail.com (bmo)</author>
         
-        <guid>https://www.bemore.dev/en/tags/markdown/</guid>
+        <guid>https://www.bemore.dev/en/tags/ml/</guid>
         <description></description>
         
         <dc:creator>bmo</dc:creator>
@@ -111,12 +183,12 @@
       </item>
       
       <item>
-        <title>themes</title>
-        <link>https://www.bemore.dev/en/tags/themes/</link>
-        <pubDate>Fri, 20 Dec 2019 12:00:06 +0900</pubDate>
+        <title>개발환경</title>
+        <link>https://www.bemore.dev/en/tags/%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD/</link>
+        <pubDate>Mon, 06 Dec 2021 19:09:48 +0900</pubDate>
         <author>bmofinnjake08@gmail.com (bmo)</author>
         
-        <guid>https://www.bemore.dev/en/tags/themes/</guid>
+        <guid>https://www.bemore.dev/en/tags/%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD/</guid>
         <description></description>
         
         <dc:creator>bmo</dc:creator>
@@ -129,12 +201,12 @@
       </item>
       
       <item>
-        <title>privacy</title>
-        <link>https://www.bemore.dev/en/tags/privacy/</link>
-        <pubDate>Thu, 19 Dec 2019 12:00:06 +0900</pubDate>
+        <title>추천시스템</title>
+        <link>https://www.bemore.dev/en/tags/%EC%B6%94%EC%B2%9C%EC%8B%9C%EC%8A%A4%ED%85%9C/</link>
+        <pubDate>Fri, 19 Nov 2021 22:09:48 +0900</pubDate>
         <author>bmofinnjake08@gmail.com (bmo)</author>
         
-        <guid>https://www.bemore.dev/en/tags/privacy/</guid>
+        <guid>https://www.bemore.dev/en/tags/%EC%B6%94%EC%B2%9C%EC%8B%9C%EC%8A%A4%ED%85%9C/</guid>
         <description></description>
         
         <dc:creator>bmo</dc:creator>
@@ -147,12 +219,12 @@
       </item>
       
       <item>
-        <title>shortcodes</title>
-        <link>https://www.bemore.dev/en/tags/shortcodes/</link>
-        <pubDate>Thu, 19 Dec 2019 12:00:06 +0900</pubDate>
+        <title>PyTorch</title>
+        <link>https://www.bemore.dev/en/tags/pytorch/</link>
+        <pubDate>Wed, 17 Nov 2021 14:41:51 +0900</pubDate>
         <author>bmofinnjake08@gmail.com (bmo)</author>
         
-        <guid>https://www.bemore.dev/en/tags/shortcodes/</guid>
+        <guid>https://www.bemore.dev/en/tags/pytorch/</guid>
         <description></description>
         
         <dc:creator>bmo</dc:creator>
@@ -165,12 +237,12 @@
       </item>
       
       <item>
-        <title>amoji</title>
-        <link>https://www.bemore.dev/en/tags/amoji/</link>
-        <pubDate>Mon, 16 Dec 2019 12:00:06 +0900</pubDate>
+        <title>M1</title>
+        <link>https://www.bemore.dev/en/tags/m1/</link>
+        <pubDate>Mon, 16 Aug 2021 22:09:48 +0900</pubDate>
         <author>bmofinnjake08@gmail.com (bmo)</author>
         
-        <guid>https://www.bemore.dev/en/tags/amoji/</guid>
+        <guid>https://www.bemore.dev/en/tags/m1/</guid>
         <description></description>
         
         <dc:creator>bmo</dc:creator>
@@ -183,12 +255,12 @@
       </item>
       
       <item>
-        <title>bamoji</title>
-        <link>https://www.bemore.dev/en/tags/bamoji/</link>
-        <pubDate>Mon, 16 Dec 2019 12:00:06 +0900</pubDate>
+        <title>chatbot</title>
+        <link>https://www.bemore.dev/en/tags/chatbot/</link>
+        <pubDate>Sun, 08 Aug 2021 22:09:48 +0900</pubDate>
         <author>bmofinnjake08@gmail.com (bmo)</author>
         
-        <guid>https://www.bemore.dev/en/tags/bamoji/</guid>
+        <guid>https://www.bemore.dev/en/tags/chatbot/</guid>
         <description></description>
         
         <dc:creator>bmo</dc:creator>
@@ -201,84 +273,12 @@
       </item>
       
       <item>
-        <title>emoji</title>
-        <link>https://www.bemore.dev/en/tags/emoji/</link>
-        <pubDate>Mon, 16 Dec 2019 12:00:06 +0900</pubDate>
+        <title>homebrew</title>
+        <link>https://www.bemore.dev/en/tags/homebrew/</link>
+        <pubDate>Tue, 08 Jun 2021 22:09:48 +0900</pubDate>
         <author>bmofinnjake08@gmail.com (bmo)</author>
         
-        <guid>https://www.bemore.dev/en/tags/emoji/</guid>
-        <description></description>
-        
-        <dc:creator>bmo</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>gamoji</title>
-        <link>https://www.bemore.dev/en/tags/gamoji/</link>
-        <pubDate>Mon, 16 Dec 2019 12:00:06 +0900</pubDate>
-        <author>bmofinnjake08@gmail.com (bmo)</author>
-        
-        <guid>https://www.bemore.dev/en/tags/gamoji/</guid>
-        <description></description>
-        
-        <dc:creator>bmo</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>namoji</title>
-        <link>https://www.bemore.dev/en/tags/namoji/</link>
-        <pubDate>Mon, 16 Dec 2019 12:00:06 +0900</pubDate>
-        <author>bmofinnjake08@gmail.com (bmo)</author>
-        
-        <guid>https://www.bemore.dev/en/tags/namoji/</guid>
-        <description></description>
-        
-        <dc:creator>bmo</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>diagram</title>
-        <link>https://www.bemore.dev/en/tags/diagram/</link>
-        <pubDate>Sun, 17 Nov 2019 12:00:06 +0900</pubDate>
-        <author>bmofinnjake08@gmail.com (bmo)</author>
-        
-        <guid>https://www.bemore.dev/en/tags/diagram/</guid>
-        <description></description>
-        
-        <dc:creator>bmo</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>index</title>
-        <link>https://www.bemore.dev/en/tags/index/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        <author>bmofinnjake08@gmail.com (bmo)</author>
-        
-        <guid>https://www.bemore.dev/en/tags/index/</guid>
+        <guid>https://www.bemore.dev/en/tags/homebrew/</guid>
         <description></description>
         
         <dc:creator>bmo</dc:creator>

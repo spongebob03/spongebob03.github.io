@@ -14,11 +14,67 @@
     <managingEditor>bmofinnjake08@gmail.com (bmo)</managingEditor>
     <webMaster>bmofinnjake08@gmail.com (bmo)</webMaster>
     <copyright>©2022, All Rights Reserved</copyright>
-    <lastBuildDate>Thu, 30 Dec 2021 14:39:31 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 05 Mar 2022 12:09:48 +0900</lastBuildDate>
     
         <atom:link href="https://www.bemore.dev/en/posts/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>Linked List</title>
+        <link>https://www.bemore.dev/en/posts/cs/datastructure/linkedlist/</link>
+        <pubDate>Sat, 05 Mar 2022 12:09:48 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Sat, 05 Mar 2022 12:09:48 +0900</atom:modified>
+        <guid>https://www.bemore.dev/en/posts/cs/datastructure/linkedlist/</guid>
+        <description>LinkedList 연결된 데이터를 저장할때 사용합니다. 연결리스트를 구성하는 노드의 구조는 다음과 같습니다. - node - data - Link(next) 장점: 삭제와 삽입 O(1) 길이가 정해지지 않은 데이터를</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>자료구조</category>
+            
+          
+            
+              <category>연결리스트</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>리모트에 올린 커밋 취소 or 되돌리기</title>
+        <link>https://www.bemore.dev/en/posts/devstory/about_git/</link>
+        <pubDate>Sun, 30 Jan 2022 14:36:02 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Sun, 30 Jan 2022 14:36:02 +0900</atom:modified>
+        <guid>https://www.bemore.dev/en/posts/devstory/about_git/</guid>
+        <description>요즘 번역 오픈소스 프로젝트를 하다보니 커밋하고 나서 보이는 오타들이 있었다. 하지만 글자 하나 때문에 새로 커밋 올리는 것은 깔끔하지 않다고 생각되고 어떤 오픈소스</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>git</category>
+            
+          
+            
+              <category>오픈소스</category>
+            
+          
+        
+        
+        
+      </item>
       
       <item>
         <title>2021년 회고</title>
@@ -41,12 +97,350 @@
           
         
         
+        
+      </item>
+      
+      <item>
+        <title>어느날 Hugo 블로그 검색이 안될때</title>
+        <link>https://www.bemore.dev/en/posts/devstory/blogsearch/</link>
+        <pubDate>Fri, 10 Dec 2021 12:09:48 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Fri, 10 Dec 2021 12:09:48 +0900</atom:modified>
+        <guid>https://www.bemore.dev/en/posts/devstory/blogsearch/</guid>
+        <description>로컬에서 되던 검색이 도메인에서는 안된다..? 블로그 만들고 도메인 설정하고 신나게 글을 쓰다가 검색기능이 안되는걸 발견했다. 빌드한 그대로 로컬에서 돌려봤을</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>blog</category>
+            
+          
+            
+              <category>hugo</category>
+            
+          
+        
+        
+        
+          
+            
+              <category>이게 왜 안되지</category>
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>fastai와 파이토치가 만나 꽃피운 딥러닝 2장</title>
+        <link>https://www.bemore.dev/en/posts/ml/fastai/ch2/</link>
+        <pubDate>Wed, 08 Dec 2021 19:09:48 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Wed, 08 Dec 2021 19:09:48 +0900</atom:modified>
+        <guid>https://www.bemore.dev/en/posts/ml/fastai/ch2/</guid>
+        <description>이번 장에서는 분류 모델을 구축하면서 딥러닝의 가능성 및 제한사항을 살펴볼 수 있다. 이 곰돌이가 어떤 곰돌이인지 예측하는 모델을 다뤄봅시다 🐻 데이터 다운로드 책에</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>ML</category>
+            
+          
+            
+              <category>fastai</category>
+            
+          
+        
+        
+          
+            
+              <category>ML</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Hugo Blog with Custom Domain</title>
+        <link>https://www.bemore.dev/en/posts/devstory/customdomain/</link>
+        <pubDate>Mon, 06 Dec 2021 19:09:48 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Mon, 06 Dec 2021 19:09:48 +0900</atom:modified>
+        <guid>https://www.bemore.dev/en/posts/devstory/customdomain/</guid>
+        <description>github.io 주소도 좋지만 간단하고 나만의 도메인 주소를 만들어서 쓰고 싶었다. 도메인 구매 구매 사이트 비교(.dev 도메인 비용으로 찾아봤을 때 1년 비용. 기간에 따라 더</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>blog</category>
+            
+          
+            
+              <category>hugo</category>
+            
+          
+            
+              <category>개발환경</category>
+            
+          
+        
+        
+        
+          
+            
+              <category>우당탕탕 개발기</category>
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>Hugo로 개발 블로그 장만하기</title>
+        <link>https://www.bemore.dev/en/posts/first-post/</link>
+        <pubDate>Thu, 02 Dec 2021 22:09:48 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Thu, 02 Dec 2021 22:09:48 +0900</atom:modified>
+        <guid>https://www.bemore.dev/en/posts/first-post/</guid>
+        <description>SSG(Static site generator) 중 Hugo를 사용하여 블로그를 만들었다. 처음에 뭐가 뭔지 몰라서 뚱땅뚱땅 만들었다. 호스팅까지 하는데 하루 걸렸고 더 빠르게 할 수 있었지만 역시 세팅에서</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>blog</category>
+            
+          
+            
+              <category>hugo</category>
+            
+          
+            
+              <category>개발환경</category>
+            
+          
+        
+        
+        
+          
+            
+              <category>우당탕탕 개발기</category>
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>주요 추천 알고리즘</title>
+        <link>https://www.bemore.dev/en/posts/recsys/recsys2/</link>
+        <pubDate>Fri, 19 Nov 2021 22:09:48 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Fri, 19 Nov 2021 22:09:48 +0900</atom:modified>
+        <guid>https://www.bemore.dev/en/posts/recsys/recsys2/</guid>
+        <description>1. Content-Based filtering: CB 비슷한 아이템을 기반으로 추천 도메인 지식 필요 아이템 간의 유사도 측정하여 추천 모든 이에게 동일한 아이템을 추천 보통 아이템, 사용자 수가 적다 hand-engineered feat</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>추천시스템</category>
+            
+          
+        
+        
+          
+            
+              <category>Recommendation System</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>오픈소스 컨트리뷰톤</title>
+        <link>https://www.bemore.dev/en/posts/retrospect/contributhon/</link>
+        <pubDate>Wed, 17 Nov 2021 14:41:51 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Wed, 17 Nov 2021 14:41:51 +0900</atom:modified>
+        <guid>https://www.bemore.dev/en/posts/retrospect/contributhon/</guid>
+        <description>오픈소스? 공개적으로 액세스할 수 있게 설계되어 누구나 자유롭게 확인, 수정, 배포할 수 있는 코드. Red Hat 오픈소스 프로젝트 PyTorch-tutorial-kr PyTorch-hub-kr 파이토치를 처음 공부할 파이토치 한</description>
+        
+        <dc:creator>BMO</dc:creator>
+        
+        
+        
+        
           
             
               <category>회고</category>
             
           
+            
+              <category>PyTorch</category>
+            
+          
         
+        
+          
+            
+              <category>오픈소스</category>
+            
+          
+        
+        
+          
+            
+              <category>오픈소스 컨트리뷰톤</category>
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>추천시스템이란?</title>
+        <link>https://www.bemore.dev/en/posts/recsys/recsys1/</link>
+        <pubDate>Tue, 09 Nov 2021 22:09:48 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Tue, 09 Nov 2021 22:09:48 +0900</atom:modified>
+        <guid>https://www.bemore.dev/en/posts/recsys/recsys1/</guid>
+        <description>사용자가 관심있어 할만한 아이템을 제공해주는 자동화된 시스템 핵심 관심을 어떻게 표현하는가? 관심을 어떻게 측정하는가? =&amp;gt; 유사도 측정 사용자와 아이템 사용자:</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>추천시스템</category>
+            
+          
+        
+        
+          
+            
+              <category>Recommendation System</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>파이토치 허브 M1 로컬에서 빌드하기</title>
+        <link>https://www.bemore.dev/en/posts/devstory/torchhub_m1/</link>
+        <pubDate>Mon, 16 Aug 2021 22:09:48 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Mon, 16 Aug 2021 22:09:48 +0900</atom:modified>
+        <guid>https://www.bemore.dev/en/posts/devstory/torchhub_m1/</guid>
+        <description>Github) PyTorchKR nvm: command not found 노드 버전관리 설치 및 사용법 find ~/.zshrc로 /.zshrc파일 있는지 확인 open ~/.zshrc 파일 열어서 아래 내용 추가 export NVM_DIR=~/.nvm source $(brew --prefix nvm)/nvm.sh source ~/.zshrc 코드 적용 nvm &amp;n</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>M1</category>
+            
+          
+            
+              <category>오픈소스</category>
+            
+          
+            
+              <category>개발환경</category>
+            
+          
+        
+        
+        
+          
+            
+              <category>이게 왜 안되지</category>
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>SlackBot으로 랜덤 문제 출제</title>
+        <link>https://www.bemore.dev/en/posts/devstory/slackbot1/</link>
+        <pubDate>Sun, 08 Aug 2021 22:09:48 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Sun, 08 Aug 2021 22:09:48 +0900</atom:modified>
+        <guid>https://www.bemore.dev/en/posts/devstory/slackbot1/</guid>
+        <description>스터디에서 4주 동안 배운 알고리즘 유형 문제를 정해진 시간에 풀어보는 모의 코딩테스트를 진행하고 싶었다. 백준 문제를 배운 알고리즘 내에서 랜덤으로 출제하는 슬랙</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>chatbot</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>MacMini M1 에서 Homebrew 설치</title>
+        <link>https://www.bemore.dev/en/posts/devstory/macmini_brew/</link>
+        <pubDate>Tue, 08 Jun 2021 22:09:48 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Tue, 08 Jun 2021 22:09:48 +0900</atom:modified>
+        <guid>https://www.bemore.dev/en/posts/devstory/macmini_brew/</guid>
+        <description>Homebrew? 그냥 사이트에서 다운받는거랑 뭐가 다른가요? macOS용 패키지 매니저로 프로그램 설치, 업데이트, 삭제를 편하게 관리할 수 있다. (하지만 윈도우만 쓰던 나</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>M1</category>
+            
+          
+            
+              <category>homebrew</category>
+            
+          
+            
+              <category>개발환경</category>
+            
+          
+        
+        
+        
+          
+            
+              <category>이게 왜 안되지</category>
+            
+          
         
       </item>
       
@@ -71,45 +465,6 @@
           
         
         
-          
-            
-              <category>회고</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
-        <title>Shortcodes</title>
-        <link>https://www.bemore.dev/en/posts/shortcodes/</link>
-        <pubDate>Sat, 25 Jan 2020 06:40:51 +0900</pubDate>
-        <author>bmofinnjake08@gmail.com (bmo)</author>
-        <atom:modified>Sat, 25 Jan 2020 06:40:51 +0900</atom:modified>
-        <guid>https://www.bemore.dev/en/posts/shortcodes/</guid>
-        <description>Markdownify box This is boxmd shortcode Simple box This is **box** shortcode  Code tabs Make it easy to switch between different code
-java javascript  1  System.out.println(&amp;#39;Hello World!&amp;#39;);     1  console.log(&amp;#39;Hello World!&amp;#39;);       &#39;use strict&#39;; var containerId = JSON.parse(&#34;\&#34;beee16b23b213409\&#34;&#34;); var containerElem = document.getElementById(containerId); var codetabLinks = null; var codetabContents = null; var ids = []; if (containerElem) { codetabLinks = containerElem.</description>
-        
-        <dc:creator>bmo</dc:creator>
-        <media:content url="https://www.bemore.dev/images/feature3/code-file.png" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-              <category>shortcode</category>
-            
-          
-        
-        
-          
-            
-          
-        
-        
-          
-            
-          
         
       </item>
       
@@ -134,420 +489,6 @@ java javascript  1  System.out.println(&amp;#39;Hello World!&amp;#39;);     1  c
           
         
         
-          
-            
-              <category>회고</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
-        <title>Markdown Syntax Guide</title>
-        <link>https://www.bemore.dev/en/posts/markdown-syntax/</link>
-        <pubDate>Fri, 20 Dec 2019 12:00:06 +0900</pubDate>
-        <author>bmofinnjake08@gmail.com (bmo)</author>
-        <atom:modified>Fri, 20 Dec 2019 12:00:06 +0900</atom:modified>
-        <guid>https://www.bemore.dev/en/posts/markdown-syntax/</guid>
-        <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;</description>
-        
-        <dc:creator>Choi</dc:creator>
-        <media:content url="https://www.bemore.dev/images/feature1/markdown.png" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-              <category>markdown</category>
-            
-          
-            
-              <category>css</category>
-            
-          
-            
-              <category>html</category>
-            
-          
-            
-              <category>themes</category>
-            
-          
-        
-        
-          
-            
-              <category>themes</category>
-            
-          
-            
-              <category>syntax</category>
-            
-          
-        
-        
-          
-            
-              <category>Themes Guide</category>
-            
-          
-        
-      </item>
-      
-      <item>
-        <title>Rich Content</title>
-        <link>https://www.bemore.dev/en/posts/rich-content/</link>
-        <pubDate>Thu, 19 Dec 2019 12:00:06 +0900</pubDate>
-        <author>bmofinnjake08@gmail.com (bmo)</author>
-        <atom:modified>Thu, 19 Dec 2019 12:00:06 +0900</atom:modified>
-        <guid>https://www.bemore.dev/en/posts/rich-content/</guid>
-        <description>&lt;p&gt;Hugo ships with several &lt;a href=&#34;https://gohugo.io/content-management/shortcodes/#use-hugo-s-built-in-shortcodes&#34;&gt;Built-in Shortcodes&lt;/a&gt; for rich content, along with a &lt;a href=&#34;https://gohugo.io/about/hugo-and-gdpr/&#34;&gt;Privacy Config&lt;/a&gt; and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.&lt;/p&gt;</description>
-        
-        <dc:creator>Lee</dc:creator>
-        <media:content url="https://www.bemore.dev/images/feature2/content.png" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-              <category>shortcodes</category>
-            
-          
-            
-              <category>privacy</category>
-            
-          
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>Math Typesetting</title>
-        <link>https://www.bemore.dev/en/posts/math-typesetting/</link>
-        <pubDate>Tue, 17 Dec 2019 12:00:06 +0900</pubDate>
-        <author>bmofinnjake08@gmail.com (bmo)</author>
-        <atom:modified>Tue, 17 Dec 2019 12:00:06 +0900</atom:modified>
-        <guid>https://www.bemore.dev/en/posts/math-typesetting/</guid>
-        <description>&lt;div class=&#34;box&#34;&gt;
-We need goldmark katex entension which is not yet we have: 
-[https://github.com/gohugoio/hugo/issues/6544](https://github.com/gohugoio/hugo/issues/6544)
-&lt;/div&gt;
-&lt;p&gt;Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.&lt;/p&gt;</description>
-        
-        <dc:creator>Park</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>Emoji Support</title>
-        <link>https://www.bemore.dev/en/posts/emoji-support/</link>
-        <pubDate>Mon, 16 Dec 2019 12:00:06 +0900</pubDate>
-        <author>bmofinnjake08@gmail.com (bmo)</author>
-        <atom:modified>Mon, 16 Dec 2019 12:00:06 +0900</atom:modified>
-        <guid>https://www.bemore.dev/en/posts/emoji-support/</guid>
-        <description>&lt;p&gt;Emoji can be enabled in a Hugo project in a number of ways.&lt;/p&gt;</description>
-        
-        <dc:creator>Kim</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>emoji</category>
-            
-          
-            
-              <category>gamoji</category>
-            
-          
-            
-              <category>namoji</category>
-            
-          
-            
-              <category>bamoji</category>
-            
-          
-            
-              <category>amoji</category>
-            
-          
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>Viz support</title>
-        <link>https://www.bemore.dev/en/posts/test-viz/</link>
-        <pubDate>Mon, 18 Nov 2019 21:00:06 +0900</pubDate>
-        <author>bmofinnjake08@gmail.com (bmo)</author>
-        <atom:modified>Mon, 18 Nov 2019 21:00:06 +0900</atom:modified>
-        <guid>https://www.bemore.dev/en/posts/test-viz/</guid>
-        <description>digraph G { subgraph cluster_0 { style=filled; color=lightgrey; node [style=filled,color=white]; a0 -&amp;gt; a1 -&amp;gt; a2 -&amp;gt; a3; label = &amp;quot;process #1&amp;quot;; } subgraph cluster_1 { node [style=filled]; b0 -&amp;gt; b1 -&amp;gt; b2 -&amp;gt; b3; label = &amp;quot;process #2&amp;quot;; color=blue } start -&amp;gt; a0; start -&amp;gt; b0; a1 -&amp;gt; b3; b2 -&amp;gt; a3; a3 -&amp;gt; a0; a3 -&amp;gt; end; b3 -&amp;gt; end; start [shape=Mdiamond]; end [shape=Msquare]; } </description>
-        
-        <dc:creator>bmo</dc:creator>
-        <media:content url="https://www.bemore.dev/images/feature2/graph.png" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-          
-        
-        
-          
-            
-              <category>diagram</category>
-            
-          
-        
-        
-          
-            
-          
-        
-      </item>
-      
-      <item>
-        <title>Wavedrom support</title>
-        <link>https://www.bemore.dev/en/posts/test-wavedrom/</link>
-        <pubDate>Mon, 18 Nov 2019 18:00:06 +0900</pubDate>
-        <author>bmofinnjake08@gmail.com (bmo)</author>
-        <atom:modified>Mon, 18 Nov 2019 18:00:06 +0900</atom:modified>
-        <guid>https://www.bemore.dev/en/posts/test-wavedrom/</guid>
-        <description>{ &amp;quot;signal&amp;quot;: [ {&amp;quot;name&amp;quot;: &amp;quot;CLK&amp;quot;, &amp;quot;wave&amp;quot;: &amp;quot;p.....|...&amp;quot;}, {&amp;quot;name&amp;quot;:&amp;quot;DAT&amp;quot;, &amp;quot;wave&amp;quot;:&amp;quot;x.345x|=.x&amp;quot;, &amp;quot;data&amp;quot;:[&amp;quot;A&amp;quot;,&amp;quot;B&amp;quot;,&amp;quot;C&amp;quot;,&amp;quot;D&amp;quot;]}, {&amp;quot;name&amp;quot;: &amp;quot;REQ&amp;quot;, &amp;quot;wave&amp;quot;: &amp;quot;0.1..0|1.0&amp;quot;}, {}, {&amp;quot;name&amp;quot;: &amp;quot;ACK&amp;quot;, &amp;quot;wave&amp;quot;: &amp;quot;1.....|01.&amp;quot;} ]} </description>
-        
-        <dc:creator>bmo</dc:creator>
-        <media:content url="https://www.bemore.dev/images/feature1/wave.png" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-          
-        
-        
-          
-            
-              <category>diagram</category>
-            
-          
-        
-        
-          
-            
-          
-        
-      </item>
-      
-      <item>
-        <title>Chart support</title>
-        <link>https://www.bemore.dev/en/posts/test-chartjs/</link>
-        <pubDate>Mon, 18 Nov 2019 12:00:06 +0900</pubDate>
-        <author>bmofinnjake08@gmail.com (bmo)</author>
-        <atom:modified>Mon, 18 Nov 2019 12:00:06 +0900</atom:modified>
-        <guid>https://www.bemore.dev/en/posts/test-chartjs/</guid>
-        <description>{ &amp;quot;type&amp;quot;: &amp;quot;bar&amp;quot;, &amp;quot;data&amp;quot;: { &amp;quot;labels&amp;quot;: [&amp;quot;One&amp;quot;, &amp;quot;Two&amp;quot;, &amp;quot;Three&amp;quot;, &amp;quot;Four&amp;quot;, &amp;quot;Five&amp;quot;, &amp;quot;Six&amp;quot;], &amp;quot;datasets&amp;quot;: [{ &amp;quot;label&amp;quot;: &amp;quot;# of Votes&amp;quot;, &amp;quot;data&amp;quot;: [12, 19, 3, 5, 3, 8] }] } } { &amp;quot;type&amp;quot;: &amp;quot;line&amp;quot;, &amp;quot;data&amp;quot;: { &amp;quot;labels&amp;quot;: [&amp;quot;One&amp;quot;, &amp;quot;Two&amp;quot;, &amp;quot;Three&amp;quot;, &amp;quot;Four&amp;quot;, &amp;quot;Five&amp;quot;, &amp;quot;Six&amp;quot;], &amp;quot;datasets&amp;quot;: [ { &amp;quot;label&amp;quot;: &amp;quot;# of Votes&amp;quot;, &amp;quot;data&amp;quot;: [12, 19, 3, 5, 2, 3], &amp;quot;backgroundColor&amp;quot;:&amp;quot;transparent&amp;quot;, &amp;quot;borderColor&amp;quot;:&amp;quot;orange&amp;quot; }, { &amp;quot;label&amp;quot;: &amp;quot;Some other set&amp;quot;, &amp;quot;data&amp;quot;: [15, 8, 13, 5, 5, 9], &amp;quot;backgroundColor&amp;quot;:&amp;quot;transparent&amp;quot;, &amp;quot;borderColor&amp;quot;:&amp;quot;#44ccff&amp;quot; } ] } } </description>
-        
-        <dc:creator>bmo</dc:creator>
-        <media:content url="https://www.bemore.dev/images/feature1/graph.png" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-          
-        
-        
-          
-            
-              <category>diagram</category>
-            
-          
-        
-        
-          
-            
-          
-        
-      </item>
-      
-      <item>
-        <title>JS Sequence Diagram support</title>
-        <link>https://www.bemore.dev/en/posts/test-js-sequence-diagrams/</link>
-        <pubDate>Mon, 18 Nov 2019 12:00:06 +0900</pubDate>
-        <author>bmofinnjake08@gmail.com (bmo)</author>
-        <atom:modified>Mon, 18 Nov 2019 12:00:06 +0900</atom:modified>
-        <guid>https://www.bemore.dev/en/posts/test-js-sequence-diagrams/</guid>
-        <description>Alice-&amp;gt;Bob: Hello Bob, how are you? Note right of Bob: Bob thinks Bob--&amp;gt;Alice: I am good thanks! Title: Here is a title A-&amp;gt;B: Normal line B--&amp;gt;C: Dashed line C-&amp;gt;&amp;gt;D: Open arrow D--&amp;gt;&amp;gt;A: Dashed open arrow </description>
-        
-        <dc:creator>bmo</dc:creator>
-        <media:content url="https://www.bemore.dev/images/feature2/transfer.png" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-          
-        
-        
-          
-            
-              <category>diagram</category>
-            
-          
-        
-        
-          
-            
-          
-        
-      </item>
-      
-      <item>
-        <title>Mermaid support</title>
-        <link>https://www.bemore.dev/en/posts/test-mermaid/</link>
-        <pubDate>Sun, 17 Nov 2019 12:00:06 +0900</pubDate>
-        <author>bmofinnjake08@gmail.com (bmo)</author>
-        <atom:modified>Sun, 17 Nov 2019 12:00:06 +0900</atom:modified>
-        <guid>https://www.bemore.dev/en/posts/test-mermaid/</guid>
-        <description>graph TD; A--&amp;gt;B; A--&amp;gt;C; B--&amp;gt;D; C--&amp;gt;D; sequenceDiagram participant Alice participant Bob Alice-&amp;gt;John: Hello John, how are you? loop Healthcheck John-&amp;gt;John: Fight against hypochondria end Note right of John: Rational thoughts &amp;lt;br/&amp;gt;prevail... John--&amp;gt;Alice: Great! John-&amp;gt;Bob: How about you? Bob--&amp;gt;John: Jolly good! graph TD A[Hard] --&amp;gt;|Text| B(Round) B --&amp;gt; C{Decision} C --&amp;gt;|One| D[Result 1] C --&amp;gt;|Two| E[Result 2] gantt section Section Completed :done, des1, 2014-01-06,2014-01-08 Active :active, des2, 2014-01-07, 3d Parallel 1 : des3, after des1, 1d Parallel 2 : des4, after des1, 1d Parallel 3 : des5, after des3, 1d Parallel 4 : des6, after des4, 1d classDiagram Class01 &amp;lt;|-- AveryLongClass : Cool &amp;lt;&amp;lt;interface&amp;gt;&amp;gt; Class01 Class09 --&amp;gt; C2 : Where am i?</description>
-        
-        <dc:creator>bmo</dc:creator>
-        <media:content url="https://www.bemore.dev/images/feature2/workflow.png" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-              <category>diagram</category>
-            
-          
-        
-        
-          
-            
-              <category>diagram</category>
-            
-          
-        
-        
-          
-            
-          
-        
-      </item>
-      
-      <item>
-        <title>MathJax support</title>
-        <link>https://www.bemore.dev/en/posts/test-mathjax/</link>
-        <pubDate>Sat, 16 Nov 2019 12:00:06 +0900</pubDate>
-        <author>bmofinnjake08@gmail.com (bmo)</author>
-        <atom:modified>Sat, 16 Nov 2019 12:00:06 +0900</atom:modified>
-        <guid>https://www.bemore.dev/en/posts/test-mathjax/</guid>
-        <description>When $a \ne 0$, there are two solutions to $(ax^2 + bx + c = 0)$ and they are
-$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$</description>
-        
-        <dc:creator>bmo</dc:creator>
-        <media:content url="https://www.bemore.dev/images/feature1/infinity.png" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-          
-        
-        
-          
-            
-              <category>math</category>
-            
-          
-        
-        
-          
-            
-          
-        
-      </item>
-      
-      <item>
-        <title>Katex support</title>
-        <link>https://www.bemore.dev/en/posts/test-katex/</link>
-        <pubDate>Fri, 15 Nov 2019 12:00:06 +0900</pubDate>
-        <author>bmofinnjake08@gmail.com (bmo)</author>
-        <atom:modified>Fri, 15 Nov 2019 12:00:06 +0900</atom:modified>
-        <guid>https://www.bemore.dev/en/posts/test-katex/</guid>
-        <description>The following
-$$ \int_{a}^{b} x^2 dx $$
-Is an integral
-$$ \varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } } $$
-Enable Katex in the config file by setting the katex param to true. This will import the necessary Katex CSS/JS.
-See the online reference of supported TeX functions.
-Note: For inline math to render correctly, your content file extension must be .mmark. See the official mmark site.
-Inline math: $ \varphi = \dfrac{1+\sqrt5}{2}= 1.</description>
-        
-        <dc:creator>bmo</dc:creator>
-        <media:content url="https://www.bemore.dev/images/feature2/mathbook.png" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-          
-        
-        
-          
-            
-              <category>math</category>
-            
-          
-        
-        
-          
-            
-          
-        
-      </item>
-      
-      <item>
-        <title>Flowchart support</title>
-        <link>https://www.bemore.dev/en/posts/test-flowchart/</link>
-        <pubDate>Thu, 14 Nov 2019 12:00:06 +0900</pubDate>
-        <author>bmofinnjake08@gmail.com (bmo)</author>
-        <atom:modified>Thu, 14 Nov 2019 12:00:06 +0900</atom:modified>
-        <guid>https://www.bemore.dev/en/posts/test-flowchart/</guid>
-        <description>st=&amp;gt;start: Start|past:&amp;gt;http://www.google.com[blank] e=&amp;gt;end: End|future:&amp;gt;http://www.google.com op1=&amp;gt;operation: My Operation|past op2=&amp;gt;operation: Stuff|current sub1=&amp;gt;subroutine: My Subroutine|invalid cond=&amp;gt;condition: Yes or No?|approved:&amp;gt;http://www.google.com c2=&amp;gt;condition: Good idea|rejected io=&amp;gt;inputoutput: catch something...|future st-&amp;gt;op1(right)-&amp;gt;cond cond(yes, right)-&amp;gt;c2 cond(no)-&amp;gt;sub1(left)-&amp;gt;op1 c2(yes)-&amp;gt;io-&amp;gt;e c2(no)-&amp;gt;op2-&amp;gt;e </description>
-        
-        <dc:creator>bmo</dc:creator>
-        <media:content url="https://www.bemore.dev/images/feature1/flowchart.png" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-          
-        
-        
-          
-            
-              <category>diagram</category>
-            
-          
-        
-        
-          
-            
-          
         
       </item>
       

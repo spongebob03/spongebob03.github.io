@@ -41,12 +41,46 @@
           
         
         
+        
+      </item>
+      
+      <item>
+        <title>오픈소스 컨트리뷰톤</title>
+        <link>https://www.bemore.dev/en/posts/retrospect/contributhon/</link>
+        <pubDate>Wed, 17 Nov 2021 14:41:51 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Wed, 17 Nov 2021 14:41:51 +0900</atom:modified>
+        <guid>https://www.bemore.dev/en/posts/retrospect/contributhon/</guid>
+        <description>오픈소스? 공개적으로 액세스할 수 있게 설계되어 누구나 자유롭게 확인, 수정, 배포할 수 있는 코드. Red Hat 오픈소스 프로젝트 PyTorch-tutorial-kr PyTorch-hub-kr 파이토치를 처음 공부할 파이토치 한</description>
+        
+        <dc:creator>BMO</dc:creator>
+        
+        
+        
+        
           
             
               <category>회고</category>
             
           
+            
+              <category>PyTorch</category>
+            
+          
         
+        
+          
+            
+              <category>오픈소스</category>
+            
+          
+        
+        
+          
+            
+              <category>오픈소스 컨트리뷰톤</category>
+            
+          
         
       </item>
       
@@ -71,12 +105,6 @@
           
         
         
-          
-            
-              <category>회고</category>
-            
-          
-        
         
       </item>
       
@@ -100,12 +128,6 @@
             
           
         
-        
-          
-            
-              <category>회고</category>
-            
-          
         
         
       </item>

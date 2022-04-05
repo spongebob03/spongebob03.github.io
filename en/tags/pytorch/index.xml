@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>PyTorch on Bemore</title>
+    <link>https://www.bemore.dev/en/tags/pytorch/</link>
+    <description>Recent content in PyTorch on Bemore</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>bmofinnjake08@gmail.com (bmo)</managingEditor>
+    <webMaster>bmofinnjake08@gmail.com (bmo)</webMaster>
+    <copyright>©2022, All Rights Reserved</copyright>
+    <lastBuildDate>Wed, 17 Nov 2021 14:41:51 +0900</lastBuildDate>
+    
+        <atom:link href="https://www.bemore.dev/en/tags/pytorch/index.xml" rel="self" type="application/rss+xml" />
+    
+
+      
+      <item>
+        <title>오픈소스 컨트리뷰톤</title>
+        <link>https://www.bemore.dev/en/posts/retrospect/contributhon/</link>
+        <pubDate>Wed, 17 Nov 2021 14:41:51 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Wed, 17 Nov 2021 14:41:51 +0900</atom:modified>
+        <guid>https://www.bemore.dev/en/posts/retrospect/contributhon/</guid>
+        <description>오픈소스? 공개적으로 액세스할 수 있게 설계되어 누구나 자유롭게 확인, 수정, 배포할 수 있는 코드. Red Hat 오픈소스 프로젝트 PyTorch-tutorial-kr PyTorch-hub-kr 파이토치를 처음 공부할 파이토치 한</description>
+        
+        <dc:creator>BMO</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>회고</category>
+            
+          
+            
+              <category>PyTorch</category>
+            
+          
+        
+        
+          
+            
+              <category>오픈소스</category>
+            
+          
+        
+        
+          
+            
+              <category>오픈소스 컨트리뷰톤</category>
+            
+          
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

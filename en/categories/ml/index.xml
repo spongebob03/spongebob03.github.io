@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>ML on Bemore</title>
+    <link>https://www.bemore.dev/en/categories/ml/</link>
+    <description>Recent content in ML on Bemore</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>bmofinnjake08@gmail.com (bmo)</managingEditor>
+    <webMaster>bmofinnjake08@gmail.com (bmo)</webMaster>
+    <copyright>©2022, All Rights Reserved</copyright>
+    <lastBuildDate>Wed, 08 Dec 2021 19:09:48 +0900</lastBuildDate>
+    
+        <atom:link href="https://www.bemore.dev/en/categories/ml/index.xml" rel="self" type="application/rss+xml" />
+    
+
+      
+      <item>
+        <title>fastai와 파이토치가 만나 꽃피운 딥러닝 2장</title>
+        <link>https://www.bemore.dev/en/posts/ml/fastai/ch2/</link>
+        <pubDate>Wed, 08 Dec 2021 19:09:48 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Wed, 08 Dec 2021 19:09:48 +0900</atom:modified>
+        <guid>https://www.bemore.dev/en/posts/ml/fastai/ch2/</guid>
+        <description>이번 장에서는 분류 모델을 구축하면서 딥러닝의 가능성 및 제한사항을 살펴볼 수 있다. 이 곰돌이가 어떤 곰돌이인지 예측하는 모델을 다뤄봅시다 🐻 데이터 다운로드 책에</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>ML</category>
+            
+          
+            
+              <category>fastai</category>
+            
+          
+        
+        
+          
+            
+              <category>ML</category>
+            
+          
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>chatbot on Bemore</title>
+    <link>https://www.bemore.dev/en/tags/chatbot/</link>
+    <description>Recent content in chatbot on Bemore</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>bmofinnjake08@gmail.com (bmo)</managingEditor>
+    <webMaster>bmofinnjake08@gmail.com (bmo)</webMaster>
+    <copyright>©2022, All Rights Reserved</copyright>
+    <lastBuildDate>Sun, 08 Aug 2021 22:09:48 +0900</lastBuildDate>
+    
+        <atom:link href="https://www.bemore.dev/en/tags/chatbot/index.xml" rel="self" type="application/rss+xml" />
+    
+
+      
+      <item>
+        <title>SlackBot으로 랜덤 문제 출제</title>
+        <link>https://www.bemore.dev/en/posts/devstory/slackbot1/</link>
+        <pubDate>Sun, 08 Aug 2021 22:09:48 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Sun, 08 Aug 2021 22:09:48 +0900</atom:modified>
+        <guid>https://www.bemore.dev/en/posts/devstory/slackbot1/</guid>
+        <description>스터디에서 4주 동안 배운 알고리즘 유형 문제를 정해진 시간에 풀어보는 모의 코딩테스트를 진행하고 싶었다. 백준 문제를 배운 알고리즘 내에서 랜덤으로 출제하는 슬랙</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>chatbot</category>
+            
+          
+        
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

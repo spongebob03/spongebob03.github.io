@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>Recommendation System on Bemore</title>
+    <link>https://www.bemore.dev/en/categories/recommendation-system/</link>
+    <description>Recent content in Recommendation System on Bemore</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>bmofinnjake08@gmail.com (bmo)</managingEditor>
+    <webMaster>bmofinnjake08@gmail.com (bmo)</webMaster>
+    <copyright>©2022, All Rights Reserved</copyright>
+    <lastBuildDate>Fri, 19 Nov 2021 22:09:48 +0900</lastBuildDate>
+    
+        <atom:link href="https://www.bemore.dev/en/categories/recommendation-system/index.xml" rel="self" type="application/rss+xml" />
+    
+
+      
+      <item>
+        <title>주요 추천 알고리즘</title>
+        <link>https://www.bemore.dev/en/posts/recsys/recsys2/</link>
+        <pubDate>Fri, 19 Nov 2021 22:09:48 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Fri, 19 Nov 2021 22:09:48 +0900</atom:modified>
+        <guid>https://www.bemore.dev/en/posts/recsys/recsys2/</guid>
+        <description>1. Content-Based filtering: CB 비슷한 아이템을 기반으로 추천 도메인 지식 필요 아이템 간의 유사도 측정하여 추천 모든 이에게 동일한 아이템을 추천 보통 아이템, 사용자 수가 적다 hand-engineered feat</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>추천시스템</category>
+            
+          
+        
+        
+          
+            
+              <category>Recommendation System</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>추천시스템이란?</title>
+        <link>https://www.bemore.dev/en/posts/recsys/recsys1/</link>
+        <pubDate>Tue, 09 Nov 2021 22:09:48 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Tue, 09 Nov 2021 22:09:48 +0900</atom:modified>
+        <guid>https://www.bemore.dev/en/posts/recsys/recsys1/</guid>
+        <description>사용자가 관심있어 할만한 아이템을 제공해주는 자동화된 시스템 핵심 관심을 어떻게 표현하는가? 관심을 어떻게 측정하는가? =&amp;gt; 유사도 측정 사용자와 아이템 사용자:</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>추천시스템</category>
+            
+          
+        
+        
+          
+            
+              <category>Recommendation System</category>
+            
+          
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

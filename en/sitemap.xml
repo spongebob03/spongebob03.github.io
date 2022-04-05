@@ -2,14 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://www.bemore.dev/en/showcase/opensource/hugo-theme-zzo/</loc>
+    <loc>https://www.bemore.dev/en/showcase/opensource/pytorch_tutorial/</loc>
     <lastmod>2020-01-19T21:13:42+09:00</lastmod>
   </url><url>
-    <loc>https://www.bemore.dev/en/showcase/repos/hugo-theme-zdoc/</loc>
+    <loc>https://www.bemore.dev/en/showcase/repos/music_reco/</loc>
     <lastmod>2020-01-19T21:13:42+09:00</lastmod>
   </url><url>
     <loc>https://www.bemore.dev/en/</loc>
-    <lastmod>2021-12-30T14:39:31+09:00</lastmod>
+    <lastmod>2022-03-05T12:09:48+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
@@ -21,27 +21,14 @@
                 href="https://www.bemore.dev/en/"
                 />
   </url><url>
-    <loc>https://www.bemore.dev/en/posts/retrospect/y2021/</loc>
-    <lastmod>2021-12-30T14:39:31+09:00</lastmod>
-  </url><url>
-    <loc>https://www.bemore.dev/en/categories/</loc>
-    <lastmod>2021-12-30T14:39:31+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="https://www.bemore.dev/ko/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.bemore.dev/en/categories/"
-                />
+    <loc>https://www.bemore.dev/en/posts/cs/datastructure/linkedlist/</loc>
+    <lastmod>2022-03-05T12:09:48+09:00</lastmod>
   </url><url>
     <loc>https://www.bemore.dev/en/posts/</loc>
-    <lastmod>2021-12-30T14:39:31+09:00</lastmod>
+    <lastmod>2022-03-05T12:09:48+09:00</lastmod>
   </url><url>
     <loc>https://www.bemore.dev/en/tags/</loc>
-    <lastmod>2021-12-30T14:39:31+09:00</lastmod>
+    <lastmod>2022-03-05T12:09:48+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
@@ -53,14 +40,133 @@
                 href="https://www.bemore.dev/en/tags/"
                 />
   </url><url>
+    <loc>https://www.bemore.dev/en/tags/%EC%97%B0%EA%B2%B0%EB%A6%AC%EC%8A%A4%ED%8A%B8/</loc>
+    <lastmod>2022-03-05T12:09:48+09:00</lastmod>
+  </url><url>
+    <loc>https://www.bemore.dev/en/tags/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/</loc>
+    <lastmod>2022-03-05T12:09:48+09:00</lastmod>
+  </url><url>
+    <loc>https://www.bemore.dev/en/tags/git/</loc>
+    <lastmod>2022-01-30T14:36:02+09:00</lastmod>
+  </url><url>
+    <loc>https://www.bemore.dev/en/posts/devstory/about_git/</loc>
+    <lastmod>2022-01-30T14:36:02+09:00</lastmod>
+  </url><url>
+    <loc>https://www.bemore.dev/en/tags/%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4/</loc>
+    <lastmod>2022-01-30T14:36:02+09:00</lastmod>
+  </url><url>
+    <loc>https://www.bemore.dev/en/posts/retrospect/y2021/</loc>
+    <lastmod>2021-12-30T14:39:31+09:00</lastmod>
+  </url><url>
     <loc>https://www.bemore.dev/en/tags/%ED%9A%8C%EA%B3%A0/</loc>
     <lastmod>2021-12-30T14:39:31+09:00</lastmod>
   </url><url>
-    <loc>https://www.bemore.dev/en/categories/%ED%9A%8C%EA%B3%A0/</loc>
-    <lastmod>2021-12-30T14:39:31+09:00</lastmod>
+    <loc>https://www.bemore.dev/en/tags/blog/</loc>
+    <lastmod>2021-12-10T12:09:48+09:00</lastmod>
+  </url><url>
+    <loc>https://www.bemore.dev/en/tags/hugo/</loc>
+    <lastmod>2021-12-10T12:09:48+09:00</lastmod>
+  </url><url>
+    <loc>https://www.bemore.dev/en/series/</loc>
+    <lastmod>2021-12-10T12:09:48+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://www.bemore.dev/ko/series/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.bemore.dev/en/series/"
+                />
+  </url><url>
+    <loc>https://www.bemore.dev/en/posts/devstory/blogsearch/</loc>
+    <lastmod>2021-12-10T12:09:48+09:00</lastmod>
+  </url><url>
+    <loc>https://www.bemore.dev/en/series/%EC%9D%B4%EA%B2%8C-%EC%99%9C-%EC%95%88%EB%90%98%EC%A7%80/</loc>
+    <lastmod>2021-12-10T12:09:48+09:00</lastmod>
+  </url><url>
+    <loc>https://www.bemore.dev/en/categories/</loc>
+    <lastmod>2021-12-08T19:09:48+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://www.bemore.dev/ko/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.bemore.dev/en/categories/"
+                />
+  </url><url>
+    <loc>https://www.bemore.dev/en/tags/fastai/</loc>
+    <lastmod>2021-12-08T19:09:48+09:00</lastmod>
+  </url><url>
+    <loc>https://www.bemore.dev/en/posts/ml/fastai/ch2/</loc>
+    <lastmod>2021-12-08T19:09:48+09:00</lastmod>
+  </url><url>
+    <loc>https://www.bemore.dev/en/tags/ml/</loc>
+    <lastmod>2021-12-08T19:09:48+09:00</lastmod>
+  </url><url>
+    <loc>https://www.bemore.dev/en/categories/ml/</loc>
+    <lastmod>2021-12-08T19:09:48+09:00</lastmod>
+  </url><url>
+    <loc>https://www.bemore.dev/en/posts/devstory/customdomain/</loc>
+    <lastmod>2021-12-06T19:09:48+09:00</lastmod>
+  </url><url>
+    <loc>https://www.bemore.dev/en/tags/%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD/</loc>
+    <lastmod>2021-12-06T19:09:48+09:00</lastmod>
+  </url><url>
+    <loc>https://www.bemore.dev/en/series/%EC%9A%B0%EB%8B%B9%ED%83%95%ED%83%95-%EA%B0%9C%EB%B0%9C%EA%B8%B0/</loc>
+    <lastmod>2021-12-06T19:09:48+09:00</lastmod>
   </url><url>
     <loc>https://www.bemore.dev/en/about/</loc>
     <lastmod>2021-12-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.bemore.dev/en/posts/first-post/</loc>
+    <lastmod>2021-12-02T22:09:48+09:00</lastmod>
+  </url><url>
+    <loc>https://www.bemore.dev/en/categories/recommendation-system/</loc>
+    <lastmod>2021-11-19T22:09:48+09:00</lastmod>
+  </url><url>
+    <loc>https://www.bemore.dev/en/posts/recsys/recsys2/</loc>
+    <lastmod>2021-11-19T22:09:48+09:00</lastmod>
+  </url><url>
+    <loc>https://www.bemore.dev/en/tags/%EC%B6%94%EC%B2%9C%EC%8B%9C%EC%8A%A4%ED%85%9C/</loc>
+    <lastmod>2021-11-19T22:09:48+09:00</lastmod>
+  </url><url>
+    <loc>https://www.bemore.dev/en/tags/pytorch/</loc>
+    <lastmod>2021-11-17T14:41:51+09:00</lastmod>
+  </url><url>
+    <loc>https://www.bemore.dev/en/categories/%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4/</loc>
+    <lastmod>2021-11-17T14:41:51+09:00</lastmod>
+  </url><url>
+    <loc>https://www.bemore.dev/en/series/%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%ED%86%A4/</loc>
+    <lastmod>2021-11-17T14:41:51+09:00</lastmod>
+  </url><url>
+    <loc>https://www.bemore.dev/en/posts/retrospect/contributhon/</loc>
+    <lastmod>2021-11-17T14:41:51+09:00</lastmod>
+  </url><url>
+    <loc>https://www.bemore.dev/en/posts/recsys/recsys1/</loc>
+    <lastmod>2021-11-09T22:09:48+09:00</lastmod>
+  </url><url>
+    <loc>https://www.bemore.dev/en/tags/m1/</loc>
+    <lastmod>2021-08-16T22:09:48+09:00</lastmod>
+  </url><url>
+    <loc>https://www.bemore.dev/en/posts/devstory/torchhub_m1/</loc>
+    <lastmod>2021-08-16T22:09:48+09:00</lastmod>
+  </url><url>
+    <loc>https://www.bemore.dev/en/tags/chatbot/</loc>
+    <lastmod>2021-08-08T22:09:48+09:00</lastmod>
+  </url><url>
+    <loc>https://www.bemore.dev/en/posts/devstory/slackbot1/</loc>
+    <lastmod>2021-08-08T22:09:48+09:00</lastmod>
+  </url><url>
+    <loc>https://www.bemore.dev/en/tags/homebrew/</loc>
+    <lastmod>2021-06-08T22:09:48+09:00</lastmod>
+  </url><url>
+    <loc>https://www.bemore.dev/en/posts/devstory/macmini_brew/</loc>
+    <lastmod>2021-06-08T22:09:48+09:00</lastmod>
   </url><url>
     <loc>https://www.bemore.dev/en/posts/retrospect/y2020/</loc>
     <lastmod>2020-12-30T14:58:14+09:00</lastmod>
@@ -77,12 +183,6 @@
     <loc>https://www.bemore.dev/en/publication/</loc>
     <lastmod>2020-03-05T14:08:48+00:00</lastmod>
   </url><url>
-    <loc>https://www.bemore.dev/en/tags/shortcode/</loc>
-    <lastmod>2020-01-25T06:40:51+09:00</lastmod>
-  </url><url>
-    <loc>https://www.bemore.dev/en/posts/shortcodes/</loc>
-    <lastmod>2020-01-25T06:40:51+09:00</lastmod>
-  </url><url>
     <loc>https://www.bemore.dev/en/showcase/opensource/</loc>
     <lastmod>2020-01-19T21:04:11+09:00</lastmod>
   </url><url>
@@ -95,142 +195,10 @@
     <loc>https://www.bemore.dev/en/posts/retrospect/y2019/</loc>
     <lastmod>2019-12-31T14:58:04+09:00</lastmod>
   </url><url>
-    <loc>https://www.bemore.dev/en/tags/css/</loc>
-    <lastmod>2019-12-20T12:00:06+09:00</lastmod>
-  </url><url>
-    <loc>https://www.bemore.dev/en/tags/html/</loc>
-    <lastmod>2019-12-20T12:00:06+09:00</lastmod>
-  </url><url>
-    <loc>https://www.bemore.dev/en/tags/markdown/</loc>
-    <lastmod>2019-12-20T12:00:06+09:00</lastmod>
-  </url><url>
-    <loc>https://www.bemore.dev/en/posts/markdown-syntax/</loc>
-    <lastmod>2019-12-20T12:00:06+09:00</lastmod>
-  </url><url>
-    <loc>https://www.bemore.dev/en/series/</loc>
-    <lastmod>2019-12-20T12:00:06+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="https://www.bemore.dev/ko/series/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.bemore.dev/en/series/"
-                />
-  </url><url>
-    <loc>https://www.bemore.dev/en/categories/syntax/</loc>
-    <lastmod>2019-12-20T12:00:06+09:00</lastmod>
-  </url><url>
-    <loc>https://www.bemore.dev/en/tags/themes/</loc>
-    <lastmod>2019-12-20T12:00:06+09:00</lastmod>
-  </url><url>
-    <loc>https://www.bemore.dev/en/categories/themes/</loc>
-    <lastmod>2019-12-20T12:00:06+09:00</lastmod>
-  </url><url>
-    <loc>https://www.bemore.dev/en/series/themes-guide/</loc>
-    <lastmod>2019-12-20T12:00:06+09:00</lastmod>
-  </url><url>
-    <loc>https://www.bemore.dev/en/tags/privacy/</loc>
-    <lastmod>2019-12-19T12:00:06+09:00</lastmod>
-  </url><url>
-    <loc>https://www.bemore.dev/en/posts/rich-content/</loc>
-    <lastmod>2019-12-19T12:00:06+09:00</lastmod>
-  </url><url>
-    <loc>https://www.bemore.dev/en/tags/shortcodes/</loc>
-    <lastmod>2019-12-19T12:00:06+09:00</lastmod>
-  </url><url>
-    <loc>https://www.bemore.dev/en/posts/math-typesetting/</loc>
-    <lastmod>2019-12-17T12:00:06+09:00</lastmod>
-  </url><url>
-    <loc>https://www.bemore.dev/en/tags/amoji/</loc>
-    <lastmod>2019-12-16T12:00:06+09:00</lastmod>
-  </url><url>
-    <loc>https://www.bemore.dev/en/tags/bamoji/</loc>
-    <lastmod>2019-12-16T12:00:06+09:00</lastmod>
-  </url><url>
-    <loc>https://www.bemore.dev/en/tags/emoji/</loc>
-    <lastmod>2019-12-16T12:00:06+09:00</lastmod>
-  </url><url>
-    <loc>https://www.bemore.dev/en/posts/emoji-support/</loc>
-    <lastmod>2019-12-16T12:00:06+09:00</lastmod>
-  </url><url>
-    <loc>https://www.bemore.dev/en/tags/gamoji/</loc>
-    <lastmod>2019-12-16T12:00:06+09:00</lastmod>
-  </url><url>
-    <loc>https://www.bemore.dev/en/tags/namoji/</loc>
-    <lastmod>2019-12-16T12:00:06+09:00</lastmod>
-  </url><url>
-    <loc>https://www.bemore.dev/en/categories/diagram/</loc>
-    <lastmod>2019-11-18T21:00:06+09:00</lastmod>
-  </url><url>
-    <loc>https://www.bemore.dev/en/posts/test-viz/</loc>
-    <lastmod>2019-11-18T21:00:06+09:00</lastmod>
-  </url><url>
-    <loc>https://www.bemore.dev/en/posts/test-wavedrom/</loc>
-    <lastmod>2019-11-18T18:00:06+09:00</lastmod>
-  </url><url>
-    <loc>https://www.bemore.dev/en/posts/test-chartjs/</loc>
-    <lastmod>2019-11-18T12:00:06+09:00</lastmod>
-  </url><url>
-    <loc>https://www.bemore.dev/en/posts/test-js-sequence-diagrams/</loc>
-    <lastmod>2019-11-18T12:00:06+09:00</lastmod>
-  </url><url>
-    <loc>https://www.bemore.dev/en/tags/diagram/</loc>
-    <lastmod>2019-11-17T12:00:06+09:00</lastmod>
-  </url><url>
-    <loc>https://www.bemore.dev/en/posts/test-mermaid/</loc>
-    <lastmod>2019-11-17T12:00:06+09:00</lastmod>
-  </url><url>
-    <loc>https://www.bemore.dev/en/categories/math/</loc>
-    <lastmod>2019-11-16T12:00:06+09:00</lastmod>
-  </url><url>
-    <loc>https://www.bemore.dev/en/posts/test-mathjax/</loc>
-    <lastmod>2019-11-16T12:00:06+09:00</lastmod>
-  </url><url>
-    <loc>https://www.bemore.dev/en/posts/test-katex/</loc>
-    <lastmod>2019-11-15T12:00:06+09:00</lastmod>
-  </url><url>
-    <loc>https://www.bemore.dev/en/posts/test-flowchart/</loc>
-    <lastmod>2019-11-14T12:00:06+09:00</lastmod>
-  </url><url>
-    <loc>https://www.bemore.dev/en/gallery/cartoon/</loc>
-    <lastmod>2019-10-31T10:20:16+09:00</lastmod>
-  </url><url>
-    <loc>https://www.bemore.dev/en/gallery/</loc>
-    <lastmod>2019-10-31T10:20:16+09:00</lastmod>
-  </url><url>
-    <loc>https://www.bemore.dev/en/gallery/photo/</loc>
-    <lastmod>2019-10-31T10:20:16+09:00</lastmod>
-  </url><url>
-    <loc>https://www.bemore.dev/en/presentation/dir/fourth/</loc>
-    <lastmod>2019-10-30T20:48:10+09:00</lastmod>
-  </url><url>
-    <loc>https://www.bemore.dev/en/presentation/</loc>
-    <lastmod>2019-10-30T20:48:10+09:00</lastmod>
-  </url><url>
-    <loc>https://www.bemore.dev/en/presentation/third/</loc>
-    <lastmod>2019-10-30T20:46:30+09:00</lastmod>
-  </url><url>
-    <loc>https://www.bemore.dev/en/presentation/second/</loc>
-    <lastmod>2019-10-30T20:45:24+09:00</lastmod>
-  </url><url>
-    <loc>https://www.bemore.dev/en/presentation/first/</loc>
-    <lastmod>2019-10-30T19:45:20+09:00</lastmod>
-  </url><url>
     <loc>https://www.bemore.dev/en/archive/</loc>
     <lastmod>2019-10-19T11:44:14+09:00</lastmod>
   </url><url>
-    <loc>https://www.bemore.dev/en/publication/article/article_any_folder_name_1/</loc>
-    <lastmod>2018-06-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.bemore.dev/en/publication/book/book_any_folder_name_1/</loc>
+    <loc>https://www.bemore.dev/en/publication/book/whatishistory/</loc>
     <lastmod>2017-06-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.bemore.dev/en/publication/misc/misc_any_folder_name_1/</loc>
-    <lastmod>2016-11-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.bemore.dev/en/tags/index/</loc>
   </url>
 </urlset>
