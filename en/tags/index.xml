@@ -14,11 +14,47 @@
     <managingEditor>bmofinnjake08@gmail.com (bmo)</managingEditor>
     <webMaster>bmofinnjake08@gmail.com (bmo)</webMaster>
     <copyright>©2022, All Rights Reserved</copyright>
-    <lastBuildDate>Sat, 05 Mar 2022 12:09:48 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 06 Apr 2022 10:32:30 +0900</lastBuildDate>
     
         <atom:link href="https://www.bemore.dev/en/tags/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>blog</title>
+        <link>https://www.bemore.dev/en/tags/blog/</link>
+        <pubDate>Wed, 06 Apr 2022 10:32:30 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        
+        <guid>https://www.bemore.dev/en/tags/blog/</guid>
+        <description></description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>hugo</title>
+        <link>https://www.bemore.dev/en/tags/hugo/</link>
+        <pubDate>Wed, 06 Apr 2022 10:32:30 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        
+        <guid>https://www.bemore.dev/en/tags/hugo/</guid>
+        <description></description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
       
       <item>
         <title>연결리스트</title>
@@ -99,42 +135,6 @@
         <author>bmofinnjake08@gmail.com (bmo)</author>
         
         <guid>https://www.bemore.dev/en/tags/%ED%9A%8C%EA%B3%A0/</guid>
-        <description></description>
-        
-        <dc:creator>bmo</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>blog</title>
-        <link>https://www.bemore.dev/en/tags/blog/</link>
-        <pubDate>Fri, 10 Dec 2021 12:09:48 +0900</pubDate>
-        <author>bmofinnjake08@gmail.com (bmo)</author>
-        
-        <guid>https://www.bemore.dev/en/tags/blog/</guid>
-        <description></description>
-        
-        <dc:creator>bmo</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>hugo</title>
-        <link>https://www.bemore.dev/en/tags/hugo/</link>
-        <pubDate>Fri, 10 Dec 2021 12:09:48 +0900</pubDate>
-        <author>bmofinnjake08@gmail.com (bmo)</author>
-        
-        <guid>https://www.bemore.dev/en/tags/hugo/</guid>
         <description></description>
         
         <dc:creator>bmo</dc:creator>
