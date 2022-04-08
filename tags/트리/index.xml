@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>트리 on Bemore</title>
+    <link>https://www.bemore.dev/tags/%ED%8A%B8%EB%A6%AC/</link>
+    <description>Recent content in 트리 on Bemore</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>bmofinnjake08@gmail.com (bmo)</managingEditor>
+    <webMaster>bmofinnjake08@gmail.com (bmo)</webMaster>
+    <copyright>©2022, All Rights Reserved</copyright>
+    <lastBuildDate>Tue, 05 Apr 2022 12:09:48 +0900</lastBuildDate>
+    
+        <atom:link href="https://www.bemore.dev/tags/%ED%8A%B8%EB%A6%AC/index.xml" rel="self" type="application/rss+xml" />
+    
+
+      
+      <item>
+        <title>Tree</title>
+        <link>https://www.bemore.dev/posts/cs/datastructure/tree/</link>
+        <pubDate>Tue, 05 Apr 2022 12:09:48 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Tue, 05 Apr 2022 12:09:48 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/cs/datastructure/tree/</guid>
+        <description>트리 🌲 정점끼리 전부 연결되어 있으면서 사이클이 존재하지 않는 그래프 원소의 구성을 정말 나무처럼 표현한 예시로 영화 &amp;lsquo;해리포터&amp;rsquo; 속에</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>자료구조</category>
+            
+          
+            
+              <category>트리</category>
+            
+          
+        
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

@@ -1,22 +1,50 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>chatbot on BeMore</title>
+    <title>chatbot on Bemore</title>
     <link>https://www.bemore.dev/tags/chatbot/</link>
-    <description>Recent content in chatbot on BeMore</description>
+    <description>Recent content in chatbot on Bemore</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 08 Aug 2021 22:09:48 +0900</lastBuildDate><atom:link href="https://www.bemore.dev/tags/chatbot/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>SlackBot으로 랜덤 문제 출제</title>
-      <link>https://www.bemore.dev/p/slackbot%EC%9C%BC%EB%A1%9C-%EB%9E%9C%EB%8D%A4-%EB%AC%B8%EC%A0%9C-%EC%B6%9C%EC%A0%9C/</link>
-      <pubDate>Sun, 08 Aug 2021 22:09:48 +0900</pubDate>
+    <language>en</language>
+    <managingEditor>bmofinnjake08@gmail.com (bmo)</managingEditor>
+    <webMaster>bmofinnjake08@gmail.com (bmo)</webMaster>
+    <copyright>©2022, All Rights Reserved</copyright>
+    <lastBuildDate>Sun, 08 Aug 2021 22:09:48 +0900</lastBuildDate>
+    
+        <atom:link href="https://www.bemore.dev/tags/chatbot/index.xml" rel="self" type="application/rss+xml" />
+    
+
       
-      <guid>https://www.bemore.dev/p/slackbot%EC%9C%BC%EB%A1%9C-%EB%9E%9C%EB%8D%A4-%EB%AC%B8%EC%A0%9C-%EC%B6%9C%EC%A0%9C/</guid>
-      <description>스터디에서 4주 동안 배운 알고리즘 유형 문제를 정해진 시간에 풀어보는 모의 코딩테스트를 진행하고 싶었다. 백준 문제를 배운 알고리즘 내에서 랜덤으로 출제하는 슬랙 챗봇을 사용하면 재밌을거 같았다. 백준 사이트는 웹 스크래핑이 금지된다고 공지가 되어있어 solved.ac의 알고리즘 유형 카테고리 정보를 긁어오는 식으로 문제를 뽑아왔다. 혹시 이것도 문제가 되는지 문의해봐야겠다&amp;hellip;
-사용 라이브러리  BeautifulSoup slack_sdk  데이터 긁어오기  
-출제 유형 랜덤 선택, 문제 랜덤 선택 tag의 랜덤 범위가 5인 이유는 5개 알고리즘을 배워서&amp;hellip;</description>
-    </item>
+      <item>
+        <title>SlackBot으로 랜덤 문제 출제</title>
+        <link>https://www.bemore.dev/posts/devstory/slackbot1/</link>
+        <pubDate>Sun, 08 Aug 2021 22:09:48 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Sun, 08 Aug 2021 22:09:48 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/devstory/slackbot1/</guid>
+        <description>스터디에서 4주 동안 배운 알고리즘 유형 문제를 정해진 시간에 풀어보는 모의 코딩테스트를 진행하고 싶었다. 백준 문제를 배운 알고리즘 내에서 랜덤으로 출제하는 슬랙</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>chatbot</category>
+            
+          
+        
+        
+        
+      </item>
+      
+
     
   </channel>
 </rss>

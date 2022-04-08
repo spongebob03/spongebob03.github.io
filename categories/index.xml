@@ -1,74 +1,98 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>Categories on BeMore</title>
+    <title>Categories on Bemore</title>
     <link>https://www.bemore.dev/categories/</link>
-    <description>Recent content in Categories on BeMore</description>
+    <description>Recent content in Categories on Bemore</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 20 Feb 2022 10:19:13 +0900</lastBuildDate><atom:link href="https://www.bemore.dev/categories/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>독서</title>
-      <link>https://www.bemore.dev/categories/%EB%8F%85%EC%84%9C/</link>
-      <pubDate>Sun, 20 Feb 2022 10:19:13 +0900</pubDate>
-      
-      <guid>https://www.bemore.dev/categories/%EB%8F%85%EC%84%9C/</guid>
-      <description></description>
-    </item>
+    <language>en</language>
+    <managingEditor>bmofinnjake08@gmail.com (bmo)</managingEditor>
+    <webMaster>bmofinnjake08@gmail.com (bmo)</webMaster>
+    <copyright>©2022, All Rights Reserved</copyright>
+    <lastBuildDate>Fri, 08 Apr 2022 12:09:48 +0900</lastBuildDate>
     
-    <item>
-      <title>회고</title>
-      <link>https://www.bemore.dev/categories/%ED%9A%8C%EA%B3%A0/</link>
-      <pubDate>Thu, 30 Dec 2021 14:39:31 +0900</pubDate>
-      
-      <guid>https://www.bemore.dev/categories/%ED%9A%8C%EA%B3%A0/</guid>
-      <description></description>
-    </item>
+        <atom:link href="https://www.bemore.dev/categories/index.xml" rel="self" type="application/rss+xml" />
     
-    <item>
-      <title>이게 왜 안되지</title>
-      <link>https://www.bemore.dev/categories/%EC%9D%B4%EA%B2%8C-%EC%99%9C-%EC%95%88%EB%90%98%EC%A7%80/</link>
-      <pubDate>Fri, 10 Dec 2021 12:09:48 +0900</pubDate>
+
       
-      <guid>https://www.bemore.dev/categories/%EC%9D%B4%EA%B2%8C-%EC%99%9C-%EC%95%88%EB%90%98%EC%A7%80/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>fastai</title>
-      <link>https://www.bemore.dev/categories/fastai/</link>
-      <pubDate>Wed, 08 Dec 2021 19:09:48 +0900</pubDate>
+      <item>
+        <title>알고리즘</title>
+        <link>https://www.bemore.dev/categories/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/</link>
+        <pubDate>Fri, 08 Apr 2022 12:09:48 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        
+        <guid>https://www.bemore.dev/categories/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/</guid>
+        <description></description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
       
-      <guid>https://www.bemore.dev/categories/fastai/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>우당탕탕 개발기</title>
-      <link>https://www.bemore.dev/categories/%EC%9A%B0%EB%8B%B9%ED%83%95%ED%83%95-%EA%B0%9C%EB%B0%9C%EA%B8%B0/</link>
-      <pubDate>Mon, 06 Dec 2021 19:09:48 +0900</pubDate>
+      <item>
+        <title>ML</title>
+        <link>https://www.bemore.dev/categories/ml/</link>
+        <pubDate>Wed, 08 Dec 2021 19:09:48 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        
+        <guid>https://www.bemore.dev/categories/ml/</guid>
+        <description></description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
       
-      <guid>https://www.bemore.dev/categories/%EC%9A%B0%EB%8B%B9%ED%83%95%ED%83%95-%EA%B0%9C%EB%B0%9C%EA%B8%B0/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Recommendation System</title>
-      <link>https://www.bemore.dev/categories/recommendation-system/</link>
-      <pubDate>Fri, 19 Nov 2021 22:09:48 +0900</pubDate>
+      <item>
+        <title>Recommendation System</title>
+        <link>https://www.bemore.dev/categories/recommendation-system/</link>
+        <pubDate>Fri, 19 Nov 2021 22:09:48 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        
+        <guid>https://www.bemore.dev/categories/recommendation-system/</guid>
+        <description></description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
       
-      <guid>https://www.bemore.dev/categories/recommendation-system/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Cognitive psychology</title>
-      <link>https://www.bemore.dev/categories/cognitive-psychology/</link>
-      <pubDate>Wed, 02 Oct 2019 22:09:48 +0900</pubDate>
+      <item>
+        <title>오픈소스</title>
+        <link>https://www.bemore.dev/categories/%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4/</link>
+        <pubDate>Wed, 17 Nov 2021 14:41:51 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        
+        <guid>https://www.bemore.dev/categories/%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4/</guid>
+        <description></description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
       
-      <guid>https://www.bemore.dev/categories/cognitive-psychology/</guid>
-      <description></description>
-    </item>
+
     
   </channel>
 </rss>

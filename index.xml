@@ -1,1334 +1,643 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>BeMore</title>
-        <link>https://www.bemore.dev/</link>
-        <description>Recent content on BeMore</description>
-        <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language>
-        <lastBuildDate>Sun, 20 Feb 2022 10:19:13 +0900</lastBuildDate><atom:link href="https://www.bemore.dev/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>클린코드: Ch2</title>
-        <link>https://www.bemore.dev/p/%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C-ch2/</link>
-        <pubDate>Sun, 20 Feb 2022 10:19:13 +0900</pubDate>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>Bemore</title>
+    <link>https://www.bemore.dev/</link>
+    <description>Recent content on Bemore</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>bmofinnjake08@gmail.com (bmo)</managingEditor>
+    <webMaster>bmofinnjake08@gmail.com (bmo)</webMaster>
+    <copyright>©2022, All Rights Reserved</copyright>
+    <lastBuildDate>Fri, 08 Apr 2022 12:09:48 +0900</lastBuildDate>
+    
+        <atom:link href="https://www.bemore.dev/index.xml" rel="self" type="application/rss+xml" />
+    
+      
+      
+      
         
-        <guid>https://www.bemore.dev/p/%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C-ch2/</guid>
-        <description>&lt;p&gt;영어는 필수다&amp;hellip;&lt;/p&gt;
-&lt;h2 id=&#34;-의미있는-이름&#34;&gt;👍 의미있는 이름&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;역할 파악할 수 있도록 표현&lt;/li&gt;
-&lt;li&gt;읽는 사람이 차이를 알도록 이름을 지어야 한다&lt;/li&gt;
-&lt;li&gt;발음하기 쉬운 이름쓰기&lt;/li&gt;
-&lt;li&gt;검색하기 쉬운 이름&lt;/li&gt;
-&lt;li&gt;접두어는 이제 더이상 필요하지 않다&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;클래스 이름&lt;/strong&gt;은 명사나 명사구가 적합&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;메서드 이름&lt;/strong&gt;은 동사, 동사구가 적합
-&lt;ul&gt;
-&lt;li&gt;접근, 변경, 조건은 값 앞에 get, set, is를 붙이는게 표준&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;기발한 이름보다 명료한 이름이 모두의 평화를 위해서 더 좋다&lt;/li&gt;
-&lt;li&gt;일관성 있는 어휘&lt;/li&gt;
-&lt;li&gt;한 단어 다른 맥락에서 남발하지 않기
-&lt;ul&gt;
-&lt;li&gt;예)add, insert, append는 다르다&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;기술 개념에는 기술 이름이 가장 적합&lt;/li&gt;
-&lt;li&gt;적절한 개발 용어 없다면 도메인 용어&lt;/li&gt;
-&lt;li&gt;필요하다면 의미있는 맥락 추가&lt;/li&gt;
-&lt;li&gt;불필요한 맥락 없애기&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;-나쁜-이름&#34;&gt;👎 나쁜 이름&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;비슷한 이름&lt;/li&gt;
-&lt;li&gt;소문자 l이나 o 변수: 뭘 표현한지도 모르겠고 숫자 1, 0으로 착각하기 쉽다.&lt;/li&gt;
-&lt;li&gt;문자 하나만 사용하는 변수 이름 (단, 반복문에서 주로 사용하는 변수 i, j, k는 괜찮다)
-&lt;ul&gt;
-&lt;li&gt;예)a1, a2는 그릇된 정보를 제공하는 이름은 아니지만 아무런 정보를 제공하지 못한다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;유의미한 상수: 그냥 숫자 형태로 써왔다면 해당 변수 검색은 꿈도 못꿀듯.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;느낀점&#34;&gt;느낀점&lt;/h2&gt;
-&lt;p&gt;작성하는 클래스, 메서드, 변수 이름을 명확하게 표현해서 처음 코드를 보는 사람도 이해할 수 있어야한다. 맥락을 추가하는 예시를 통해서 클래스, 함수, 접근자를 어떻게 쓰는지 볼 수 있었다. 나는 리팩토링 이전의 코드만 짜고 있었다. 갈 길이 멀다.&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>CleanCode: 시작</title>
-        <link>https://www.bemore.dev/p/cleancode-%EC%8B%9C%EC%9E%91/</link>
-        <pubDate>Sat, 19 Feb 2022 22:35:43 +0900</pubDate>
+      
         
-        <guid>https://www.bemore.dev/p/cleancode-%EC%8B%9C%EC%9E%91/</guid>
-        <description>&lt;h2 id=&#34;프로그래머&#34;&gt;프로그래머&lt;/h2&gt;
-&lt;p&gt;이 책에서 프로그래밍의 정의는 &lt;strong&gt;기계가 실행할 정도로 상세하게 요구사항을 명시하는 작업&lt;/strong&gt;이다. 본 목적에 충실하면서도 협업에 적합한 코드를 충족하는 것이 클린 코드 아닐까.&lt;br&gt;
-소프트웨어 개발에서 80% 이상은 &lt;strong&gt;유지보수&lt;/strong&gt;다. 따라서 출시했다고 끝이 아니라 시작인것이다.&lt;br&gt;
-미루는 대신 리팩토링으로 나중의 &amp;ldquo;대가&amp;quot;를 줄이는 자세가 기본이다.&lt;br&gt;
-자기 코드에 대해서 정직하자. 버그 파티인 코드도 돌아간다고 면죄부를 준다면 그 대가는 혹독하다.&lt;/p&gt;
-&lt;h2 id=&#34;코드-장인&#34;&gt;코드 장인&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;원칙, 패턴, 기법에 대한 지식&lt;/li&gt;
-&lt;li&gt;깨져가면서 연습&lt;/li&gt;
-&lt;li&gt;왜 그렇게 고쳤는지 서술할 수 있는 능력&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&amp;ldquo;클린코드&amp;quot;의 이론 부분만 읽고 그쳐서는 그저 &amp;ldquo;기분 좋은 책&amp;rdquo;, 자기계발서에 머물지 않는다. 잘 읽고 잘 연습하고 스스로 깨닫도록 하자.&lt;/p&gt;
-&lt;h2 id=&#34;나쁜-코드의-스노우볼링&#34;&gt;나쁜 코드의 스노우볼링&lt;/h2&gt;
-&lt;p&gt;처음의 회피가 더 큰 대가로&amp;hellip;&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;일단 돌아가니까..!나중에 하자 -&amp;gt; 내가 뭘 짠거지? -&amp;gt; 버그 파티 -&amp;gt; 고통 반복
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;⭐️ 르블랑의 법칙: &lt;strong&gt;나중은 절대 돌아오지 않는다&lt;/strong&gt;&lt;/p&gt;
-&lt;h2 id=&#34;깨끗한-코드&#34;&gt;깨끗한 코드?&lt;/h2&gt;
-&lt;p&gt;대단한 프로그래머들의 견해에 따르면 클린 코드란&lt;br&gt;
-&lt;code&gt;#우아&lt;/code&gt;, &lt;code&gt;#간단&lt;/code&gt;, &lt;code&gt;#간결&lt;/code&gt;, &lt;code&gt;#단순&lt;/code&gt;, &lt;code&gt;#직관적&lt;/code&gt;, &lt;code&gt;#이해쉬운&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;명쾌한 추상화, 의존성 최소화, 테스트코드&lt;/p&gt;
-&lt;h2 id=&#34;느낀점&#34;&gt;느낀점&lt;/h2&gt;
-&lt;p&gt;나쁜 예시를 읽을때마다 자꾸 뜨끔한다. 하지만 이 책을 읽고 단순히 반성만 하고 끝내고 싶지 않았다.
-세세함에 몰두하는 태도는 탁월함을 추구하는 모든 노력에서 공통으로 발견된다고 한다.
-작업한 코드에 대한 끊임없는 관심이 필요하다는 핵심을 표현하는 문장들은 획기적인 능력을 말하지 않는다. 사소하지만 일상적인 노력의 형태를 요구한다. 마치 문학 작품을 집필하는 작가나 그림을 그리는 화가에게 필요하는 것이 한번의 초안, 스케치로 명작을 만드는 것이 아니라 계속된 수정을 거치면서 더 낫게 하려는 노력인 것과 같다. 물론 지속가능한 노력이 가장 어렵다&amp;hellip;
-일상적이고 간단한 활동 모두 인간의 노력에 들어 있는 위대함과 아름다움의 바탕이다. 이를 무시하고 대단한 일을 할 수 없는 것이다.&lt;/p&gt;
-&lt;h2 id=&#34;이-책에-대한-다른-리뷰들&#34;&gt;이 책에 대한 다른 리뷰들&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://techblog.woowahan.com/2620/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;우아한 형제들 기술 블로그&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.outsider.ne.kr/515&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;아웃사이더 개발 블로그&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        </item>
-        <item>
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+
+      
+      <item>
+        <title>정렬</title>
+        <link>https://www.bemore.dev/posts/cs/algorithm/sort2/</link>
+        <pubDate>Fri, 08 Apr 2022 12:09:48 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Fri, 08 Apr 2022 12:09:48 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/cs/algorithm/sort2/</guid>
+        <description>Merge Sort 구현 코드 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 def merge_sort(arr, left, right): if left &amp;lt; right: mid = (left + right) // 2 merge_sort(arr, left, mid) merge_sort(arr, mid+1, right) merge(arr, left, mid, right) def merge(arr, left,</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>알고리즘</category>
+            
+          
+            
+              <category>정렬</category>
+            
+          
+        
+        
+          
+            
+              <category>알고리즘</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Heap</title>
+        <link>https://www.bemore.dev/posts/cs/datastructure/heap/</link>
+        <pubDate>Wed, 06 Apr 2022 12:12:26 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Wed, 06 Apr 2022 12:12:26 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/cs/datastructure/heap/</guid>
+        <description>🎄 특별한 이진 트리 완전 이진 트리에서 부모 노드가 자식 노드 값보다 같거나 작은(MinHeap)/큰(MaxHeap) 경우를 만족한다. 현재 남아있는 원소들</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>자료구조</category>
+            
+          
+            
+              <category>힙</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>hugo 블로그 테마 바꾸기</title>
+        <link>https://www.bemore.dev/posts/devstory/chage_theme/</link>
+        <pubDate>Wed, 06 Apr 2022 10:32:30 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Wed, 06 Apr 2022 10:32:30 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/devstory/chage_theme/</guid>
+        <description>휴고 블로그를 처음 만들었을때 나름 많이 찾아보고 고른 테마였는데도 뭔가 아쉬운 점이 많았다. 그래도 레이아웃도 커스텀하고 쓰고 있었는데 더 좋아보이는 테마를 발견</description>
+        
+        <dc:creator>bmo</dc:creator>
+        <media:content url="https://www.bemore.dev/images/thumnail/bob-ross.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>hugo</category>
+            
+          
+            
+              <category>blog</category>
+            
+          
+        
+        
+        
+          
+            
+              <category>우당탕탕 개발기</category>
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>Tree</title>
+        <link>https://www.bemore.dev/posts/cs/datastructure/tree/</link>
+        <pubDate>Tue, 05 Apr 2022 12:09:48 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Tue, 05 Apr 2022 12:09:48 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/cs/datastructure/tree/</guid>
+        <description>트리 🌲 정점끼리 전부 연결되어 있으면서 사이클이 존재하지 않는 그래프 원소의 구성을 정말 나무처럼 표현한 예시로 영화 &amp;lsquo;해리포터&amp;rsquo; 속에</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>자료구조</category>
+            
+          
+            
+              <category>트리</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Linked List</title>
+        <link>https://www.bemore.dev/posts/cs/datastructure/linkedlist/</link>
+        <pubDate>Sat, 05 Mar 2022 12:09:48 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Sat, 05 Mar 2022 12:09:48 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/cs/datastructure/linkedlist/</guid>
+        <description>연결 리스트 연결된 데이터를 저장할때 사용합니다. 연결리스트를 구성하는 노드의 구조는 다음과 같습니다. node data link(next) 장점 단점 삭제와 삽입 O(1)길이가 정해지지 않</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>자료구조</category>
+            
+          
+            
+              <category>연결리스트</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
         <title>리모트에 올린 커밋 취소 or 되돌리기</title>
-        <link>https://www.bemore.dev/p/%EB%A6%AC%EB%AA%A8%ED%8A%B8%EC%97%90-%EC%98%AC%EB%A6%B0-%EC%BB%A4%EB%B0%8B-%EC%B7%A8%EC%86%8C-or-%EB%90%98%EB%8F%8C%EB%A6%AC%EA%B8%B0/</link>
+        <link>https://www.bemore.dev/posts/devstory/about_git/</link>
         <pubDate>Sun, 30 Jan 2022 14:36:02 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Sun, 30 Jan 2022 14:36:02 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/devstory/about_git/</guid>
+        <description>요즘 번역 오픈소스 프로젝트를 하다보니 커밋하고 나서 보이는 오타들이 있었다. 하지만 글자 하나 때문에 새로 커밋 올리는 것은 깔끔하지 않다고 생각되고 어떤 오픈소스</description>
         
-        <guid>https://www.bemore.dev/p/%EB%A6%AC%EB%AA%A8%ED%8A%B8%EC%97%90-%EC%98%AC%EB%A6%B0-%EC%BB%A4%EB%B0%8B-%EC%B7%A8%EC%86%8C-or-%EB%90%98%EB%8F%8C%EB%A6%AC%EA%B8%B0/</guid>
-        <description>&lt;p&gt;요즘 번역 오픈소스 프로젝트를 하다보니 커밋하고 나서 보이는 오타들이 있었다. 하지만 글자 하나 때문에 새로 커밋 올리는 것은 깔끔하지 않다고 생각되고 어떤 오픈소스 프로젝트에서는 불필요한 커밋은 합쳐서 올리기를 요청하기도 한다고 했다(기본인가..?)🤔&lt;br&gt;
-이럴땐 커밋 취소, 되돌리기, 덮어쓰기를 상황에 맞게 사용하자.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;git log --oneline&lt;/code&gt;&lt;br&gt;
-현재 커밋 로그를 조회해서 어느 지점 커밋으로 되돌리고 싶은지 확인한다.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;8d9111b (HEAD -&amp;gt; ddp_pipeline, origin/ddp_pipeline) 커밋4
-cedfd58 커밋3
-f0780f0 커밋2
-b908557 커밋1
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;✅  이미 올라간 커밋을 바꾸고 싶다! 어떻게?&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;방법1 &lt;strong&gt;커밋 취소하기&lt;/strong&gt;:&lt;code&gt;git reset --soft HEAD^&lt;/code&gt;&lt;br&gt;
-로컬 저장소 상태를 커밋 이전 상태로 강제 변경해린다.&lt;br&gt;
-⚠️ 해당 브랜치를 협업하고 있다면 위험할 수 있다⚠️&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;--soft&lt;/code&gt;: 지정한 커밋에 있던 내용이 stage에 있는 상태로 되돌려진다.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;--hard&lt;/code&gt;: 지정한 커밋 기점의 상태로 되돌아간 상태이다.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;HEAD^&lt;/code&gt;: 바로 이전 커밋으로 돌아가기&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;HEAD~n&lt;/code&gt;: n전 커밋으로 돌아가기 (HEAD~1==HEAD^)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;방법2 &lt;strong&gt;커밋 되돌리기&lt;/strong&gt;:&lt;code&gt;git revert HEAD^&lt;/code&gt;&lt;br&gt;
-커밋을 되돌렸다는 게 히스토리에 남는다.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;방법3 &lt;strong&gt;커밋 덮어쓰기&lt;/strong&gt;: &lt;code&gt;git commit --amend&lt;/code&gt;&lt;br&gt;
-추가 작업을 이전 커밋에 포함시킨다. (이게 제일 좋은 방법같다..)&lt;br&gt;
-하지만 이미 원격 저장소에 push한 커밋 내용이라면 resest처럼 force push 필요하다)&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;나는 해당 브랜치를 함께 작업하는 사람이 없어서 reset을 사용하는데 문제가 없었고 이전 커밋을 취소하고 새 커밋을 올리리고 싶었다. 이 방법으로 오타까지 고친 &lt;code&gt;커밋5&lt;/code&gt;를 새로 올리고 히스토리에 &lt;code&gt;커밋4&lt;/code&gt;를 남기지 않는다.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;code&gt;git reset --soft HEAD^&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cedfd58 (HEAD -&amp;gt; ddp_pipeline) 커밋3
-f0780f0 커밋2
-b908557 커밋3
-&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;기존의 수정한 내용을 지우지 않고 한군데만 더 고치면 되어서 &lt;code&gt;hard&lt;/code&gt; 대신 &lt;code&gt;soft&lt;/code&gt; 옵션을 줬다.&lt;br&gt;
-스테이지에 추가되어있던 파일을 내려주고 수정하기&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;git commit -m &amp;quot;message&amp;quot;&lt;/code&gt; 커밋 올리기&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;git push -f origin ddp_pipeline&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cfb8eec (HEAD -&amp;gt; ddp_pipeline, origin/ddp_pipeline) 커밋5
-cedfd58 커밋3
-f0780f0 커밋2
-b908557 커밋3
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;다음엔 revert를 사용해야겠다.&lt;/p&gt;
-</description>
-        </item>
-        <item>
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>git</category>
+            
+          
+            
+              <category>오픈소스</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
         <title>2021년 회고</title>
-        <link>https://www.bemore.dev/p/2021%EB%85%84-%ED%9A%8C%EA%B3%A0/</link>
+        <link>https://www.bemore.dev/posts/retrospect/y2021/</link>
         <pubDate>Thu, 30 Dec 2021 14:39:31 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Thu, 30 Dec 2021 14:39:31 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/retrospect/y2021/</guid>
+        <description>😷 올해도 코로나 올해도 코로나는 끝나지 않았다&amp;hellip; 이제는 &amp;lsquo;곧 끝나겠지&amp;rsquo;라는 생각도 들지 않지만 &amp;lsquo;언젠간</description>
         
-        <guid>https://www.bemore.dev/p/2021%EB%85%84-%ED%9A%8C%EA%B3%A0/</guid>
-        <description>&lt;h2 id=&#34;올해도-코로나&#34;&gt;😷 올해도 코로나&lt;/h2&gt;
-&lt;p&gt;올해도 코로나는 끝나지 않았다&amp;hellip; 이제는 &amp;lsquo;곧 끝나겠지&amp;rsquo;라는 생각도 들지 않지만 &amp;lsquo;언젠간 끝나겠지&amp;rsquo;라는 마음이다. 언젠가 끝날 때까지 모두 건강하길!&lt;/p&gt;
-&lt;h2 id=&#34;mac-mini-m1-사용기&#34;&gt;🖥 Mac mini M1 사용기&lt;/h2&gt;
-&lt;p&gt;10년 동안 쓴 데스크탑을 보내주고 MacOS를 체험해 보고 싶어서 Mac mini M1을 선택했다. 일단 맥북보다 가격이 낮았고(옵션을 추가했더니 원래 가격보다 더 올라갔지만) 발열, 소음이 거의 없었다. 1년 동안 사용하면서 성능도 만족한다. 다만 아직 개발 생태계에서 지원해 주지 않는 곳이 아직 있을 수 있다. 가끔 개발환경 세팅하거나 이전에 썼던 툴이 설치가 안 되거나 실행이 안 된다면 &amp;lsquo;이걸 M1이 또..?&amp;lsquo;라고 생각된다. 하지만 애플이 앞으로 M1 Pro, M2 등 자체 개발 칩을 개발하기 때문에 앞으로는 표준이 될 것으로 기대된다.&lt;/p&gt;
-&lt;h2 id=&#34;오픈소스-프로젝트-파이토치-한국어-튜토리얼&#34;&gt;🌱 오픈소스 프로젝트: 파이토치 한국어 튜토리얼&lt;/h2&gt;
-&lt;p&gt;파이토치를 처음 공부할 때 당연히 참고하는 파이토치 튜토리얼 공식 문서는 한글 지원이 없어서 공부할 때 더 어렵게 느껴졌다. 그런 나에게 파이토치 한국어 튜토리얼은 한줄기 빛이었다. 마침 8월쯤 2021 오픈소스 컨트리뷰션 아카데미 신청 기간이 있었다. 해당 프로젝트도 멘티를 모집하는 것을 확인하고 이 기회에 튜토리얼 사이트를 사용하면서 찾았던 불편한 점을 개선해 보고 싶어서 참가하게 되었다. 주로 다른 컨트리뷰터가 올린 번역 PR에 대한 리뷰하기, 문서 번역, 머신러닝 용어에 대한 번역 용어 고정에 대해 기여할 수 있었다. 다들 번역 잘하셔서 PR을 리뷰하기 위해서는 여러 번 봐야지 작은 부분이라도 찾을 수 있었고 리뷰하면서도 혹시 틀린 내용이 있을까 더 찾아보고 코멘트를 남겼다. 그래서 간단한 내용이어도 어떤 식으로 의견을 전달하면 좋을지 계속 쓰고 지웠다 반복했던 것 같다. 번역만 생각했는데 오픈소스 프로젝트를 어떻게 더 잘 운영할 수 있는지, CI/CD, 번역 편의와 일관성, 사용자들에게 정보를 더 쉽게 표현할 수 있을지 등등&amp;hellip; 많은 부분 생각해보는 시간이었다. 오픈소스 프로젝트에 참여하는 기본 방법(컨트리뷰션 가이드, 번역규칙 등)부터 차근차근 해당 프로젝트 메인테이너인 멘토님이 알려주시고 멘티들과 함께 할 수 있어서 많이 배우고 재밌게 참여할 수 있었다. 무엇보다도 내가 작업한 내용이 많은 사람들이 사용하는 오픈소스에 반영된다는 점이 정말 신기하고 신난다..!&lt;/p&gt;
-&lt;h2 id=&#34;블로그&#34;&gt;🌿 블로그&lt;/h2&gt;
-&lt;p&gt;노션, 벨로그로 개발 블로그 쓰고 있었다. 노션엔 주로 공부한 내용을 정리하고 벨로그에는 정보를 공유하는 용도로 사용하였다. 개발 정보를 찾을 때 볼 수 있었던 github.io주소의 블로그들을 볼 때마다 나도 원하는 기능을 넣은 블로그를 직접 만들고 싶었다. 마침 21년 회고를 작성하면서 이를 실을 블로그를 장만하고 싶다는 동기가 생기자 당장 시작했다. 정적 사이트 생성기 Hugo를 활용한 블로그 글들을 참고해서 블로그를 만들었다. 쇼핑하는 것처럼 여러 템플릿 찾아보고 더 좋아보이는 템플릿이 보일때마다 장바구니같이 기록하게 되는 재미가 있다. 최대한 지금 테마에 원하는 기능이 들어가도록 조금씩 계속 뜯어 고치고 있다. 당장 내가 쓰고 싶어서 작업하는 과정이 즐겁다. 그 과정에서 다양한 블로그들을 볼 수 있었고 기록의 중요성을 확인하는 시간이었다. 그 기록들 덕분에 나만의 공간을 마련할 수 있었다. 당장은 내가 하고 싶은 일을 하면서 찾았던 정보들을 정리한 수준밖에 되지 않지만 꾸준히 정리하고 공유하면서 내가 얻었던 도움의 조각만큼이라도 다른 사람들에게도 도움을 줄 수 있는 글을 쓰고 싶다. 또한 개발이 아닌 다양한 분야에 대한 공부와 생각도 정리할 수 있는 공간으로 꾸며나갈 예정이다.&lt;/p&gt;
-&lt;h2 id=&#34;매달-책-1권-독서&#34;&gt;📚 매달 책 1권 독서&lt;/h2&gt;
-&lt;p&gt;작년부터 한 달에 한 번 주제를 정해 책 1권 읽는 모임에 있었는데 아쉽게도 모임이 끝나게 되었다. 메모장 앱에 쓰다가 독서 기록 앱을 발견해서 그동안 읽었던 책을 정리하고 읽고 있는 책을 더 효과적으로 기록할 수 있었다. 주로 고전 소설만 읽었는데 다른 분야도 균형 있게 읽어야겠다는 필요성을 느껴서 인문학 도서를 읽는 북클럽에 참여했다. 읽고 싶었는데 미루던 책을 읽는 시간을 가졌다. 각 장에 대한 생각을 정리하고 에세이를 작성하면서 오랜만에 글쓰기를 한 느낌이다. 내년엔 더 많이 읽을 필요가 있다&amp;hellip;&lt;/p&gt;
-&lt;h2 id=&#34;느낀점&#34;&gt;느낀점&lt;/h2&gt;
-&lt;p&gt;&lt;figure 
-	&gt;
-	&lt;a href=&#34;https://wikidocs.net/images/page/124130/%EB%8D%94%EB%8B%9D_%ED%81%AC%EB%A3%A8%EA%B1%B0.png&#34; &gt;
-		&lt;img src=&#34;https://wikidocs.net/images/page/124130/%EB%8D%94%EB%8B%9D_%ED%81%AC%EB%A3%A8%EA%B1%B0.png&#34;
-			
-			
-			
-			loading=&#34;lazy&#34;
-			alt=&#34;더닝 크루거 효과&#34;&gt;
-	&lt;/a&gt;
-	
-	&lt;figcaption&gt;더닝 크루거 효과&lt;/figcaption&gt;
-	
-&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;공부는 끝이 없다. 배우고 싶었던 분야를 새로 공부면서 더닝 크루거 효과처럼 우매함의 봉우리와 절망의 계곡에 있었던 것 같다. 이제는 좀 절망의 계곡에서 나와서 비탈길 입구라도 밟았을까? 그냥 멈추지 않고 계속해야겠다.&lt;/p&gt;
-&lt;p&gt;교육 프로그램에서 머신러닝 기초를 배우고 팀 프로젝트가 있었다. 원래는 2달간 대면으로 만나면서 진행할 수 있을 줄 알았는데 7월부터 코로나 추세가 심해져 프로젝트 동안 2번 만나고 모두 화상으로 진행되었다. 대면으로 못 만나면 팀원간 소통이나 피드백이 불편하지 않을까 걱정했는데 pr남기고 슬랙, 게더 등 협업 툴을 자주 사용하니 직접 모여서 하는 것보다 편했다. 백엔드로 부족한 점이 많아서 모델 서빙뿐만 아니라 다른 부분도 더 공부해야겠다.&lt;/p&gt;
-&lt;p&gt;자소서를 작성하면서 글쓰기는 피할 수 없는 존재라는 걸 뼈저리게 느끼는 중이다. 메모와 단순한 기록에 익숙해서 그것들을 어떻게 풀어 쓸지 막막했다. 다양한 상황에서도 목적에 맞는 글을 쓰는 과정이 필요했고 여태 공부하면서 읽었던 글들이 더 대단하고 소중하게 보였다. 안다고 생각한 내용도 막상 내 언어로 표현하려고 보면 더없이 낯설다. 알고 있다는 착각에서 나와서 말로 설명해 보고 글로 정리할 필요가 있다.&lt;/p&gt;
-&lt;p&gt;회고 모임을 통해서 차분하게 올해를 마무리할 수 있었다. 같은 1년의 시간 속에서 다양한 성장을 기록한 멋진 분들을 만나는 시간이었다. 내년에는 더 다양한 활동으로 회고를 채우고 싶다.&lt;/p&gt;
-&lt;h2 id=&#34;아쉬운-점&#34;&gt;아쉬운 점&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;코로나 언제 끝나&amp;hellip;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;내년에는&#34;&gt;내년에는&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;기획한 프로젝트 서비스까지&lt;/li&gt;
-&lt;li&gt;코로나 끝나길&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        </item>
-        <item>
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>회고</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
         <title>어느날 Hugo 블로그 검색이 안될때</title>
-        <link>https://www.bemore.dev/p/%EC%96%B4%EB%8A%90%EB%82%A0-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B2%80%EC%83%89%EC%9D%B4-%EC%95%88%EB%90%A0%EB%95%8C/</link>
+        <link>https://www.bemore.dev/posts/devstory/blogsearch/</link>
         <pubDate>Fri, 10 Dec 2021 12:09:48 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Fri, 10 Dec 2021 12:09:48 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/devstory/blogsearch/</guid>
+        <description>로컬에서 되던 검색이 도메인에서는 안된다..? 블로그 만들고 도메인 설정하고 신나게 글을 쓰다가 검색기능이 안되는걸 발견했다. 빌드한 그대로 로컬에서 돌려봤을</description>
         
-        <guid>https://www.bemore.dev/p/%EC%96%B4%EB%8A%90%EB%82%A0-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B2%80%EC%83%89%EC%9D%B4-%EC%95%88%EB%90%A0%EB%95%8C/</guid>
-        <description>&lt;h2 id=&#34;로컬에서-되던-검색이-도메인에서는-안된다&#34;&gt;로컬에서 되던 검색이 도메인에서는 안된다..?&lt;/h2&gt;
-&lt;p&gt;블로그 만들고 도메인 설정하고 신나게 글을 쓰다가 검색기능이 안되는걸 발견했다. 빌드한 그대로 로컬에서 돌려봤을때는 잘만 되는데..?&lt;br&gt;
-&lt;strong&gt;도메인에서는 다음과 같은 에러메시지가 나오는 상태였다.&lt;/strong&gt;
-&lt;figure 
-	
-		class=&#34;gallery-image&#34; 
-		style=&#34;
-			flex-grow: 466; 
-			flex-basis: 1120px&#34;
-	&gt;
-	&lt;a href=&#34;https://www.bemore.dev/p/%EC%96%B4%EB%8A%90%EB%82%A0-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B2%80%EC%83%89%EC%9D%B4-%EC%95%88%EB%90%A0%EB%95%8C/searcherror.png&#34; data-size=&#34;579x124&#34;&gt;
-		&lt;img src=&#34;https://www.bemore.dev/p/%EC%96%B4%EB%8A%90%EB%82%A0-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B2%80%EC%83%89%EC%9D%B4-%EC%95%88%EB%90%A0%EB%95%8C/searcherror.png&#34;
-			width=&#34;579&#34;
-			height=&#34;124&#34;
-			srcset=&#34;https://www.bemore.dev/p/%EC%96%B4%EB%8A%90%EB%82%A0-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B2%80%EC%83%89%EC%9D%B4-%EC%95%88%EB%90%A0%EB%95%8C/searcherror_hu769297bb68b3f56c7a9d5596579c0b61_41646_480x0_resize_box_3.png 480w, https://www.bemore.dev/p/%EC%96%B4%EB%8A%90%EB%82%A0-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B2%80%EC%83%89%EC%9D%B4-%EC%95%88%EB%90%A0%EB%95%8C/searcherror_hu769297bb68b3f56c7a9d5596579c0b61_41646_1024x0_resize_box_3.png 1024w&#34;
-			loading=&#34;lazy&#34;
-			&gt;
-	&lt;/a&gt;
-	
-&lt;/figure&gt;
-baseURL 설정이 웹에서 요구하는 주소 형태랑 좀 달라서 나타난 문제같았다.&lt;/p&gt;
-&lt;h2 id=&#34;-해결&#34;&gt;🛠 해결&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;config.yaml&lt;/code&gt;에서 baseURL을 &lt;a class=&#34;link&#34; href=&#34;http://www.bemore.dev&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;www.bemore.dev&lt;/a&gt;로 바꿔도 달라지지 않았다.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;CNAME 파일 확인하기&lt;br&gt;
-CNAME 내부 주소 값이 처음 도메인 설정해줄때 &lt;a class=&#34;link&#34; href=&#34;http://www.bemore.dev&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;www.bemore.dev&lt;/a&gt;였는데 빌드하고 나서 bemore.dev로 바꼈던 부분이 생각났다.&lt;br&gt;
-&amp;lt;- Push할 떄마다 페이지가 작동하지 않을수도 있다고 해서 이를 방지하기 위해 static/CNAME을 작성할때&lt;br&gt;
-😈 &lt;strong&gt;&lt;code&gt;www&lt;/code&gt;를 뺀 apex주소를 썼던거 때문이었다.&lt;/strong&gt; 😈&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;static/CNAME&lt;br&gt;
-👉 내용 &lt;code&gt;www.도메인주소&lt;/code&gt;으로 수정하고 Push&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;🎉 이제 도메인에서도 제대로 작동한다!&lt;/p&gt;
-&lt;h3 id=&#34;참고&#34;&gt;참고&lt;/h3&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://discourse.gohugo.io/t/search-works-locally-but-not-on-domain/20641&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Search works locally but not on domain&lt;/a&gt;&lt;br&gt;
-&lt;a class=&#34;link&#34; href=&#34;https://github.com/xiaoheiAh/hugo-theme-pure/issues/14&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;&amp;ldquo;Search&amp;rdquo; still not functioning with CORS blocking&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;블로그 그만 고치고 글 쓰겠어&amp;hellip;&lt;/p&gt;
-</description>
-        </item>
-        <item>
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>blog</category>
+            
+          
+            
+              <category>hugo</category>
+            
+          
+        
+        
+        
+          
+            
+              <category>이게 왜 안되지</category>
+            
+          
+        
+      </item>
+      
+      <item>
         <title>fastai와 파이토치가 만나 꽃피운 딥러닝 2장</title>
-        <link>https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/</link>
+        <link>https://www.bemore.dev/posts/ml/fastai/ch2/</link>
         <pubDate>Wed, 08 Dec 2021 19:09:48 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Wed, 08 Dec 2021 19:09:48 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/ml/fastai/ch2/</guid>
+        <description>이번 장에서는 분류 모델을 구축하면서 딥러닝의 가능성 및 제한사항을 살펴볼 수 있다. 이 곰돌이가 어떤 곰돌이인지 예측하는 모델을 다뤄봅시다 🐻 데이터 다운로드 책에</description>
         
-        <guid>https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/</guid>
-        <description>&lt;p&gt;이번 장에서는 분류 모델을 구축하면서 딥러닝의 가능성 및 제한사항을 살펴볼 수 있다. 이 곰돌이가 어떤 곰돌이인지 예측하는 모델을 다뤄봅시다 🐻&lt;/p&gt;
-&lt;h2 id=&#34;데이터-다운로드&#34;&gt;데이터 다운로드&lt;/h2&gt;
-&lt;p&gt;책에서는 빙 이미지 검색의 데이터를 사용했지만 빙 이미지 검색은 보안키를 요구해서&amp;hellip;좀 더 편하게 이미지 데이터를 받아올 방법을 찾아보았다.&lt;br&gt;
-역시 &lt;a class=&#34;link&#34; href=&#34;https://course.fast.ai/images&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;fastai공식 자료&lt;/a&gt;를 찾아보니 귀찮게 보안키를 요구하지 않는 DuckDuckGo 이미지를 편하게 받아서 쓸 수 있는 방법이 있었다!&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;err&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pip&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;install&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;fastbook&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;fastbook&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; 
-&lt;span class=&#34;n&#34;&gt;urls&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;search_images_ddg&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;grizzly bear&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;max_images&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;100&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;span class=&#34;nb&#34;&gt;len&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;urls&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;urls&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;출력:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;(100,
- &#39;https://s3-us-west-2.amazonaws.com/cdn.yellowst.one/animals/grizzly-bear.jpg&#39;)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;다운로드한 이미지 하나 열어서 확인하면&amp;hellip;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;download_url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;urls&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;images/bear.jpg&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;im&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Image&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;open&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;images/bear.jpg&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;im&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;thumbnail&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;256&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;256&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;im&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;figure 
-	
-		class=&#34;gallery-image&#34; 
-		style=&#34;
-			flex-grow: 149; 
-			flex-basis: 359px&#34;
-	&gt;
-	&lt;a href=&#34;https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_3_1.png&#34; data-size=&#34;256x171&#34;&gt;
-		&lt;img src=&#34;https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_3_1.png&#34;
-			width=&#34;256&#34;
-			height=&#34;171&#34;
-			srcset=&#34;https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_3_1_hu1bb6afd40de311997667ad05661f3970_80388_480x0_resize_box_3.png 480w, https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_3_1_hu1bb6afd40de311997667ad05661f3970_80388_1024x0_resize_box_3.png 1024w&#34;
-			loading=&#34;lazy&#34;
-			alt=&#34;귀여운 곰이다&#34;&gt;
-	&lt;/a&gt;
-	
-	&lt;figcaption&gt;귀여운 곰이다&lt;/figcaption&gt;
-	
-&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;각 검색어에서 얻은 모든 URL의 이미지를 fastai가 제공하는 &lt;code&gt;download_images&lt;/code&gt; 함수로 다운로드 하여 검색어가 이름인 별도의 폴더에 저장한다.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;bear_types&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;grizzly&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;black&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;teddy&amp;#39;&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;path&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Path&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;bears&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-
-&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;not&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;exists&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;():&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mkdir&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
-    &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;o&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;bear_types&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
-        &lt;span class=&#34;n&#34;&gt;dest&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;o&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-        &lt;span class=&#34;n&#34;&gt;dest&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mkdir&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;exist_ok&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;True&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-        &lt;span class=&#34;n&#34;&gt;download_images&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dest&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;urls&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;search_images_ddg&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;sa&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;o&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt; bear&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;max_images&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;150&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;fns&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;get_image_files&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;fns&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[:&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;출력:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;(#5) [Path(&#39;bears/teddy/00000085.png&#39;),Path(&#39;bears/teddy/00000008.jpg&#39;),Path(&#39;bears/teddy/00000107.jpg&#39;),Path(&#39;bears/teddy/00000168.jpeg&#39;),Path(&#39;bears/teddy/00000130.jpg&#39;)]
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;가끔 파일에 오류가 발생할 수 있어서 &lt;code&gt;verify_images&lt;/code&gt; 함수로 검사&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;failed&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;verify_images&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;fns&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;failed&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;출력:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;(#1) [Path(&#39;bears/teddy/00000101.png&#39;)]
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;code&gt;map&lt;/code&gt; 메서드는 호출 시 인자로 전달된 함수를 컬렉션에 포함된 각 요소에 적용.&lt;br&gt;
-unlink 함수를 사용해 오류가 발생한 모든 요소 삭제.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;failed&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;map&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Path&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;unlink&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;(#1) [None]
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;데이터에서-dataloaders까지&#34;&gt;데이터에서 DataLoaders까지&lt;/h2&gt;
-&lt;p&gt;다운로드한 데이터를 &lt;code&gt;DataLoaders&lt;/code&gt;객체로 만들어 목적에 맞게 학습용과 검증용으로 나눈다.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;k&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;DataLoaders&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;GetAttr&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
-    &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;fm&#34;&gt;__init__&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;loaders&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt; &lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;loaders&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;loaders&lt;/span&gt;
-    &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;fm&#34;&gt;__getitem__&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;loaders&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;train&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;valid&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;add_props&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;lambda&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;딱 들어맞는 메서드가 없다면 fastai가 제공하는 데이터블록 사용해 사용자의 상황에 맞는 DataLoaders 객체 생성.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;bears&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;DataBlock&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;blocks&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ImageBlock&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;CategoryBlock&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; 
-                  &lt;span class=&#34;n&#34;&gt;get_items&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;get_image_files&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-                  &lt;span class=&#34;n&#34;&gt;splitter&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;RandomSplitter&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;valid_pct&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;seed&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;42&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
-                  &lt;span class=&#34;n&#34;&gt;get_y&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;parent_label&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-                  &lt;span class=&#34;n&#34;&gt;item_tfms&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Resize&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;128&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;bocks=(독립변수, 종속변수)&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;get_image_files&lt;/code&gt;: 인자로 주어진 경로에 포함된 모든 이미지 목록 찾아 반환&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;splitter=RandomSplitter(valid_pct=0.2, seed=42)&lt;/code&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;seed&lt;/code&gt;: 목록이 시작되는 지점. 난순을 생성하는 기준값이 매번 바뀌기 때문에 주피터 노트북을 실행할 때마다 각 데이터셋에 포함된 이미지가 달라지는 문제 해결하기 위해 제시됨.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;get_y=데이터셋 레이블링에 쓰일 함수&lt;/code&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;parent_label&lt;/code&gt;: 파일이 저장된 폴더명 반환&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;item_tfms&lt;/code&gt;: 모델을 학습시킬 이미지를 텐서로 구성하려면 모든 이미지의 크기가 같아야 한다. 이미지의 크기를 똑같이 맞추는 변형방법.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;dls&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;bears&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dataloaders&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;배치 요소 중 일부 확인&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;dls&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;valid&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;show_batch&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;max_n&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nrows&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;figure 
-	
-		class=&#34;gallery-image&#34; 
-		style=&#34;
-			flex-grow: 388; 
-			flex-basis: 932px&#34;
-	&gt;
-	&lt;a href=&#34;https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_12_0.png&#34; data-size=&#34;684x176&#34;&gt;
-		&lt;img src=&#34;https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_12_0.png&#34;
-			width=&#34;684&#34;
-			height=&#34;176&#34;
-			srcset=&#34;https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_12_0_huc8fb08359629f4677ae7826fddbd59ee_156634_480x0_resize_box_3.png 480w, https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_12_0_huc8fb08359629f4677ae7826fddbd59ee_156634_1024x0_resize_box_3.png 1024w&#34;
-			loading=&#34;lazy&#34;
-			&gt;
-	&lt;/a&gt;
-	
-&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;이미지 크기를 동일하게 맞추려 잘라내다가 일부가 유실될 수도 있다. 이미지를 잘라내지 않고 크기를 맞추는 다음 방법들이 있다.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;찌그러뜨리기&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;bears&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;bears&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;new&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;item_tfms&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Resize&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;128&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ResizeMethod&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Squish&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;dls&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;bears&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dataloaders&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;dls&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;valid&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;show_batch&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;max_n&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nrows&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;figure 
-	
-		class=&#34;gallery-image&#34; 
-		style=&#34;
-			flex-grow: 388; 
-			flex-basis: 932px&#34;
-	&gt;
-	&lt;a href=&#34;https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_13_0.png&#34; data-size=&#34;684x176&#34;&gt;
-		&lt;img src=&#34;https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_13_0.png&#34;
-			width=&#34;684&#34;
-			height=&#34;176&#34;
-			srcset=&#34;https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_13_0_hu3e27ee519e62bee5c495f9382b12154f_158300_480x0_resize_box_3.png 480w, https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_13_0_hu3e27ee519e62bee5c495f9382b12154f_158300_1024x0_resize_box_3.png 1024w&#34;
-			loading=&#34;lazy&#34;
-			&gt;
-	&lt;/a&gt;
-	
-&lt;/figure&gt;&lt;/p&gt;
-&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;빈 곳을 0으로 채우는 방법&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;bears&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;bears&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;new&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;item_tfms&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Resize&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;128&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ResizeMethod&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Pad&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pad_mode&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;zeros&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;dls&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;bears&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dataloaders&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;dls&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;valid&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;show_batch&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;max_n&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nrows&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;figure 
-	
-		class=&#34;gallery-image&#34; 
-		style=&#34;
-			flex-grow: 388; 
-			flex-basis: 932px&#34;
-	&gt;
-	&lt;a href=&#34;https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_14_0.png&#34; data-size=&#34;684x176&#34;&gt;
-		&lt;img src=&#34;https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_14_0.png&#34;
-			width=&#34;684&#34;
-			height=&#34;176&#34;
-			srcset=&#34;https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_14_0_hub5a1ed7303ea03551def5a978a8a0e34_115631_480x0_resize_box_3.png 480w, https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_14_0_hub5a1ed7303ea03551def5a978a8a0e34_115631_1024x0_resize_box_3.png 1024w&#34;
-			loading=&#34;lazy&#34;
-			&gt;
-	&lt;/a&gt;
-	
-&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;위의 두 방법은 이미지를 비현실적으로 변형해서 모델이 실제와는 다른 형태를 학습할 수도 있다. 이미지 크기를 맞추기 위해서 이미지 일부를 잘라내거나, 찌그러뜨리거나, 늘리기, 불필요한 빈 공간을 많이 만들어내는 방법은 모델의 계산 처리에 큰 낭비를 야기시킨다. 이는 유효해상도가 낮아지는 결과로 이어질 수 있다.&lt;/p&gt;
-&lt;p&gt;실전에서는 이미지의 특정 부분을 &lt;strong&gt;무작위&lt;/strong&gt;로 선택하여 잘라내는 방식을 보편적으로 사용한다. 에포크마다 무작위로 각 이미지의 다른 부분을 선택해 모델이 각 이미지의 서로 다른 위치에서 드러난 특징에 집중하여 다양성을 인식할 수 있는 방향으로 학습될 수 있도록 한다.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;bears&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;bears&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;new&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;item_tfms&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;RandomResizedCrop&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;128&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;min_scale&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;dls&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;bears&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dataloaders&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;dls&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;train&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;show_batch&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;max_n&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nrows&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;unique&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;True&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;min_scale&lt;/code&gt;: 매번 이미지의 얼마나 많은 영역을 선택할지 결정!&lt;br&gt;
-&lt;code&gt;show_batch&lt;/code&gt;함수의 &lt;code&gt;unique&lt;/code&gt;인자: 동일 이미지에서 반복해서 적용되는 변형으로 만들어지는 서로 다른 이미지 확인&lt;/p&gt;
-&lt;p&gt;&lt;figure 
-	
-		class=&#34;gallery-image&#34; 
-		style=&#34;
-			flex-grow: 388; 
-			flex-basis: 932px&#34;
-	&gt;
-	&lt;a href=&#34;https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_16_0.png&#34; data-size=&#34;684x176&#34;&gt;
-		&lt;img src=&#34;https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_16_0.png&#34;
-			width=&#34;684&#34;
-			height=&#34;176&#34;
-			srcset=&#34;https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_16_0_hu3cac9a43ab4796d812018327ad516491_184729_480x0_resize_box_3.png 480w, https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_16_0_hu3cac9a43ab4796d812018327ad516491_184729_1024x0_resize_box_3.png 1024w&#34;
-			loading=&#34;lazy&#34;
-			&gt;
-	&lt;/a&gt;
-	
-&lt;/figure&gt;&lt;/p&gt;
-&lt;h2 id=&#34;데이터-증강&#34;&gt;데이터 증강&lt;/h2&gt;
-&lt;p&gt;입력 데이터를 임의로 변형해 새로운 데이터를 생성하는 기법. 변형된 결과들은 서로 다른 개체를 만들지만, 데이터 자체의 의미를 벗어나서는 안된다.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;회전&lt;/li&gt;
-&lt;li&gt;뒤집기&lt;/li&gt;
-&lt;li&gt;원근 뒤틀기&lt;/li&gt;
-&lt;li&gt;명도 바꾸기&lt;/li&gt;
-&lt;li&gt;채도 바꾸기..등&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;bears&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;bears&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;new&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;item_tfms&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Resize&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;128&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;batch_tfms&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;aug_transforms&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mult&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;dls&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;bears&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dataloaders&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;dls&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;train&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;show_batch&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;max_n&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nrows&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;unique&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;True&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;batch_tfms&lt;/code&gt;: GPU에서 배치 단위로 적용할 변형 지정하는 인자&lt;br&gt;
-&lt;code&gt;aug_transforms&lt;/code&gt;: 자연스러운 사진에는 이미 잘 작동한다고 알려진 표준적인 데이터 증강 목록 반환&lt;/p&gt;
-&lt;p&gt;&lt;figure 
-	
-		class=&#34;gallery-image&#34; 
-		style=&#34;
-			flex-grow: 193; 
-			flex-basis: 463px&#34;
-	&gt;
-	&lt;a href=&#34;https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_17_1.png&#34; data-size=&#34;684x354&#34;&gt;
-		&lt;img src=&#34;https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_17_1.png&#34;
-			width=&#34;684&#34;
-			height=&#34;354&#34;
-			srcset=&#34;https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_17_1_hu266d6a9a7a888d308f410a9877683652_336767_480x0_resize_box_3.png 480w, https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_17_1_hu266d6a9a7a888d308f410a9877683652_336767_1024x0_resize_box_3.png 1024w&#34;
-			loading=&#34;lazy&#34;
-			&gt;
-	&lt;/a&gt;
-	
-&lt;/figure&gt;&lt;/p&gt;
-&lt;h2 id=&#34;모델-훈련과-훈련된-모델을-이용한-데이터-정리&#34;&gt;모델 훈련과 훈련된 모델을 이용한 데이터 정리&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;bears&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;bears&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;new&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;item_tfms&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;RandomResizedCrop&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;224&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;min_scale&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
-                  &lt;span class=&#34;n&#34;&gt;batch_tfms&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;aug_transforms&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;())&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;dls&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;bears&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dataloaders&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;learn&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cnn_learner&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dls&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;resnet18&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;metrics&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;error_rate&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;learn&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;fine_tune&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;출력:&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;interp&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ClassificationInterpretation&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;from_learner&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;learn&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;interp&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;plot_confusion_matrix&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;오차행렬:&lt;/p&gt;
-&lt;p&gt;&lt;figure 
-	
-		class=&#34;gallery-image&#34; 
-		style=&#34;
-			flex-grow: 94; 
-			flex-basis: 226px&#34;
-	&gt;
-	&lt;a href=&#34;https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_21_1.png&#34; data-size=&#34;276x293&#34;&gt;
-		&lt;img src=&#34;https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_21_1.png&#34;
-			width=&#34;276&#34;
-			height=&#34;293&#34;
-			srcset=&#34;https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_21_1_hu0b708653e88c6d776bf4d1054135c6c1_9387_480x0_resize_box_3.png 480w, https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_21_1_hu0b708653e88c6d776bf4d1054135c6c1_9387_1024x0_resize_box_3.png 1024w&#34;
-			loading=&#34;lazy&#34;
-			&gt;
-	&lt;/a&gt;
-	
-&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;오류가 발생하는 곳 원인 파악해야 데이터셋인지, 모델 자체 문제인지 알 수 있다.&lt;/p&gt;
-&lt;p&gt;손실 기준으로 이미지 정렬해서 확인하기&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;interp&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;plot_top_losses&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nrows&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;figure 
-	
-		class=&#34;gallery-image&#34; 
-		style=&#34;
-			flex-grow: 403; 
-			flex-basis: 967px&#34;
-	&gt;
-	&lt;a href=&#34;https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_22_0.png&#34; data-size=&#34;883x219&#34;&gt;
-		&lt;img src=&#34;https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_22_0.png&#34;
-			width=&#34;883&#34;
-			height=&#34;219&#34;
-			srcset=&#34;https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_22_0_hu6a3e2d981486c349521ff5fe4df8d74d_65212_480x0_resize_box_3.png 480w, https://www.bemore.dev/p/fastai%EC%99%80-%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%EA%B0%80-%EB%A7%8C%EB%82%98-%EA%BD%83%ED%94%BC%EC%9A%B4-%EB%94%A5%EB%9F%AC%EB%8B%9D-2%EC%9E%A5/output_22_0_hu6a3e2d981486c349521ff5fe4df8d74d_65212_1024x0_resize_box_3.png 1024w&#34;
-			loading=&#34;lazy&#34;
-			&gt;
-	&lt;/a&gt;
-	
-&lt;/figure&gt;&lt;/p&gt;
-&lt;h3 id=&#34;imageclassifiercleaner로-시각적으로-확인해서-데이터-정제&#34;&gt;ImageClassifierCleaner로 시각적으로 확인해서 데이터 정제&lt;/h3&gt;
-&lt;p&gt;⚠️ Colab환경에서 실습할 때 ImageClassifier not found Error 발생할 수 있다.
-&lt;a class=&#34;link&#34; href=&#34;https://forums.fast.ai/t/fastai2s-imageclassifiercleaner-to-clean-image-data-is-not-showing-up-in-colab/66125&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Fastai2’s ImageClassifierCleaner to clean image data is not showing up in Colab&lt;/a&gt; 참고해 위젯 모듈을 임포트 해줘야했다. fastai2가 아니라 fastai로 해야 문제가 없었다.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;fastai.vision.widgets&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;cleaner&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ImageClassifierCleaner&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;learn&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;cleaner&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;위젯으로 확인했을 때, 라벨링이 잘못되어 있는 이미지는 레이블을 바꿔주거나 삭제. ImageClassifierCleaner가 해당 이미지를 실제 삭제하거나 레이블을 변경하지는 않는다. 변경이 필요한 목록의 색인번호를 반환한다.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;idx&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cleaner&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;delete&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;():&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cleaner&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;fns&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;idx&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;unlink&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;삭제를 선택한 모든 이미지 삭제.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;idx&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cat&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cleaner&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;change&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;():&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;shutil&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;move&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;str&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cleaner&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;fns&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;idx&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]),&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cat&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;레이블 변경을 선택한 모든 이미지 알맞은 범주의 디렉터리로 옮긴다.&lt;/p&gt;
-&lt;h2 id=&#34;모델을-온라인-애플리케이션으로-전환하기&#34;&gt;모델을 온라인 애플리케이션으로 전환하기&lt;/h2&gt;
-&lt;p&gt;먼저, 학습한 모델 파일 형태로 서버에 저장한다. 모델은 &lt;code&gt;구조&lt;/code&gt;, &lt;code&gt;학습된 파라미터&lt;/code&gt;로 구성된다.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;learn&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;export&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;모델의 구조 및 파라미터 파일로 저장&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;path&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Path&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ls&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;file_exts&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;.pkl&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;확인:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;(#1) [Path(&#39;export.pkl&#39;)]
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;추론&#34;&gt;추론&lt;/h3&gt;
-&lt;p&gt;모델을 예측에 사용하기&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;learn_inf&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;load_learner&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;export.pkl&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;learn_inf&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;predict&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;images/bear.jpg&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;결과:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;(&#39;grizzly&#39;, TensorBase(1), TensorBase([9.1902e-08, 1.0000e+00, 5.0465e-07]))
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;(예측된 범주, 예측된 범주의 인덱스, 범주 별 확률)&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;learn_inf&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dls&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;vocab&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;DataLoaders의 vocab에 저장된 모든 범주 목록 순서 확인&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;[&#39;black&#39;, &#39;grizzly&#39;, &#39;teddy&#39;]
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;범주 인덱스도 맞게 된 것을 확인할 수 있다.&lt;/p&gt;
-&lt;h2 id=&#34;어플리케이션에-모델-서빙&#34;&gt;어플리케이션에 모델 서빙&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;predict&lt;/code&gt; 메서드로 모델 예측 기능을 만들어서 구동해봅시다. 간단하게 주피터 노트북에서 위젯으로 웹 어플리케이션을 만들어볼 수 있다.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;예측하고 싶은 이미지 파일 업로드하는 버튼 만들기&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;btn_upload&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;widgets&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;FileUpload&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;btn_upload&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;FileUpload(value={}, description=&#39;Upload&#39;)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;업로드한 이미지 확인하기&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;img&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;PILImage&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;create&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;btn_upload&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;out_pl&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;widgets&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Output&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;out_pl&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;clear_output&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;with&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;out_pl&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;display&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;img&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;to_thumb&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;128&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;128&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;out_pl&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;이미지 확인&lt;/p&gt;
-&lt;p&gt;해당 이미지에 대한 예측 실행&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;pred&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pred_idx&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;probs&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;learn_inf&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;predict&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;img&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Label 위젯으로 예측 결과 출력하기&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;lbl_pred&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;widgets&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Label&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;lbl_pred&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;value&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;Prediction: &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pred&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;; Probability: &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;probs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pred_idx&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;.04f&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&lt;/span&gt;
-
-&lt;span class=&#34;n&#34;&gt;lbl_pred&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;출력:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Label(value=&#39;Prediction: grizzly; Probability: 1.0000&#39;)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;예측하기 버튼 만들기&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;btn_run&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;widgets&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Button&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;description&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;Classify&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;btn_run&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;Button(description=&#39;Classify&#39;, style=ButtonStyle())
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;클릭 이벤트 핸들러 정의하기&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;on_click_classify&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;change&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;img&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;PILImage&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;create&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;btn_upload&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;out_pl&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;clear_output&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
-    &lt;span class=&#34;k&#34;&gt;with&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;out_pl&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;display&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;img&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;to_thumb&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;128&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;128&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;pred&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pred_idx&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;probs&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;learn_inf&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;predict&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;img&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;lbl_pred&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;value&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;Prediction: &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pred&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;; Probability: &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;probs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pred_idx&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;.04f&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&lt;/span&gt;
-
-&lt;span class=&#34;n&#34;&gt;btn_run&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;on_click&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;on_click_classify&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;
-&lt;li&gt;만든 위젯들 나열. GUI 완성&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;VBox&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;([&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;widgets&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Label&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;Select your bear!&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
-      &lt;span class=&#34;n&#34;&gt;btn_upload&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;btn_run&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;out_pl&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;lbl_pred&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;VBox(children=(Label(value=&#39;Select your bear!&#39;), FileUpload(value={&#39;스크린샷 2021-11-30 오후 10.25.08.png&#39;: …
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;이상 곰 이미지 분류 모델에 대한 간단한 연습을 해볼 수 있었다.&lt;/p&gt;
-</description>
-        </item>
-        <item>
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>ML</category>
+            
+          
+            
+              <category>fastai</category>
+            
+          
+        
+        
+          
+            
+              <category>ML</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
         <title>Hugo Blog with Custom Domain</title>
-        <link>https://www.bemore.dev/p/hugo-blog-with-custom-domain/</link>
+        <link>https://www.bemore.dev/posts/devstory/customdomain/</link>
         <pubDate>Mon, 06 Dec 2021 19:09:48 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Mon, 06 Dec 2021 19:09:48 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/devstory/customdomain/</guid>
+        <description>github.io 주소도 좋지만 간단하고 나만의 도메인 주소를 만들어서 쓰고 싶었다. 도메인 구매 구매 사이트 비교(.dev 도메인 비용으로 찾아봤을 때 1년 비용. 기간에 따라 더</description>
         
-        <guid>https://www.bemore.dev/p/hugo-blog-with-custom-domain/</guid>
-        <description>&lt;p&gt;github.io 주소도 좋지만 간단하고 나만의 도메인 주소를 만들어서 쓰고 싶었다.&lt;/p&gt;
-&lt;h2 id=&#34;도메인-구매&#34;&gt;도메인 구매&lt;/h2&gt;
-&lt;p&gt;구매 사이트 비교(.dev 도메인 비용으로 찾아봤을 때 1년 비용. 기간에 따라 더 비싸지는 곳도 있다고 한다. 구매 전 기간을 설정하고 확인하자.)&lt;br&gt;
-&lt;em&gt;원화 가격은 편의를 위해 만단위로 표시&lt;/em&gt;&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;사이트&lt;/th&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;1년 가격&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;google domain&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;$12&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;namecheap&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;$14.98&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;gandi&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;€14.01&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;godaddy&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;2,3890₩&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;gabia&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;2,9000₩&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;이 중 google이니 ad, analytics 사용할 때도 편하지 않을까 하는 기대로 google domain으로 정했다. 그런데 한국은 아직 서비스 하는 지역이 아니어서 결제를 못한다는..? 안내가 있어서 포기했다. 그러다가 역시 구글링을 통해 &lt;a class=&#34;link&#34; href=&#34;https://starton.tistory.com/598&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;지역을 바꾸고 진행할 수 있다는 글&lt;/a&gt;을 따라 무사히 결제하고 도메인을 받을 수 있었다.&lt;/p&gt;
-&lt;h2 id=&#34;네임서버-레코드-설정&#34;&gt;네임서버 레코드 설정&lt;/h2&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;호스트 이름&lt;/th&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;유형&lt;/th&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;TTL&lt;/th&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;데이터&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;커스텀도메인&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;A&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;기본&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;185.199.108.153&lt;/code&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;www.커스텀도메인&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;CNAME&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;기본&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;깃헙계정.github.io&lt;/code&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2 id=&#34;github-저장소에서-도메인-설정&#34;&gt;GitHub 저장소에서 도메인 설정&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;github.io 저장소&lt;/code&gt; &amp;gt; &lt;code&gt;Settings&lt;/code&gt; &amp;gt; &lt;code&gt;Pages&lt;/code&gt; &amp;gt; &lt;code&gt;Custom domain&lt;/code&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;구입한 도메인 입력&lt;/li&gt;
-&lt;li&gt;Save&lt;/li&gt;
-&lt;li&gt;조금 기다린 후 Enforce HTTPS 체크&lt;br&gt;
-github.io 저장소에 CNAME 파일이 생성된다.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;-완성&#34;&gt;🎉 완성&lt;/h2&gt;
-&lt;p&gt;이제 내가 설정한 도메인을 이용할 수 있다!&lt;/p&gt;
-&lt;h2 id=&#34;-이후-빌드-커밋하기-전&#34;&gt;⚠️ 이후 빌드 커밋하기 전&lt;/h2&gt;
-&lt;p&gt;github.io저장소에 CNAME파일이 생성되었기 때문에 그냥 빌드하고 커밋, 푸시할 때 에러날 수 있다. submodule로 연결되어 있는 public폴더를 미리 업데이트 해주면 문제 없다. 그전에 서브모듈 폴더(public, theme) 내부를 바꾸지 않았어야 한다.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;code&gt;cd blog&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;git pull&lt;/code&gt;: main 프로젝트 pull&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;git submodule update --remote --merge&lt;/code&gt; : 연결된 서브모듈들의 업데이트 한번에 받아오기&lt;br&gt;
-&lt;code&gt;git submodule update --remote &amp;lt;REMOTE-REPO-NAME&amp;gt; --merge&lt;/code&gt;: 특정 서브모듈 업데이트만 받아오기&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;참고자료&#34;&gt;참고자료&lt;/h2&gt;
-&lt;p&gt;Doc&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/hosting-and-deployment/hosting-on-github/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Hugo doc - Use a Custom Domain&lt;/a&gt;
-&lt;a class=&#34;link&#34; href=&#34;https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;About custom domains and GitHub Pages&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#about-custom-domain-configuration&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Managing a custom domain for your GitHub Pages site&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Blog&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.chulgil.me/how-to-make-blog-using-github-3/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;블로그 만들기 GitHub 심화 3편 - 커스텀 도메인&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://devinlife.com/howto%20github%20pages/custom-domain/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;블로그 커스텀 도메인 등록하기&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://pinedance.github.io/blog/2019/05/28/Git-Submodule&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Git submodule 사용하기&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        </item>
-        <item>
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>blog</category>
+            
+          
+            
+              <category>hugo</category>
+            
+          
+            
+              <category>개발환경</category>
+            
+          
+        
+        
+        
+          
+            
+              <category>우당탕탕 개발기</category>
+            
+          
+        
+      </item>
+      
+      <item>
         <title>Hugo로 개발 블로그 장만하기</title>
-        <link>https://www.bemore.dev/p/hugo%EB%A1%9C-%EA%B0%9C%EB%B0%9C-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9E%A5%EB%A7%8C%ED%95%98%EA%B8%B0/</link>
+        <link>https://www.bemore.dev/posts/first-post/</link>
         <pubDate>Thu, 02 Dec 2021 22:09:48 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Thu, 02 Dec 2021 22:09:48 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/first-post/</guid>
+        <description>SSG(Static site generator) 중 Hugo를 사용하여 블로그를 만들었다. 처음에 뭐가 뭔지 몰라서 뚱땅뚱땅 만들었다. 호스팅까지 하는데 하루 걸렸고 더 빠르게 할 수 있었지만 역시 세팅에서</description>
         
-        <guid>https://www.bemore.dev/p/hugo%EB%A1%9C-%EA%B0%9C%EB%B0%9C-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9E%A5%EB%A7%8C%ED%95%98%EA%B8%B0/</guid>
-        <description>&lt;p&gt;&lt;figure 
-	&gt;
-	&lt;a href=&#34;https://blog.chodaeho.com/images/blog/2021/01/hugo-logo.png&#34; &gt;
-		&lt;img src=&#34;https://blog.chodaeho.com/images/blog/2021/01/hugo-logo.png&#34;
-			
-			
-			
-			loading=&#34;lazy&#34;
-			&gt;
-	&lt;/a&gt;
-	
-&lt;/figure&gt;&lt;br&gt;
-SSG(Static site generator) 중 Hugo를 사용하여 블로그를 만들었다. 처음에 뭐가 뭔지 몰라서 뚱땅뚱땅 만들었다. 호스팅까지 하는데 하루 걸렸고 더 빠르게 할 수 있었지만 역시 세팅에서 시행착오를 겪었다. 그나마 Hugo여서 하루만에 할 수 있었던걸수도&amp;hellip; Hugo는 Go로 만들어져서 나중에 Go에 대해서 더 공부해보고 싶다.&lt;/p&gt;
-&lt;h2 id=&#34;githubio-만들기&#34;&gt;github.io 만들기&lt;/h2&gt;
-&lt;h3 id=&#34;hugo-설치하기&#34;&gt;Hugo 설치하기&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;brew install hugo&lt;/code&gt;&lt;br&gt;
-&lt;code&gt;hugo version&lt;/code&gt;&lt;/p&gt;
-&lt;h3 id=&#34;사이트-폴더-만들기&#34;&gt;사이트 폴더 만들기&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;hugo new site blog&lt;/code&gt;&lt;/p&gt;
-&lt;h3 id=&#34;테마-붙이기&#34;&gt;테마 붙이기&lt;/h3&gt;
-&lt;p&gt;태그, 카테고리 잘보이는 테마가 안보여서 그나마 stack 테마가 제일 내가 원하는 템플릿이었다.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cd blog
-git init
-git submodule add https://github.com/CaiJimmy/hugo-theme-stack/ themes/hugo-theme-stack
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;code&gt;config.toml&lt;/code&gt;파일 삭제&lt;/p&gt;
-&lt;h3 id=&#34;github-저장소-연결&#34;&gt;Github 저장소 연결&lt;/h3&gt;
-&lt;p&gt;github.io 블로그를 호스팅하기 위해서는 깃헙 저장소 2개가 필요하다.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;blog&lt;/code&gt;: 블로그 컨텐츠&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;깃헙id.github.io&lt;/code&gt;: 빌드된 웹사이트&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git remote add origin https://blog_저장소_주소
-git submodule add -b main git@github.io_저장소_SSH주소 public ## SSH키 있어야함
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;블로그-사용하기&#34;&gt;블로그 사용하기&lt;/h3&gt;
-&lt;p&gt;themes/exampleSite의 &lt;code&gt;content&lt;/code&gt; 폴더 내용을 복사해와서 사용.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;포스트 생성
-&lt;code&gt;hugo new post/포스트제목.md&lt;/code&gt; 제목은 title 항목으로 고칠 수 있다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;댓글-기능-추가&#34;&gt;댓글 기능 추가&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;config.yaml&lt;/code&gt;의 comments 설정만으로 간단하게 추가할 수 있다. &lt;br&gt;
-깃헙계정으로 댓글을 남길 수 있는 &lt;a class=&#34;link&#34; href=&#34;https://utteranc.es/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;utterances&lt;/a&gt;로 설정했다.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;comments:
-        enabled: true
-        provider: utterances
-
-        utterances:
-            repo: 깃헙계정/깃헙계정.github.io
-            issueTerm: pathname
-            label: comment
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;로컬-서버-확인&#34;&gt;로컬 서버 확인&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;hugo server (-D)&lt;/code&gt; 웹서버 실행해서 수정사항 확인&lt;/p&gt;
-&lt;h3 id=&#34;host-on-github&#34;&gt;host on github&lt;/h3&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/hosting-and-deployment/hosting-on-github/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;공식 문서&lt;/a&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;code&gt;cd blog&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;hugo -t hugo-theme-stack&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;cd public&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;git add .&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;git commit -m &amp;quot;커밋메시지&amp;quot;&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;git push origin main&lt;/code&gt; -&amp;gt; 내계정.github.io에 푸시(main이 기본 브랜치명이었다)&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;cd ..&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;git add .&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;git commit -m &amp;quot;커밋메시지&amp;quot;&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;git push origin master&lt;/code&gt; -&amp;gt; blog 저장소에 푸시&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;쉘 스크립트로 업로드 자동화&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;code&gt;deploy.sh&lt;/code&gt;에 위에 매번 쓰는 커맨드를 정리&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;./deploy.sh &amp;quot;커밋 메시지&amp;quot;&lt;/code&gt;&lt;br&gt;
-이후에는 Gist, GithubAction&amp;hellip; 더 편하게 할 수 있는 방법 도전&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;추가할-사항&#34;&gt;추가할 사항&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; utterances로 댓글기능 추가&lt;/li&gt;
-&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 카테고리 사이드메뉴에 추가&lt;/li&gt;
-&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; GithubAction으로 자동화&lt;/li&gt;
-&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; hugo 기능 잘 활용하기&lt;/li&gt;
-&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 통계기능 추가&lt;/li&gt;
-&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; custom domain
-&lt;ul&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.holaxprogramming.com/2017/05/15/github-page-and-custom-domain/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://www.holaxprogramming.com/2017/05/15/github-page-and-custom-domain/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;참고-자료&#34;&gt;참고 자료&lt;/h2&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/getting-started/quick-start/#step-3-add-a-theme&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Hugo 공식문서 Quick Start&lt;/a&gt;&lt;br&gt;
-&lt;a class=&#34;link&#34; href=&#34;https://github.com/Integerous/Integerous.github.io&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Hugo로 Github.io 블로그 만들기&lt;/a&gt;
-&lt;a class=&#34;link&#34; href=&#34;https://docs.stack.jimmycai.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Hugo theme Stack doc&lt;/a&gt;&lt;br&gt;
-&lt;a class=&#34;link&#34; href=&#34;https://key4920.github.io/p/%EC%B4%88%EB%B3%B4%EC%9E%90-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95%EA%B8%B0/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;초보자 Hugo 블로그 구축기&lt;/a&gt; - 같은 테마를 사용하는 분의 블로그를 찾아서 더 수월했다.&lt;/p&gt;
-</description>
-        </item>
-        <item>
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>blog</category>
+            
+          
+            
+              <category>hugo</category>
+            
+          
+            
+              <category>개발환경</category>
+            
+          
+        
+        
+        
+          
+            
+              <category>우당탕탕 개발기</category>
+            
+          
+        
+      </item>
+      
+      <item>
         <title>주요 추천 알고리즘</title>
-        <link>https://www.bemore.dev/p/%EC%A3%BC%EC%9A%94-%EC%B6%94%EC%B2%9C-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/</link>
+        <link>https://www.bemore.dev/posts/recsys/recsys2/</link>
         <pubDate>Fri, 19 Nov 2021 22:09:48 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Fri, 19 Nov 2021 22:09:48 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/recsys/recsys2/</guid>
+        <description>1. Content-Based filtering: CB 비슷한 아이템을 기반으로 추천 도메인 지식 필요 아이템 간의 유사도 측정하여 추천 모든 이에게 동일한 아이템을 추천 보통 아이템, 사용자 수가 적다 hand-engineered feat</description>
         
-        <guid>https://www.bemore.dev/p/%EC%A3%BC%EC%9A%94-%EC%B6%94%EC%B2%9C-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/</guid>
-        <description>&lt;h2 id=&#34;1-content-based-filtering-cb&#34;&gt;1. Content-Based filtering: CB&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;비슷한 아이템을 기반으로 추천&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;도메인 지식 필요&lt;/li&gt;
-&lt;li&gt;아이템 간의 유사도 측정하여 추천&lt;/li&gt;
-&lt;li&gt;모든 이에게 동일한 아이템을 추천&lt;/li&gt;
-&lt;li&gt;보통 아이템, 사용자 수가 적다&lt;/li&gt;
-&lt;li&gt;hand-engineered features에서만 성능 좋음&lt;/li&gt;
-&lt;li&gt;텍스트 처리 필요하기도 함(NLP) - &lt;em&gt;예.작가의 다른 책&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;핵심&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;아이템들을 어떤 정보를 기준으로 서술할 건가&lt;/li&gt;
-&lt;li&gt;유사소 계산 방법 정하기 (코사인, 피어슨&amp;hellip;)&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;2-collaborative-filtering-cf&#34;&gt;2. Collaborative Filtering: CF&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;기본적으로 다른 사용자들의 정보를 이용하여 취향 예측&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&#34;1-메모리-기반-nearest-neighbor-based-cf&#34;&gt;1) 메모리 기반 (=Nearest Neighbor based CF)&lt;/h3&gt;
-&lt;h4 id=&#34;---사용자-기반&#34;&gt;- 👨‍👩‍👧‍👦 사용자 기반&lt;/h4&gt;
-&lt;p&gt;나와 비슷한 평점 패턴을 보이는 &lt;strong&gt;사람&lt;/strong&gt;들을 찾아서 그 사람들이 높게 평가한 아이템 추천&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;나와 다른 사람 어떻게 표현할 것인가&lt;/li&gt;
-&lt;li&gt;나와 비슷한 사용자를 어떻게 찾을지가 중요
-&lt;ul&gt;
-&lt;li&gt;사용자 프로파일 정보 구축&lt;/li&gt;
-&lt;li&gt;프로파일 정보간의 유사도 계산&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;---아이템-기반&#34;&gt;- 🎨 아이템 기반&lt;/h4&gt;
-&lt;p&gt;아마존에서 논문으로 발표
-유사도 비교 → &lt;strong&gt;평점&lt;/strong&gt;의 패턴이 비슷한 &lt;strong&gt;아이템&lt;/strong&gt;들을 찾아서 그걸 추천하는 방식
-아이템의 수가 보통 사용자 수보다 적다 → 평점의 수가 평균적으로 더 많고 계산량이 작다 → 사용자 기반보다는 덜 sparse → 사용자 기반 협업 필터링과 비교해 더 안정적이며 좋은 성능을 보임&lt;/p&gt;
-&lt;h3 id=&#34;2-모델-기반&#34;&gt;2) 모델 기반&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;넷플릭스 프라이즈 컨테스트 때 고안된 추천 방식&lt;/li&gt;
-&lt;li&gt;사용자 아이템 행렬에서 비어있는 평점들을 SGD를 사용해서 채우는 방식&lt;/li&gt;
-&lt;li&gt;SVD(Singular Vector Decomposition)을 사용해서 구현
-&lt;ul&gt;
-&lt;li&gt;요즘은 딥려닝의 오토인코더를 사용&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;평점을 포함한 다른 사용자 행동을 예측하는 방식으로 진화&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;3-사용자-행동-기반&#34;&gt;3) 사용자 행동 기반&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;사용자 행동(아이템 클릭 or 구매 등) 정보를 기반으로 추천
-&lt;ul&gt;
-&lt;li&gt;사용자, 아이템에 대한 부가 정보 필수&lt;/li&gt;
-&lt;li&gt;구현 간단하지만 아주 유용&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;사용자 행동을 예측하는 추천 (클릭 or 구매)
-&lt;ul&gt;
-&lt;li&gt;모델링을 통해 사용자와 아이템 페어에 대한 클릭 확률 등의 점수 계산 가능
-&lt;ul&gt;
-&lt;li&gt;의사 결정 트리나 딥러닝등이 사용 가능&lt;/li&gt;
-&lt;li&gt;유데미에서 사용했던 방식&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;4-latent-factor-cf&#34;&gt;4) Latent Factor CF&lt;/h3&gt;
-&lt;p&gt;사용자-아이템 평점 행렬 데이터만을 이용해 말 그대로 &amp;lsquo;잠재 요인&amp;rsquo;을 끄집어 내는 것&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Matrix Factorization&lt;/li&gt;
-&lt;li&gt;우연한 추천 기능&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;3-다수의-알고리즘-다양한-방식-조합&#34;&gt;3. 다수의 알고리즘: 다양한 방식 조합&lt;/h1&gt;
-&lt;h1 id=&#34;4-지도학습-방식&#34;&gt;4. 지도학습 방식&lt;/h1&gt;
-&lt;p&gt;어떤 기준으로 추천을 하느냐가 가장 중요 - 머신러닝의 레이블 정보!&lt;/p&gt;
-&lt;p&gt;힌트&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;명시적 힌트: 리뷰점수, 좋아요&lt;/li&gt;
-&lt;li&gt;암시적 힌트: 클릭, 구매, 소비
-&lt;ul&gt;
-&lt;li&gt;클릭보다는 구매가 더 좋은 힌트, 소비 여부도 좋은 힌트다&lt;/li&gt;
-&lt;li&gt;클릭은 노이즈가 있지만 장점은 관심없는 아이템들의 파악이 쉽다&lt;/li&gt;
-&lt;li&gt;자세한 사용자 행동 정보의 수집, 저장과 가공 먼저 필요&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        </item>
-        <item>
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>추천시스템</category>
+            
+          
+        
+        
+          
+            
+              <category>Recommendation System</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>오픈소스 컨트리뷰톤</title>
+        <link>https://www.bemore.dev/posts/retrospect/contributhon/</link>
+        <pubDate>Wed, 17 Nov 2021 14:41:51 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Wed, 17 Nov 2021 14:41:51 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/retrospect/contributhon/</guid>
+        <description>오픈소스? 공개적으로 액세스할 수 있게 설계되어 누구나 자유롭게 확인, 수정, 배포할 수 있는 코드. Red Hat 오픈소스 프로젝트 PyTorch-tutorial-kr PyTorch-hub-kr 파이토치를 처음 공부할 파이토치 한</description>
+        
+        <dc:creator>BMO</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>회고</category>
+            
+          
+            
+              <category>PyTorch</category>
+            
+          
+        
+        
+          
+            
+              <category>오픈소스</category>
+            
+          
+        
+        
+          
+            
+              <category>오픈소스 컨트리뷰톤</category>
+            
+          
+        
+      </item>
+      
+      <item>
         <title>추천시스템이란?</title>
-        <link>https://www.bemore.dev/p/%EC%B6%94%EC%B2%9C%EC%8B%9C%EC%8A%A4%ED%85%9C%EC%9D%B4%EB%9E%80/</link>
+        <link>https://www.bemore.dev/posts/recsys/recsys1/</link>
         <pubDate>Tue, 09 Nov 2021 22:09:48 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Tue, 09 Nov 2021 22:09:48 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/recsys/recsys1/</guid>
+        <description>사용자가 관심있어 할만한 아이템을 제공해주는 자동화된 시스템 핵심 관심을 어떻게 표현하는가? 관심을 어떻게 측정하는가? =&amp;gt; 유사도 측정 사용자와 아이템 사용자:</description>
         
-        <guid>https://www.bemore.dev/p/%EC%B6%94%EC%B2%9C%EC%8B%9C%EC%8A%A4%ED%85%9C%EC%9D%B4%EB%9E%80/</guid>
-        <description>&lt;blockquote&gt;
-&lt;p&gt;사용자가 관심있어 할만한 아이템을 제공해주는 자동화된 시스템&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;핵심
-&lt;ul&gt;
-&lt;li&gt;관심을 어떻게 표현하는가?&lt;/li&gt;
-&lt;li&gt;관심을 어떻게 측정하는가?
-=&amp;gt; 유사도 측정&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;사용자와-아이템&#34;&gt;사용자와 아이템&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;사용자: 서비스를 사용하는 사람&lt;/li&gt;
-&lt;li&gt;아이템: 서비스에서 판매하는 물품(다른 사용자가 물품이 될 수 있음)
-보통 서비스가 성장하면 사용자, 아이템의 수도 같이 성장함
-&lt;ul&gt;
-&lt;li&gt;특히 사용자의 성장도가 훨씬 커짐&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;하지만 아이템의 수가 커지면서 아이템 디스커버리 문제가 대두
-&lt;ul&gt;
-&lt;li&gt;모든 사용자가 검색(능동적)을 하지 않으며 사람들이 점점 더 추천(수동적) 선호&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;필요성&#34;&gt;필요성&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;조금의 노력으로 사용자가 관심있어 할만한 아이템을 찾아주는 방법
-&lt;ul&gt;
-&lt;li&gt;아이템의 수가 굉장히 큰 경우 더 의미가 있다&lt;/li&gt;
-&lt;li&gt;수작업으론&amp;hellip;도저히 불가 → 자동화 필요!&lt;/li&gt;
-&lt;li&gt;개인화(Personalization)으로 연결됨&lt;/li&gt;
-&lt;li&gt;확증편향의 문제가 있을 수 있다
-&lt;ul&gt;
-&lt;li&gt;가끔씩 전혀 관심없을 듯한 아이템도 추천 가능(Serendipity)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;회사 관점에서는 추천 엔진을 기반으로 다양한 기능 추가 가능
-&lt;ul&gt;
-&lt;li&gt;마케팅시 추천 엔진 사용(이메일 마케팅)&lt;/li&gt;
-&lt;li&gt;관련 상품 추천으로 쉽게 확장 가능&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;아이템 수가 많아서 원하는 것을 찾기 쉽지 않은 경우
-⇒ 검색을 위한 수고를 덜어줌&lt;/li&gt;
-&lt;li&gt;추천을 통해 신상품등의 마케팅이 가능해짐
-&lt;ul&gt;
-&lt;li&gt;새로 나온 아이템들은 노출 자체가 어려운데 추천을 통해 기회를 줄 수 있다&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;인기 아이템 뿐만 아니라 롱 테일의 다양한 아이템 노출이 가능
-&lt;ul&gt;
-&lt;li&gt;추천 방식에 따라 다르지만 개인화가 잘 되면 이게 가능해짐&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;추천은-매칭-문제&#34;&gt;추천은 매칭 문제!&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;사용자에게 맞는 아이템을 매칭해주기
-&lt;ul&gt;
-&lt;li&gt;아이템은 서비스에 따라 달라지며 아이템이 다른 사용자가 될 수도 있음 (친구 추천, 강의 추천&amp;hellip;)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;어떤 아이뎀을 추천할 것인가?
-&lt;ul&gt;
-&lt;li&gt;다양한 방법이 존재
-&lt;ul&gt;
-&lt;li&gt;지금 뜨는 아이템 추천(개인화되어 있지 않음)&lt;/li&gt;
-&lt;li&gt;사용자가 마지막에 클릭했던 아이템들 다시 추천&lt;/li&gt;
-&lt;li&gt;사용자가 구매했던 아이템들을 구매한 다른 사용자들이 구매한 아이템 추천 ← &lt;em&gt;협업 필터링&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;추천 UI도 굉장히 중요
-&lt;ul&gt;
-&lt;li&gt;추천 유닛 존재. 일르 어떤 순서로 어떻게 노출하는지가 중요&lt;/li&gt;
-&lt;li&gt;구체적인 이유를 보여주는 것이 좋다&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;사용자와 아이템에 대한 부가 정보들이 필요해짐&lt;/li&gt;
-&lt;li&gt;아이템 부가 정보
-&lt;ul&gt;
-&lt;li&gt;분류 체계&lt;/li&gt;
-&lt;li&gt;태그 형태로 부가정보를 유지하는 것도 아주 좋음&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;사용자 프로파일 정보
-&lt;ul&gt;
-&lt;li&gt;개인정보: 성별, 연령대 → 콜드 스타트 문제 해결&lt;/li&gt;
-&lt;li&gt;아이템 정보:
-&lt;ul&gt;
-&lt;li&gt;관심 카테고리와 서브 카테고리(분류체계 기반), 태그&lt;/li&gt;
-&lt;li&gt;클릭 혹은 구매 아이템&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;무엇을 기준으로 추천을 할 것인가?&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;일상에서-볼-수-있는-추천&#34;&gt;일상에서 볼 수 있는 추천&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;아마존 관련 상품 추천
-키보드 샀다면 → 같이 쓸 마우스 추천&lt;/li&gt;
-&lt;li&gt;넷플릭스 영화, 드라마 추천
-이전에 봤던 작품 → 다른 드라마, 영화 추천
-&lt;code&gt;추천 타이틀&lt;/code&gt;: 이 작품들 왜 추천하는지&lt;/li&gt;
-&lt;li&gt;구글 검색어 자동 완성
-편리, 내가 생각하지 못했던 정보로도 검색할 수 있어서
-개인정보 이슈가 있었다&lt;/li&gt;
-&lt;li&gt;링크드인 or 페이스북 친구 추천
-&lt;ul&gt;
-&lt;li&gt;사용자: 멤버&lt;/li&gt;
-&lt;li&gt;아이템: 멤버
-왜 추천하는지 이유를 보여준다&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;스포티파이 노래, 플레이리스트 추천&lt;/li&gt;
-&lt;li&gt;헬스케어 도메인의 위험 점수 계산
-사용자: 의사, 간호사
-아이템: 환자
-어느 환자를 먼저 치료하는게 좋은지 점수로 수치화&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;-공통점&#34;&gt;→ 공통점&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;격자 형태 UI 사용&lt;/li&gt;
-&lt;li&gt;다양한 종류의 추천 유닛 존재
-&lt;ul&gt;
-&lt;li&gt;일부 유닛은 개인화&lt;/li&gt;
-&lt;li&gt;일부 유닛은 인기도 등 비 개인화 정보기반&lt;/li&gt;
-&lt;li&gt;추천 유닛의 랭킹 중요
-&lt;ul&gt;
-&lt;li&gt;이 부분도 모델링하여 개인화하는 추세&lt;/li&gt;
-&lt;li&gt;클릭을 최적화하고 이 데이터 수집을 위한 실험을 함
-&lt;ul&gt;
-&lt;li&gt;순전히 데이터 수집을 위한 온라인 테스트&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        </item>
-        <item>
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>추천시스템</category>
+            
+          
+        
+        
+          
+            
+              <category>Recommendation System</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
         <title>파이토치 허브 M1 로컬에서 빌드하기</title>
-        <link>https://www.bemore.dev/p/%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98-%ED%97%88%EB%B8%8C-m1-%EB%A1%9C%EC%BB%AC%EC%97%90%EC%84%9C-%EB%B9%8C%EB%93%9C%ED%95%98%EA%B8%B0/</link>
+        <link>https://www.bemore.dev/posts/devstory/torchhub_m1/</link>
         <pubDate>Mon, 16 Aug 2021 22:09:48 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Mon, 16 Aug 2021 22:09:48 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/devstory/torchhub_m1/</guid>
+        <description>Github) PyTorchKR nvm: command not found 노드 버전관리 설치 및 사용법 find ~/.zshrc로 /.zshrc파일 있는지 확인 open ~/.zshrc 파일 열어서 아래 내용 추가 export NVM_DIR=~/.nvm source $(brew --prefix nvm)/nvm.sh source ~/.zshrc 코드 적용 nvm &amp;n</description>
         
-        <guid>https://www.bemore.dev/p/%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98-%ED%97%88%EB%B8%8C-m1-%EB%A1%9C%EC%BB%AC%EC%97%90%EC%84%9C-%EB%B9%8C%EB%93%9C%ED%95%98%EA%B8%B0/</guid>
-        <description>&lt;blockquote&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/9bow/PyTorchKR&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Github) PyTorchKR&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&#34;nvm-command-not-found&#34;&gt;nvm: command not found&lt;/h3&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://kood-dev.tistory.com/3&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;노드 버전관리 설치 및 사용법&lt;/a&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;code&gt;find ~/.zshrc&lt;/code&gt;로 /.zshrc파일 있는지 확인&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;open ~/.zshrc&lt;/code&gt; 파일 열어서 아래 내용 추가&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;export NVM_DIR=~/.nvm 
-source $(brew --prefix nvm)/nvm.sh
-&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;4&#34;&gt;
-&lt;li&gt;&lt;code&gt;source ~/.zshrc&lt;/code&gt; 코드 적용&lt;/li&gt;
-&lt;li&gt;nvm &amp;ndash;version으로 확인&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;rbenv-version-259-is-not-installed&#34;&gt;rbenv: version `2.5.9&#39; is not installed&lt;/h3&gt;
-&lt;p&gt;brew install rbenv했지만 [이걸 또 m1이..?]
-(&lt;a class=&#34;link&#34; href=&#34;https://github.com/rbenv/ruby-build/issues/1691&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://github.com/rbenv/ruby-build/issues/1691&lt;/a&gt;)
-해결 방법은 간단했습니다.
-&lt;code&gt;rbenv install 2.5.9&lt;/code&gt;&lt;/p&gt;
-&lt;h3 id=&#34;error-while-executing-gemgemfilepermissionerror&#34;&gt;ERROR: While executing gem&amp;hellip;Gem::FilePermissionError&lt;/h3&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://jojoldu.tistory.com/288&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Mac에서 Gem::FilePermissionError 에러 발생시 해결 방법&lt;/a&gt;
-~/.zshrc 파일에 아래 내용 추가&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;[[ -d ~/.rbenv  ]] &amp;amp;&amp;amp; \
-  export PATH=${HOME}/.rbenv/bin:${PATH} &amp;amp;&amp;amp; \
-  eval &amp;quot;$(rbenv init -)&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;code&gt;source ~/.zshrc&lt;/code&gt;로 코드 적용&lt;/p&gt;
-&lt;h3 id=&#34;bundle-install-에서-make-yarn-no-such-file-or-directory&#34;&gt;bundle install 에서 make: yarn: No such file or directory&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;npm install -g yarn&lt;/code&gt;&lt;/p&gt;
-&lt;h3 id=&#34;빌드&#34;&gt;빌드&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;make serve&lt;/code&gt;
-&lt;figure 
-	&gt;
-	&lt;a href=&#34;https://images.velog.io/images/spongebob03/post/2d0b56cb-0994-430f-9b91-593d8f6237a0/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202021-08-16%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%2011.15.55.png&#34; &gt;
-		&lt;img src=&#34;https://images.velog.io/images/spongebob03/post/2d0b56cb-0994-430f-9b91-593d8f6237a0/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202021-08-16%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%2011.15.55.png&#34;
-			
-			
-			
-			loading=&#34;lazy&#34;
-			&gt;
-	&lt;/a&gt;
-	
-&lt;/figure&gt;
-멘토님의 친절한 커맨드 예시와 오늘도 구글링으로 얻은 정보들에 감사하며&amp;hellip;🥳&lt;/p&gt;
-</description>
-        </item>
-        <item>
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>M1</category>
+            
+          
+            
+              <category>오픈소스</category>
+            
+          
+            
+              <category>개발환경</category>
+            
+          
+        
+        
+        
+          
+            
+              <category>이게 왜 안되지</category>
+            
+          
+        
+      </item>
+      
+      <item>
         <title>SlackBot으로 랜덤 문제 출제</title>
-        <link>https://www.bemore.dev/p/slackbot%EC%9C%BC%EB%A1%9C-%EB%9E%9C%EB%8D%A4-%EB%AC%B8%EC%A0%9C-%EC%B6%9C%EC%A0%9C/</link>
+        <link>https://www.bemore.dev/posts/devstory/slackbot1/</link>
         <pubDate>Sun, 08 Aug 2021 22:09:48 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Sun, 08 Aug 2021 22:09:48 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/devstory/slackbot1/</guid>
+        <description>스터디에서 4주 동안 배운 알고리즘 유형 문제를 정해진 시간에 풀어보는 모의 코딩테스트를 진행하고 싶었다. 백준 문제를 배운 알고리즘 내에서 랜덤으로 출제하는 슬랙</description>
         
-        <guid>https://www.bemore.dev/p/slackbot%EC%9C%BC%EB%A1%9C-%EB%9E%9C%EB%8D%A4-%EB%AC%B8%EC%A0%9C-%EC%B6%9C%EC%A0%9C/</guid>
-        <description>&lt;p&gt;스터디에서 4주 동안 배운 알고리즘 유형 문제를 정해진 시간에 풀어보는 모의 코딩테스트를 진행하고 싶었다. 백준 문제를 배운 알고리즘 내에서 랜덤으로 출제하는 슬랙 챗봇을 사용하면 재밌을거 같았다. &lt;a class=&#34;link&#34; href=&#34;https://www.acmicpc.net/board/view/2308&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;백준 사이트는 웹 스크래핑이 금지된다고 공지&lt;/a&gt;가 되어있어 solved.ac의 알고리즘 유형 카테고리 정보를 긁어오는 식으로 문제를 뽑아왔다. 혹시 이것도 문제가 되는지 문의해봐야겠다&amp;hellip;&lt;/p&gt;
-&lt;h4 id=&#34;사용-라이브러리&#34;&gt;사용 라이브러리&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;BeautifulSoup&lt;/li&gt;
-&lt;li&gt;slack_sdk&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;데이터-긁어오기&#34;&gt;데이터 긁어오기&lt;/h3&gt;
-&lt;p&gt;&lt;figure 
-	&gt;
-	&lt;a href=&#34;https://images.velog.io/images/spongebob03/post/3a536885-5dc4-4497-8213-a2590ac989ad/getData.png&#34; &gt;
-		&lt;img src=&#34;https://images.velog.io/images/spongebob03/post/3a536885-5dc4-4497-8213-a2590ac989ad/getData.png&#34;
-			
-			
-			
-			loading=&#34;lazy&#34;
-			&gt;
-	&lt;/a&gt;
-	
-&lt;/figure&gt;&lt;/p&gt;
-&lt;h3 id=&#34;출제-유형-랜덤-선택-문제-랜덤-선택&#34;&gt;출제 유형 랜덤 선택, 문제 랜덤 선택&lt;/h3&gt;
-&lt;p&gt;tag의 랜덤 범위가 5인 이유는 5개 알고리즘을 배워서&amp;hellip;
-&lt;figure 
-	&gt;
-	&lt;a href=&#34;https://images.velog.io/images/spongebob03/post/77194cbc-754d-456d-9afc-669ac3d3c9ea/random.png&#34; &gt;
-		&lt;img src=&#34;https://images.velog.io/images/spongebob03/post/77194cbc-754d-456d-9afc-669ac3d3c9ea/random.png&#34;
-			
-			
-			
-			loading=&#34;lazy&#34;
-			&gt;
-	&lt;/a&gt;
-	
-&lt;/figure&gt;&lt;/p&gt;
-&lt;h3 id=&#34;슬랙에-텍스트-보내기&#34;&gt;슬랙에 텍스트 보내기&lt;/h3&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://api.slack.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Slack api&lt;/a&gt; &amp;gt; create app
-&lt;a class=&#34;link&#34; href=&#34;https://api.slack.com/messaging/sending&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Sending messages 문서&lt;/a&gt;
-원래 slacker 모듈을 사용했는데 적용이 안되어서 찾아보니 21년부터 slacker는 지원하지 않고 slack_sdk 패키지를 사용하는 것 같다.
-&lt;figure 
-	&gt;
-	&lt;a href=&#34;https://images.velog.io/images/spongebob03/post/f274ad9c-4d72-475d-9f35-d3c2a9b4fd8a/sendToSlack.png&#34; &gt;
-		&lt;img src=&#34;https://images.velog.io/images/spongebob03/post/f274ad9c-4d72-475d-9f35-d3c2a9b4fd8a/sendToSlack.png&#34;
-			
-			
-			
-			loading=&#34;lazy&#34;
-			&gt;
-	&lt;/a&gt;
-	
-&lt;/figure&gt;&lt;/p&gt;
-&lt;h3 id=&#34;문제-상황-&#34;&gt;문제 상황 🤔&lt;/h3&gt;
-&lt;p&gt;백준 사이트는 지나치게 많은 트래픽을 발생시키는 경우에는 사이트 이용이 정지된다고 합니다. 백준 사이트가 아닌 solved.ac의 알고리즘별 문제 목록을 긁어오는 것도 그래서인지 여러번 실행하면 아무 정보가 들어오지 않는다. 하지만 solvedac인데 왜..?&lt;/p&gt;
-&lt;h3 id=&#34;개선해야할-점&#34;&gt;개선해야할 점&lt;/h3&gt;
-&lt;p&gt;지금 상태는 파이썬 코드를 직접 실행시켜야 슬랙 챗봇이 실행된다. 파이썬 메인함수에서 스터디 기간동안 배운 알고리즘 유형들을 solved.ac에 있는 tag이름으로 찾아서 써줘야한다. 외부에서 간단하게 입력할 수 있었으면 좋겠다. 또한 다른 슬랙 앱처럼 슬랙에서 바로 실행시킬 수 있도록 할 필요가 있다.&lt;/p&gt;
-&lt;h4 id=&#34;참고-사이트&#34;&gt;[참고 사이트]&lt;/h4&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://yganalyst.github.io/web/slackbot1/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://yganalyst.github.io/web/slackbot1/&lt;/a&gt;
-&lt;a class=&#34;link&#34; href=&#34;https://corikachu.github.io/articles/python/python-slack-bot-slacker&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://corikachu.github.io/articles/python/python-slack-bot-slacker&lt;/a&gt;
-&lt;a class=&#34;link&#34; href=&#34;https://github.com/os/slacker&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://github.com/os/slacker&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://api.slack.com/authentication/oauth-v2&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://api.slack.com/authentication/oauth-v2&lt;/a&gt;
-&lt;a class=&#34;link&#34; href=&#34;https://developerdk.tistory.com/96&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://developerdk.tistory.com/96&lt;/a&gt; 슬랙커가 안먹히는 이유
-&lt;a class=&#34;link&#34; href=&#34;https://api.slack.com/methods/chat.postMessage/code&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://api.slack.com/methods/chat.postMessage/code&lt;/a&gt;
-&lt;a class=&#34;link&#34; href=&#34;https://slack.dev/python-slack-sdk/v3-migration/index.html#from-slackclient-2-x&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://slack.dev/python-slack-sdk/v3-migration/index.html#from-slackclient-2-x&lt;/a&gt;
-&lt;a class=&#34;link&#34; href=&#34;https://pypi.org/project/slack-sdk/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://pypi.org/project/slack-sdk/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://pythonrepo.com/repo/slackapi-python-slack-sdk-python-third-party-apis-wrappers&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://pythonrepo.com/repo/slackapi-python-slack-sdk-python-third-party-apis-wrappers&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/slackapi/python-slack-sdk/issues/561&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://github.com/slackapi/python-slack-sdk/issues/561&lt;/a&gt;&lt;/p&gt;
-</description>
-        </item>
-        <item>
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>chatbot</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
         <title>MacMini M1 에서 Homebrew 설치</title>
-        <link>https://www.bemore.dev/p/macmini-m1-%EC%97%90%EC%84%9C-homebrew-%EC%84%A4%EC%B9%98/</link>
+        <link>https://www.bemore.dev/posts/devstory/macmini_brew/</link>
         <pubDate>Tue, 08 Jun 2021 22:09:48 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Tue, 08 Jun 2021 22:09:48 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/devstory/macmini_brew/</guid>
+        <description>Homebrew? 그냥 사이트에서 다운받는거랑 뭐가 다른가요? macOS용 패키지 매니저로 프로그램 설치, 업데이트, 삭제를 편하게 관리할 수 있다. (하지만 윈도우만 쓰던 나</description>
         
-        <guid>https://www.bemore.dev/p/macmini-m1-%EC%97%90%EC%84%9C-homebrew-%EC%84%A4%EC%B9%98/</guid>
-        <description>&lt;h2 id=&#34;homebrew&#34;&gt;Homebrew?&lt;/h2&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://stackoverflow.com/questions/17265226/what-is-the-difference-between-installing-an-app-via-homebrew-or-installing-it&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;그냥 사이트에서 다운받는거랑 뭐가 다른가요?&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;macOS용 패키지 매니저로 프로그램 설치, 업데이트, 삭제를 편하게 관리할 수 있다. (하지만 윈도우만 쓰던 나는 나중에 알았다..)&lt;/p&gt;
-&lt;h3 id=&#34;m1-네이티브로-설치하려-했으나실패&#34;&gt;M1 네이티브로 설치하려 했으나..실패!&lt;/h3&gt;
-&lt;p&gt;그냥 뭔가 커맨드가 안먹혀서 의문이었는데 기존 MAC을 위한 안내는 기존 실리콘칩. 내 컴퓨터는 m1칩이라 그런 것이었다.&lt;/p&gt;
-&lt;h3 id=&#34;해결&#34;&gt;🛠해결&lt;/h3&gt;
-&lt;p&gt;M1 네이티브로 설치하는 방법도 있으나 이전 맥 터미널과 동일하게 호환할 수 있는 Rosetta를 사용하는 방법이 제일 간단했다.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;터미널앱 &amp;gt; 정보 가져오기&amp;gt; ☑️ &lt;strong&gt;Rosetta를 사용하여 열기&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://brew.sh/index_ko&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Homebrew&lt;/a&gt; 설치
-&lt;code&gt;/bin/bash -c &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&amp;quot;&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;참고&lt;br&gt;
-&lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=j-933jvH8sE&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;설치하기 이전에 이걸 봤어야 했는데&amp;hellip;&lt;/a&gt;&lt;/p&gt;
-</description>
-        </item>
-        <item>
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>M1</category>
+            
+          
+            
+              <category>homebrew</category>
+            
+          
+            
+              <category>개발환경</category>
+            
+          
+        
+        
+        
+          
+            
+              <category>이게 왜 안되지</category>
+            
+          
+        
+      </item>
+      
+      <item>
         <title>2020년 회고</title>
-        <link>https://www.bemore.dev/p/2020%EB%85%84-%ED%9A%8C%EA%B3%A0/</link>
+        <link>https://www.bemore.dev/posts/retrospect/y2020/</link>
         <pubDate>Wed, 30 Dec 2020 14:58:14 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Wed, 30 Dec 2020 14:58:14 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/retrospect/y2020/</guid>
+        <description>코로나 이&amp;hellip; 미친 코로나 때문에&amp;hellip; 1년이 날아간 기분이다. 주어진 처지에서 최선을 다했으니 후회는 없지만 그래도 아쉬움이 없는 것은</description>
         
-        <guid>https://www.bemore.dev/p/2020%EB%85%84-%ED%9A%8C%EA%B3%A0/</guid>
-        <description>&lt;h2 id=&#34;코로나&#34;&gt;코로나&lt;/h2&gt;
-&lt;p&gt;이&amp;hellip; 미친 코로나 때문에&amp;hellip; 1년이 날아간 기분이다. 주어진 처지에서 최선을 다했으니 후회는 없지만 그래도 아쉬움이 없는 것은 아니다.&lt;/p&gt;
-&lt;h2 id=&#34;졸업-프로젝트&#34;&gt;졸업 프로젝트&lt;/h2&gt;
-&lt;p&gt;졸업 프로젝트때 되면 선배들처럼 엄청난걸 척척 해낼 줄 알았다. 하지만 나는 여전히 똑같았다&amp;hellip; 더군다나 코로나로 대면수업도 못하는데 팀 프로젝트를 진행하려니 심란했다. 그나마 다행인건 친한 동기들과 해서 모임 약속 잡는게 수월했다. 프로젝트 하면서 내 이상과 현실이 같지 않아서 마치 더닝크루거 그래프의 절망의 계곡에서 허덕였다. 화상 회의 프로그램을 잘 활용하는 것이 코로나 속에서 팀플하는 사람에게 미덕이 될 수 있었다. 협업 툴을 내가 좀 더 잘 다룰 수 있었다면 협업할 수 있었을 거같다. 계획을 가지고 찬찬히 공부했다면 좀더 헤메지 않았을거 같지만 조급하고 막막했다.&lt;/p&gt;
-&lt;h2 id=&#34;심리학&#34;&gt;심리학&lt;/h2&gt;
-&lt;p&gt;생리심리학을 공부하면서 뇌구조에 배웠다. 뇌는 정말 흥미롭다. 전뇌, 중뇌, 후뇌&amp;hellip;전두엽, 두정엽, 측두엽, 후두엽&amp;hellip;전전두피질, 연합피질 등 뇌의 세부적인 부위와 그 기능을 알 수 있었다. 제제교수님 안식년 가시기 전에 강의 다 들어두려고 수강신청도 성공하고 재밌게 공부했던 것 같다. 강의 ppt는 가로측으로 넘기는거라 상하관계가 잘 정리되지 않아서 노션 토글버튼으로 편하게 필기(?)하면서 복습했다. 뇌를 공부하면서 인간의 사고방식과 컴퓨터 동작 구조와 유사한 점이 많았다. 아마 인지심리학의 접근법이 컴퓨터과학과 비슷하기 때문이라 생각한다. 학습심리학은 머신러닝에도 쓰이는 이론들이 많아서 재밌었다. 하지만 시험이 즐겁진 않았다&amp;hellip;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;학문은 다 연관되어 있다. 모든 분야는 다른 분야를 발전시킬 수 있다&lt;/strong&gt;🌱&lt;/p&gt;
-</description>
-        </item>
-        <item>
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>회고</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
         <title>2019년 회고</title>
-        <link>https://www.bemore.dev/p/2019%EB%85%84-%ED%9A%8C%EA%B3%A0/</link>
+        <link>https://www.bemore.dev/posts/retrospect/y2019/</link>
         <pubDate>Tue, 31 Dec 2019 14:58:04 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Tue, 31 Dec 2019 14:58:04 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/retrospect/y2019/</guid>
+        <description>운동🏃 태권도. 8월까지 방학에는 태권도장에 다니면서 처음보다 확실히 좋아졌다. 하지만 학기 중에 운동을 위해 집에 자주 오는 것도 부담되서 2학기에 소모임을 만들</description>
         
-        <guid>https://www.bemore.dev/p/2019%EB%85%84-%ED%9A%8C%EA%B3%A0/</guid>
-        <description>&lt;h2 id=&#34;운동&#34;&gt;운동🏃&lt;/h2&gt;
-&lt;p&gt;태권도. 8월까지 방학에는 태권도장에 다니면서 처음보다 확실히 좋아졌다. 하지만 학기 중에 운동을 위해 집에 자주 오는 것도 부담되서 2학기에 소모임을 만들어 주 3회 운동하려고 했으나&amp;hellip;모임을 지속적으로 유지하는 것도 쉽지 않았고 내가 유단자가 아니어서 역량도 없는 상태였다. 회비를 걷지 않고 자율적인 참여여서 참여율은 많이 떨어졌지만 금전 문제가 없는 것이 차라리 다행이었다. 이렇게 부족한 소모임 운영이었지만 참여해준 모든 모임원들에게 정말 고마울 뿐이다. 특히 그냥 모임원이었는데 운영자보다 더 많은 부분 맡아야했던 다른과 후배님,,,나와 같은 초급자들 기본자세, 품새를 가르쳐줬다. 같이 운동하는게 즐거워서 하는 사람을 만나서 좋았던 기회였다. 막판엔 거의 못했지만 지속적으로 한 운동은 수영 이후로 처음이다. 체력에 대해서 많이 필요하다고 생각했던 한 해였고 체력을 기르기 위해 나름의 노력을 했는데도 어려웠다. 아쉬움이 더 많이 남는다. 이번에 6개월 꾸준히 했던 거라면 내년에는 12개월을 꾸준히 운동하고 그렇게 된다면 태극5~8장도 잘하게 된 상태를 만들고 싶다.&lt;/p&gt;
-&lt;h2 id=&#34;학교&#34;&gt;학교&lt;/h2&gt;
-&lt;p&gt;1학기는 휴학하는 동안 무엇을 공부하고 싶은지 정하고 공부가 필요하다는 생각이 있어서 힘들지 않았다. 통학하다 기숙사에 들어갔더니 2시간에서 10분으로 줄어든 통학시간을 만끽할 수 있었다. 반면 2학기는 태권도 소모임 진행도 일주일에 2번 이상이고 튜터링으로 3학점 수업을 8개 듣는 느낌이었다. 계획도 부실했고 시간을 관리하는 모습이 아니라 시간이 미친듯이 달려 내가 이리저리 휘둘리는 기분이었다. 특히 화,목 하루 4연강에 기말고사만 시험보는 과목이 4개였는데 다시는 그런 선택을 하고 싶지 않다&amp;hellip;&lt;/p&gt;
-&lt;h3 id=&#34;심리학&#34;&gt;심리학&lt;/h3&gt;
-&lt;p&gt;심리학을 공부하기로 한 것은 인간의 사고과정이 어떻게 작동하는지 알 수 있다면 인공지능을 공부하는데 도움이 될거 같아서 선택하였다. 그리고 내 기분이 형성되는 과정이 어떤 생물학적 성분과 연관되는지 배우는 것도 재밌어 보였다. 아직 5과목 들어본 상태지만, 적성에 잘 맞는 것 같다. 심리학과는 학점따기 많이 힘들다고 들어서 두려웠지만 도전한 것이 답이었다. 3학년때 심리학 전공을 듣기 시작해서 복수전공은 시간적으로 어려워 부전공으로 공부하지만 늦게라도 내가 정말 공부하고 싶었던 것을 찾아서 행운이다. 물론 공부하다가 힘든 점은 있었다. 전공 공부보다 적성에 맞는다고 해서 그 학문이 쉽다는건 절대 아니었다. 다른 타입의 어려움을 많이 느꼈던 2학기였다.&lt;/p&gt;
-&lt;h2 id=&#34;활동&#34;&gt;활동&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;머신러닝 스터디: 휴학하는 동안 빅데이터, 블록체인, VR&amp;hellip; 새롭게 나오는 개념들을 얕게만 배웠는데 머신러닝은 배워보지 않은 부분이었다. 구글에서 제공하는 스터디잼을 신청해서 코세라, 콜랩을 이용할 수 있었는데 몰아서 듣느라 잘 활용하지 못했다. 통계 그래프 설명이 있었는데 상관계수(correlation coefficient), 회귀분석(regression)라는 용어도 잘 몰랐다. 심리통계연구법 강의를 듣고 나서야 알 수 있었다. 내년에도 구글 스터디잼이 열렸으면 좋겠다. 아는 만큼 들리는 거였나 보다.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;와이즈센터 교육봉사: 1학기, 여름방학에 영등포 여고로 가서 코딩실습 수업을 돕는 활동이었다. 고3이 이렇게 밝을 수 있다는 것을 처음 봤다. 대학교 1학년때 들었던 실기 수업보다 더 유익한 수업이었다. 나도 코딩을 이렇게 처음 접했더라면&amp;hellip;이라는 헛된 생각을 했었다.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;튜터링: 기존 학과 튜터링이었으면 4점 대가 아닌 나는 학점미달로 신청도 못했을거다. 하지만 파이썬으로 튜터도 공부하면서 따라갈 수 있다고 되어있어 도전했다. 운이 좋게(?) 인원 미달이었고 2명의 튜터가 한 반씩 맡아 과제시간을 진행했다. 개념을 가르치는 것보다는 매주 과제가 나오면 후배들의 질문에 필요한 파이썬 개념이나 함수들을 알려주거나 에러메세지를 읽고 답해주는 일이었다. 수업을 준비하면서 더 많이 배웠다. 초반에는 내가 문제 풀면서 어려운 점이 없어서 널널하게 갔다가 질문이 많아 당황한 적이 있었다. &amp;lsquo;소수 구하기&amp;rsquo;, &amp;lsquo;반복문 예제&amp;rsquo;들을 반복해서 풀었던 경험이 있어 자동을 풀었던 거지만 그 문제를 처음 봤을 때는 낯설고 어려웠던 것을 잊었던 것이다. 이후에는 교수님이 보내주신 수업 피피티와 문제들을 푸는 것은 짧았지만 질문을 예상하고 어디에 중점을 둬서 설명할지, 더 쉽게 알려주고 싶어서 연습했다. 매주 튜터링이 끝나고 더 잘 설명하지 못한게 아쉽고 다음주에는 더 준비해야겠다는 생각이 들었다. 열심히 하는 후배들을 보면서 뿌듯하면서도 이 친구들의 시작이 내 시작보다 좋다는 부러움, &amp;lsquo;1학년때 질문하는 것을 왜 그리 어려워했을까&amp;rsquo; 후회했다. 당시에는 남들은 다 빨리 푸는데 나는 아직도 앞에 문제도 못 풀고 질문하는게 무의식적으로 부끄러워 알아서 해결하려고 했고 제대로 질문하는 것도 몰랐고 대답을 들어도 이해를 못했다. 막상 선배로서 질문을 받아주는 역할이 되니 질문을 많이 하는 후배가 귀찮은게 아니라 나도 질문을 받으면서 더 많이 알아갈 수 있는 기회였다. 문제에 직면했을때 자신이 어떤 시도를 해봤고 결과가 나온 것에서 나아가기 위해서 무엇이 필요한지 묻는 질문에는 칭찬을 하고 싶었다. 튜터링을 하면서 여러사람이 쓴 코드를 볼 수 있었고 에러메시지를 읽고 문제 부분을 먼저 파악하고 빠르게 각 변수, 함수가 무엇인지 보고 에러를 찾는 과정은 일종의 순발력을 키울 수 있는 시간이었다. 끝으로 파이썬을 표현하자면 &amp;lsquo;이게 되네..?!&amp;lsquo;였다.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;모각코: 10월부터 12월까지 매주 토요일 9시에 강남에 모여 각자 코딩하는 시간이었다. 기숙사 급식 챗봇을 카카오톡으로 만드는 것이 목표였다. 하지만 카카오플러스가 유료화 된 시점이었고 다른 메신저에 크롤링한 결과를 보내는 것이 생각만큼 간단하지 않았다. 초반 작업만 빨랐고 그 다음부턴&amp;hellip; 그래도 개발직군에서 일하는 분들을 가까이 만날 수 있는 기회였고 다들 좋은 분들이었다. 목표가 있고 그것을 위해 구체적인 노력을 쏟는 사람들이 모인 자리에서 많은 에너지와 정보를 얻을 수 있었다. 나 혼자였으면 몰랐을 기술 서적, 세미나, 좋아보이는 개발자 문화에 대해 알 수 있었다. 수업이나 과제때문에 하는 개발이 아니라 내가 필요해서, 해보고 싶어서 하는 코딩이 재밌다는 것을 처음 느꼈다. (지속기간 3주였지만..)&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;세미나&#34;&gt;세미나&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;우먼테크메이커스&lt;/li&gt;
-&lt;li&gt;슬기로운 인턴 생활&lt;/li&gt;
-&lt;li&gt;플러터&lt;/li&gt;
-&lt;li&gt;위민후코드 연말 행사&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;느낀-점&#34;&gt;느낀 점&lt;/h2&gt;
-&lt;p&gt;시간이 정말 빠르다. 올해의 가장 중점은 휴학 생활이 끝나고 학교로 돌아가 학교 공부에 집중하는 거였다. 학교를 다니면서 수업을 듣고 과제를 하고, 시험만 보는데도 정신 없었고 어느새 1년이 마무리 되었다. 학점관리는 원하는 만큼 나왔는데 다시 생각해보니 강의에서 수업이상으로 추구하는 의미가 있는데 당시 나는 성적에 얽매여서 그 의미를 제대로 보지 못했던 것 같다. 그만큼 좋은 강의를 들었던 학기였다. 올해 가장 큰 수확은 기숙사에 들어간 것과 아이패드이다. 기숙사는 그동안 통학했던 내 고통이 보상받는 기분이다. 아이패드는 노트북만큼 좋다. ios는 처음 사용하는데 더 편한 기능들도 있고 새로운 앱 보는 것도 재밌다.&lt;/p&gt;
-&lt;h2 id=&#34;내년엔&#34;&gt;내년엔&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;운동: 태권도 꾸준히&lt;/li&gt;
-&lt;li&gt;졸업 프로젝트 잘 끝내기&lt;/li&gt;
-&lt;li&gt;인턴&lt;/li&gt;
-&lt;li&gt;책 50권&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        </item>
-        <item>
-        <title>Memory Process 기억 과정</title>
-        <link>https://www.bemore.dev/p/memory-process-%EA%B8%B0%EC%96%B5-%EA%B3%BC%EC%A0%95/</link>
-        <pubDate>Wed, 02 Oct 2019 22:09:48 +0900</pubDate>
+        <dc:creator>bmo</dc:creator>
         
-        <guid>https://www.bemore.dev/p/memory-process-%EA%B8%B0%EC%96%B5-%EA%B3%BC%EC%A0%95/</guid>
-        <description>&lt;h2 id=&#34;memory-process&#34;&gt;Memory Process&lt;/h2&gt;
-</description>
-        </item>
-        <item>
-        <title>Memory 기억</title>
-        <link>https://www.bemore.dev/p/memory-%EA%B8%B0%EC%96%B5/</link>
-        <pubDate>Wed, 02 Oct 2019 22:09:48 +0900</pubDate>
         
-        <guid>https://www.bemore.dev/p/memory-%EA%B8%B0%EC%96%B5/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Attention 주의</title>
-        <link>https://www.bemore.dev/p/attention-%EC%A3%BC%EC%9D%98/</link>
-        <pubDate>Tue, 10 Sep 2019 22:09:48 +0900</pubDate>
         
-        <guid>https://www.bemore.dev/p/attention-%EC%A3%BC%EC%9D%98/</guid>
-        <description>&lt;blockquote&gt;
-&lt;p&gt;(감각, 저장된 기억, 다른 인지적 과정을 통해) 이용가능한 엄청난 양의 정보로부터 제한된 양의 정보를 집중적으로 처리 할 수 있게 해주는 수단&lt;/p&gt;
-&lt;/blockquote&gt;
-</description>
-        </item>
         
-    </channel>
+          
+            
+              <category>회고</category>
+            
+          
+        
+        
+        
+      </item>
+      
+
+    
+  </channel>
 </rss>

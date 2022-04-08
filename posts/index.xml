@@ -1,0 +1,622 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>Posts on Bemore</title>
+    <link>https://www.bemore.dev/posts/</link>
+    <description>Recent content in Posts on Bemore</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>bmofinnjake08@gmail.com (bmo)</managingEditor>
+    <webMaster>bmofinnjake08@gmail.com (bmo)</webMaster>
+    <copyright>©2022, All Rights Reserved</copyright>
+    <lastBuildDate>Fri, 08 Apr 2022 12:09:48 +0900</lastBuildDate>
+    
+        <atom:link href="https://www.bemore.dev/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+
+      
+      <item>
+        <title>정렬</title>
+        <link>https://www.bemore.dev/posts/cs/algorithm/sort2/</link>
+        <pubDate>Fri, 08 Apr 2022 12:09:48 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Fri, 08 Apr 2022 12:09:48 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/cs/algorithm/sort2/</guid>
+        <description>Merge Sort 구현 코드 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 def merge_sort(arr, left, right): if left &amp;lt; right: mid = (left + right) // 2 merge_sort(arr, left, mid) merge_sort(arr, mid+1, right) merge(arr, left, mid, right) def merge(arr, left,</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>알고리즘</category>
+            
+          
+            
+              <category>정렬</category>
+            
+          
+        
+        
+          
+            
+              <category>알고리즘</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Heap</title>
+        <link>https://www.bemore.dev/posts/cs/datastructure/heap/</link>
+        <pubDate>Wed, 06 Apr 2022 12:12:26 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Wed, 06 Apr 2022 12:12:26 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/cs/datastructure/heap/</guid>
+        <description>🎄 특별한 이진 트리 완전 이진 트리에서 부모 노드가 자식 노드 값보다 같거나 작은(MinHeap)/큰(MaxHeap) 경우를 만족한다. 현재 남아있는 원소들</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>자료구조</category>
+            
+          
+            
+              <category>힙</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>hugo 블로그 테마 바꾸기</title>
+        <link>https://www.bemore.dev/posts/devstory/chage_theme/</link>
+        <pubDate>Wed, 06 Apr 2022 10:32:30 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Wed, 06 Apr 2022 10:32:30 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/devstory/chage_theme/</guid>
+        <description>휴고 블로그를 처음 만들었을때 나름 많이 찾아보고 고른 테마였는데도 뭔가 아쉬운 점이 많았다. 그래도 레이아웃도 커스텀하고 쓰고 있었는데 더 좋아보이는 테마를 발견</description>
+        
+        <dc:creator>bmo</dc:creator>
+        <media:content url="https://www.bemore.dev/images/thumnail/bob-ross.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>hugo</category>
+            
+          
+            
+              <category>blog</category>
+            
+          
+        
+        
+        
+          
+            
+              <category>우당탕탕 개발기</category>
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>Tree</title>
+        <link>https://www.bemore.dev/posts/cs/datastructure/tree/</link>
+        <pubDate>Tue, 05 Apr 2022 12:09:48 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Tue, 05 Apr 2022 12:09:48 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/cs/datastructure/tree/</guid>
+        <description>트리 🌲 정점끼리 전부 연결되어 있으면서 사이클이 존재하지 않는 그래프 원소의 구성을 정말 나무처럼 표현한 예시로 영화 &amp;lsquo;해리포터&amp;rsquo; 속에</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>자료구조</category>
+            
+          
+            
+              <category>트리</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Linked List</title>
+        <link>https://www.bemore.dev/posts/cs/datastructure/linkedlist/</link>
+        <pubDate>Sat, 05 Mar 2022 12:09:48 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Sat, 05 Mar 2022 12:09:48 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/cs/datastructure/linkedlist/</guid>
+        <description>연결 리스트 연결된 데이터를 저장할때 사용합니다. 연결리스트를 구성하는 노드의 구조는 다음과 같습니다. node data link(next) 장점 단점 삭제와 삽입 O(1)길이가 정해지지 않</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>자료구조</category>
+            
+          
+            
+              <category>연결리스트</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>리모트에 올린 커밋 취소 or 되돌리기</title>
+        <link>https://www.bemore.dev/posts/devstory/about_git/</link>
+        <pubDate>Sun, 30 Jan 2022 14:36:02 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Sun, 30 Jan 2022 14:36:02 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/devstory/about_git/</guid>
+        <description>요즘 번역 오픈소스 프로젝트를 하다보니 커밋하고 나서 보이는 오타들이 있었다. 하지만 글자 하나 때문에 새로 커밋 올리는 것은 깔끔하지 않다고 생각되고 어떤 오픈소스</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>git</category>
+            
+          
+            
+              <category>오픈소스</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>2021년 회고</title>
+        <link>https://www.bemore.dev/posts/retrospect/y2021/</link>
+        <pubDate>Thu, 30 Dec 2021 14:39:31 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Thu, 30 Dec 2021 14:39:31 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/retrospect/y2021/</guid>
+        <description>😷 올해도 코로나 올해도 코로나는 끝나지 않았다&amp;hellip; 이제는 &amp;lsquo;곧 끝나겠지&amp;rsquo;라는 생각도 들지 않지만 &amp;lsquo;언젠간</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>회고</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>어느날 Hugo 블로그 검색이 안될때</title>
+        <link>https://www.bemore.dev/posts/devstory/blogsearch/</link>
+        <pubDate>Fri, 10 Dec 2021 12:09:48 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Fri, 10 Dec 2021 12:09:48 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/devstory/blogsearch/</guid>
+        <description>로컬에서 되던 검색이 도메인에서는 안된다..? 블로그 만들고 도메인 설정하고 신나게 글을 쓰다가 검색기능이 안되는걸 발견했다. 빌드한 그대로 로컬에서 돌려봤을</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>blog</category>
+            
+          
+            
+              <category>hugo</category>
+            
+          
+        
+        
+        
+          
+            
+              <category>이게 왜 안되지</category>
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>fastai와 파이토치가 만나 꽃피운 딥러닝 2장</title>
+        <link>https://www.bemore.dev/posts/ml/fastai/ch2/</link>
+        <pubDate>Wed, 08 Dec 2021 19:09:48 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Wed, 08 Dec 2021 19:09:48 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/ml/fastai/ch2/</guid>
+        <description>이번 장에서는 분류 모델을 구축하면서 딥러닝의 가능성 및 제한사항을 살펴볼 수 있다. 이 곰돌이가 어떤 곰돌이인지 예측하는 모델을 다뤄봅시다 🐻 데이터 다운로드 책에</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>ML</category>
+            
+          
+            
+              <category>fastai</category>
+            
+          
+        
+        
+          
+            
+              <category>ML</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Hugo Blog with Custom Domain</title>
+        <link>https://www.bemore.dev/posts/devstory/customdomain/</link>
+        <pubDate>Mon, 06 Dec 2021 19:09:48 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Mon, 06 Dec 2021 19:09:48 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/devstory/customdomain/</guid>
+        <description>github.io 주소도 좋지만 간단하고 나만의 도메인 주소를 만들어서 쓰고 싶었다. 도메인 구매 구매 사이트 비교(.dev 도메인 비용으로 찾아봤을 때 1년 비용. 기간에 따라 더</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>blog</category>
+            
+          
+            
+              <category>hugo</category>
+            
+          
+            
+              <category>개발환경</category>
+            
+          
+        
+        
+        
+          
+            
+              <category>우당탕탕 개발기</category>
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>Hugo로 개발 블로그 장만하기</title>
+        <link>https://www.bemore.dev/posts/first-post/</link>
+        <pubDate>Thu, 02 Dec 2021 22:09:48 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Thu, 02 Dec 2021 22:09:48 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/first-post/</guid>
+        <description>SSG(Static site generator) 중 Hugo를 사용하여 블로그를 만들었다. 처음에 뭐가 뭔지 몰라서 뚱땅뚱땅 만들었다. 호스팅까지 하는데 하루 걸렸고 더 빠르게 할 수 있었지만 역시 세팅에서</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>blog</category>
+            
+          
+            
+              <category>hugo</category>
+            
+          
+            
+              <category>개발환경</category>
+            
+          
+        
+        
+        
+          
+            
+              <category>우당탕탕 개발기</category>
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>주요 추천 알고리즘</title>
+        <link>https://www.bemore.dev/posts/recsys/recsys2/</link>
+        <pubDate>Fri, 19 Nov 2021 22:09:48 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Fri, 19 Nov 2021 22:09:48 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/recsys/recsys2/</guid>
+        <description>1. Content-Based filtering: CB 비슷한 아이템을 기반으로 추천 도메인 지식 필요 아이템 간의 유사도 측정하여 추천 모든 이에게 동일한 아이템을 추천 보통 아이템, 사용자 수가 적다 hand-engineered feat</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>추천시스템</category>
+            
+          
+        
+        
+          
+            
+              <category>Recommendation System</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>오픈소스 컨트리뷰톤</title>
+        <link>https://www.bemore.dev/posts/retrospect/contributhon/</link>
+        <pubDate>Wed, 17 Nov 2021 14:41:51 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Wed, 17 Nov 2021 14:41:51 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/retrospect/contributhon/</guid>
+        <description>오픈소스? 공개적으로 액세스할 수 있게 설계되어 누구나 자유롭게 확인, 수정, 배포할 수 있는 코드. Red Hat 오픈소스 프로젝트 PyTorch-tutorial-kr PyTorch-hub-kr 파이토치를 처음 공부할 파이토치 한</description>
+        
+        <dc:creator>BMO</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>회고</category>
+            
+          
+            
+              <category>PyTorch</category>
+            
+          
+        
+        
+          
+            
+              <category>오픈소스</category>
+            
+          
+        
+        
+          
+            
+              <category>오픈소스 컨트리뷰톤</category>
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>추천시스템이란?</title>
+        <link>https://www.bemore.dev/posts/recsys/recsys1/</link>
+        <pubDate>Tue, 09 Nov 2021 22:09:48 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Tue, 09 Nov 2021 22:09:48 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/recsys/recsys1/</guid>
+        <description>사용자가 관심있어 할만한 아이템을 제공해주는 자동화된 시스템 핵심 관심을 어떻게 표현하는가? 관심을 어떻게 측정하는가? =&amp;gt; 유사도 측정 사용자와 아이템 사용자:</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>추천시스템</category>
+            
+          
+        
+        
+          
+            
+              <category>Recommendation System</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>파이토치 허브 M1 로컬에서 빌드하기</title>
+        <link>https://www.bemore.dev/posts/devstory/torchhub_m1/</link>
+        <pubDate>Mon, 16 Aug 2021 22:09:48 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Mon, 16 Aug 2021 22:09:48 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/devstory/torchhub_m1/</guid>
+        <description>Github) PyTorchKR nvm: command not found 노드 버전관리 설치 및 사용법 find ~/.zshrc로 /.zshrc파일 있는지 확인 open ~/.zshrc 파일 열어서 아래 내용 추가 export NVM_DIR=~/.nvm source $(brew --prefix nvm)/nvm.sh source ~/.zshrc 코드 적용 nvm &amp;n</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>M1</category>
+            
+          
+            
+              <category>오픈소스</category>
+            
+          
+            
+              <category>개발환경</category>
+            
+          
+        
+        
+        
+          
+            
+              <category>이게 왜 안되지</category>
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>SlackBot으로 랜덤 문제 출제</title>
+        <link>https://www.bemore.dev/posts/devstory/slackbot1/</link>
+        <pubDate>Sun, 08 Aug 2021 22:09:48 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Sun, 08 Aug 2021 22:09:48 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/devstory/slackbot1/</guid>
+        <description>스터디에서 4주 동안 배운 알고리즘 유형 문제를 정해진 시간에 풀어보는 모의 코딩테스트를 진행하고 싶었다. 백준 문제를 배운 알고리즘 내에서 랜덤으로 출제하는 슬랙</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>chatbot</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>MacMini M1 에서 Homebrew 설치</title>
+        <link>https://www.bemore.dev/posts/devstory/macmini_brew/</link>
+        <pubDate>Tue, 08 Jun 2021 22:09:48 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Tue, 08 Jun 2021 22:09:48 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/devstory/macmini_brew/</guid>
+        <description>Homebrew? 그냥 사이트에서 다운받는거랑 뭐가 다른가요? macOS용 패키지 매니저로 프로그램 설치, 업데이트, 삭제를 편하게 관리할 수 있다. (하지만 윈도우만 쓰던 나</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>M1</category>
+            
+          
+            
+              <category>homebrew</category>
+            
+          
+            
+              <category>개발환경</category>
+            
+          
+        
+        
+        
+          
+            
+              <category>이게 왜 안되지</category>
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>2020년 회고</title>
+        <link>https://www.bemore.dev/posts/retrospect/y2020/</link>
+        <pubDate>Wed, 30 Dec 2020 14:58:14 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Wed, 30 Dec 2020 14:58:14 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/retrospect/y2020/</guid>
+        <description>코로나 이&amp;hellip; 미친 코로나 때문에&amp;hellip; 1년이 날아간 기분이다. 주어진 처지에서 최선을 다했으니 후회는 없지만 그래도 아쉬움이 없는 것은</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>회고</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>2019년 회고</title>
+        <link>https://www.bemore.dev/posts/retrospect/y2019/</link>
+        <pubDate>Tue, 31 Dec 2019 14:58:04 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Tue, 31 Dec 2019 14:58:04 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/retrospect/y2019/</guid>
+        <description>운동🏃 태권도. 8월까지 방학에는 태권도장에 다니면서 처음보다 확실히 좋아졌다. 하지만 학기 중에 운동을 위해 집에 자주 오는 것도 부담되서 2학기에 소모임을 만들</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>회고</category>
+            
+          
+        
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

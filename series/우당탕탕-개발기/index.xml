@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>우당탕탕 개발기 on Bemore</title>
+    <link>https://www.bemore.dev/series/%EC%9A%B0%EB%8B%B9%ED%83%95%ED%83%95-%EA%B0%9C%EB%B0%9C%EA%B8%B0/</link>
+    <description>Recent content in 우당탕탕 개발기 on Bemore</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>bmofinnjake08@gmail.com (bmo)</managingEditor>
+    <webMaster>bmofinnjake08@gmail.com (bmo)</webMaster>
+    <copyright>©2022, All Rights Reserved</copyright>
+    <lastBuildDate>Wed, 06 Apr 2022 10:32:30 +0900</lastBuildDate>
+    
+        <atom:link href="https://www.bemore.dev/series/%EC%9A%B0%EB%8B%B9%ED%83%95%ED%83%95-%EA%B0%9C%EB%B0%9C%EA%B8%B0/index.xml" rel="self" type="application/rss+xml" />
+    
+
+      
+      <item>
+        <title>hugo 블로그 테마 바꾸기</title>
+        <link>https://www.bemore.dev/posts/devstory/chage_theme/</link>
+        <pubDate>Wed, 06 Apr 2022 10:32:30 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Wed, 06 Apr 2022 10:32:30 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/devstory/chage_theme/</guid>
+        <description>휴고 블로그를 처음 만들었을때 나름 많이 찾아보고 고른 테마였는데도 뭔가 아쉬운 점이 많았다. 그래도 레이아웃도 커스텀하고 쓰고 있었는데 더 좋아보이는 테마를 발견</description>
+        
+        <dc:creator>bmo</dc:creator>
+        <media:content url="https://www.bemore.dev/images/thumnail/bob-ross.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>hugo</category>
+            
+          
+            
+              <category>blog</category>
+            
+          
+        
+        
+        
+          
+            
+              <category>우당탕탕 개발기</category>
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>Hugo Blog with Custom Domain</title>
+        <link>https://www.bemore.dev/posts/devstory/customdomain/</link>
+        <pubDate>Mon, 06 Dec 2021 19:09:48 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Mon, 06 Dec 2021 19:09:48 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/devstory/customdomain/</guid>
+        <description>github.io 주소도 좋지만 간단하고 나만의 도메인 주소를 만들어서 쓰고 싶었다. 도메인 구매 구매 사이트 비교(.dev 도메인 비용으로 찾아봤을 때 1년 비용. 기간에 따라 더</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>blog</category>
+            
+          
+            
+              <category>hugo</category>
+            
+          
+            
+              <category>개발환경</category>
+            
+          
+        
+        
+        
+          
+            
+              <category>우당탕탕 개발기</category>
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>Hugo로 개발 블로그 장만하기</title>
+        <link>https://www.bemore.dev/posts/first-post/</link>
+        <pubDate>Thu, 02 Dec 2021 22:09:48 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Thu, 02 Dec 2021 22:09:48 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/first-post/</guid>
+        <description>SSG(Static site generator) 중 Hugo를 사용하여 블로그를 만들었다. 처음에 뭐가 뭔지 몰라서 뚱땅뚱땅 만들었다. 호스팅까지 하는데 하루 걸렸고 더 빠르게 할 수 있었지만 역시 세팅에서</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>blog</category>
+            
+          
+            
+              <category>hugo</category>
+            
+          
+            
+              <category>개발환경</category>
+            
+          
+        
+        
+        
+          
+            
+              <category>우당탕탕 개발기</category>
+            
+          
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

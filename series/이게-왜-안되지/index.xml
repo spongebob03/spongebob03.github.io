@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>이게 왜 안되지 on Bemore</title>
+    <link>https://www.bemore.dev/series/%EC%9D%B4%EA%B2%8C-%EC%99%9C-%EC%95%88%EB%90%98%EC%A7%80/</link>
+    <description>Recent content in 이게 왜 안되지 on Bemore</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>bmofinnjake08@gmail.com (bmo)</managingEditor>
+    <webMaster>bmofinnjake08@gmail.com (bmo)</webMaster>
+    <copyright>©2022, All Rights Reserved</copyright>
+    <lastBuildDate>Fri, 10 Dec 2021 12:09:48 +0900</lastBuildDate>
+    
+        <atom:link href="https://www.bemore.dev/series/%EC%9D%B4%EA%B2%8C-%EC%99%9C-%EC%95%88%EB%90%98%EC%A7%80/index.xml" rel="self" type="application/rss+xml" />
+    
+
+      
+      <item>
+        <title>어느날 Hugo 블로그 검색이 안될때</title>
+        <link>https://www.bemore.dev/posts/devstory/blogsearch/</link>
+        <pubDate>Fri, 10 Dec 2021 12:09:48 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Fri, 10 Dec 2021 12:09:48 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/devstory/blogsearch/</guid>
+        <description>로컬에서 되던 검색이 도메인에서는 안된다..? 블로그 만들고 도메인 설정하고 신나게 글을 쓰다가 검색기능이 안되는걸 발견했다. 빌드한 그대로 로컬에서 돌려봤을</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>blog</category>
+            
+          
+            
+              <category>hugo</category>
+            
+          
+        
+        
+        
+          
+            
+              <category>이게 왜 안되지</category>
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>파이토치 허브 M1 로컬에서 빌드하기</title>
+        <link>https://www.bemore.dev/posts/devstory/torchhub_m1/</link>
+        <pubDate>Mon, 16 Aug 2021 22:09:48 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Mon, 16 Aug 2021 22:09:48 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/devstory/torchhub_m1/</guid>
+        <description>Github) PyTorchKR nvm: command not found 노드 버전관리 설치 및 사용법 find ~/.zshrc로 /.zshrc파일 있는지 확인 open ~/.zshrc 파일 열어서 아래 내용 추가 export NVM_DIR=~/.nvm source $(brew --prefix nvm)/nvm.sh source ~/.zshrc 코드 적용 nvm &amp;n</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>M1</category>
+            
+          
+            
+              <category>오픈소스</category>
+            
+          
+            
+              <category>개발환경</category>
+            
+          
+        
+        
+        
+          
+            
+              <category>이게 왜 안되지</category>
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>MacMini M1 에서 Homebrew 설치</title>
+        <link>https://www.bemore.dev/posts/devstory/macmini_brew/</link>
+        <pubDate>Tue, 08 Jun 2021 22:09:48 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Tue, 08 Jun 2021 22:09:48 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/devstory/macmini_brew/</guid>
+        <description>Homebrew? 그냥 사이트에서 다운받는거랑 뭐가 다른가요? macOS용 패키지 매니저로 프로그램 설치, 업데이트, 삭제를 편하게 관리할 수 있다. (하지만 윈도우만 쓰던 나</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>M1</category>
+            
+          
+            
+              <category>homebrew</category>
+            
+          
+            
+              <category>개발환경</category>
+            
+          
+        
+        
+        
+          
+            
+              <category>이게 왜 안되지</category>
+            
+          
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>Series on Bemore</title>
+    <link>https://www.bemore.dev/series/</link>
+    <description>Recent content in Series on Bemore</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>bmofinnjake08@gmail.com (bmo)</managingEditor>
+    <webMaster>bmofinnjake08@gmail.com (bmo)</webMaster>
+    <copyright>©2022, All Rights Reserved</copyright>
+    <lastBuildDate>Wed, 06 Apr 2022 10:32:30 +0900</lastBuildDate>
+    
+        <atom:link href="https://www.bemore.dev/series/index.xml" rel="self" type="application/rss+xml" />
+    
+
+      
+      <item>
+        <title>우당탕탕 개발기</title>
+        <link>https://www.bemore.dev/series/%EC%9A%B0%EB%8B%B9%ED%83%95%ED%83%95-%EA%B0%9C%EB%B0%9C%EA%B8%B0/</link>
+        <pubDate>Wed, 06 Apr 2022 10:32:30 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        
+        <guid>https://www.bemore.dev/series/%EC%9A%B0%EB%8B%B9%ED%83%95%ED%83%95-%EA%B0%9C%EB%B0%9C%EA%B8%B0/</guid>
+        <description></description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>이게 왜 안되지</title>
+        <link>https://www.bemore.dev/series/%EC%9D%B4%EA%B2%8C-%EC%99%9C-%EC%95%88%EB%90%98%EC%A7%80/</link>
+        <pubDate>Fri, 10 Dec 2021 12:09:48 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        
+        <guid>https://www.bemore.dev/series/%EC%9D%B4%EA%B2%8C-%EC%99%9C-%EC%95%88%EB%90%98%EC%A7%80/</guid>
+        <description></description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>오픈소스 컨트리뷰톤</title>
+        <link>https://www.bemore.dev/series/%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%ED%86%A4/</link>
+        <pubDate>Wed, 17 Nov 2021 14:41:51 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        
+        <guid>https://www.bemore.dev/series/%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%ED%86%A4/</guid>
+        <description></description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

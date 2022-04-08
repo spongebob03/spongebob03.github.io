@@ -1,50 +1,170 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>blog on BeMore</title>
+    <title>blog on Bemore</title>
     <link>https://www.bemore.dev/tags/blog/</link>
-    <description>Recent content in blog on BeMore</description>
+    <description>Recent content in blog on Bemore</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 10 Dec 2021 12:09:48 +0900</lastBuildDate><atom:link href="https://www.bemore.dev/tags/blog/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>어느날 Hugo 블로그 검색이 안될때</title>
-      <link>https://www.bemore.dev/p/%EC%96%B4%EB%8A%90%EB%82%A0-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B2%80%EC%83%89%EC%9D%B4-%EC%95%88%EB%90%A0%EB%95%8C/</link>
-      <pubDate>Fri, 10 Dec 2021 12:09:48 +0900</pubDate>
-      
-      <guid>https://www.bemore.dev/p/%EC%96%B4%EB%8A%90%EB%82%A0-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B2%80%EC%83%89%EC%9D%B4-%EC%95%88%EB%90%A0%EB%95%8C/</guid>
-      <description>로컬에서 되던 검색이 도메인에서는 안된다..? 블로그 만들고 도메인 설정하고 신나게 글을 쓰다가 검색기능이 안되는걸 발견했다. 빌드한 그대로 로컬에서 돌려봤을때는 잘만 되는데..?
-도메인에서는 다음과 같은 에러메시지가 나오는 상태였다.   baseURL 설정이 웹에서 요구하는 주소 형태랑 좀 달라서 나타난 문제같았다.
-🛠 해결   config.yaml에서 baseURL을 www.bemore.dev로 바꿔도 달라지지 않았다.
-  CNAME 파일 확인하기
-CNAME 내부 주소 값이 처음 도메인 설정해줄때 www.bemore.dev였는데 빌드하고 나서 bemore.dev로 바꼈던 부분이 생각났다.
-&amp;lt;- Push할 떄마다 페이지가 작동하지 않을수도 있다고 해서 이를 방지하기 위해 static/CNAME을 작성할때</description>
-    </item>
+    <language>en</language>
+    <managingEditor>bmofinnjake08@gmail.com (bmo)</managingEditor>
+    <webMaster>bmofinnjake08@gmail.com (bmo)</webMaster>
+    <copyright>©2022, All Rights Reserved</copyright>
+    <lastBuildDate>Wed, 06 Apr 2022 10:32:30 +0900</lastBuildDate>
     
-    <item>
-      <title>Hugo Blog with Custom Domain</title>
-      <link>https://www.bemore.dev/p/hugo-blog-with-custom-domain/</link>
-      <pubDate>Mon, 06 Dec 2021 19:09:48 +0900</pubDate>
-      
-      <guid>https://www.bemore.dev/p/hugo-blog-with-custom-domain/</guid>
-      <description>github.io 주소도 좋지만 간단하고 나만의 도메인 주소를 만들어서 쓰고 싶었다.
-도메인 구매 구매 사이트 비교(.dev 도메인 비용으로 찾아봤을 때 1년 비용. 기간에 따라 더 비싸지는 곳도 있다고 한다. 구매 전 기간을 설정하고 확인하자.)
-원화 가격은 편의를 위해 만단위로 표시
-   사이트 1년 가격     google domain $12   namecheap $14.98   gandi €14.01   godaddy 2,3890₩   gabia 2,9000₩    이 중 google이니 ad, analytics 사용할 때도 편하지 않을까 하는 기대로 google domain으로 정했다.</description>
-    </item>
+        <atom:link href="https://www.bemore.dev/tags/blog/index.xml" rel="self" type="application/rss+xml" />
     
-    <item>
-      <title>Hugo로 개발 블로그 장만하기</title>
-      <link>https://www.bemore.dev/p/hugo%EB%A1%9C-%EA%B0%9C%EB%B0%9C-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9E%A5%EB%A7%8C%ED%95%98%EA%B8%B0/</link>
-      <pubDate>Thu, 02 Dec 2021 22:09:48 +0900</pubDate>
+
       
-      <guid>https://www.bemore.dev/p/hugo%EB%A1%9C-%EA%B0%9C%EB%B0%9C-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9E%A5%EB%A7%8C%ED%95%98%EA%B8%B0/</guid>
-      <description>SSG(Static site generator) 중 Hugo를 사용하여 블로그를 만들었다. 처음에 뭐가 뭔지 몰라서 뚱땅뚱땅 만들었다. 호스팅까지 하는데 하루 걸렸고 더 빠르게 할 수 있었지만 역시 세팅에서 시행착오를 겪었다. 그나마 Hugo여서 하루만에 할 수 있었던걸수도&amp;hellip; Hugo는 Go로 만들어져서 나중에 Go에 대해서 더 공부해보고 싶다.
-github.io 만들기 Hugo 설치하기 brew install hugo
-hugo version
-사이트 폴더 만들기 hugo new site blog
-테마 붙이기 태그, 카테고리 잘보이는 테마가 안보여서 그나마 stack 테마가 제일 내가 원하는 템플릿이었다.</description>
-    </item>
+      <item>
+        <title>hugo 블로그 테마 바꾸기</title>
+        <link>https://www.bemore.dev/posts/devstory/chage_theme/</link>
+        <pubDate>Wed, 06 Apr 2022 10:32:30 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Wed, 06 Apr 2022 10:32:30 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/devstory/chage_theme/</guid>
+        <description>휴고 블로그를 처음 만들었을때 나름 많이 찾아보고 고른 테마였는데도 뭔가 아쉬운 점이 많았다. 그래도 레이아웃도 커스텀하고 쓰고 있었는데 더 좋아보이는 테마를 발견</description>
+        
+        <dc:creator>bmo</dc:creator>
+        <media:content url="https://www.bemore.dev/images/thumnail/bob-ross.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>hugo</category>
+            
+          
+            
+              <category>blog</category>
+            
+          
+        
+        
+        
+          
+            
+              <category>우당탕탕 개발기</category>
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>어느날 Hugo 블로그 검색이 안될때</title>
+        <link>https://www.bemore.dev/posts/devstory/blogsearch/</link>
+        <pubDate>Fri, 10 Dec 2021 12:09:48 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Fri, 10 Dec 2021 12:09:48 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/devstory/blogsearch/</guid>
+        <description>로컬에서 되던 검색이 도메인에서는 안된다..? 블로그 만들고 도메인 설정하고 신나게 글을 쓰다가 검색기능이 안되는걸 발견했다. 빌드한 그대로 로컬에서 돌려봤을</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>blog</category>
+            
+          
+            
+              <category>hugo</category>
+            
+          
+        
+        
+        
+          
+            
+              <category>이게 왜 안되지</category>
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>Hugo Blog with Custom Domain</title>
+        <link>https://www.bemore.dev/posts/devstory/customdomain/</link>
+        <pubDate>Mon, 06 Dec 2021 19:09:48 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Mon, 06 Dec 2021 19:09:48 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/devstory/customdomain/</guid>
+        <description>github.io 주소도 좋지만 간단하고 나만의 도메인 주소를 만들어서 쓰고 싶었다. 도메인 구매 구매 사이트 비교(.dev 도메인 비용으로 찾아봤을 때 1년 비용. 기간에 따라 더</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>blog</category>
+            
+          
+            
+              <category>hugo</category>
+            
+          
+            
+              <category>개발환경</category>
+            
+          
+        
+        
+        
+          
+            
+              <category>우당탕탕 개발기</category>
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>Hugo로 개발 블로그 장만하기</title>
+        <link>https://www.bemore.dev/posts/first-post/</link>
+        <pubDate>Thu, 02 Dec 2021 22:09:48 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Thu, 02 Dec 2021 22:09:48 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/first-post/</guid>
+        <description>SSG(Static site generator) 중 Hugo를 사용하여 블로그를 만들었다. 처음에 뭐가 뭔지 몰라서 뚱땅뚱땅 만들었다. 호스팅까지 하는데 하루 걸렸고 더 빠르게 할 수 있었지만 역시 세팅에서</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>blog</category>
+            
+          
+            
+              <category>hugo</category>
+            
+          
+            
+              <category>개발환경</category>
+            
+          
+        
+        
+        
+          
+            
+              <category>우당탕탕 개발기</category>
+            
+          
+        
+      </item>
+      
+
     
   </channel>
 </rss>
