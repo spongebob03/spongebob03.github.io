@@ -14,11 +14,29 @@
     <managingEditor>bmofinnjake08@gmail.com (bmo)</managingEditor>
     <webMaster>bmofinnjake08@gmail.com (bmo)</webMaster>
     <copyright>©2022, All Rights Reserved</copyright>
-    <lastBuildDate>Fri, 08 Apr 2022 12:09:48 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 20 Apr 2022 17:48:51 +0900</lastBuildDate>
     
         <atom:link href="https://www.bemore.dev/posts/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>BinarySearch</title>
+        <link>https://www.bemore.dev/posts/cs/algorithm/binarysearch/</link>
+        <pubDate>Wed, 20 Apr 2022 17:48:51 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Wed, 20 Apr 2022 17:48:51 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/cs/algorithm/binarysearch/</guid>
+        <description>이진 탐색 타겟이 중간값보다 크면 왼쪽 버리고 오른쪽만 보면 됨🔎 타겟이 중간값보다 작으면 오른쪽 버리고 왼쪽만 보면 됨🔍 1 2 3 4 5 6 7 8 9 10 11 12 13 14 def binarySearch(arr, target): left =</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
       
       <item>
         <title>정렬2</title>

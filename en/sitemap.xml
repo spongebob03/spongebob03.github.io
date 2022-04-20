@@ -9,7 +9,7 @@
     <lastmod>2020-01-19T21:13:42+09:00</lastmod>
   </url><url>
     <loc>https://www.bemore.dev/</loc>
-    <lastmod>2022-04-08T12:09:48+09:00</lastmod>
+    <lastmod>2022-04-20T17:48:51+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
@@ -20,6 +20,12 @@
                 hreflang="en"
                 href="https://www.bemore.dev/"
                 />
+  </url><url>
+    <loc>https://www.bemore.dev/posts/cs/algorithm/binarysearch/</loc>
+    <lastmod>2022-04-20T17:48:51+09:00</lastmod>
+  </url><url>
+    <loc>https://www.bemore.dev/posts/</loc>
+    <lastmod>2022-04-20T17:48:51+09:00</lastmod>
   </url><url>
     <loc>https://www.bemore.dev/categories/</loc>
     <lastmod>2022-04-08T12:09:48+09:00</lastmod>
@@ -33,9 +39,6 @@
                 hreflang="en"
                 href="https://www.bemore.dev/categories/"
                 />
-  </url><url>
-    <loc>https://www.bemore.dev/posts/</loc>
-    <lastmod>2022-04-08T12:09:48+09:00</lastmod>
   </url><url>
     <loc>https://www.bemore.dev/tags/</loc>
     <lastmod>2022-04-08T12:09:48+09:00</lastmod>
