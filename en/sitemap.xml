@@ -9,7 +9,7 @@
     <lastmod>2020-01-19T21:13:42+09:00</lastmod>
   </url><url>
     <loc>https://www.bemore.dev/</loc>
-    <lastmod>2022-04-20T17:48:51+09:00</lastmod>
+    <lastmod>2022-04-23T21:44:43+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
@@ -21,14 +21,8 @@
                 href="https://www.bemore.dev/"
                 />
   </url><url>
-    <loc>https://www.bemore.dev/posts/cs/algorithm/binarysearch/</loc>
-    <lastmod>2022-04-20T17:48:51+09:00</lastmod>
-  </url><url>
-    <loc>https://www.bemore.dev/posts/</loc>
-    <lastmod>2022-04-20T17:48:51+09:00</lastmod>
-  </url><url>
     <loc>https://www.bemore.dev/categories/</loc>
-    <lastmod>2022-04-08T12:09:48+09:00</lastmod>
+    <lastmod>2022-04-23T21:44:43+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
@@ -40,8 +34,14 @@
                 href="https://www.bemore.dev/categories/"
                 />
   </url><url>
+    <loc>https://www.bemore.dev/tags/cs/</loc>
+    <lastmod>2022-04-23T21:44:43+09:00</lastmod>
+  </url><url>
+    <loc>https://www.bemore.dev/posts/</loc>
+    <lastmod>2022-04-23T21:44:43+09:00</lastmod>
+  </url><url>
     <loc>https://www.bemore.dev/tags/</loc>
-    <lastmod>2022-04-08T12:09:48+09:00</lastmod>
+    <lastmod>2022-04-23T21:44:43+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
@@ -53,11 +53,29 @@
                 href="https://www.bemore.dev/tags/"
                 />
   </url><url>
+    <loc>https://www.bemore.dev/tags/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4/</loc>
+    <lastmod>2022-04-23T21:44:43+09:00</lastmod>
+  </url><url>
+    <loc>https://www.bemore.dev/categories/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4/</loc>
+    <lastmod>2022-04-23T21:44:43+09:00</lastmod>
+  </url><url>
+    <loc>https://www.bemore.dev/posts/cs/database/database2/</loc>
+    <lastmod>2022-04-23T21:44:43+09:00</lastmod>
+  </url><url>
+    <loc>https://www.bemore.dev/posts/cs/database/database1/</loc>
+    <lastmod>2022-04-23T17:48:51+09:00</lastmod>
+  </url><url>
+    <loc>https://www.bemore.dev/posts/cs/algorithm/binarysearch/</loc>
+    <lastmod>2022-04-20T17:48:51+09:00</lastmod>
+  </url><url>
     <loc>https://www.bemore.dev/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/</loc>
-    <lastmod>2022-04-08T12:09:48+09:00</lastmod>
+    <lastmod>2022-04-20T17:48:51+09:00</lastmod>
   </url><url>
     <loc>https://www.bemore.dev/categories/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/</loc>
-    <lastmod>2022-04-08T12:09:48+09:00</lastmod>
+    <lastmod>2022-04-20T17:48:51+09:00</lastmod>
+  </url><url>
+    <loc>https://www.bemore.dev/tags/%ED%83%90%EC%83%89/</loc>
+    <lastmod>2022-04-20T17:48:51+09:00</lastmod>
   </url><url>
     <loc>https://www.bemore.dev/tags/%EC%A0%95%EB%A0%AC/</loc>
     <lastmod>2022-04-08T12:09:48+09:00</lastmod>
@@ -108,19 +126,22 @@
     <loc>https://www.bemore.dev/tags/%ED%8A%B8%EB%A6%AC/</loc>
     <lastmod>2022-04-05T12:09:48+09:00</lastmod>
   </url><url>
+    <loc>https://www.bemore.dev/tags/git/</loc>
+    <lastmod>2022-04-01T14:36:02+09:00</lastmod>
+  </url><url>
+    <loc>https://www.bemore.dev/posts/devstory/about_git0/</loc>
+    <lastmod>2022-04-01T14:36:02+09:00</lastmod>
+  </url><url>
+    <loc>https://www.bemore.dev/tags/%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4/</loc>
+    <lastmod>2022-04-01T14:36:02+09:00</lastmod>
+  </url><url>
     <loc>https://www.bemore.dev/posts/cs/datastructure/linkedlist/</loc>
     <lastmod>2022-03-05T12:09:48+09:00</lastmod>
   </url><url>
     <loc>https://www.bemore.dev/tags/%EC%97%B0%EA%B2%B0%EB%A6%AC%EC%8A%A4%ED%8A%B8/</loc>
     <lastmod>2022-03-05T12:09:48+09:00</lastmod>
   </url><url>
-    <loc>https://www.bemore.dev/tags/git/</loc>
-    <lastmod>2022-01-30T14:36:02+09:00</lastmod>
-  </url><url>
     <loc>https://www.bemore.dev/posts/devstory/about_git/</loc>
-    <lastmod>2022-01-30T14:36:02+09:00</lastmod>
-  </url><url>
-    <loc>https://www.bemore.dev/tags/%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4/</loc>
     <lastmod>2022-01-30T14:36:02+09:00</lastmod>
   </url><url>
     <loc>https://www.bemore.dev/posts/retrospect/y2021/</loc>

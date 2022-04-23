@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>데이터베이스 on Bemore</title>
+    <link>https://www.bemore.dev/tags/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4/</link>
+    <description>Recent content in 데이터베이스 on Bemore</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>bmofinnjake08@gmail.com (bmo)</managingEditor>
+    <webMaster>bmofinnjake08@gmail.com (bmo)</webMaster>
+    <copyright>©2022, All Rights Reserved</copyright>
+    <lastBuildDate>Sat, 23 Apr 2022 21:44:43 +0900</lastBuildDate>
+    
+        <atom:link href="https://www.bemore.dev/tags/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4/index.xml" rel="self" type="application/rss+xml" />
+    
+
+      
+      <item>
+        <title>데이터베이스-2</title>
+        <link>https://www.bemore.dev/posts/cs/database/database2/</link>
+        <pubDate>Sat, 23 Apr 2022 21:44:43 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Sat, 23 Apr 2022 21:44:43 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/cs/database/database2/</guid>
+        <description>DDL 데이터 정의어 Data Definition Language 데이터베이스나 테이블 등을 생성, 삭제, 변경을 위한 명령어 생성: create table 테이블명; 변경: alter table 테이블명 add 속성 타입; modify 속성 타입 (제약조</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>데이터베이스</category>
+            
+          
+            
+              <category>CS</category>
+            
+          
+        
+        
+          
+            
+              <category>데이터베이스</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>데이터베이스-1</title>
+        <link>https://www.bemore.dev/posts/cs/database/database1/</link>
+        <pubDate>Sat, 23 Apr 2022 17:48:51 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Sat, 23 Apr 2022 17:48:51 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/cs/database/database1/</guid>
+        <description>데이터베이스 프로젝트에 필요한 정보를 얻기 위해 논리적으로 연관된 데이터를 모아 구조적으로 통합해 놓은 것 - 데이터베이스 개론 개념 integrated data: 중복을 최소화함으로써 데</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>데이터베이스</category>
+            
+          
+            
+              <category>CS</category>
+            
+          
+        
+        
+          
+            
+              <category>데이터베이스</category>
+            
+          
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

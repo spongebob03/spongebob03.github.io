@@ -14,11 +14,39 @@
     <managingEditor>bmofinnjake08@gmail.com (bmo)</managingEditor>
     <webMaster>bmofinnjake08@gmail.com (bmo)</webMaster>
     <copyright>©2022, All Rights Reserved</copyright>
-    <lastBuildDate>Sun, 30 Jan 2022 14:36:02 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 01 Apr 2022 14:36:02 +0900</lastBuildDate>
     
         <atom:link href="https://www.bemore.dev/tags/git/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>Git 기본 활용</title>
+        <link>https://www.bemore.dev/posts/devstory/about_git0/</link>
+        <pubDate>Fri, 01 Apr 2022 14:36:02 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Fri, 01 Apr 2022 14:36:02 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/devstory/about_git0/</guid>
+        <description>공식문서 누구나 쉽게 이해할 수 있는 Git 입문 git 개념 버전 관리? 파일의 변화를 시간에 따라 기록했다가 필요한 경우 특정 시점의 버전을 다시 꺼내올 수 있는 시스템 중앙집중</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>git</category>
+            
+          
+            
+              <category>오픈소스</category>
+            
+          
+        
+        
+        
+      </item>
       
       <item>
         <title>리모트에 올린 커밋 취소 or 되돌리기</title>

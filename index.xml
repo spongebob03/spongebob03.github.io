@@ -14,7 +14,7 @@
     <managingEditor>bmofinnjake08@gmail.com (bmo)</managingEditor>
     <webMaster>bmofinnjake08@gmail.com (bmo)</webMaster>
     <copyright>©2022, All Rights Reserved</copyright>
-    <lastBuildDate>Wed, 20 Apr 2022 17:48:51 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 23 Apr 2022 21:44:43 +0900</lastBuildDate>
     
         <atom:link href="https://www.bemore.dev/index.xml" rel="self" type="application/rss+xml" />
     
@@ -42,6 +42,74 @@
 
       
       <item>
+        <title>데이터베이스-2</title>
+        <link>https://www.bemore.dev/posts/cs/database/database2/</link>
+        <pubDate>Sat, 23 Apr 2022 21:44:43 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Sat, 23 Apr 2022 21:44:43 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/cs/database/database2/</guid>
+        <description>DDL 데이터 정의어 Data Definition Language 데이터베이스나 테이블 등을 생성, 삭제, 변경을 위한 명령어 생성: create table 테이블명; 변경: alter table 테이블명 add 속성 타입; modify 속성 타입 (제약조</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>데이터베이스</category>
+            
+          
+            
+              <category>CS</category>
+            
+          
+        
+        
+          
+            
+              <category>데이터베이스</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>데이터베이스-1</title>
+        <link>https://www.bemore.dev/posts/cs/database/database1/</link>
+        <pubDate>Sat, 23 Apr 2022 17:48:51 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Sat, 23 Apr 2022 17:48:51 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/cs/database/database1/</guid>
+        <description>데이터베이스 프로젝트에 필요한 정보를 얻기 위해 논리적으로 연관된 데이터를 모아 구조적으로 통합해 놓은 것 - 데이터베이스 개론 개념 integrated data: 중복을 최소화함으로써 데</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>데이터베이스</category>
+            
+          
+            
+              <category>CS</category>
+            
+          
+        
+        
+          
+            
+              <category>데이터베이스</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
         <title>BinarySearch</title>
         <link>https://www.bemore.dev/posts/cs/algorithm/binarysearch/</link>
         <pubDate>Wed, 20 Apr 2022 17:48:51 +0900</pubDate>
@@ -55,6 +123,22 @@
         
         
         
+          
+            
+              <category>알고리즘</category>
+            
+          
+            
+              <category>탐색</category>
+            
+          
+        
+        
+          
+            
+              <category>알고리즘</category>
+            
+          
         
         
       </item>
@@ -210,6 +294,34 @@
           
             
               <category>트리</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Git 기본 활용</title>
+        <link>https://www.bemore.dev/posts/devstory/about_git0/</link>
+        <pubDate>Fri, 01 Apr 2022 14:36:02 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Fri, 01 Apr 2022 14:36:02 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/devstory/about_git0/</guid>
+        <description>공식문서 누구나 쉽게 이해할 수 있는 Git 입문 git 개념 버전 관리? 파일의 변화를 시간에 따라 기록했다가 필요한 경우 특정 시점의 버전을 다시 꺼내올 수 있는 시스템 중앙집중</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>git</category>
+            
+          
+            
+              <category>오픈소스</category>
             
           
         
