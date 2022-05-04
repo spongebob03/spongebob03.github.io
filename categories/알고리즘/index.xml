@@ -14,11 +14,87 @@
     <managingEditor>bmofinnjake08@gmail.com (bmo)</managingEditor>
     <webMaster>bmofinnjake08@gmail.com (bmo)</webMaster>
     <copyright>©2022, All Rights Reserved</copyright>
-    <lastBuildDate>Wed, 20 Apr 2022 17:48:51 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 04 May 2022 21:30:53 +0900</lastBuildDate>
     
         <atom:link href="https://www.bemore.dev/categories/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>플로이드 와샬</title>
+        <link>https://www.bemore.dev/posts/cs/algorithm/floyd/</link>
+        <pubDate>Wed, 04 May 2022 21:30:53 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Wed, 04 May 2022 21:30:53 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/cs/algorithm/floyd/</guid>
+        <description>Floyd Warshall 그래프의 모든 노드 쌍에 대한 최단거리를 구하는 알고리즘 모든 지점끼리의 거리를 구한다. 다이니믹 프로그래밍 기반이다. A-&amp;gt;B로 다이렉트로 가는 경</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>알고리즘</category>
+            
+          
+            
+              <category>그래프</category>
+            
+          
+            
+              <category>최단경로</category>
+            
+          
+        
+        
+          
+            
+              <category>알고리즘</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>다익스트라 알고리즘</title>
+        <link>https://www.bemore.dev/posts/cs/algorithm/dijkstra/</link>
+        <pubDate>Wed, 04 May 2022 21:15:37 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Wed, 04 May 2022 21:15:37 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/cs/algorithm/dijkstra/</guid>
+        <description>Dijkstra 특정 시작점에서 다른 모든 정점으로 가는 최단 거리를 각각 구해주는 알고리즘 A도시에서 D도시로 가는 최단 비용(거리, 시간, 돈)을 구하는 문제에 적합한 알고리</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>알고리즘</category>
+            
+          
+            
+              <category>그래프</category>
+            
+          
+            
+              <category>최단경로</category>
+            
+          
+        
+        
+          
+            
+              <category>알고리즘</category>
+            
+          
+        
+        
+      </item>
       
       <item>
         <title>BinarySearch</title>
@@ -55,7 +131,7 @@
       </item>
       
       <item>
-        <title>정렬2</title>
+        <title>정렬-2</title>
         <link>https://www.bemore.dev/posts/cs/algorithm/sort2/</link>
         <pubDate>Fri, 08 Apr 2022 12:09:48 +0900</pubDate>
         <author>bmofinnjake08@gmail.com (bmo)</author>
@@ -89,7 +165,7 @@
       </item>
       
       <item>
-        <title>정렬1</title>
+        <title>정렬-1</title>
         <link>https://www.bemore.dev/posts/cs/algorithm/sort1/</link>
         <pubDate>Thu, 07 Apr 2022 12:09:48 +0900</pubDate>
         <author>bmofinnjake08@gmail.com (bmo)</author>
