@@ -1818,7 +1818,15 @@ if (!doNotTrack) {
 <blockquote>
 <p>다익스트라를 모든 정점에서 돌려도 되지 않나?!</p>
 </blockquote>
-<p>그럴 수 있지만&hellip;<code>플로이드-와샬</code>을 괜히 쓰는것은 아니다. 간선이 많지 않은 경우(<code>sparse graph</code>) 간선의 개수는 노드의 개수와 비슷해 $E \fallingdotseq V$ 이면 기존의 <code>다익스트라</code> 시간복잡도 $O(V^3)$로 플로이드-와샬과 같은 시간복잡도이다. 하지만 간선이 빽빽한 경우(<code>dense graph</code>) 모든 노드끼리 간선이 존재한다면 $E = \frac {v(v-1)}2 \fallingdotseq$ $V^2$로 <code>다익스트라</code> 시간복잡도 $O(VElogV)$이기 때문에 $O(V^3logV)$라면 <code>플로이드-와샬</code>보다 좋지 않은 시간복잡도이다. 또한 같은 시간복잡도여도 <code>플로이드-와샬</code>이 구현 난이도가 더 쉽다. 따라서 그래프 모든 쌍에서의 최단거리를 구하는 문제에서는 <code>플로이드-와샬</code>을 사용하는 것이 좋을 수 있다.</p>
+<p>✅ 경우에 따라서 다르다.</p>
+<p><strong>간선이 많지 않은</strong> 경우(<code>sparse graph</code>) 간선의 개수는 노드의 개수와 비슷해 $E \fallingdotseq V$ 이면 우선순위 큐를 사용하지 않는 <code>다익스트라</code>라면 시간복잡도 $O(V^3)$로 플로이드-와샬과 같은 시간복잡도이지만 <code>플로이드-와샬</code>보다 구현 난이도가 더 어려울 수 있다. 이때는 간단한 플로이드를 사용하는 것이 낫다. 하지만 우선순위 큐를 사용한 <code>다익스트라</code>라면 시간복잡도는 $O(VElogV)=&gt;O(V^2logV)$로 플로이드 보다 효율적이다.</p>
+<p><strong>간선이 빽빽한</strong> 경우(<code>dense graph</code>) 모든 노드끼리 간선이 존재한다면 $E = \frac {v(v-1)}2 \fallingdotseq$ $V^2$로 <code>다익스트라</code> 시간복잡도 $O(VElogV)=&gt;O(V^3logV)$라면 <code>플로이드-와샬</code>보다 효율이 떨어진다.</p>
+<h3 id="-정리">🤖 정리</h3>
+<ul>
+<li>sparse 그래프에서 우선순위 큐를 사용한 다익스트라면 효율적일 수도 있다.<br />
+우선순위 큐를 사용하지 않는 다면 플로이드와 비슷하고 플로이드-워셜이 구현하는데 더 편하다.</li>
+<li>dense 그래프에서는 플로이드-워셜이 더 효율적이다.</li>
+</ul>
 
     </article>
     
@@ -2610,7 +2618,11 @@ document.addEventListener('DOMContentLoaded', function () {
   <ul>
     <li><a href="#floyd-warshall">Floyd Warshall</a></li>
     <li><a href="#구현">구현</a></li>
-    <li><a href="#-다익스트라와-비교">🤔 다익스트라와 비교</a></li>
+    <li><a href="#-다익스트라와-비교">🤔 다익스트라와 비교</a>
+      <ul>
+        <li><a href="#-정리">🤖 정리</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
   </div>
