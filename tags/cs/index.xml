@@ -14,11 +14,45 @@
     <managingEditor>bmofinnjake08@gmail.com (bmo)</managingEditor>
     <webMaster>bmofinnjake08@gmail.com (bmo)</webMaster>
     <copyright>©2022, All Rights Reserved</copyright>
-    <lastBuildDate>Tue, 10 May 2022 17:48:51 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 12 May 2022 17:48:51 +0900</lastBuildDate>
     
         <atom:link href="https://www.bemore.dev/tags/cs/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>데이터베이스 정규화</title>
+        <link>https://www.bemore.dev/posts/cs/database/normalization/</link>
+        <pubDate>Thu, 12 May 2022 17:48:51 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Thu, 12 May 2022 17:48:51 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/cs/database/normalization/</guid>
+        <description>정규화 normalization 이상현상이 발생하는 릴레이션을 분해하여 이를 없애는 과정. 이상현상을 일으키는 함수 종속성의 유형에 따라 등급을 구분할 수 있다. 1NF: 제 1 정규형 A relation in which</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>데이터베이스</category>
+            
+          
+            
+              <category>CS</category>
+            
+          
+        
+        
+          
+            
+              <category>데이터베이스</category>
+            
+          
+        
+        
+      </item>
       
       <item>
         <title>데이터베이스 이상현상</title>
@@ -27,7 +61,7 @@
         <author>bmofinnjake08@gmail.com (bmo)</author>
         <atom:modified>Tue, 10 May 2022 17:48:51 +0900</atom:modified>
         <guid>https://www.bemore.dev/posts/cs/database/database3/</guid>
-        <description>이상현상 Anomaly 💡 잘못 설계된 테이블로 데이터 조작(삽입, 삭제, 수정)을 하면 일어난다. 😈 삭제이상 튜플 삭제 시 같이 저장된 다른 정보까지 연쇄적으로 삭제되는 현상</description>
+        <description>이상현상 Anomaly 💡 잘못 설계된 테이블로 데이터 조작(삽입, 삭제, 수정)을 하면 일어난다. 수강정보 테이블에 학생, 학과, 강좌 정보를 한꺼번에 쓴 테이블&amp;hell</description>
         
         <dc:creator>bmo</dc:creator>
         
