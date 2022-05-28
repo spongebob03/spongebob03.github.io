@@ -27,7 +27,7 @@
         <author>bmofinnjake08@gmail.com (bmo)</author>
         <atom:modified>Thu, 12 May 2022 17:48:51 +0900</atom:modified>
         <guid>https://www.bemore.dev/posts/cs/database/normalization/</guid>
-        <description>정규화 normalization 이상현상이 발생하는 릴레이션을 분해하여 이를 없애는 과정. 이상현상을 일으키는 함수 종속성의 유형에 따라 등급을 구분할 수 있다. 1NF: 제 1 정규형 A relation in which</description>
+        <description>정규화 normalization 이상현상이 발생하는 릴레이션을 분해하여 이를 없애는 과정. 이상현상을 일으키는 함수 종속성의 유형에 따라 등급을 구분할 수 있다. 제 1 정규형 A relation in which the</description>
         
         <dc:creator>bmo</dc:creator>
         

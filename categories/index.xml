@@ -14,19 +14,19 @@
     <managingEditor>bmofinnjake08@gmail.com (bmo)</managingEditor>
     <webMaster>bmofinnjake08@gmail.com (bmo)</webMaster>
     <copyright>©2022, All Rights Reserved</copyright>
-    <lastBuildDate>Thu, 12 May 2022 17:48:51 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 15 May 2022 23:01:42 +0900</lastBuildDate>
     
         <atom:link href="https://www.bemore.dev/categories/index.xml" rel="self" type="application/rss+xml" />
     
 
       
       <item>
-        <title>데이터베이스</title>
-        <link>https://www.bemore.dev/categories/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4/</link>
-        <pubDate>Thu, 12 May 2022 17:48:51 +0900</pubDate>
+        <title>알고리즘</title>
+        <link>https://www.bemore.dev/categories/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/</link>
+        <pubDate>Sun, 15 May 2022 23:01:42 +0900</pubDate>
         <author>bmofinnjake08@gmail.com (bmo)</author>
         
-        <guid>https://www.bemore.dev/categories/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4/</guid>
+        <guid>https://www.bemore.dev/categories/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/</guid>
         <description></description>
         
         <dc:creator>bmo</dc:creator>
@@ -39,12 +39,12 @@
       </item>
       
       <item>
-        <title>알고리즘</title>
-        <link>https://www.bemore.dev/categories/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/</link>
-        <pubDate>Wed, 04 May 2022 21:30:53 +0900</pubDate>
+        <title>데이터베이스</title>
+        <link>https://www.bemore.dev/categories/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4/</link>
+        <pubDate>Thu, 12 May 2022 17:48:51 +0900</pubDate>
         <author>bmofinnjake08@gmail.com (bmo)</author>
         
-        <guid>https://www.bemore.dev/categories/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/</guid>
+        <guid>https://www.bemore.dev/categories/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4/</guid>
         <description></description>
         
         <dc:creator>bmo</dc:creator>

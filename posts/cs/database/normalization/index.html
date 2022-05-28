@@ -1720,7 +1720,7 @@ if (!doNotTrack) {
 <div class="single__infos">
   <time class="single__info" title="Written At">📅&nbsp;May 12, 2022 </time>
   
-  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;1&nbsp;min read </span>
+  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;4&nbsp;min read </span>
   
   <span class="single__info">
     
@@ -1742,36 +1742,114 @@ if (!doNotTrack) {
     </div>
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
-      <h2 id="정규화-normalization">정규화 normalization</h2>
-<div class="box">이상현상이 발생하는 릴레이션을 분해하여 이를 없애는 과정.<br />
+      <div class="box"><strong>정규화 normalization</strong><br />
+이상현상이 발생하는 릴레이션을 분해하여 이를 없애는 과정.<br />
 이상현상을 일으키는 함수 종속성의 유형에 따라 등급을 구분할 수 있다.</div>
-<h3 id="1nf-제-1-정규형">1NF: 제 1 정규형</h3>
+<h2 id="제-1-정규형">제 1 정규형</h2>
 <div class="box">A relation in which the intersection of each row and column contains one and only one value.<br />
 릴레이션의 모든 속성 값이 원자값을 가지면 제 1 정규형이라고 한다.</div>
-<h4 id="-이상현상">😈 이상현상</h4>
-<h4 id="-이상현상-원인">🗝 이상현상 원인</h4>
-<h4 id="-정규형-변환">🛠 정규형 변환</h4>
-<h3 id="제-2-정규형">제 2 정규형</h3>
+<h3 id="-정규형-변환">🛠 정규형 변환</h3>
+<figure><img src="/images/CS/nomalization1.png"
+         alt="학생 릴레이션"/><figcaption>
+            <p>학생 릴레이션</p>
+        </figcaption>
+</figure>
+
+<h2 id="제-2-정규형">제 2 정규형</h2>
 <div class="box">A relation that is in first normal form and every non-primary key attribute is fully functionally dependent on the primary key.<br />
-릴레이션이 제 1 정규형이고 기본키가 아닌 속성이 가본키에 완전 함수 종속일 때 제 2 정규형이라고 한다.</div>
-<h4 id="완전-함수-종속">완전 함수 종속?</h4>
-<p>A와 B가 릴레이션의 속성이고 A -&gt; B 종속성이 성립할 때, B가 A의 속성 전체에 함수 종속하고 부분 집합 속성에 함수 종속하지 않을 경우 완전 함수 종속이라고 한다.<br />
+릴레이션이 제 1 정규형이고 기본키가 아닌 속성이 기본키에 완전 함수 종속일 때 제 2 정규형이라고 한다.</div>
+<ul>
+<li><strong>완전 함수 종속?</strong><br />
+A와 B가 릴레이션의 속성이고 A -&gt; B 종속성이 성립할 때, B가 A의 속성 전체에 함수 종속하고 부분 집합 속성에 함수 종속하지 않을 경우 완전 함수 종속이라고 한다.<br />
 <code>(학번, 강좌이름)</code> -&gt; <code>학점</code><br />
-<code>학번</code> -x-&gt; <code>학점</code> and <code>강좌이름</code> -x-&gt; <code>학점</code></p>
-<h4 id="-이상현상-1">😈 이상현상</h4>
-<h4 id="-이상현상-원인-1">🗝 이상현상 원인</h4>
-<h4 id="-정규형-변환-1">🛠 정규형 변환</h4>
-<h3 id="제-3-정규형">제 3 정규형</h3>
-<div class="box">A relation that is in first and second normal form and in which no non-primary key is transitively dependent on the primary key.</div>
-<h4 id="-이상현상-2">😈 이상현상</h4>
-<h4 id="-이상현상-원인-2">🗝 이상현상 원인</h4>
-<h4 id="-정규형-변환-2">🛠 정규형 변환</h4>
-<h3 id="bcnf">BCNF</h3>
+<code>학번</code> -x-&gt; <code>학점</code> and <code>강좌이름</code> -x-&gt; <code>학점</code></li>
+<li>불완전 함수 종속(부분 함수 종속)<br />
+<code>(학번, 강좌이름)</code> -&gt; <code>강의실</code>에서 학번을 제거해도 <code>강좌이름</code> -&gt; <code>강의실</code> 성립</li>
+</ul>
+<h3 id="-이상현상">😈 이상현상</h3>
+<figure><img src="/images/CS/nomalization2.png"
+         alt="학점 릴레이션"/><figcaption>
+            <p>학점 릴레이션</p>
+        </figcaption>
+</figure>
+
+<ul>
+<li>삭제이상: 202233 학생의 수강을 취소하면 작문 강좌의 정보가 사라진다</li>
+<li>삽입이상: 새 강좌를 개설했을때 수강신청한 학생이 없으면 학생번호, 학점을 NULL값으로 삽입해야하는 문제</li>
+<li>수정이상: 데이터베이스 강좌 강의실을 변경할 시 데이터 불일치기 발생할 수 있다</li>
+</ul>
+<h3 id="-이상현상-원인">🗝 이상현상 원인</h3>
+<p>기본키가 아닌 속성(강의실)이 기본키에 완전 함수 종속이 아닌 불완전 함수 종속 되어 있으면 이상현상이 발생한다.<br />
+예시 릴레이션의 기본키는 (학번, 강좌이름), 기본키가 아닌 속성은 성적, 강의실. 성적과 강의실은 모두 기본키(학번, 강좌이름)에 함수적으로 종속되어 있지만 강의실은 기본키의 부분집합인 강좌이름에 종속되어 있다.</p>
+<h3 id="-정규형-변환-1">🛠 정규형 변환</h3>
+<p><figure><img src="/images/CS/nomalization4.png"/>
+</figure>
+<br />
+<figure><img src="/images/CS/nomalization3.png"/>
+</figure>
+</p>
+<h2 id="제-3-정규형">제 3 정규형</h2>
+<div class="box">A relation that is in first and second normal form and in which no non-primary key is transitively dependent on the primary key.<br />
+제 2정규형이고 기본키가 아닌 속성이 기본키에 비이행적으로 종속할 때(직접 종속) 제 3정규형이라 한다.</div>
+<ul>
+<li><strong>이행적 종속?</strong><br />
+A -&gt; B, B -&gt; C 이면 A -&gt; C가 성립되는 함수 종속성</li>
+</ul>
+<figure><img src="/images/CS/nomalization5.png"
+         alt="음료주문 릴레이션"/><figcaption>
+            <p>음료주문 릴레이션</p>
+        </figcaption>
+</figure>
+
+<h3 id="-이상현상-1">😈 이상현상</h3>
+<ul>
+<li>삭제이상: 202번 주문을 취소하면 밀크티 가격에 대한 정보도 사라진다</li>
+<li>삽입이상: 신메뉴가 추가되었는데 아직 주문이 없을 시 주문번호를 NULL값으로 삽입해야 하는 문제</li>
+<li>수정이상: 밀크티 가격을 5500원으로 변경하면 데이터 불일치가 발생할 가능성</li>
+</ul>
+<h3 id="-이상현상-원인-1">🗝 이상현상 원인</h3>
+<p>가격이 기본키가 아닌 음료에 함번 더 종속되어 있다. 따라서 (주문번호-&gt;음료), (음료-&gt;가격)로 가격은 기본키에 이행적으로 종속되어 있다.</p>
+<h3 id="-정규형-변환-2">🛠 정규형 변환</h3>
+<p>(주문번호, 음료, 가격) 분해<br />
+-&gt; 주문(주문번호, 음료), 메뉴(음료, 가격)<br />
+<figure><img src="/images/CS/nomalization6.png"/>
+</figure>
+</p>
+<h2 id="bcnf">BCNF</h2>
 <p>Boyce Codd Normal Form<br />
-<div class="box">A relation is BCNF if and only if every determinant is a cadidate key.</div></p>
-<h4 id="-이상현상-3">😈 이상현상</h4>
-<h4 id="-이상현상-원인-3">🗝 이상현상 원인</h4>
-<h4 id="-정규형-변환-3">🛠 정규형 변환</h4>
+릴레이션에 존재하는 함수 종속성에서 모든 결정자가 후보키이면 BCNF 정규형이다<br />
+<div class="box">A relation is BCNF if and only if every determinant is a cadidate key.<br />
+함수 종속성 X-&gt;Y가 성립할 때 모든 결정자 X가 후보키이면 BCNF 정규형이라 한다</div></p>
+<h3 id="-이상현상-2">😈 이상현상</h3>
+<figure><img src="/images/CS/nomalization7.png"
+         alt="특강수강 릴레이션"/><figcaption>
+            <p>특강수강 릴레이션</p>
+        </figcaption>
+</figure>
+
+<ul>
+<li>삭제이상: 202202 학생이 수강을 취소하면 실험심리 강좌 정보도 사라진다</li>
+<li>삽입이상: 백교수가 새로 특강을 개설했는데 아직 수강 신청한 학생이 없어 학생 번호를 NULL값으로 삽입해야 하는 문제</li>
+<li>수정이상: 이교수가 특강 이름을 알고리즘에서 알고리즘 중급으로 바꾸면 데이터 불일치가 발생할 수 있다</li>
+</ul>
+<h3 id="-이상현상-원인-2">🗝 이상현상 원인</h3>
+<p>결정자이면서 후보키가 아닌 속성이 존재하기 때문에 이상현상이 발생한다.<br />
+예시 릴레이션의 기본키는 (학번, 특강)이며 여기서 볼 수 있는 관계는 (학번, 특강)-&gt; 교수, 교수 -&gt; 특강이름이다. 교수는 결정자이지만 부분 릴레이션(교수, 특강)의 기본키일 뿐 해당 릴레이션의 후보키가 아니다.</p>
+<h3 id="-정규형-변환-3">🛠 정규형 변환</h3>
+<p>특강수강(학번, 특강, 교수)<br />
+-&gt; 특강신청(학번, 교수), 특강교수(특강, 교수)</p>
+<figure><img src="/images/CS/nomalization8.png"/>
+</figure>
+
+<h2 id="-무손실-분해-릴레이션을-분해할-때-지켜야-할-규칙">🚨 무손실 분해: 릴레이션을 분해할 때 지켜야 할 규칙</h2>
+<p>분해된 릴레이션 간의 관계를 유지하기 위해 분해된 릴레이션에 공통 속성을 한 개 이상 두어야 한다.<br />
+릴레이션 R을 릴레이션을 R1, R2로 분해했을 때, 다시 조인 하면 원래의 릴레이션 R이 만들어져야 한다.</p>
+<ul>
+<li>특강수강(학번, 특강, 교수) -&gt; R1(<ins>학번</ins>, 교수), R2(<ins>특강</ins>, 교수)<br />
+R1, R2의 공통 속성은 교수, 교수는 R2의 키이다. -&gt; 무손실 분해 규칙 🅾️</li>
+<li>특강수강(학번, 특강, 교수) -&gt; R1(<ins>학번</ins>, 특강), R2(교수, 특강)<br />
+R1, R2의 공통 속성은 특강, (분반이 있을 수 있다면..)특강은 R2의 키가 아니다. -&gt; 무손실 분해 규칙 ❌</li>
+</ul>
 
     </article>
     
@@ -2146,6 +2224,13 @@ if (!doNotTrack) {
       </a>
     
     <div class="grow"></div>
+    
+      <a href="https://www.bemore.dev/posts/cs/algorithm/kruskal/" class="pagination-single__right">      
+        <div class="pagination-single__right-title">크루스칼 알고리즘</div>
+        <div class="pagination-single__icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"/></svg>
+        </div>
+      </a>
     
   
 </nav>
@@ -2557,39 +2642,33 @@ document.addEventListener('DOMContentLoaded', function () {
   <div class="toc " data-dir="ltr" data-folding="true" data-ani="true">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#정규화-normalization">정규화 normalization</a>
+    <li><a href="#제-1-정규형">제 1 정규형</a>
       <ul>
-        <li><a href="#1nf-제-1-정규형">1NF: 제 1 정규형</a>
-          <ul>
-            <li><a href="#-이상현상">😈 이상현상</a></li>
-            <li><a href="#-이상현상-원인">🗝 이상현상 원인</a></li>
-            <li><a href="#-정규형-변환">🛠 정규형 변환</a></li>
-          </ul>
-        </li>
-        <li><a href="#제-2-정규형">제 2 정규형</a>
-          <ul>
-            <li><a href="#완전-함수-종속">완전 함수 종속?</a></li>
-            <li><a href="#-이상현상-1">😈 이상현상</a></li>
-            <li><a href="#-이상현상-원인-1">🗝 이상현상 원인</a></li>
-            <li><a href="#-정규형-변환-1">🛠 정규형 변환</a></li>
-          </ul>
-        </li>
-        <li><a href="#제-3-정규형">제 3 정규형</a>
-          <ul>
-            <li><a href="#-이상현상-2">😈 이상현상</a></li>
-            <li><a href="#-이상현상-원인-2">🗝 이상현상 원인</a></li>
-            <li><a href="#-정규형-변환-2">🛠 정규형 변환</a></li>
-          </ul>
-        </li>
-        <li><a href="#bcnf">BCNF</a>
-          <ul>
-            <li><a href="#-이상현상-3">😈 이상현상</a></li>
-            <li><a href="#-이상현상-원인-3">🗝 이상현상 원인</a></li>
-            <li><a href="#-정규형-변환-3">🛠 정규형 변환</a></li>
-          </ul>
-        </li>
+        <li><a href="#-정규형-변환">🛠 정규형 변환</a></li>
       </ul>
     </li>
+    <li><a href="#제-2-정규형">제 2 정규형</a>
+      <ul>
+        <li><a href="#-이상현상">😈 이상현상</a></li>
+        <li><a href="#-이상현상-원인">🗝 이상현상 원인</a></li>
+        <li><a href="#-정규형-변환-1">🛠 정규형 변환</a></li>
+      </ul>
+    </li>
+    <li><a href="#제-3-정규형">제 3 정규형</a>
+      <ul>
+        <li><a href="#-이상현상-1">😈 이상현상</a></li>
+        <li><a href="#-이상현상-원인-1">🗝 이상현상 원인</a></li>
+        <li><a href="#-정규형-변환-2">🛠 정규형 변환</a></li>
+      </ul>
+    </li>
+    <li><a href="#bcnf">BCNF</a>
+      <ul>
+        <li><a href="#-이상현상-2">😈 이상현상</a></li>
+        <li><a href="#-이상현상-원인-2">🗝 이상현상 원인</a></li>
+        <li><a href="#-정규형-변환-3">🛠 정규형 변환</a></li>
+      </ul>
+    </li>
+    <li><a href="#-무손실-분해-릴레이션을-분해할-때-지켜야-할-규칙">🚨 무손실 분해: 릴레이션을 분해할 때 지켜야 할 규칙</a></li>
   </ul>
 </nav>
   </div>

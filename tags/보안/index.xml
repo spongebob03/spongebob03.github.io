@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>보안 on Bemore</title>
+    <link>https://www.bemore.dev/tags/%EB%B3%B4%EC%95%88/</link>
+    <description>Recent content in 보안 on Bemore</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>bmofinnjake08@gmail.com (bmo)</managingEditor>
+    <webMaster>bmofinnjake08@gmail.com (bmo)</webMaster>
+    <copyright>©2022, All Rights Reserved</copyright>
+    <lastBuildDate>Sun, 15 May 2022 23:13:39 +0900</lastBuildDate>
+    
+        <atom:link href="https://www.bemore.dev/tags/%EB%B3%B4%EC%95%88/index.xml" rel="self" type="application/rss+xml" />
+    
+
+      
+      <item>
+        <title>파이썬 시큐어코딩 가이드</title>
+        <link>https://www.bemore.dev/posts/devstory/python_secure/</link>
+        <pubDate>Sun, 15 May 2022 23:13:39 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Sun, 15 May 2022 23:13:39 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/devstory/python_secure/</guid>
+        <description>입력데이터 검증 및 표현 1. SQL 삽입 😈 데이터베이스와 연동된 웹 응용 프로그램에서 입력된 데이터에 대한 유효성 검증을 하지 않을 경우 공격자가 입력 폼 및 입력란에 SQL</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>보안</category>
+            
+          
+        
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

@@ -14,11 +14,49 @@
     <managingEditor>bmofinnjake08@gmail.com (bmo)</managingEditor>
     <webMaster>bmofinnjake08@gmail.com (bmo)</webMaster>
     <copyright>©2022, All Rights Reserved</copyright>
-    <lastBuildDate>Wed, 04 May 2022 21:30:53 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 15 May 2022 23:01:42 +0900</lastBuildDate>
     
         <atom:link href="https://www.bemore.dev/tags/%EA%B7%B8%EB%9E%98%ED%94%84/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>크루스칼 알고리즘</title>
+        <link>https://www.bemore.dev/posts/cs/algorithm/kruskal/</link>
+        <pubDate>Sun, 15 May 2022 23:01:42 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Sun, 15 May 2022 23:01:42 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/cs/algorithm/kruskal/</guid>
+        <description>MST Spanning Tree: 최소한 간선을 사용하여 그래프 내 모든 정점을 이은 트리(트리는 사이클이 없다는거 주의) n개의 정점에 n-1개의 간선이 존재하는 그래프는 트리 가중치가 있</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>알고리즘</category>
+            
+          
+            
+              <category>그래프</category>
+            
+          
+            
+              <category>최단경로</category>
+            
+          
+        
+        
+          
+            
+              <category>알고리즘</category>
+            
+          
+        
+        
+      </item>
       
       <item>
         <title>플로이드 와샬</title>
