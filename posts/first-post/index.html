@@ -1748,17 +1748,15 @@ if (!doNotTrack) {
 SSG(Static site generator) 중 Hugo를 사용하여 블로그를 만들었다. 처음에 뭐가 뭔지 몰라서 뚱땅뚱땅 만들었다. 호스팅까지 하는데 하루 걸렸고 더 빠르게 할 수 있었지만 역시 세팅에서 시행착오를 겪었다. 그나마 Hugo여서 하루만에 할 수 있었던걸수도&hellip; Hugo는 Go로 만들어져서 나중에 Go에 대해서 더 공부해보고 싶다.</p>
 <h2 id="githubio-만들기">github.io 만들기</h2>
 <h3 id="hugo-설치하기">Hugo 설치하기</h3>
-<p><code>brew install hugo</code><br />
-<code>hugo version</code></p>
+<p><code>brew install hugo</code></p>
 <h3 id="사이트-폴더-만들기">사이트 폴더 만들기</h3>
 <p><code>hugo new site blog</code></p>
 <h3 id="테마-붙이기">테마 붙이기</h3>
-<p>태그, 카테고리 잘보이는 테마가 안보여서 그나마 stack 테마가 제일 내가 원하는 템플릿이었다.</p>
+<p>마음에 드는 테마를 찾아서 해당 repo를 submodule로 연결합니다.(보통 해당 repo, docs를 참고)</p>
 <pre tabindex="0"><code>cd blog
 git init
-git submodule add https://github.com/CaiJimmy/hugo-theme-stack/ themes/hugo-theme-stack
-</code></pre><p><code>config.toml</code>파일 삭제</p>
-<h3 id="github-저장소-연결">Github 저장소 연결</h3>
+git submodule add https://github.com/테마깃주소.git themes/테마이름
+</code></pre><h3 id="github-저장소-연결">Github 저장소 연결</h3>
 <p>github.io 블로그를 호스팅하기 위해서는 깃헙 저장소 2개가 필요하다.</p>
 <ul>
 <li><code>blog</code>: 블로그 컨텐츠</li>
@@ -1773,51 +1771,46 @@ git submodule add -b main git@github.io_저장소_SSH주소 public ## SSH키 있
 <code>hugo new post/포스트제목.md</code> 제목은 title 항목으로 고칠 수 있다.</li>
 </ul>
 <h3 id="댓글-기능-추가">댓글 기능 추가</h3>
-<p><code>config.yaml</code>의 comments 설정만으로 간단하게 추가할 수 있다. <br />
-깃헙계정으로 댓글을 남길 수 있는 <a href="https://utteranc.es/">utterances</a>로 설정했다.</p>
-<pre tabindex="0"><code>comments:
-        enabled: true
-        provider: utterances
+<p>깃헙계정으로 댓글을 남길 수 있는 <a href="https://utteranc.es/">utterances</a>로 설정했다.</p>
+<ol>
+<li>utterances 공식문서를 참고해서 <code>깃헙id.github.io</code> repo에서 앱을 추가</li>
+<li><strong>설정파일</strong>에서 comment부분이 있다면 설정값 입력!</li>
+</ol>
+<pre tabindex="0"><code># comment
+enableComment = true
+disqus_shortname = &quot;&quot;
+commento = false
 
-        utterances:
-            repo: 깃헙계정/깃헙계정.github.io
-            issueTerm: pathname
-            label: comment
+[utterances]                  # https://utteranc.es/
+owner = &quot;깃헙계정&quot;              # Your GitHub ID
+repo = &quot;깃헙계정.github.io&quot;     # The repo to store comments
 </code></pre><h3 id="로컬-서버-확인">로컬 서버 확인</h3>
 <p><code>hugo server (-D)</code> 웹서버 실행해서 수정사항 확인</p>
 <h3 id="host-on-github">host on github</h3>
 <p><a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">공식 문서</a></p>
+<pre tabindex="0"><code>1. cd blog
+2. hugo -t 테마
+3. cd public
+4. git add .
+5. git commit -m &quot;커밋메시지&quot;
+6. git push origin main -&gt; 내계정.github.io에 푸시(main이 기본 브랜치명이었다)  
+7. cd ..
+8. git add .
+9. git commit -m &quot;커밋메시지&quot;
+10. git push origin master -&gt; blog 저장소에 푸시  
+</code></pre><h4 id="쉘-스크립트로-커맨드-줄이기">쉘 스크립트로 커맨드 줄이기</h4>
 <ol>
-<li><code>cd blog</code></li>
-<li><code>hugo -t 테마</code></li>
-<li><code>cd public</code></li>
-<li><code>git add .</code></li>
-<li><code>git commit -m &quot;커밋메시지&quot;</code></li>
-<li><code>git push origin main</code> -&gt; 내계정.github.io에 푸시(main이 기본 브랜치명이었다)</li>
-<li><code>cd ..</code></li>
-<li><code>git add .</code></li>
-<li><code>git commit -m &quot;커밋메시지&quot;</code></li>
-<li><code>git push origin master</code> -&gt; blog 저장소에 푸시</li>
+<li>deploy.sh에 위에 매번 쓰는 커맨드를 정리</li>
+<li>이후에 <code>./deploy.sh &quot;커밋 메시지&quot;</code>만 쓰면 된다</li>
 </ol>
-<p>쉘 스크립트로 업로드 자동화</p>
-<ol>
-<li><code>deploy.sh</code>에 위에 매번 쓰는 커맨드를 정리</li>
-<li><code>./deploy.sh &quot;커밋 메시지&quot;</code><br />
-이후에는 Gist, GithubAction&hellip; 더 편하게 할 수 있는 방법 도전</li>
-</ol>
+<p>더 간단하게 업로드하는 방법이 있을거 같은데&hellip;Gist, Github Action을 찾아봐야겠다</p>
 <h2 id="추가할-사항">추가할 사항</h2>
 <ul>
 <li><input checked="" disabled="" type="checkbox" /> utterances로 댓글기능 추가</li>
-<li><input disabled="" type="checkbox" /> 카테고리 사이드메뉴에 추가</li>
 <li><input disabled="" type="checkbox" /> GithubAction으로 자동화</li>
-<li><input disabled="" type="checkbox" /> hugo 기능 잘 활용하기</li>
-<li><input disabled="" type="checkbox" /> 통계기능 추가</li>
-<li><input disabled="" type="checkbox" /> custom domain
-<ul>
-<li><a href="https://www.holaxprogramming.com/2017/05/15/github-page-and-custom-domain/">https://www.holaxprogramming.com/2017/05/15/github-page-and-custom-domain/</a></li>
-<li><a href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages">https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages</a></li>
-</ul>
-</li>
+<li><input checked="" disabled="" type="checkbox" /> Google Analytics</li>
+<li><input checked="" disabled="" type="checkbox" /> custom domain 👉 <a href="https://www.bemore.dev/posts/devstory/customdomain/">포스트</a></li>
+<li><input checked="" disabled="" type="checkbox" /> 테마 바꾸기 👉 <a href="https://www.bemore.dev/posts/devstory/chage_theme/">포스트</a></li>
 </ul>
 <h2 id="참고-자료">참고 자료</h2>
 <p><a href="https://gohugo.io/getting-started/quick-start/#step-3-add-a-theme">Hugo 공식문서 Quick Start</a><br />
@@ -2621,7 +2614,11 @@ document.addEventListener('DOMContentLoaded', function () {
         <li><a href="#블로그-사용하기">블로그 사용하기</a></li>
         <li><a href="#댓글-기능-추가">댓글 기능 추가</a></li>
         <li><a href="#로컬-서버-확인">로컬 서버 확인</a></li>
-        <li><a href="#host-on-github">host on github</a></li>
+        <li><a href="#host-on-github">host on github</a>
+          <ul>
+            <li><a href="#쉘-스크립트로-커맨드-줄이기">쉘 스크립트로 커맨드 줄이기</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
     <li><a href="#추가할-사항">추가할 사항</a></li>
