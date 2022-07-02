@@ -14,11 +14,39 @@
     <managingEditor>bmofinnjake08@gmail.com (bmo)</managingEditor>
     <webMaster>bmofinnjake08@gmail.com (bmo)</webMaster>
     <copyright>©2022, All Rights Reserved</copyright>
-    <lastBuildDate>Sun, 15 May 2022 23:13:39 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 23 Jun 2022 22:19:06 +0900</lastBuildDate>
     
         <atom:link href="https://www.bemore.dev/posts/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>Hello World in Kaggle</title>
+        <link>https://www.bemore.dev/posts/ml/kaggle/hello-kaggle/</link>
+        <pubDate>Thu, 23 Jun 2022 22:19:06 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Thu, 23 Jun 2022 22:19:06 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/ml/kaggle/hello-kaggle/</guid>
+        <description>프로그래밍을 공부하고 실습할 때 가장 먼저 해보는 print(&amp;ldquo;Hello World&amp;rdquo;) 데이터 사이언스를 공부할 때 Hello World 같은 데이터들은? Dataset MNIST Dataset Iris Project and Dataset Titanic Project and Dataset Housing Prices project and Dataset House Prices Credit Card Fraud Detection Project and Dataset</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>ml</category>
+            
+          
+            
+              <category>kaggle</category>
+            
+          
+        
+        
+        
+      </item>
       
       <item>
         <title>파이썬 시큐어코딩 가이드</title>
@@ -40,6 +68,44 @@
             
           
         
+        
+        
+      </item>
+      
+      <item>
+        <title>프림 알고리즘</title>
+        <link>https://www.bemore.dev/posts/cs/algorithm/prim/</link>
+        <pubDate>Sun, 15 May 2022 23:02:38 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Sun, 15 May 2022 23:02:38 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/cs/algorithm/prim/</guid>
+        <description>Prim Algorithm 크루스칼이 최소비용 간선을 선택해 나간다면, 프림 알고리즘은 최소비용 간선이 있는 정점을 선택해 나간다. 시간복잡도 우선순위 큐 $O(ElogV)$ 인접행렬 $O(V^2)$ 구현 1 2 3 4</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>알고리즘</category>
+            
+          
+            
+              <category>그래프</category>
+            
+          
+            
+              <category>최단경로</category>
+            
+          
+        
+        
+          
+            
+              <category>알고리즘</category>
+            
+          
         
         
       </item>
@@ -839,6 +905,106 @@
       </item>
       
       <item>
+        <title>AWS linux에 도커 설치</title>
+        <link>https://www.bemore.dev/posts/whynotwork/aws_docker/</link>
+        <pubDate>Fri, 10 Sep 2021 22:43:56 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Fri, 10 Sep 2021 22:43:56 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/whynotwork/aws_docker/</guid>
+        <description>AWS 도커 설치 이대로 했는데 도커 서버가 보이지 않다면 Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running? Fix sudo service docker status: 도커가 inactivate 상태인지 확인 sudo service docker start sudo systemctl enable docker: 리부팅때 자동 실행되도록 설</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+        
+        
+          
+            
+              <category>이게 왜 안되지</category>
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>Django 프로젝트 도커 이미지 생성하기</title>
+        <link>https://www.bemore.dev/posts/devstory/docker_build/</link>
+        <pubDate>Tue, 07 Sep 2021 22:43:56 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Tue, 07 Sep 2021 22:43:56 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/devstory/docker_build/</guid>
+        <description>추천시스템에 관한 프로젝트를 진행하면서 점점 커지는 프로젝트 내용과 설정들, github에 용량 커서 안올라가는 파일들도 있어서 배포할때 어떻게 해야할지 고민</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>docker</category>
+            
+          
+            
+              <category>django</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>파이토치 모델 불러오기</title>
+        <link>https://www.bemore.dev/posts/whynotwork/model_serving/</link>
+        <pubDate>Tue, 31 Aug 2021 22:43:56 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Tue, 31 Aug 2021 22:43:56 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/whynotwork/model_serving/</guid>
+        <description>플레이리스트에 추천 곡을 채워주는 서비스를 작업중 모델파트에서 모델파일이랑 필요한 부분을 주셔서 장고 웹에 붙이기만 하면되는데&amp;hellip;생각보다 빨리</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+        
+        
+          
+            
+              <category>이게 왜 안되지</category>
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>Django runserver 에러</title>
+        <link>https://www.bemore.dev/posts/whynotwork/django_runserver/</link>
+        <pubDate>Mon, 23 Aug 2021 22:43:56 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Mon, 23 Aug 2021 22:43:56 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/whynotwork/django_runserver/</guid>
+        <description>When? 파이토치 모델 서빙하기 위해 예시를 보다가 이미지 분류 장고 웹을 볼 수 있었다. 로컬에서 돌러보고싶어서 클론하고 requirements.txt로 필요한 모</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+        
+        
+          
+            
+              <category>이게 왜 안되지</category>
+            
+          
+        
+      </item>
+      
+      <item>
         <title>파이토치 허브 M1 로컬에서 빌드하기</title>
         <link>https://www.bemore.dev/posts/devstory/torchhub_m1/</link>
         <pubDate>Mon, 16 Aug 2021 22:09:48 +0900</pubDate>
@@ -895,6 +1061,48 @@
               <category>chatbot</category>
             
           
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>ModuleNotFoundError: No module named 모듈</title>
+        <link>https://www.bemore.dev/posts/whynotwork/python_modulenotfound/</link>
+        <pubDate>Wed, 04 Aug 2021 22:43:56 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Wed, 04 Aug 2021 22:43:56 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/whynotwork/python_modulenotfound/</guid>
+        <description>여러 파이썬 파일로 모듈을 구성하고 이를 연결할때 ModuleNotFoundError: No module named 모듈 에러를 확인하면 당황스러울 수 있다. 왜냐하면 이전까지 아무 생각 안하고 썼을때는 문제가 없었는데!</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+        
+        
+          
+            
+              <category>이게 왜 안되지</category>
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>터미널 꾸미기</title>
+        <link>https://www.bemore.dev/posts/devstory/terminal/</link>
+        <pubDate>Fri, 23 Jul 2021 22:09:48 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Fri, 23 Jul 2021 22:09:48 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/devstory/terminal/</guid>
+        <description>1. iTerm2 설치 brew install --cask iterm2 2. Powerlevel10k 권장 폰트 설치 설치한 다음 iterm-&amp;gt; 폰트 설정에서 MesloLGS NF 선택 vscode 콘솔에서 프롬프트가 깨지는 문제가 있었는데 이부분도 폰트를 추가해줘야 해결된다 3. Powerlevel10k</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
         
         
         

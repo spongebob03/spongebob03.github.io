@@ -9,7 +9,7 @@
     <lastmod>2020-01-19T21:13:42+09:00</lastmod>
   </url><url>
     <loc>https://www.bemore.dev/</loc>
-    <lastmod>2022-05-15T23:13:39+09:00</lastmod>
+    <lastmod>2022-06-23T22:19:06+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
@@ -21,11 +21,20 @@
                 href="https://www.bemore.dev/"
                 />
   </url><url>
+    <loc>https://www.bemore.dev/posts/ml/kaggle/hello-kaggle/</loc>
+    <lastmod>2022-06-23T22:19:06+09:00</lastmod>
+  </url><url>
+    <loc>https://www.bemore.dev/tags/kaggle/</loc>
+    <lastmod>2022-06-23T22:19:06+09:00</lastmod>
+  </url><url>
+    <loc>https://www.bemore.dev/tags/ml/</loc>
+    <lastmod>2022-06-23T22:19:06+09:00</lastmod>
+  </url><url>
     <loc>https://www.bemore.dev/posts/</loc>
-    <lastmod>2022-05-15T23:13:39+09:00</lastmod>
+    <lastmod>2022-06-23T22:19:06+09:00</lastmod>
   </url><url>
     <loc>https://www.bemore.dev/tags/</loc>
-    <lastmod>2022-05-15T23:13:39+09:00</lastmod>
+    <lastmod>2022-06-23T22:19:06+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
@@ -44,7 +53,7 @@
     <lastmod>2022-05-15T23:13:39+09:00</lastmod>
   </url><url>
     <loc>https://www.bemore.dev/categories/</loc>
-    <lastmod>2022-05-15T23:01:42+09:00</lastmod>
+    <lastmod>2022-05-15T23:02:38+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
@@ -57,16 +66,19 @@
                 />
   </url><url>
     <loc>https://www.bemore.dev/tags/%EA%B7%B8%EB%9E%98%ED%94%84/</loc>
-    <lastmod>2022-05-15T23:01:42+09:00</lastmod>
+    <lastmod>2022-05-15T23:02:38+09:00</lastmod>
   </url><url>
     <loc>https://www.bemore.dev/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/</loc>
-    <lastmod>2022-05-15T23:01:42+09:00</lastmod>
+    <lastmod>2022-05-15T23:02:38+09:00</lastmod>
   </url><url>
     <loc>https://www.bemore.dev/categories/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/</loc>
-    <lastmod>2022-05-15T23:01:42+09:00</lastmod>
+    <lastmod>2022-05-15T23:02:38+09:00</lastmod>
   </url><url>
     <loc>https://www.bemore.dev/tags/%EC%B5%9C%EB%8B%A8%EA%B2%BD%EB%A1%9C/</loc>
-    <lastmod>2022-05-15T23:01:42+09:00</lastmod>
+    <lastmod>2022-05-15T23:02:38+09:00</lastmod>
+  </url><url>
+    <loc>https://www.bemore.dev/posts/cs/algorithm/prim/</loc>
+    <lastmod>2022-05-15T23:02:38+09:00</lastmod>
   </url><url>
     <loc>https://www.bemore.dev/posts/cs/algorithm/kruskal/</loc>
     <lastmod>2022-05-15T23:01:42+09:00</lastmod>
@@ -189,9 +201,6 @@
     <loc>https://www.bemore.dev/posts/ml/fastai/ch2/</loc>
     <lastmod>2021-12-08T19:09:48+09:00</lastmod>
   </url><url>
-    <loc>https://www.bemore.dev/tags/ml/</loc>
-    <lastmod>2021-12-08T19:09:48+09:00</lastmod>
-  </url><url>
     <loc>https://www.bemore.dev/categories/ml/</loc>
     <lastmod>2021-12-08T19:09:48+09:00</lastmod>
   </url><url>
@@ -231,6 +240,24 @@
     <loc>https://www.bemore.dev/posts/recsys/recsys1/</loc>
     <lastmod>2021-11-09T22:09:48+09:00</lastmod>
   </url><url>
+    <loc>https://www.bemore.dev/posts/whynotwork/aws_docker/</loc>
+    <lastmod>2021-09-10T22:43:56+09:00</lastmod>
+  </url><url>
+    <loc>https://www.bemore.dev/tags/django/</loc>
+    <lastmod>2021-09-07T22:43:56+09:00</lastmod>
+  </url><url>
+    <loc>https://www.bemore.dev/posts/devstory/docker_build/</loc>
+    <lastmod>2021-09-07T22:43:56+09:00</lastmod>
+  </url><url>
+    <loc>https://www.bemore.dev/tags/docker/</loc>
+    <lastmod>2021-09-07T22:43:56+09:00</lastmod>
+  </url><url>
+    <loc>https://www.bemore.dev/posts/whynotwork/model_serving/</loc>
+    <lastmod>2021-08-31T22:43:56+09:00</lastmod>
+  </url><url>
+    <loc>https://www.bemore.dev/posts/whynotwork/django_runserver/</loc>
+    <lastmod>2021-08-23T22:43:56+09:00</lastmod>
+  </url><url>
     <loc>https://www.bemore.dev/tags/m1/</loc>
     <lastmod>2021-08-16T22:09:48+09:00</lastmod>
   </url><url>
@@ -242,6 +269,12 @@
   </url><url>
     <loc>https://www.bemore.dev/posts/devstory/slackbot1/</loc>
     <lastmod>2021-08-08T22:09:48+09:00</lastmod>
+  </url><url>
+    <loc>https://www.bemore.dev/posts/whynotwork/python_modulenotfound/</loc>
+    <lastmod>2021-08-04T22:43:56+09:00</lastmod>
+  </url><url>
+    <loc>https://www.bemore.dev/posts/devstory/terminal/</loc>
+    <lastmod>2021-07-23T22:09:48+09:00</lastmod>
   </url><url>
     <loc>https://www.bemore.dev/tags/homebrew/</loc>
     <lastmod>2021-06-08T22:09:48+09:00</lastmod>

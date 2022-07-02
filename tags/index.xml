@@ -14,11 +14,47 @@
     <managingEditor>bmofinnjake08@gmail.com (bmo)</managingEditor>
     <webMaster>bmofinnjake08@gmail.com (bmo)</webMaster>
     <copyright>©2022, All Rights Reserved</copyright>
-    <lastBuildDate>Sun, 15 May 2022 23:13:39 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 23 Jun 2022 22:19:06 +0900</lastBuildDate>
     
         <atom:link href="https://www.bemore.dev/tags/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>kaggle</title>
+        <link>https://www.bemore.dev/tags/kaggle/</link>
+        <pubDate>Thu, 23 Jun 2022 22:19:06 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        
+        <guid>https://www.bemore.dev/tags/kaggle/</guid>
+        <description></description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>ML</title>
+        <link>https://www.bemore.dev/tags/ml/</link>
+        <pubDate>Thu, 23 Jun 2022 22:19:06 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        
+        <guid>https://www.bemore.dev/tags/ml/</guid>
+        <description></description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
       
       <item>
         <title>보안</title>
@@ -41,7 +77,7 @@
       <item>
         <title>그래프</title>
         <link>https://www.bemore.dev/tags/%EA%B7%B8%EB%9E%98%ED%94%84/</link>
-        <pubDate>Sun, 15 May 2022 23:01:42 +0900</pubDate>
+        <pubDate>Sun, 15 May 2022 23:02:38 +0900</pubDate>
         <author>bmofinnjake08@gmail.com (bmo)</author>
         
         <guid>https://www.bemore.dev/tags/%EA%B7%B8%EB%9E%98%ED%94%84/</guid>
@@ -59,7 +95,7 @@
       <item>
         <title>알고리즘</title>
         <link>https://www.bemore.dev/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/</link>
-        <pubDate>Sun, 15 May 2022 23:01:42 +0900</pubDate>
+        <pubDate>Sun, 15 May 2022 23:02:38 +0900</pubDate>
         <author>bmofinnjake08@gmail.com (bmo)</author>
         
         <guid>https://www.bemore.dev/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/</guid>
@@ -77,7 +113,7 @@
       <item>
         <title>최단경로</title>
         <link>https://www.bemore.dev/tags/%EC%B5%9C%EB%8B%A8%EA%B2%BD%EB%A1%9C/</link>
-        <pubDate>Sun, 15 May 2022 23:01:42 +0900</pubDate>
+        <pubDate>Sun, 15 May 2022 23:02:38 +0900</pubDate>
         <author>bmofinnjake08@gmail.com (bmo)</author>
         
         <guid>https://www.bemore.dev/tags/%EC%B5%9C%EB%8B%A8%EA%B2%BD%EB%A1%9C/</guid>
@@ -345,24 +381,6 @@
       </item>
       
       <item>
-        <title>ML</title>
-        <link>https://www.bemore.dev/tags/ml/</link>
-        <pubDate>Wed, 08 Dec 2021 19:09:48 +0900</pubDate>
-        <author>bmofinnjake08@gmail.com (bmo)</author>
-        
-        <guid>https://www.bemore.dev/tags/ml/</guid>
-        <description></description>
-        
-        <dc:creator>bmo</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
         <title>개발환경</title>
         <link>https://www.bemore.dev/tags/%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD/</link>
         <pubDate>Mon, 06 Dec 2021 19:09:48 +0900</pubDate>
@@ -405,6 +423,42 @@
         <author>bmofinnjake08@gmail.com (bmo)</author>
         
         <guid>https://www.bemore.dev/tags/pytorch/</guid>
+        <description></description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>django</title>
+        <link>https://www.bemore.dev/tags/django/</link>
+        <pubDate>Tue, 07 Sep 2021 22:43:56 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        
+        <guid>https://www.bemore.dev/tags/django/</guid>
+        <description></description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>docker</title>
+        <link>https://www.bemore.dev/tags/docker/</link>
+        <pubDate>Tue, 07 Sep 2021 22:43:56 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        
+        <guid>https://www.bemore.dev/tags/docker/</guid>
         <description></description>
         
         <dc:creator>bmo</dc:creator>

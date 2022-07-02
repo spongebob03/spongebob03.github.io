@@ -55,6 +55,78 @@
       </item>
       
       <item>
+        <title>AWS linux에 도커 설치</title>
+        <link>https://www.bemore.dev/posts/whynotwork/aws_docker/</link>
+        <pubDate>Fri, 10 Sep 2021 22:43:56 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Fri, 10 Sep 2021 22:43:56 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/whynotwork/aws_docker/</guid>
+        <description>AWS 도커 설치 이대로 했는데 도커 서버가 보이지 않다면 Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running? Fix sudo service docker status: 도커가 inactivate 상태인지 확인 sudo service docker start sudo systemctl enable docker: 리부팅때 자동 실행되도록 설</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+        
+        
+          
+            
+              <category>이게 왜 안되지</category>
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>파이토치 모델 불러오기</title>
+        <link>https://www.bemore.dev/posts/whynotwork/model_serving/</link>
+        <pubDate>Tue, 31 Aug 2021 22:43:56 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Tue, 31 Aug 2021 22:43:56 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/whynotwork/model_serving/</guid>
+        <description>플레이리스트에 추천 곡을 채워주는 서비스를 작업중 모델파트에서 모델파일이랑 필요한 부분을 주셔서 장고 웹에 붙이기만 하면되는데&amp;hellip;생각보다 빨리</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+        
+        
+          
+            
+              <category>이게 왜 안되지</category>
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>Django runserver 에러</title>
+        <link>https://www.bemore.dev/posts/whynotwork/django_runserver/</link>
+        <pubDate>Mon, 23 Aug 2021 22:43:56 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Mon, 23 Aug 2021 22:43:56 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/whynotwork/django_runserver/</guid>
+        <description>When? 파이토치 모델 서빙하기 위해 예시를 보다가 이미지 분류 장고 웹을 볼 수 있었다. 로컬에서 돌러보고싶어서 클론하고 requirements.txt로 필요한 모</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+        
+        
+          
+            
+              <category>이게 왜 안되지</category>
+            
+          
+        
+      </item>
+      
+      <item>
         <title>파이토치 허브 M1 로컬에서 빌드하기</title>
         <link>https://www.bemore.dev/posts/devstory/torchhub_m1/</link>
         <pubDate>Mon, 16 Aug 2021 22:09:48 +0900</pubDate>
@@ -81,6 +153,30 @@
               <category>개발환경</category>
             
           
+        
+        
+        
+          
+            
+              <category>이게 왜 안되지</category>
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>ModuleNotFoundError: No module named 모듈</title>
+        <link>https://www.bemore.dev/posts/whynotwork/python_modulenotfound/</link>
+        <pubDate>Wed, 04 Aug 2021 22:43:56 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Wed, 04 Aug 2021 22:43:56 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/whynotwork/python_modulenotfound/</guid>
+        <description>여러 파이썬 파일로 모듈을 구성하고 이를 연결할때 ModuleNotFoundError: No module named 모듈 에러를 확인하면 당황스러울 수 있다. 왜냐하면 이전까지 아무 생각 안하고 썼을때는 문제가 없었는데!</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
         
         
         

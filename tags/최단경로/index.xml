@@ -14,11 +14,49 @@
     <managingEditor>bmofinnjake08@gmail.com (bmo)</managingEditor>
     <webMaster>bmofinnjake08@gmail.com (bmo)</webMaster>
     <copyright>©2022, All Rights Reserved</copyright>
-    <lastBuildDate>Sun, 15 May 2022 23:01:42 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 15 May 2022 23:02:38 +0900</lastBuildDate>
     
         <atom:link href="https://www.bemore.dev/tags/%EC%B5%9C%EB%8B%A8%EA%B2%BD%EB%A1%9C/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>프림 알고리즘</title>
+        <link>https://www.bemore.dev/posts/cs/algorithm/prim/</link>
+        <pubDate>Sun, 15 May 2022 23:02:38 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Sun, 15 May 2022 23:02:38 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/cs/algorithm/prim/</guid>
+        <description>Prim Algorithm 크루스칼이 최소비용 간선을 선택해 나간다면, 프림 알고리즘은 최소비용 간선이 있는 정점을 선택해 나간다. 시간복잡도 우선순위 큐 $O(ElogV)$ 인접행렬 $O(V^2)$ 구현 1 2 3 4</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>알고리즘</category>
+            
+          
+            
+              <category>그래프</category>
+            
+          
+            
+              <category>최단경로</category>
+            
+          
+        
+        
+          
+            
+              <category>알고리즘</category>
+            
+          
+        
+        
+      </item>
       
       <item>
         <title>크루스칼 알고리즘</title>
