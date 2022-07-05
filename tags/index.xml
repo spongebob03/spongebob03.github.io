@@ -14,19 +14,19 @@
     <managingEditor>bmofinnjake08@gmail.com (bmo)</managingEditor>
     <webMaster>bmofinnjake08@gmail.com (bmo)</webMaster>
     <copyright>©2022, All Rights Reserved</copyright>
-    <lastBuildDate>Thu, 23 Jun 2022 22:19:06 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 04 Jul 2022 22:17:06 +0900</lastBuildDate>
     
         <atom:link href="https://www.bemore.dev/tags/index.xml" rel="self" type="application/rss+xml" />
     
 
       
       <item>
-        <title>kaggle</title>
-        <link>https://www.bemore.dev/tags/kaggle/</link>
-        <pubDate>Thu, 23 Jun 2022 22:19:06 +0900</pubDate>
+        <title>dls</title>
+        <link>https://www.bemore.dev/tags/dls/</link>
+        <pubDate>Mon, 04 Jul 2022 22:17:06 +0900</pubDate>
         <author>bmofinnjake08@gmail.com (bmo)</author>
         
-        <guid>https://www.bemore.dev/tags/kaggle/</guid>
+        <guid>https://www.bemore.dev/tags/dls/</guid>
         <description></description>
         
         <dc:creator>bmo</dc:creator>
@@ -39,12 +39,30 @@
       </item>
       
       <item>
-        <title>ML</title>
+        <title>ml</title>
         <link>https://www.bemore.dev/tags/ml/</link>
-        <pubDate>Thu, 23 Jun 2022 22:19:06 +0900</pubDate>
+        <pubDate>Mon, 04 Jul 2022 22:17:06 +0900</pubDate>
         <author>bmofinnjake08@gmail.com (bmo)</author>
         
         <guid>https://www.bemore.dev/tags/ml/</guid>
+        <description></description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>kaggle</title>
+        <link>https://www.bemore.dev/tags/kaggle/</link>
+        <pubDate>Thu, 23 Jun 2022 22:19:06 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        
+        <guid>https://www.bemore.dev/tags/kaggle/</guid>
         <description></description>
         
         <dc:creator>bmo</dc:creator>

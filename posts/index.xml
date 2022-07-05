@@ -14,11 +14,63 @@
     <managingEditor>bmofinnjake08@gmail.com (bmo)</managingEditor>
     <webMaster>bmofinnjake08@gmail.com (bmo)</webMaster>
     <copyright>©2022, All Rights Reserved</copyright>
-    <lastBuildDate>Thu, 23 Jun 2022 22:19:06 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 04 Jul 2022 22:17:06 +0900</lastBuildDate>
     
         <atom:link href="https://www.bemore.dev/posts/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>Improving Deep Neural Network</title>
+        <link>https://www.bemore.dev/posts/ml/dls/course2_week1/</link>
+        <pubDate>Mon, 04 Jul 2022 22:17:06 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Mon, 04 Jul 2022 22:17:06 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/ml/dls/course2_week1/</guid>
+        <description>Dataset Dataset ➡️ train / dev / test 데이터셋 비중 이전에는 데이터셋 비중을 60% / 20% / 20% 을 이상적으로 생각했다. (10000개 정도 데이터에서는 이 비중이 이상적이지만) 1000,000 이</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>ml</category>
+            
+          
+            
+              <category>dls</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Activation Function</title>
+        <link>https://www.bemore.dev/posts/ml/activationfunction/</link>
+        <pubDate>Sat, 02 Jul 2022 22:19:06 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Sat, 02 Jul 2022 22:19:06 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/ml/activationfunction/</guid>
+        <description>신경망에서 활성 함수로 쓰이는 비선형 함수들 🧨 Sigmoid 1 2 def sigmoid(x): return 1 / (1 + np.exp(-x)) 입력이 작을 떄의 출력은 0에 가깝고 입력이 커지면 출력이 1에 가까워진다. 또한 출력이 클수</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>ml</category>
+            
+          
+        
+        
+        
+      </item>
       
       <item>
         <title>Hello World in Kaggle</title>
