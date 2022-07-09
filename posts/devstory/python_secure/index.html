@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>파이썬 시큐어코딩 가이드 – Bemore</title>
+    <title>파이썬 시큐어코딩 가이드: 입력데이터 검증 및 표현 – Bemore</title>
     
 
 
@@ -1344,7 +1344,7 @@
 
 
 <meta property="og:site_name" content="Bemore">
-<meta property="og:title" content="파이썬 시큐어코딩 가이드">
+<meta property="og:title" content="파이썬 시큐어코딩 가이드: 입력데이터 검증 및 표현">
 <meta property="og:url" content="https://www.bemore.dev/posts/devstory/python_secure/">
 <meta property="og:type" content="article">
 <meta property="og:description" content="&lt;Python 시큐어코딩 가이드&gt; - KISA">
@@ -1384,7 +1384,7 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "headline": "파이썬 시큐어코딩 가이드",
+    "headline": "파이썬 시큐어코딩 가이드: 입력데이터 검증 및 표현",
     "datePublished": "2022-05-15T23:13:39+09:00",
     "dateModified": "2022-05-15T23:13:39+09:00",
     "url" : "https://www.bemore.dev/posts/devstory/python_secure/",
@@ -1701,7 +1701,7 @@ if (!doNotTrack) {
   
   <li  class="is-active" >
     
-      <span>파이썬 시큐어코딩 가이드</span>
+      <span>파이썬 시큐어코딩 가이드: 입력데이터 검증 및 표현</span>
     
   </li>
   
@@ -1713,14 +1713,14 @@ if (!doNotTrack) {
   <div class="single ">
     <div class="single__nojs">This page looks best with JavaScript enabled</div>
     <script>document.querySelector('.single').classList.remove('hide'); document.querySelector('.single__nojs').classList.add('hide');</script>
-    <h2 class="single__title" data-ani="true">파이썬 시큐어코딩 가이드</h2>
+    <h2 class="single__title" data-ani="true">파이썬 시큐어코딩 가이드: 입력데이터 검증 및 표현</h2>
     <h3 class="single__subtitle"></h3>
     <div class="single__meta">
       
 <div class="single__infos">
   <time class="single__info" title="Written At">📅&nbsp;May 15, 2022 </time>
   
-  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;10&nbsp;min read </span>
+  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;15&nbsp;min read </span>
   
   <span class="single__info">
     
@@ -1740,12 +1740,12 @@ if (!doNotTrack) {
     </div>
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
-      <h2 id="입력데이터-검증-및-표현">입력데이터 검증 및 표현</h2>
-<h3 id="1-sql-삽입">1. SQL 삽입</h3>
+      <p>입력데이터 검증 및 표현</p>
+<h2 id="1-sql-삽입">1. SQL 삽입</h2>
 <p><div class="box">😈 데이터베이스와 연동된 웹 응용 프로그램에서 입력된 데이터에 대한 유효성 검증을 하지 않을 경우 공격자가 <strong>입력 폼 및 입력란에 SQL문을 삽입하여 DB로부터 정보를 열람하거나 조작</strong>할 수 있는 보안취약점</div><br />
 Python에서는 데이터베이스에 엑세스에 사용되는 다양한 Python 모듈간의 일관성을 장려하기 위해 DB-API를 정의해서 각 데이터베이스마다 별도의 DB 모듈을 이용해 데이터베이스에 엑세스하게 된다. DB-API 외에도, 파이썬에서는 ORM을 사용하여 데이터베이스에 엑세스할 수 있다.</p>
 <p>ORM(Object RElation Mapping)을 이용하면 보다 <ins>안전하게 DB를 사용할 수 있지만 일부 복잡한 조건의 쿼리문 생성이 어렵고 성능저하</ins> 등의 이유로 쿼리의 튜닝이 필요한 경우 직접 원시 SQL 실행이 필요한 경우가 있다. ORM 대신 원시 쿼리를 사용하는 경우 검증되지 않은 외부 입력값으로 인해 SQL 삽입 공격이 발생할 수 있다.</p>
-<h4 id="-시큐어-코딩">👮‍♀️ 시큐어 코딩</h4>
+<h3 id="-시큐어-코딩">👮‍♀️ 시큐어 코딩</h3>
 <ul>
 <li>DB-API, 원시SQL: 매개변수화된 쿼리 사용하여 외부 입력값을 바인딩해서 사용하기</li>
 <li>ORM(Django&rsquo;s querySets, SQLALchemy, Storm): 따로 필요없음. ORM 프레임워크는 내부적으로 사용되는 쿼리 모든 곳에서 매개변수화된 명령문을 사용하므로 기본으로 SQL삽입 공격으로부터 보호된다.</li>
@@ -1838,10 +1838,10 @@ Python에서는 데이터베이스에 엑세스에 사용되는 다양한 Python
     <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;/member_list.html&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;member_list&#39;</span><span class="p">:</span><span class="n">data</span><span class="p">})</span>
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="2-코드-삽입">2. 코드 삽입</h3>
+</div><h2 id="2-코드-삽입">2. 코드 삽입</h2>
 <p><div class="box">프로그래밍 언어 자체의 기능에 한해 이뤄지며 취약한 프로그램에서 <strong>사용자의 입력 값에 코드가 포함되는 것을 허용할 경우</strong>, 공격자가 임의 코드를 삽입해 소프트웨어를 비정상적으로 동작시켜 공격자가 의도한 동작을 하도록 만드는 보안약점. 개발자가 의도하지 않은 코드를 실행하여 권한을 탈취하거나 인증 우회, 시스템 명령어 실행 등을 할 수 있다.</div><br />
 Python에서 코드 삽입 공격을 유발할 수 있는 함수로 eval(), exec()등의 함수가 있다. 이 함수들을 사용할때 더욱 주의할것.</p>
-<h4 id="-시큐어-코딩-1">👮‍♀️ 시큐어 코딩</h4>
+<h3 id="-시큐어-코딩-1">👮‍♀️ 시큐어 코딩</h3>
 <ul>
 <li>동적코드를 실행할 수 있는 함수를 사용하지 않는다 or 실행 가능한 동적코드를 입력 값으로 받지 않도록하고 외부 입력값에 대하여 화이트리스트 방식으로 검증한다.</li>
 <li>유효한 문자만 포함하도록 동적 코드에 사용되는 사용자 입력 값을 필터링</li>
@@ -1922,7 +1922,7 @@ Python에서 코드 삽입 공격을 유발할 수 있는 함수로 eval(), exec
     <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;/error&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;error&#39;</span><span class="p">:</span><span class="s1">&#39;허용되지 않은 함수입니다.&#39;</span><span class="p">})</span>
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="3-경로-조직-및-자원-삽입">3. 경로 조직 및 자원 삽입</h3>
+</div><h2 id="3-경로-조직-및-자원-삽입">3. 경로 조직 및 자원 삽입</h2>
 <p><div class="box">검증되지 않은 외부 입력값을 통해 파일 및 서버 등 시스템 자원(파일, 소켓의 포트 등)에 대한 접근 혹은 식별을 허용할 경우, 입력 값 조작을 통해 시스템이 보호하는 자원에 임의로 접근할 수 있는 보안약점. 공격자는 이를 통해 자원의 수정-삭제, 시스템 정보 누출, 시스템 자원간 충돌로 인한 서비스 장애를 유발시킬 수 있다.</div><br />
 Python에서 주의해야할 점</p>
 <ul>
@@ -1930,7 +1930,7 @@ Python에서 주의해야할 점</p>
 <li>os.pipe()처럼 파이프</li>
 <li>socket 연결 등에서 외부 입력값을 검증 없이 사용할 경우</li>
 </ul>
-<h4 id="-시큐어-코딩-2">👮‍♀️ 시큐어 코딩</h4>
+<h3 id="-시큐어-코딩-2">👮‍♀️ 시큐어 코딩</h3>
 <ul>
 <li>외부의 입력 값을 자원의 식별자로 사용하는 경우, 적절한 검증을 거치도록 하거나, 사전에 정의된 리스트에서 선택되도록 한다.</li>
 <li>외부의 입력이 파일명인 경우에는 경로 순회(directory traversal) 공격의 위험이 있는 문자(/, , .. 등)를 제거할 수 있는 필터 이용한다.</li>
@@ -2031,11 +2031,11 @@ Python에서 주의해야할 점</p>
     <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;/error&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;error&#39;</span><span class="p">:</span><span class="s1">&#39;소켓연결 실패&#39;</span><span class="p">})</span>
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="4-크로스사이트-스크립트xss">4. 크로스사이트 스크립트(XSS)</h3>
+</div><h2 id="4-크로스사이트-스크립트xss">4. 크로스사이트 스크립트(XSS)</h2>
 <p>Cross-site scripting Attacks<br />
 <div class="box">웹사이트의 결함을 이용하여 악성코드(일반적으로 클라이언트 측 js사용)삽입하여 사용자에게 보내는 공격 방법. 일반적으로 애플리케이션 사용자를 목표로 삼는다.</div><br />
 공격자가 웹 응용프로그램을 속여 사용자의 브라우저에서 실행할 수 있는 형식의 데이터를 보낼때 발생. 일반적인 HTML+공격자의 XSS코드 조합 뿐만 아니라 악성코드 다운로드, 플로그인 또는 미디어 콘텐츠를 이용하기도 한다. 입력 양식의 데이터 또는 서버에서 클라이언트 endpoint로 전달된 데이터가 적절한 검증 없이 사용자에게 표시되도록 허용하는 경우 발생.</p>
-<h4 id="유형">유형</h4>
+<h3 id="유형">유형</h3>
 <ul>
 <li>Reflective XSS (Non-persistent XSS)<br />
 공격 코드를 사용자 HTTP 요청에 삽입 -&gt; 해당 공격 코드가 서버 응답 내용에 그대로 반사(Reflected)되어 브라우저에서 실행시키는 공격기법. 종종 악의적으로 제작된 링크를 클릭하도록 사용자를 속여 대상 사이트로 데이터를 보내도록 한다. 대부분 공개적으로 게시되거나 피싱(phishing) 이메일 또는 단축 URL, 모호한 URL에 매개 변수로 포함하는 방법이 쓰인다.</li>
@@ -2044,7 +2044,7 @@ Python에서 주의해야할 점</p>
 <li>DOM 기반 XSS (Client-Side XSS)<br />
 공격 스크립트가 포함된 악성 URL을 통해 전달되는 경우가 많다. 문선 개체 모델을 수정하여 브라우저에서 독립적으로 완전한 공격을 실행해서 웹 페이지에 있는 js의 검증 로직을 무효화한다.공격자는 세션 정보를 포함한 쿠키와 같은 개인 정보를 피해자의 컴퓨터에서 공격자에게 전송할 수 있다. 공격자는 피해자의 정보를 사용하여 웹 사이트에 악의적인 요청을 보낼 수 있다.</li>
 </ul>
-<h4 id="-시큐어-코딩-3">👮‍♀️ 시큐어 코딩</h4>
+<h3 id="-시큐어-코딩-3">👮‍♀️ 시큐어 코딩</h3>
 <ul>
 <li>외부 입력값 또는 출력값에 스크립트가 삽입되지 못하도록 문자열 치환 함수를 사용하여 &amp;&lt;&gt;*‘/()등을 &amp; &lt; &gt; &quot; ' / ( )로 치환하거나, html라이브러리의 escape()를 사용한다.</li>
 <li>HTML 태그를 허용하는 게시판에서는 허용되는 HTML 태그들을 화이트리스트로 만들어 해당 태그만 지원하도록 한다.</li>
@@ -2170,12 +2170,12 @@ Python에서 주의해야할 점</p>
     <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;search.html&#39;</span><span class="p">,</span> <span class="n">search_keyword</span><span class="o">=</span><span class="n">search_keyword</span><span class="p">)</span>
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="5-운영체제-명령어-삽입">5. 운영체제 명령어 삽입</h3>
+</div><h2 id="5-운영체제-명령어-삽입">5. 운영체제 명령어 삽입</h2>
 <p><div class="box">검증을 거치지 않은 사용자 입력값이 운영체제 명령어의 일부 또는 전부로 구성되어 실행 -&gt; 의도하지 않은 시스템 명령어가 실행 -&gt; 부적절하게 권한이 변경되거나 시스템 동작, 운영에 악영향</div><br />
 명령어 라인의 파라미터나 스트림 입력 등 외부 입력을 사용하여 시스템 명령어를 생성하는 프로그램 많이 있다. 하지만 이런 경우 외부 입력 문자열은 신뢰할 수 없기 때문에 적절한 처리를 해주지 않으면 보안에 취약하다.<br />
 Python에서 주의할 점<br />
 String으로 표현된 식을 인수로 받아 반환하는 eval() 함수 + 인수로 받은 문자열을 실행하는 exec() 함수를 같이 사용하면 여러 변수들에 동적으로 값을 할당하여 사용될 수 있어 취약하다.</p>
-<h4 id="-시큐어-코딩-4">👮‍♀️ 시큐어 코딩</h4>
+<h3 id="-시큐어-코딩-4">👮‍♀️ 시큐어 코딩</h3>
 <ul>
 <li>외부 입력값이 시스템 명령에 포함되는 경우 |, ;, &amp;, :, &gt;, &lt;, `(backtick), , ! 과 같이 멀티라인 파이프 리다이렉트 문자 등을 필터링 하고 명령을 수행할 파일명, 옵션을 제한하여 인자로만 사용될 수 있도록 한다</li>
 <li>외부 입력에 따라 명령어를 생성하 거나 선택이 필요한 경우에는 명령어 생성에 필요한 값 들을 미리 지정해 놓고 외부 입력에 따라 선택하여 사용한다.</li>
@@ -2260,9 +2260,9 @@ String으로 표현된 식을 인수로 받아 반환하는 eval() 함수 + 인�
     <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;/success.html&#39;</span><span class="p">)</span>
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="6-위험한-형식-파일-업로드">6. 위험한 형식 파일 업로드</h3>
+</div><h2 id="6-위험한-형식-파일-업로드">6. 위험한 형식 파일 업로드</h2>
 <div class="box">서버에서 실행될 수 있는 스크립트 파일(.asp, .jsp, .php, .sh 등)을 업로드 할 수 있고 공격자가 웹을 통해 직접 실행시킬 수 있는 경우 시스템 내부 명령어를 실행하거나 외부와 연결하여 시스템을 제어할 수 있는 보안 약점</div>
-<h4 id="-시큐어-코딩-5">👮‍♀️ 시큐어 코딩</h4>
+<h3 id="-시큐어-코딩-5">👮‍♀️ 시큐어 코딩</h3>
 <ul>
 <li>특정 파일 유형만 허용하도록 화이트리스트 방식으로 파일 유형 제한
 <ul>
@@ -2356,35 +2356,386 @@ String으로 표현된 식을 인수로 받아 반환하는 eval() 함수 + 인�
     <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;/success.html&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;filename&#39;</span><span class="p">:</span> <span class="n">filename</span><span class="p">})</span>
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="7-신뢰되지-않는-url주소로-자동접속-연결">7. 신뢰되지 않는 URL주소로 자동접속 연결</h3>
+</div><h2 id="7-신뢰되지-않는-url주소로-자동접속-연결">7. 신뢰되지 않는 URL주소로 자동접속 연결</h2>
+<p><div class="box">클라이언트에서 전송된 URL 주소를 공격자는 해당 폼의 요청을 변조함으로써 사용자가 위험한 URL로 접속할 수 있도록 공격할 수 있다.</div><br />
+redirect함수를 사용할때 해당 프레임워크 버전에서 알려진 취약점이 있는지 확인하기</p>
+<ul>
+<li>Flask 프레임워크에서 주의할 점
+<ul>
+<li>get_post_logout_redirect</li>
+<li>get_post_login_redirect</li>
+</ul>
+</li>
+</ul>
+<p><a href="https://flask-security-too.readthedocs.io/en/stable/">Flask-Security-Too</a> 라이브러리 4.1.0 이전 버전에서 URL 유효성 검사를 우회하고 사용자를 임의의 URL로 리디렉션 할 수 있는 취약점 존재</p>
+<h3 id="-시큐어-코딩-6">👮‍♀️ 시큐어 코딩</h3>
+<ul>
+<li>리디렉션 허용하는 모든 URL을 서버에서 화이트리스트로 관리하고 입력으로 받은 주소가 화이트리스트에 존재하는지 검증한다.</li>
+<li>만약 사용자 입력 주소가 화이트리스트로 관리가 불가능하고 리디렉션 URL의 인자값으로 사용되어야만 하는 경우는 모든 리디렉션에서 프로토콜과 host정보가 들어가지 않는 상대경로를 사용하고 검증해야한다.</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">django.shortcuts</span> <span class="kn">import</span> <span class="n">redirect</span>
+
+<span class="c1"># 😇 화이트리스트로 리다이렉트 허용하는 웹사이트 정의</span>
+<span class="n">ALLOW_URL_LIST</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;127.0.0.1&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;192.168.0.1&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;192.168.0.100&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;https://login.myservice.com&#39;</span><span class="p">,</span> 
+    <span class="s1">&#39;/notice&#39;</span>
+<span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">redirect_url</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+    <span class="n">url_string</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;url&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+
+    <span class="c1"># 😇 리다이렉트할 수 있는 URL 범위 제한</span>
+    <span class="k">if</span> <span class="n">url_string</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">ALLOW_URL_LIST</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;/error.html&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;ERROR&#39;</span><span class="p">:</span><span class="s1">&#39;not allowed url&#39;</span><span class="p">})</span>
+
+    <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_string</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="8-부적절한-xml-외부-개체-참조">8. 부적절한 XML 외부 개체 참조</h2>
+<p><div class="box">서버에서 XML 외부 엔티티를 처리할 수 있도록 설정된 경우 발생.<br />
+취약한 XML parser가 외부 값을 참조하는 XML값을 처리할 때, 공격자가 삽입한 공격 구문이 동작되어 서버 파일 접근, 불필요한 자원 사용, 인증 우회, 정보 노출 등 발생할 수 있다.</div><br />
+간단한 XML 데이터 구문 분석 및 조작에 사용할 수 있는 기본 XML parser가 제공되지만 유효성 검사같은 고급 XML 기능은 지원하지 않는다. 기본 제공되는 XML 파서는 외부 엔티티를 지원하지 않지만 다른 XML 공격에 취약할 수 있다.</p>
+<h3 id="-시큐어-코딩-7">👮‍♀️ 시큐어 코딩</h3>
+<ul>
+<li>로컬 정적 <a href="https://araikuma.tistory.com/769">DTD</a>를 사용하도록 설정하고, 외부에서 전송된 XML 문서에 포함된 DTD를 완전하게 비활성화해야 한다.</li>
+<li>비활성화를 할 수 없는 경우에는 외부 엔티티 및 외부 문서 유형 선언을 각 파서에 맞는 고유한 방식으로 비활성화 한다.</li>
+<li>외부 라이브러리를 사용할 경우 기본적으로 외부 엔티티에 대한 구문 분석 기능을 제공하는지 확인하고 제공할 경우 해당 기능을 비활성화 할 수 있는 방법을 확인하여 외부 엔티티 구문 분석 기능을 비활성화 한다.</li>
+<li>많이 사용하는 XML 파서의 한 종류인 lxml의 경우 외부 엔티티 구문 분석 옵션인 resolve_entities 옵션을 비활성화
+<ul>
+<li>외부 문서를 조회할 때 네트워크 액세스를 방지하는 no_network 옵션이 활성화(True) 되어 있는지도 확인</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version=&#34;1.0&#34; encoding=&#34;ISO-8859-1&#34;?&gt;</span>
+<span class="cp">&lt;!DOCTYPE foo [
+</span><span class="cp">    &lt;!ELEMENT foo ANY &gt;</span>
+    <span class="cp">&lt;!ENTITY xxe1 SYSTEM &#34;file:///etc/passwd&#34; &gt;</span>
+    <span class="cp">&lt;!ENTITY xxe2 SYSTEM &#34;http://attacker.com/text.txt&#34;&gt;</span>
+]&gt;
+<span class="nt">&lt;foo&gt;</span><span class="ni">&amp;xxe1;&amp;xxe2;</span><span class="nt">&lt;/foo&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">xml.sax</span> <span class="kn">import</span> <span class="n">make_parser</span>
+<span class="kn">from</span> <span class="nn">xml.sax.handler</span> <span class="kn">import</span> <span class="n">feature_external_ges</span>
+<span class="kn">from</span> <span class="nn">xml.dom.pulldom</span> <span class="kn">import</span> <span class="n">parseString</span><span class="p">,</span> <span class="n">START_ELEMENT</span> <span class="kn">from</span> <span class="nn">django.shortcuts</span> <span class="kn">import</span> <span class="n">render</span>
+<span class="kn">from</span> <span class="nn">.model</span> <span class="kn">import</span> <span class="n">comments</span>
+
+<span class="k">def</span> <span class="nf">get_xml</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="err">“</span><span class="n">GET</span><span class="err">”</span><span class="p">:</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">comments</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+        <span class="n">com</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">comment</span>
+        <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;/xml_view.html&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;com&#39;</span><span class="p">:</span><span class="n">com</span><span class="p">})</span>
+    <span class="k">elif</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="err">“</span><span class="n">POST</span><span class="err">”</span><span class="p">:</span>
+        <span class="n">parser</span> <span class="o">=</span> <span class="n">make_parser</span><span class="p">()</span>
+
+        <span class="c1"># 😱</span>
+        <span class="n">parser</span><span class="o">.</span><span class="n">setFeature</span><span class="p">(</span><span class="n">feature_external_ges</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+        <span class="c1"># 😇 텍스트 값을 엔트리로 변환하는 옵션 끄기</span>
+        <span class="n">parser</span><span class="o">.</span><span class="n">setFeature</span><span class="p">(</span><span class="n">feature_external_ges</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+
+        <span class="n">doc</span> <span class="o">=</span> <span class="n">parseString</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="err">‘</span><span class="n">utf</span><span class="o">-</span><span class="mi">8</span><span class="err">’</span><span class="p">),</span> <span class="n">parser</span><span class="o">=</span><span class="n">parser</span><span class="p">)</span> <span class="k">for</span> <span class="n">event</span><span class="p">,</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">doc</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">event</span> <span class="o">==</span> <span class="n">START_ELEMENT</span> <span class="ow">and</span> <span class="n">node</span><span class="o">.</span><span class="n">tagName</span> <span class="o">==</span> <span class="err">“</span><span class="n">foo</span><span class="err">”</span><span class="p">:</span> <span class="n">doc</span><span class="o">.</span><span class="n">expandNode</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+        <span class="n">text</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">toxml</span><span class="p">()</span>
+    <span class="n">comments</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">comment</span><span class="o">=</span><span class="n">text</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;/xml_view.html&#39;</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="9-xml-삽입">9. XML 삽입</h2>
+<div class="box">검증되지 않은 외부 입력값이 XQuery 또는 XPath 쿼리문을 생성하는 문자열로 사용되어 공격자가 쿼리문의 구조로 임의로 변경하고 임의의 쿼리를 실행하여 허가되지 않는 데이터를 열람하거나 인증 절차를 우회할 수 있는 보안약점</div>
+<h3 id="-시큐어-코딩-8">👮‍♀️ 시큐어 코딩</h3>
+<p>XQuery 또는 XPath 쿼리에 사용되는 외부 입력데이터에 대하여 특수문자 및 쿼리 예약어를 필터링 하고 파라미터화된 쿼리문을 지원하는 XQuery 사용하기</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">lxml</span> <span class="kn">import</span> <span class="n">etree</span>
+
+<span class="k">def</span> <span class="nf">parse_xml</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+    <span class="n">user_name</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;user_name&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+
+    <span class="n">parser</span> <span class="o">=</span> <span class="n">etree</span><span class="o">.</span><span class="n">XMLParser</span><span class="p">(</span><span class="n">resolve_entities</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">tree</span> <span class="o">=</span> <span class="n">etree</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s1">&#39;user.xml&#39;</span><span class="p">,</span> <span class="n">parser</span><span class="p">)</span>
+    <span class="n">root</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">getroot</span><span class="p">()</span>
+
+    <span class="c1"># 😱 검증되지 않은 외부 입력값으로 안전하지 않은 질의문이 query변수에 저장</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="s2">&#34;/collection/users/user[@name=&#39;&#34;</span> <span class="o">+</span> <span class="n">user_name</span> <span class="o">+</span> <span class="s2">&#34;&#39;]/home/text()&#34;</span>
+    <span class="n">elmts</span> <span class="o">=</span> <span class="n">root</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+
+    <span class="c1"># 😇 외부 입력값을 매개변수화</span>
+    <span class="n">elmts</span> <span class="o">=</span> <span class="n">root</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">paramname</span><span class="o">=</span><span class="n">user_name</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;parse_xml.html&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;xml_element&#39;</span><span class="p">:</span><span class="n">elmts</span><span class="p">})</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="10-ldap-삽입">10. LDAP 삽입</h2>
+<p><div class="box">웹 응용프로그램이 사용자가 제공한 입력을 적절한 처리 없이 LDAP 쿼리문이나 결과의 일부로 사용하는 경우, 공격자가 외부 입력을 통해서 사용자가 의도하지 않은 LDAP 명령어를 수행할 수 있는 취약점.<br />
+프로세스가 명령을 실행한 컴포넌트와 동일한 권한을 가지고 동작하게 된다.</div><br />
+Idap3라이브러리가 python-Idap 보다 더 현대적인 라이브러리로 좀 더 Pythonic 방식으로 LDAP서버와 상호 작용할 수 있는 완전한 기능의 추상화 계층이 포함되어 있어 Idap3 라이브러리를 사용하는 것이 권장된다.</p>
+<h4 id="ldap">LDAP?</h4>
+<p>LDAP(Lightweight Directory Access Protocol)이란 네트워크상에서 조직이나 개인, 파일, 디바이스 등을 찾아볼 수 있게 해주는 소프트웨어 프로토콜<br />
+<a href="https://www.samsungsds.com/kr/insights/ldap.html">알아두면 쓸데있는 LDAP (SAMSUNG SDS)</a></p>
+<h3 id="-시큐어-코딩-9">👮‍♀️ 시큐어 코딩</h3>
+<ul>
+<li>올바른 인코딩 함수를 사용하여 모든 변수 escape</li>
+<li>화이트릴스트 방식의 입력값 유효성 검사</li>
+<li>사용자 비밀번호와 같은 민감한 정보가 포함된 필드 인덱싱</li>
+<li>LDAP 바인딩 계정에 할당된 권한 최소화</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">idap3</span> <span class="kn">import</span> <span class="n">Connection</span><span class="p">,</span> <span class="n">Server</span><span class="p">,</span> <span class="n">ALL</span>
+<span class="kn">from</span> <span class="nn">django.shortcuts</span> <span class="kn">import</span> <span class="n">render</span>
+
+<span class="k">def</span> <span class="nf">Idap_query</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+    <span class="n">search_keyword</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;search_keyword&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+
+    <span class="n">dn</span> <span class="o">=</span> <span class="n">sever</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;bind_dn&#39;</span><span class="p">]</span>
+    <span class="n">password</span> <span class="o">=</span> <span class="n">server</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;password&#39;</span><span class="p">]</span>
+
+    <span class="n">address</span> <span class="o">=</span> <span class="s1">&#39;Idap.badSource.com&#39;</span>
+    <span class="n">server</span> <span class="o">=</span> <span class="n">Server</span><span class="p">(</span><span class="n">address</span><span class="o">.</span><span class="n">get_info</span><span class="o">=</span><span class="n">ALL</span><span class="p">)</span>
+    <span class="n">conn</span> <span class="o">=</span> <span class="n">Connection</span><span class="p">(</span><span class="n">server</span><span class="p">,</span> <span class="n">user</span><span class="o">=</span><span class="n">dn</span><span class="p">,</span> <span class="n">password</span><span class="p">,</span> <span class="n">auto_bind</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="c1"># 😇 입력에 필터링을 적용하여 공격에 사용될 수 있는 문자를 이스케이프</span>
+    <span class="n">escpae_keyword</span> <span class="o">=</span> <span class="n">escape_filter_chars</span><span class="p">(</span><span class="n">search_keyword</span><span class="p">)</span>
+    <span class="n">search_str</span> <span class="o">=</span> <span class="s1">&#39;(&amp;(objectclass=</span><span class="si">%s</span><span class="s1">))&#39;</span> <span class="o">%</span> <span class="n">search_keyword</span>
+
+    <span class="n">conn</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s1">&#39;dc=company,dc=com&#39;</span><span class="p">,</span> <span class="n">search_str</span><span class="p">,</span> <span class="n">attributes</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;sn&#39;</span><span class="p">,</span> <span class="s1">&#39;cn&#39;</span><span class="p">,</span> <span class="s1">&#39;address&#39;</span><span class="p">,</span> <span class="s1">&#39;mail&#39;</span><span class="p">,</span> <span class="s1">&#39;mobile&#39;</span><span class="p">,</span> <span class="s1">&#39;uid&#39;</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;/ldap_query_response.html&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;ldap&#39;</span><span class="p">:</span><span class="n">conn</span><span class="o">.</span><span class="n">entries</span><span class="p">})</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="11-크로스사이트-요청-위조-csrf">11. 크로스사이트 요청 위조 CSRF</h2>
+<p><div class="box">세션이 의도치 않게 계속 유지되어 요청을 검증하지 못하는 경우 관리자 권한으로만 수행 가능한 기능이 공격자의 의도대로 실행될 수 있다.</div><br />
+Django, Flask 프레임워크 모두 CSRF 토큰 기능을 지원한다.</p>
+<ul>
+<li>Django: {% csrf token %} 태그 이용</li>
+<li>Flask: Flask-WTF 확장 라이브러리를 통해 {{form.csrf_token}} 태그 이용</li>
+</ul>
+<h3 id="-시큐어-코딩-10">👮‍♀️ 시큐어 코딩</h3>
+<h4 id="django-프레임워크">Django 프레임워크</h4>
+<ul>
+<li>미들웨어의 CSRF 옵션 유지
+<ul>
+<li>템플릿 페이지에서 {% csrf_token %}으로 csrf_token값 명시하기</li>
+</ul>
+</li>
+<li>템플릿에서 csrf_exempt 데코레이터를 사용❌<br />
+views.py 예시</li>
+</ul>
+<h4 id="flask">Flask</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+<span class="kn">from</span> <span class="nn">flask_wtf.csrf</span> <span class="kn">import</span> <span class="n">CSRFProtect</span>
+
+<span class="c1"># 😇 CSRF 설정 추가</span>
+<span class="n">csrf</span> <span class="o">=</span> <span class="n">CSRFProtect</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="err">‘</span><span class="n">SECRET_KEY</span><span class="err">’</span><span class="p">]</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;SECRET_KEY&#39;</span><span class="p">)</span>
+<span class="n">csrf</span><span class="o">.</span><span class="n">init_app</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>템플릿 예시</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&#34;&#34;</span> <span class="na">method</span><span class="o">=</span><span class="s">&#34;POST&#34;</span><span class="p">&gt;</span>
+    <span class="c">&lt;!-- form 태그 내부에 csrf_token 적용--&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;hidden&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;csrf_token&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;{{ csrf_token }}&#34;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">table</span><span class="p">&gt;</span>
+        {{table}}
+    <span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;submit&#34;</span><span class="p">/&gt;</span>
+<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>  
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="12-서버사이드-요청-위조">12. 서버사이드 요청 위조</h2>
+<div class="box">적절한 검증절차를 거치지 않은 상용자 입력값을 서버간의 요청에 사용하여 악의적인 행위가 발생할 수 있는 보안약점.<br />
+공격자는 URL 또는 요청문을 위조하여 접근통제를 우회하는 방식으로 비정상적인 동작을 유도하거나 네트워크에 있는 데이터를 획득할 수 있다.</div>
+<h3 id="-시큐어-코딩-11">👮‍♀️ 시큐어 코딩</h3>
+<ul>
+<li>식별할 수 있는 범위 내 사용자 입력 값을 화이트리스트 방식으로 필터링</li>
+<li>무작위 URL을 받아야한다면 내부 URL을 블랙리스트로 지정하여 필터링</li>
+<li>동일한 내부 네트워크에 있더라도 기기 인증, 접근권한 확인</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">django.shortcuts</span> <span class="kn">import</span> <span class="n">render</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="c1"># 도메인을 화이트리스트에 정의 할 경우 DNS rebinding 공격 등에</span>
+<span class="c1">#노출될위험이있어신뢰할수있는자원에대한IP를사용하여</span>
+<span class="c1"># 검증하는 것이 좀더 안전하다.</span>
+<span class="n">ALLOW_SERVER_LIST</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;https://127.0.0.1/latest/&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;https://192.168.0.1/user_data&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;https://192.168.0.100/v1/public&#39;</span>
+<span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">call_third_party_api</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+    <span class="n">addr</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;address&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">addr</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">ALLOW_SERVER_LIST</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;/error.html&#39;</span><span class="p">,</span> <span class="p">{</span><span class="n">error</span> <span class="o">=</span> <span class="s1">&#39;허용되지 않은 서버입니다.&#39;</span><span class="p">})</span>
+
+    <span class="n">result</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">addr</span><span class="p">)</span><span class="o">.</span><span class="n">text</span>
+    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;/result.html&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;result&#39;</span><span class="p">:</span><span class="n">result</span><span class="p">})</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="13-http-응답분할">13. HTTP 응답분할</h2>
+<div class="box">HTTP 요청에 있는 파라미터가 HTTP 응답헤더에 포함되어 사용자에게 다시 전달될 때, 입력값에 CR(CarriageReturn)이나 LF(LineFeed)같은 &ldquo;개행문자&quot;가 존재하면 HTTP 응답이 2개 이상으로 분리될 수 있다. 공격자는 이 경우 개행 문자를 이용하여 첫 번째 응답을 종료시키고 두번째 응답에 악의적인 코드를 주입하여 XSS 및 캐시 훼손 공격 등을 수행할 수 있다.</div>
+<h3 id="-시큐어-코딩-12">👮‍♀️ 시큐어 코딩</h3>
+<ul>
+<li>요청 파라미터의 값을 HTTP 응답헤더(예를 들어, Set-Cookie 등)에 포함시킬 경우 CR(\r), LF(\n)와 같은 개행문자를 제거한다.</li>
+<li>외부 입력값이 헤더, 쿠키, 로그등에 사용될 경우에는 항상 개행 문자를 검증하고 헤더에 사용되는 예약어 등은 화이트리스트로 제한 할 수 있으면 화이트리스트로 제한하여야 한다.</li>
+</ul>
+<h2 id="14-부적절한-입력값">14. 부적절한 입력값</h2>
 <div class="box"></div>
-<h4 id="-시큐어-코딩-6">👮‍♀️ 시큐어 코딩</h4>
-<h3 id="8-부적절한-xml-외부-개체-참조">8. 부적절한 XML 외부 개체 참조</h3>
+<h3 id="-시큐어-코딩-13">👮‍♀️ 시큐어 코딩</h3>
+<h2 id="15-포맷-스트링-삽입">15. 포맷 스트링 삽입</h2>
 <div class="box"></div>
-<h4 id="-시큐어-코딩-7">👮‍♀️ 시큐어 코딩</h4>
-<h3 id="9-xml-삽입">9. XML 삽입</h3>
-<div class="box"></div>
-<h4 id="-시큐어-코딩-8">👮‍♀️ 시큐어 코딩</h4>
-<h3 id="10-ldap-삽입">10. LDAP 삽입</h3>
-<div class="box"></div>
-<h4 id="-시큐어-코딩-9">👮‍♀️ 시큐어 코딩</h4>
-<h3 id="11-크로스사이트-요청-위조-csrf">11. 크로스사이트 요청 위조 CSRF</h3>
-<div class="box"></div>
-<h4 id="-시큐어-코딩-10">👮‍♀️ 시큐어 코딩</h4>
-<h3 id="12-서버사이드-요청-위조">12. 서버사이드 요청 위조</h3>
-<div class="box"></div>
-<h4 id="-시큐어-코딩-11">👮‍♀️ 시큐어 코딩</h4>
-<h3 id="13-http-응답분할">13. HTTP 응답분할</h3>
-<div class="box"></div>
-<h4 id="-시큐어-코딩-12">👮‍♀️ 시큐어 코딩</h4>
-<h3 id="14-부적절한-입력값">14. 부적절한 입력값</h3>
-<h3 id="15-포맷-스트링-삽입">15. 포맷 스트링 삽입</h3>
-<h2 id="보안기능">보안기능</h2>
-<h2 id="시간-및-상태">시간 및 상태</h2>
-<h2 id="에러처리">에러처리</h2>
-<h2 id="코드오류">코드오류</h2>
-<h2 id="캡슐화">캡슐화</h2>
-<h2 id="api-오용">API 오용</h2>
+<h3 id="-시큐어-코딩-14">👮‍♀️ 시큐어 코딩</h3>
 <h2 id="참고자료">참고자료</h2>
 <p>Python 시큐어코딩 가이드(전자정부보호팀,2022.04.12)<br />
 <a href="https://www.boho.or.kr/data/guideView.do?bulletin_writing_sequence=66641">https://www.boho.or.kr/data/guideView.do?bulletin_writing_sequence=66641</a></p>
@@ -2593,7 +2944,7 @@ String으로 표현된 식을 인수로 받아 반환하는 eval() 함수 + 인�
       
     
       
-        <a href="https://twitter.com/intent/tweet?text=%ed%8c%8c%ec%9d%b4%ec%8d%ac%20%ec%8b%9c%ed%81%90%ec%96%b4%ec%bd%94%eb%94%a9%20%ea%b0%80%ec%9d%b4%eb%93%9c&url=https%3a%2f%2fwww.bemore.dev%2fposts%2fdevstory%2fpython_secure%2f&hashtags=%eb%b3%b4%ec%95%88&via=" title="Twitter" aria-label="Twitter Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
+        <a href="https://twitter.com/intent/tweet?text=%ed%8c%8c%ec%9d%b4%ec%8d%ac%20%ec%8b%9c%ed%81%90%ec%96%b4%ec%bd%94%eb%94%a9%20%ea%b0%80%ec%9d%b4%eb%93%9c%3a%20%ec%9e%85%eb%a0%a5%eb%8d%b0%ec%9d%b4%ed%84%b0%20%ea%b2%80%ec%a6%9d%20%eb%b0%8f%20%ed%91%9c%ed%98%84&url=https%3a%2f%2fwww.bemore.dev%2fposts%2fdevstory%2fpython_secure%2f&hashtags=%eb%b3%b4%ec%95%88&via=" title="Twitter" aria-label="Twitter Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
           <svg data-name="twitter" enable-background="new 0 0 24 24" viewBox="0 0 24 24" width="35" height="35" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="m21.534 7.113c.976-.693 1.797-1.558 2.466-2.554v-.001c-.893.391-1.843.651-2.835.777 1.02-.609 1.799-1.566 2.165-2.719-.951.567-2.001.967-3.12 1.191-.903-.962-2.19-1.557-3.594-1.557-2.724 0-4.917 2.211-4.917 4.921 0 .39.033.765.114 1.122-4.09-.2-7.71-2.16-10.142-5.147-.424.737-.674 1.58-.674 2.487 0 1.704.877 3.214 2.186 4.089-.791-.015-1.566-.245-2.223-.606v.054c0 2.391 1.705 4.377 3.942 4.835-.401.11-.837.162-1.29.162-.315 0-.633-.018-.931-.084.637 1.948 2.447 3.381 4.597 3.428-1.674 1.309-3.8 2.098-6.101 2.098-.403 0-.79-.018-1.177-.067 2.18 1.405 4.762 2.208 7.548 2.208 8.683 0 14.342-7.244 13.986-14.637z"/></svg>
         </a>
       
@@ -3157,84 +3508,92 @@ document.addEventListener('DOMContentLoaded', function () {
   <div class="toc " data-dir="ltr" data-folding="true" data-ani="true">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#입력데이터-검증-및-표현">입력데이터 검증 및 표현</a>
+    <li><a href="#1-sql-삽입">1. SQL 삽입</a>
       <ul>
-        <li><a href="#1-sql-삽입">1. SQL 삽입</a>
-          <ul>
-            <li><a href="#-시큐어-코딩">👮‍♀️ 시큐어 코딩</a></li>
-          </ul>
-        </li>
-        <li><a href="#2-코드-삽입">2. 코드 삽입</a>
-          <ul>
-            <li><a href="#-시큐어-코딩-1">👮‍♀️ 시큐어 코딩</a></li>
-          </ul>
-        </li>
-        <li><a href="#3-경로-조직-및-자원-삽입">3. 경로 조직 및 자원 삽입</a>
-          <ul>
-            <li><a href="#-시큐어-코딩-2">👮‍♀️ 시큐어 코딩</a></li>
-          </ul>
-        </li>
-        <li><a href="#4-크로스사이트-스크립트xss">4. 크로스사이트 스크립트(XSS)</a>
-          <ul>
-            <li><a href="#유형">유형</a></li>
-            <li><a href="#-시큐어-코딩-3">👮‍♀️ 시큐어 코딩</a></li>
-          </ul>
-        </li>
-        <li><a href="#5-운영체제-명령어-삽입">5. 운영체제 명령어 삽입</a>
-          <ul>
-            <li><a href="#-시큐어-코딩-4">👮‍♀️ 시큐어 코딩</a></li>
-          </ul>
-        </li>
-        <li><a href="#6-위험한-형식-파일-업로드">6. 위험한 형식 파일 업로드</a>
-          <ul>
-            <li><a href="#-시큐어-코딩-5">👮‍♀️ 시큐어 코딩</a></li>
-          </ul>
-        </li>
-        <li><a href="#7-신뢰되지-않는-url주소로-자동접속-연결">7. 신뢰되지 않는 URL주소로 자동접속 연결</a>
-          <ul>
-            <li><a href="#-시큐어-코딩-6">👮‍♀️ 시큐어 코딩</a></li>
-          </ul>
-        </li>
-        <li><a href="#8-부적절한-xml-외부-개체-참조">8. 부적절한 XML 외부 개체 참조</a>
-          <ul>
-            <li><a href="#-시큐어-코딩-7">👮‍♀️ 시큐어 코딩</a></li>
-          </ul>
-        </li>
-        <li><a href="#9-xml-삽입">9. XML 삽입</a>
-          <ul>
-            <li><a href="#-시큐어-코딩-8">👮‍♀️ 시큐어 코딩</a></li>
-          </ul>
-        </li>
-        <li><a href="#10-ldap-삽입">10. LDAP 삽입</a>
-          <ul>
-            <li><a href="#-시큐어-코딩-9">👮‍♀️ 시큐어 코딩</a></li>
-          </ul>
-        </li>
-        <li><a href="#11-크로스사이트-요청-위조-csrf">11. 크로스사이트 요청 위조 CSRF</a>
-          <ul>
-            <li><a href="#-시큐어-코딩-10">👮‍♀️ 시큐어 코딩</a></li>
-          </ul>
-        </li>
-        <li><a href="#12-서버사이드-요청-위조">12. 서버사이드 요청 위조</a>
-          <ul>
-            <li><a href="#-시큐어-코딩-11">👮‍♀️ 시큐어 코딩</a></li>
-          </ul>
-        </li>
-        <li><a href="#13-http-응답분할">13. HTTP 응답분할</a>
-          <ul>
-            <li><a href="#-시큐어-코딩-12">👮‍♀️ 시큐어 코딩</a></li>
-          </ul>
-        </li>
-        <li><a href="#14-부적절한-입력값">14. 부적절한 입력값</a></li>
-        <li><a href="#15-포맷-스트링-삽입">15. 포맷 스트링 삽입</a></li>
+        <li><a href="#-시큐어-코딩">👮‍♀️ 시큐어 코딩</a></li>
       </ul>
     </li>
-    <li><a href="#보안기능">보안기능</a></li>
-    <li><a href="#시간-및-상태">시간 및 상태</a></li>
-    <li><a href="#에러처리">에러처리</a></li>
-    <li><a href="#코드오류">코드오류</a></li>
-    <li><a href="#캡슐화">캡슐화</a></li>
-    <li><a href="#api-오용">API 오용</a></li>
+    <li><a href="#2-코드-삽입">2. 코드 삽입</a>
+      <ul>
+        <li><a href="#-시큐어-코딩-1">👮‍♀️ 시큐어 코딩</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-경로-조직-및-자원-삽입">3. 경로 조직 및 자원 삽입</a>
+      <ul>
+        <li><a href="#-시큐어-코딩-2">👮‍♀️ 시큐어 코딩</a></li>
+      </ul>
+    </li>
+    <li><a href="#4-크로스사이트-스크립트xss">4. 크로스사이트 스크립트(XSS)</a>
+      <ul>
+        <li><a href="#유형">유형</a></li>
+        <li><a href="#-시큐어-코딩-3">👮‍♀️ 시큐어 코딩</a></li>
+      </ul>
+    </li>
+    <li><a href="#5-운영체제-명령어-삽입">5. 운영체제 명령어 삽입</a>
+      <ul>
+        <li><a href="#-시큐어-코딩-4">👮‍♀️ 시큐어 코딩</a></li>
+      </ul>
+    </li>
+    <li><a href="#6-위험한-형식-파일-업로드">6. 위험한 형식 파일 업로드</a>
+      <ul>
+        <li><a href="#-시큐어-코딩-5">👮‍♀️ 시큐어 코딩</a></li>
+      </ul>
+    </li>
+    <li><a href="#7-신뢰되지-않는-url주소로-자동접속-연결">7. 신뢰되지 않는 URL주소로 자동접속 연결</a>
+      <ul>
+        <li><a href="#-시큐어-코딩-6">👮‍♀️ 시큐어 코딩</a></li>
+      </ul>
+    </li>
+    <li><a href="#8-부적절한-xml-외부-개체-참조">8. 부적절한 XML 외부 개체 참조</a>
+      <ul>
+        <li><a href="#-시큐어-코딩-7">👮‍♀️ 시큐어 코딩</a></li>
+      </ul>
+    </li>
+    <li><a href="#9-xml-삽입">9. XML 삽입</a>
+      <ul>
+        <li><a href="#-시큐어-코딩-8">👮‍♀️ 시큐어 코딩</a></li>
+      </ul>
+    </li>
+    <li><a href="#10-ldap-삽입">10. LDAP 삽입</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#ldap">LDAP?</a></li>
+          </ul>
+        </li>
+        <li><a href="#-시큐어-코딩-9">👮‍♀️ 시큐어 코딩</a></li>
+      </ul>
+    </li>
+    <li><a href="#11-크로스사이트-요청-위조-csrf">11. 크로스사이트 요청 위조 CSRF</a>
+      <ul>
+        <li><a href="#-시큐어-코딩-10">👮‍♀️ 시큐어 코딩</a>
+          <ul>
+            <li><a href="#django-프레임워크">Django 프레임워크</a></li>
+            <li><a href="#flask">Flask</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#12-서버사이드-요청-위조">12. 서버사이드 요청 위조</a>
+      <ul>
+        <li><a href="#-시큐어-코딩-11">👮‍♀️ 시큐어 코딩</a></li>
+      </ul>
+    </li>
+    <li><a href="#13-http-응답분할">13. HTTP 응답분할</a>
+      <ul>
+        <li><a href="#-시큐어-코딩-12">👮‍♀️ 시큐어 코딩</a></li>
+      </ul>
+    </li>
+    <li><a href="#14-부적절한-입력값">14. 부적절한 입력값</a>
+      <ul>
+        <li><a href="#-시큐어-코딩-13">👮‍♀️ 시큐어 코딩</a></li>
+      </ul>
+    </li>
+    <li><a href="#15-포맷-스트링-삽입">15. 포맷 스트링 삽입</a>
+      <ul>
+        <li><a href="#-시큐어-코딩-14">👮‍♀️ 시큐어 코딩</a></li>
+      </ul>
+    </li>
     <li><a href="#참고자료">참고자료</a></li>
   </ul>
 </nav>

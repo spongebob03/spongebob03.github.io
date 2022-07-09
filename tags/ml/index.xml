@@ -14,11 +14,71 @@
     <managingEditor>bmofinnjake08@gmail.com (bmo)</managingEditor>
     <webMaster>bmofinnjake08@gmail.com (bmo)</webMaster>
     <copyright>©2022, All Rights Reserved</copyright>
-    <lastBuildDate>Mon, 04 Jul 2022 22:17:06 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 05 Jul 2022 21:54:28 +0900</lastBuildDate>
     
         <atom:link href="https://www.bemore.dev/tags/ml/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>Dropout</title>
+        <link>https://www.bemore.dev/posts/ml/dropout/</link>
+        <pubDate>Tue, 05 Jul 2022 21:54:28 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Tue, 05 Jul 2022 21:54:28 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/ml/dropout/</guid>
+        <description>복잡한 모델이 간단한 모델보다 과적합될 가능성이 높다. 그리고 간단한 모델은 적은 수의 매개변수를 가진 모델. 복잡한 모델을 좀 더 간단하게 하는 방법으로 가중치 규제</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>ml</category>
+            
+          
+            
+              <category>regularization</category>
+            
+          
+            
+              <category>딥러닝</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Regularization</title>
+        <link>https://www.bemore.dev/posts/ml/regularization/</link>
+        <pubDate>Mon, 04 Jul 2022 22:18:06 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Mon, 04 Jul 2022 22:18:06 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/ml/regularization/</guid>
+        <description>가중치 규제? 복잡한 모델을 좀 더 간단한 모델로 만들어 과적합될 가능성을 낮추는 방법. 간단한 모델이란 적은 수의 매개변수를 가진 모델을 말한다. L1 regularization(=L1 norm): 모든 가중치</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>ml</category>
+            
+          
+            
+              <category>dls</category>
+            
+          
+        
+        
+        
+      </item>
       
       <item>
         <title>Improving Deep Neural Network</title>
@@ -55,7 +115,7 @@
         <author>bmofinnjake08@gmail.com (bmo)</author>
         <atom:modified>Sat, 02 Jul 2022 22:19:06 +0900</atom:modified>
         <guid>https://www.bemore.dev/posts/ml/activationfunction/</guid>
-        <description>신경망에서 활성 함수로 쓰이는 비선형 함수들 🧨 Sigmoid 1 2 def sigmoid(x): return 1 / (1 + np.exp(-x)) 입력이 작을 떄의 출력은 0에 가깝고 입력이 커지면 출력이 1에 가까워진다. 또한 출력이 클수</description>
+        <description>신경망에서 활성 함수로 쓰이는 비선형 함수들 🧨 Sigmoid $$ h(x) = \frac{1}{1 + e^{-x}} $$ 1 2 def sigmoid(x): return 1 / (1 + np.exp(-x)) 입력이 작을 떄의 출력은 0에 가깝고 입력이 커지면 출력이 1에 가까워진다.</description>
         
         <dc:creator>bmo</dc:creator>
         

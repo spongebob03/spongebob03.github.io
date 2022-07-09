@@ -1742,7 +1742,8 @@ if (!doNotTrack) {
       
       <p>신경망에서 활성 함수로 쓰이는 비선형 함수들 🧨</p>
 <h2 id="sigmoid">Sigmoid</h2>
-<p><img src="/images/ML/sigmoid.png" alt="" /></p>
+<p><img src="/images/ML/sigmoid.png" alt="" /><br />
+$$ h(x) = \frac{1}{1 + e^{-x}} $$</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -1756,7 +1757,12 @@ if (!doNotTrack) {
 </div><p>입력이 작을 떄의 출력은 0에 가깝고 입력이 커지면 출력이 1에 가까워진다.<br />
 또한 출력이 클수록 기울기가 0에 가깝다.</p>
 <h2 id="relu">ReLU</h2>
-<p><img src="/images/ML/relu.png" alt="" /></p>
+<p><img src="/images/ML/relu.png" alt="" /><br />
+$$ h(x) =<br />
+\cases{<br />
+\rm 0 \ \text{if }\ x\ge 0\cr<br />
+\rm x \ \text{if }\ x\lt 0<br />
+}  $$</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -1770,10 +1776,26 @@ if (!doNotTrack) {
 </div><p>입력이 0을 넘으면 그 입력을 그대로 출력하고 0 이하면 0을 출력한다.</p>
 <h2 id="leaky-relu">Leaky ReLU</h2>
 <p><img src="/images/ML/leaky_relu.png" alt="" /><br />
-ReLU에서 0이하의 입력에 모두 0으로 출력하는데 이로 인해 발생하는 손실이 발생할 수  있다.<br />
+$$ h(x) =<br />
+\cases{<br />
+\rm 0 \ \text{if }\ x\ge 0\cr<br />
+\rm 0.01 \times x \ \text{if }\ x\lt 0<br />
+}  $$</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">leaky_relu</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">maximum</span><span class="p">(</span><span class="mf">0.01</span><span class="o">*</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>ReLU에서 0이하의 입력에 모두 0으로 출력하는데 이로 인해 발생하는 손실이 발생할 수  있다.<br />
 반면 Leaky ReLU는 0이하의 입력을 0에 &ldquo;근접&quot;한 매우 작은 값으로 출력한다.</p>
 <h2 id="tanh">Tanh</h2>
-<p><img src="/images/ML/tanh.png" alt="" /></p>
+<p><img src="/images/ML/tanh.png" alt="" /><br />
+$$ h(x) = \frac{e^x - e^{-x}}{e^x + e^{-x}} $$</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -2709,6 +2731,24 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true,
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      ignoreHtmlClass: 'tex2jax_ignore',
+      processHtmlClass: 'tex2jax_process'
+    }
+  };
+  </script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" id="MathJax-script"></script>
+
 
 
 
@@ -2968,7 +3008,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     
     
-    var lib = JSON.parse("null");
+    var lib = JSON.parse("[\"mathjax\"]");
 
     if (lib && lib.includes('mermaid')) {
       
