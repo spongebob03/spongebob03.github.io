@@ -1760,8 +1760,8 @@ $$ h(x) = \frac{1}{1 + e^{-x}} $$</p>
 <p><img src="/images/ML/relu.png" alt="" /><br />
 $$ h(x) =<br />
 \cases{<br />
-\rm 0 \ \text{if }\ x\ge 0\cr<br />
-\rm x \ \text{if }\ x\lt 0<br />
+\rm x \qquad \text{if }\ x\gt 0\cr<br />
+\rm 0 \qquad \text{if }\ x\le 0<br />
 }  $$</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1778,8 +1778,8 @@ $$ h(x) =<br />
 <p><img src="/images/ML/leaky_relu.png" alt="" /><br />
 $$ h(x) =<br />
 \cases{<br />
-\rm 0 \ \text{if }\ x\ge 0\cr<br />
-\rm 0.01 \times x \ \text{if }\ x\lt 0<br />
+\rm x \qquad \text{if }\ x\gt 0\cr<br />
+\rm 0.01 \times x \qquad \text{if }\ x\le 0<br />
 }  $$</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
