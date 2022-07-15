@@ -9,7 +9,7 @@
     <lastmod>2020-01-19T21:13:42+09:00</lastmod>
   </url><url>
     <loc>https://www.bemore.dev/</loc>
-    <lastmod>2022-07-05T21:54:28+09:00</lastmod>
+    <lastmod>2022-07-15T23:16:19+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
@@ -21,20 +21,14 @@
                 href="https://www.bemore.dev/"
                 />
   </url><url>
-    <loc>https://www.bemore.dev/posts/ml/dropout/</loc>
-    <lastmod>2022-07-05T21:54:28+09:00</lastmod>
-  </url><url>
-    <loc>https://www.bemore.dev/tags/ml/</loc>
-    <lastmod>2022-07-05T21:54:28+09:00</lastmod>
-  </url><url>
     <loc>https://www.bemore.dev/posts/</loc>
-    <lastmod>2022-07-05T21:54:28+09:00</lastmod>
+    <lastmod>2022-07-15T23:16:19+09:00</lastmod>
   </url><url>
-    <loc>https://www.bemore.dev/tags/regularization/</loc>
-    <lastmod>2022-07-05T21:54:28+09:00</lastmod>
+    <loc>https://www.bemore.dev/tags/pytorch/</loc>
+    <lastmod>2022-07-15T23:16:19+09:00</lastmod>
   </url><url>
     <loc>https://www.bemore.dev/tags/</loc>
-    <lastmod>2022-07-05T21:54:28+09:00</lastmod>
+    <lastmod>2022-07-15T23:16:19+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
@@ -45,6 +39,21 @@
                 hreflang="en"
                 href="https://www.bemore.dev/tags/"
                 />
+  </url><url>
+    <loc>https://www.bemore.dev/posts/ml/pytorch/translation_transformer/</loc>
+    <lastmod>2022-07-15T23:16:19+09:00</lastmod>
+  </url><url>
+    <loc>https://www.bemore.dev/tags/%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4/</loc>
+    <lastmod>2022-07-15T23:16:19+09:00</lastmod>
+  </url><url>
+    <loc>https://www.bemore.dev/posts/ml/dropout/</loc>
+    <lastmod>2022-07-05T21:54:28+09:00</lastmod>
+  </url><url>
+    <loc>https://www.bemore.dev/tags/ml/</loc>
+    <lastmod>2022-07-05T21:54:28+09:00</lastmod>
+  </url><url>
+    <loc>https://www.bemore.dev/tags/regularization/</loc>
+    <lastmod>2022-07-05T21:54:28+09:00</lastmod>
   </url><url>
     <loc>https://www.bemore.dev/tags/%EB%94%A5%EB%9F%AC%EB%8B%9D/</loc>
     <lastmod>2022-07-05T21:54:28+09:00</lastmod>
@@ -192,9 +201,6 @@
     <loc>https://www.bemore.dev/posts/devstory/about_git0/</loc>
     <lastmod>2022-04-01T14:36:02+09:00</lastmod>
   </url><url>
-    <loc>https://www.bemore.dev/tags/%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4/</loc>
-    <lastmod>2022-04-01T14:36:02+09:00</lastmod>
-  </url><url>
     <loc>https://www.bemore.dev/posts/cs/datastructure/linkedlist/</loc>
     <lastmod>2022-03-05T12:09:48+09:00</lastmod>
   </url><url>
@@ -245,9 +251,6 @@
   </url><url>
     <loc>https://www.bemore.dev/categories/%EC%B6%94%EC%B2%9C%EC%8B%9C%EC%8A%A4%ED%85%9C/</loc>
     <lastmod>2021-11-19T22:09:48+09:00</lastmod>
-  </url><url>
-    <loc>https://www.bemore.dev/tags/pytorch/</loc>
-    <lastmod>2021-11-17T14:41:51+09:00</lastmod>
   </url><url>
     <loc>https://www.bemore.dev/categories/%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4/</loc>
     <lastmod>2021-11-17T14:41:51+09:00</lastmod>

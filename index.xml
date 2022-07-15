@@ -14,7 +14,7 @@
     <managingEditor>bmofinnjake08@gmail.com (bmo)</managingEditor>
     <webMaster>bmofinnjake08@gmail.com (bmo)</webMaster>
     <copyright>©2022, All Rights Reserved</copyright>
-    <lastBuildDate>Tue, 05 Jul 2022 21:54:28 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 15 Jul 2022 23:16:19 +0900</lastBuildDate>
     
         <atom:link href="https://www.bemore.dev/index.xml" rel="self" type="application/rss+xml" />
     
@@ -40,6 +40,34 @@
         
       
 
+      
+      <item>
+        <title>Translation with Transformer and torchtext</title>
+        <link>https://www.bemore.dev/posts/ml/pytorch/translation_transformer/</link>
+        <pubDate>Fri, 15 Jul 2022 23:16:19 +0900</pubDate>
+        <author>bmofinnjake08@gmail.com (bmo)</author>
+        <atom:modified>Fri, 15 Jul 2022 23:16:19 +0900</atom:modified>
+        <guid>https://www.bemore.dev/posts/ml/pytorch/translation_transformer/</guid>
+        <description>트랜스포머 모델을 활용하여 독일어-영어 번역을 colab 환경에서 진행 파이토치 튜토리얼의 NN.TRANSFORMER와 TORCHTEXT로 언어 번역하기의 설</description>
+        
+        <dc:creator>bmo</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>오픈소스</category>
+            
+          
+            
+              <category>pytorch</category>
+            
+          
+        
+        
+        
+      </item>
       
       <item>
         <title>Dropout</title>
