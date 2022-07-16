@@ -1437,7 +1437,7 @@ if (!doNotTrack) {
     
 </head>
 
-<body id="root" class="theme__dark">
+<body id="root" class="theme__solarized">
     <script>
         var localTheme = localStorage.getItem('theme');
         if (localTheme) {
@@ -1476,6 +1476,10 @@ if (!doNotTrack) {
       
         
         <a href="#" class="dropdown-item select-theme__item is-active">
+          solarized
+        </a>
+        
+        <a href="#" class="dropdown-item select-theme__item ">
           dark
         </a>
         
@@ -1485,10 +1489,6 @@ if (!doNotTrack) {
         
         <a href="#" class="dropdown-item select-theme__item ">
           hacker
-        </a>
-        
-        <a href="#" class="dropdown-item select-theme__item ">
-          solarized
         </a>
         
         <a href="#" class="dropdown-item select-theme__item ">
@@ -1611,6 +1611,10 @@ if (!doNotTrack) {
       
         
         <a href="#" class="dropdown-item select-theme__item is-active">
+          solarized
+        </a>
+        
+        <a href="#" class="dropdown-item select-theme__item ">
           dark
         </a>
         
@@ -1620,10 +1624,6 @@ if (!doNotTrack) {
         
         <a href="#" class="dropdown-item select-theme__item ">
           hacker
-        </a>
-        
-        <a href="#" class="dropdown-item select-theme__item ">
-          solarized
         </a>
         
         <a href="#" class="dropdown-item select-theme__item ">
@@ -2174,7 +2174,7 @@ CNAME 내부 주소 값이 처음 도메인 설정해줄때 <a href="http://www.
       
       var repo = JSON.parse("\"spongebob03.github.io\"");
       
-      var baseTheme = JSON.parse("\"dark\"");
+      var baseTheme = JSON.parse("\"solarized\"");
       var localTheme = localStorage.getItem('theme');
       var utterTheme = checkTheme(localTheme, baseTheme);
       var myScript = document.createElement('script');
@@ -2921,7 +2921,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (lib && lib.includes('mermaid')) {
       
-      var themeVariant = localStorage.getItem('theme') || JSON.parse("\"dark\"");
+      var themeVariant = localStorage.getItem('theme') || JSON.parse("\"solarized\"");
 
       if (themeVariant === "dark" || themeVariant === "hacker") {
         mermaid.initialize({ theme: 'dark' });

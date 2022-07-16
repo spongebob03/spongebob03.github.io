@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>파이토치 허브 M1 로컬에서 빌드하기 – Bemore</title>
+    <title>Loss Function – Bemore</title>
     
 
 
@@ -653,7 +653,7 @@
     
     var baseurl = JSON.parse("\"https://www.bemore.dev/\"");
     
-    var permalink = JSON.parse("\"https://www.bemore.dev/posts/devstory/torchhub_m1/\"");
+    var permalink = JSON.parse("\"https://www.bemore.dev/posts/ml/lossfunction/\"");
     
     var langprefix = JSON.parse("\"\"");
     var searchResults = null;
@@ -1331,23 +1331,23 @@
 
 
     
-<meta name="description" content="간단한 빌드 중 만나게 되는 에러들^^*" />
+<meta name="description" content="cost function" />
 
 
-<meta name="keywords" content="M1,오픈소스,개발환경">
+<meta name="keywords" content="ml">
 
-<meta name="created" content="2021-08-16T22:09:48&#43;0900">
-<meta name="modified" content="2021-08-16T22:09:48&#43;0900">
-<meta property="article:published_time" content="2021-08-16T22:09:48&#43;0900">
+<meta name="created" content="2022-07-04T22:19:06&#43;0900">
+<meta name="modified" content="2022-07-04T22:19:06&#43;0900">
+<meta property="article:published_time" content="2022-07-04T22:19:06&#43;0900">
 
 <meta name="author" content="bmo">
 
 
 <meta property="og:site_name" content="Bemore">
-<meta property="og:title" content="파이토치 허브 M1 로컬에서 빌드하기">
-<meta property="og:url" content="https://www.bemore.dev/posts/devstory/torchhub_m1/">
+<meta property="og:title" content="Loss Function">
+<meta property="og:url" content="https://www.bemore.dev/posts/ml/lossfunction/">
 <meta property="og:type" content="article">
-<meta property="og:description" content="간단한 빌드 중 만나게 되는 에러들^^*">
+<meta property="og:description" content="cost function">
 
 <meta name="generator" content="Hugo 0.89.4" />
 <meta name="msapplication-TileColor" content="#fff">
@@ -1358,7 +1358,7 @@
 
 <meta name="apple-mobile-web-app-status-bar-style" content="#fff">
 
-<link rel="canonical" href="https://www.bemore.dev/posts/devstory/torchhub_m1/">
+<link rel="canonical" href="https://www.bemore.dev/posts/ml/lossfunction/">
 
 <link rel="manifest" href="/manifest.json">
 
@@ -1384,12 +1384,12 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "headline": "파이토치 허브 M1 로컬에서 빌드하기",
-    "datePublished": "2021-08-16T22:09:48+09:00",
-    "dateModified": "2021-08-16T22:09:48+09:00",
-    "url" : "https://www.bemore.dev/posts/devstory/torchhub_m1/",
-    "description": "간단한 빌드 중 만나게 되는 에러들^^*",
-    "keywords": ["M1","오픈소스","개발환경"],
+    "headline": "Loss Function",
+    "datePublished": "2022-07-04T22:19:06+09:00",
+    "dateModified": "2022-07-04T22:19:06+09:00",
+    "url" : "https://www.bemore.dev/posts/ml/lossfunction/",
+    "description": "cost function",
+    "keywords": ["ml"],
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://www.bemore.dev/"
@@ -1701,7 +1701,7 @@ if (!doNotTrack) {
   
   <li  class="is-active" >
     
-      <span>파이토치 허브 M1 로컬에서 빌드하기</span>
+      <span>Loss Function</span>
     
   </li>
   
@@ -1713,12 +1713,12 @@ if (!doNotTrack) {
   <div class="single ">
     <div class="single__nojs">This page looks best with JavaScript enabled</div>
     <script>document.querySelector('.single').classList.remove('hide'); document.querySelector('.single__nojs').classList.add('hide');</script>
-    <h2 class="single__title" data-ani="true">파이토치 허브 M1 로컬에서 빌드하기</h2>
+    <h2 class="single__title" data-ani="true">Loss Function</h2>
     <h3 class="single__subtitle"></h3>
     <div class="single__meta">
       
 <div class="single__infos">
-  <time class="single__info" title="Written At">📅&nbsp;Aug 16, 2021 </time>
+  <time class="single__info" title="Written At">📅&nbsp;Jul 4, 2022 </time>
   
   &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;1&nbsp;min read </span>
   
@@ -1733,50 +1733,74 @@ if (!doNotTrack) {
   🏷️
   
 
-  <li><a href="https://www.bemore.dev/tags/m1/" class="single__tag" title="M1">#M1</a></li>
-
-  <li><a href="https://www.bemore.dev/tags/%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4/" class="single__tag" title="오픈소스">#오픈소스</a></li>
-
-  <li><a href="https://www.bemore.dev/tags/%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD/" class="single__tag" title="개발환경">#개발환경</a></li>
+  <li><a href="https://www.bemore.dev/tags/ml/" class="single__tag" title="ml">#ml</a></li>
 
 </ul>
 
     </div>
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
-      <blockquote>
-<p><a href="https://github.com/9bow/PyTorchKR">Github) PyTorchKR</a></p>
-</blockquote>
-<h3 id="nvm-command-not-found">nvm: command not found</h3>
-<p><a href="https://kood-dev.tistory.com/3">노드 버전관리 설치 및 사용법</a></p>
-<ol>
-<li><code>find ~/.zshrc</code>로 /.zshrc파일 있는지 확인</li>
-<li><code>open ~/.zshrc</code> 파일 열어서 아래 내용 추가</li>
-</ol>
-<pre tabindex="0"><code>export NVM_DIR=~/.nvm 
-source $(brew --prefix nvm)/nvm.sh
-</code></pre><ol start="4">
-<li><code>source ~/.zshrc</code> 코드 적용</li>
-<li>nvm &ndash;version으로 확인</li>
-</ol>
-<h3 id="rbenv-version-259-is-not-installed">rbenv: version `2.5.9' is not installed</h3>
-<p>brew install rbenv했지만 [이걸 또 m1이..?]<br />
-(<a href="https://github.com/rbenv/ruby-build/issues/1691">https://github.com/rbenv/ruby-build/issues/1691</a>)<br />
-해결 방법은 간단했습니다.<br />
-<code>rbenv install 2.5.9</code></p>
-<h3 id="error-while-executing-gemgemfilepermissionerror">ERROR: While executing gem&hellip;Gem::FilePermissionError</h3>
-<p><a href="https://jojoldu.tistory.com/288">Mac에서 Gem::FilePermissionError 에러 발생시 해결 방법</a><br />
-~/.zshrc 파일에 아래 내용 추가</p>
-<pre tabindex="0"><code>[[ -d ~/.rbenv  ]] &amp;&amp; \
-  export PATH=${HOME}/.rbenv/bin:${PATH} &amp;&amp; \
-  eval &quot;$(rbenv init -)&quot;
-</code></pre><p><code>source ~/.zshrc</code>로 코드 적용</p>
-<h3 id="bundle-install-에서-make-yarn-no-such-file-or-directory">bundle install 에서 make: yarn: No such file or directory</h3>
-<p><code>npm install -g yarn</code></p>
-<h3 id="빌드">빌드</h3>
-<p><code>make serve</code><br />
-<img src="https://images.velog.io/images/spongebob03/post/2d0b56cb-0994-430f-9b91-593d8f6237a0/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202021-08-16%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%2011.15.55.png" alt="" /><br />
-멘토님의 친절한 커맨드 예시와 오늘도 구글링으로 얻은 정보들에 감사하며&hellip;🥳</p>
+      <h2 id="손실-함수">손실 함수</h2>
+<div class="box">신경망 학습에서 <strong>현재의 상태를 표현하는 지표</strong>(손실함수)를 기준으로 최적의 가중치 매개변수의 값을 탐색한다</div>
+<h2 id="sse">SSE</h2>
+<p>오차제곱합 Sum of Squares for Error<br />
+$$ E = \frac{1}{2}\displaystyle \sum_{k}(y_k - t_k)^2$$<br />
+각 원소의 출력(추정치)과 정답 레이블의 차를 제곱한 후, 그 총합을 구한다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">sum_squares_error</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">((</span><span class="n">y</span><span class="o">-</span><span class="n">t</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="mse">MSE</h2>
+<p>평균제곱오차 Mean Squared Error<br />
+$$ MSE = \frac{1}{N}\displaystyle \sum_{k}^N (y_i - \hat{y}_i)^2$$<br />
+예측값과 정답 레이블의 차를 제곱한 후 그 총합의 평균을 구한다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">mean_squared_error</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">))</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">((</span><span class="n">y</span><span class="o">-</span><span class="n">t</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="rmse">RMSE</h2>
+<p>평균제곱근오차 Root Mean Squared Error<br />
+$$ RMSE = \sqrt{\displaystyle \sum_{i=1}^n \frac{(\hat{y}_i - y_i)^2}{n}}$$</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">root_mean_squared_error</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">((</span><span class="mi">1</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">))</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">((</span><span class="n">y</span><span class="o">-</span><span class="n">t</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="cross-entropy-error">cross entropy error</h2>
+<p>교차 엔트로피 오차<br />
+$$ E = -\displaystyle \sum_{k}t_k\log y_k$$<br />
+t는 원-핫 인코딩되어 있어 정답일 때의 추정의 자연로그를 계산한다. 따라서 정답일 때의 출력이 전체 값을 정한다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">cross_entropy_error</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+    <span class="n">delta</span> <span class="o">=</span> <span class="mf">1e-7</span>
+    <span class="k">return</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">t</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">y</span> <span class="o">+</span> <span class="n">delta</span><span class="p">))</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="엔트로피">엔트로피?</h3>
+<p>하나의 변수가 가지는 확률 분포의 불확실성</p>
 
     </article>
     
@@ -1976,13 +2000,13 @@ source $(brew --prefix nvm)/nvm.sh
     
     
       
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.bemore.dev%2fposts%2fdevstory%2ftorchhub_m1%2f" title="Facebook" aria-label="Facebook Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.bemore.dev%2fposts%2fml%2flossfunction%2f" title="Facebook" aria-label="Facebook Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
           <svg data-name="facebook" enable-background="new 0 0 24 24" viewBox="0 0 24 24" width="35" height="35" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="m15.997 3.985h2.191v-3.816c-.378-.052-1.678-.169-3.192-.169-3.159 0-5.323 1.987-5.323 5.639v3.361h-3.486v4.266h3.486v10.734h4.274v-10.733h3.345l.531-4.266h-3.877v-2.939c.001-1.233.333-2.077 2.051-2.077z"/></svg>
         </a>
       
     
       
-        <a href="https://twitter.com/intent/tweet?text=%ed%8c%8c%ec%9d%b4%ed%86%a0%ec%b9%98%20%ed%97%88%eb%b8%8c%20M1%20%eb%a1%9c%ec%bb%ac%ec%97%90%ec%84%9c%20%eb%b9%8c%eb%93%9c%ed%95%98%ea%b8%b0&url=https%3a%2f%2fwww.bemore.dev%2fposts%2fdevstory%2ftorchhub_m1%2f&hashtags=M1%2c%ec%98%a4%ed%94%88%ec%86%8c%ec%8a%a4%2c%ea%b0%9c%eb%b0%9c%ed%99%98%ea%b2%bd&via=" title="Twitter" aria-label="Twitter Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
+        <a href="https://twitter.com/intent/tweet?text=Loss%20Function&url=https%3a%2f%2fwww.bemore.dev%2fposts%2fml%2flossfunction%2f&hashtags=ml&via=" title="Twitter" aria-label="Twitter Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
           <svg data-name="twitter" enable-background="new 0 0 24 24" viewBox="0 0 24 24" width="35" height="35" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="m21.534 7.113c.976-.693 1.797-1.558 2.466-2.554v-.001c-.893.391-1.843.651-2.835.777 1.02-.609 1.799-1.566 2.165-2.719-.951.567-2.001.967-3.12 1.191-.903-.962-2.19-1.557-3.594-1.557-2.724 0-4.917 2.211-4.917 4.921 0 .39.033.765.114 1.122-4.09-.2-7.71-2.16-10.142-5.147-.424.737-.674 1.58-.674 2.487 0 1.704.877 3.214 2.186 4.089-.791-.015-1.566-.245-2.223-.606v.054c0 2.391 1.705 4.377 3.942 4.835-.401.11-.837.162-1.29.162-.315 0-.633-.018-.931-.084.637 1.948 2.447 3.381 4.597 3.428-1.674 1.309-3.8 2.098-6.101 2.098-.403 0-.79-.018-1.177-.067 2.18 1.405 4.762 2.208 7.548 2.208 8.683 0 14.342-7.244 13.986-14.637z"/></svg>
         </a>
       
@@ -2125,7 +2149,19 @@ source $(brew --prefix nvm)/nvm.sh
     <ul class="related-ul">
         
         <li>
-          <a href="/posts/devstory/macmini_brew/" class="related__link">MacMini M1 에서 Homebrew 설치</a>
+          <a href="/posts/ml/regularization/" class="related__link">Regularization</a>
+        </li>
+        
+        <li>
+          <a href="/posts/ml/dls/course2_week1/" class="related__link">Improving Deep Neural Network</a>
+        </li>
+        
+        <li>
+          <a href="/posts/ml/activationfunction/" class="related__link">Activation Function</a>
+        </li>
+        
+        <li>
+          <a href="/posts/ml/kaggle/hello-kaggle/" class="related__link">Hello World in Kaggle</a>
         </li>
         
     </ul>
@@ -2135,17 +2171,17 @@ source $(brew --prefix nvm)/nvm.sh
 <nav class="pagination-single">
   
     
-      <a href="https://www.bemore.dev/posts/devstory/slackbot1/" class="pagination-single__left">
+      <a href="https://www.bemore.dev/posts/ml/regularization/" class="pagination-single__left">
         <div class="pagination-single__icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42-.39-.39-1.02-.39-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"/></svg>
         </div>
-        <div class="pagination-single__left-title">SlackBot으로 랜덤 문제 출제</div>      
+        <div class="pagination-single__left-title">Regularization</div>      
       </a>
     
     <div class="grow"></div>
     
-      <a href="https://www.bemore.dev/posts/whynotwork/django_runserver/" class="pagination-single__right">      
-        <div class="pagination-single__right-title">Django runserver 에러</div>
+      <a href="https://www.bemore.dev/posts/ml/dropout/" class="pagination-single__right">      
+        <div class="pagination-single__right-title">Dropout</div>
         <div class="pagination-single__icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"/></svg>
         </div>
@@ -2663,6 +2699,24 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true,
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      ignoreHtmlClass: 'tex2jax_ignore',
+      processHtmlClass: 'tex2jax_process'
+    }
+  };
+  </script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" id="MathJax-script"></script>
+
 
 
 
@@ -2922,7 +2976,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     
     
-    var lib = JSON.parse("null");
+    var lib = JSON.parse("[\"mathjax\"]");
 
     if (lib && lib.includes('mermaid')) {
       
@@ -3140,7 +3194,7 @@ document.addEventListener('DOMContentLoaded', function () {
         
           
             
-              <a href="https://www.bemore.dev/posts/devstory/torchhub_m1/" data-lang="en" class="dropdown-item is-active">English</a>
+              <a href="https://www.bemore.dev/posts/ml/lossfunction/" data-lang="en" class="dropdown-item is-active">English</a>
             
           
         
@@ -3312,13 +3366,13 @@ document.addEventListener('DOMContentLoaded', function () {
         <div class="toc toc__outer " data-dir="ltr" data-folding="true" data-ani="true">
           <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#손실-함수">손실 함수</a></li>
+    <li><a href="#sse">SSE</a></li>
+    <li><a href="#mse">MSE</a></li>
+    <li><a href="#rmse">RMSE</a></li>
+    <li><a href="#cross-entropy-error">cross entropy error</a>
       <ul>
-        <li><a href="#nvm-command-not-found">nvm: command not found</a></li>
-        <li><a href="#rbenv-version-259-is-not-installed">rbenv: version `2.5.9' is not installed</a></li>
-        <li><a href="#error-while-executing-gemgemfilepermissionerror">ERROR: While executing gem&hellip;Gem::FilePermissionError</a></li>
-        <li><a href="#bundle-install-에서-make-yarn-no-such-file-or-directory">bundle install 에서 make: yarn: No such file or directory</a></li>
-        <li><a href="#빌드">빌드</a></li>
+        <li><a href="#엔트로피">엔트로피?</a></li>
       </ul>
     </li>
   </ul>
